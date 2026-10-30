@@ -6,6 +6,8 @@
  *                 |          +-- api (contract, depends on domain only)
  *                 +-- db / adapters / content-loader (driven adapters)
  *
+ *   apps/web (browser) -> api + domain only; Effect stays in apps/web/src/api
+ *
  * Rules are expressed on resolved file paths, so they hold no matter whether a
  * module is imported by relative path or by its `@dadalink/*` package name.
  */
@@ -70,6 +72,29 @@ module.exports = {
       to: { path: "^apps/" }
     },
     {
+      name: "web-depends-on-contract-only",
+      severity: "error",
+      comment:
+        "The web app talks to the server only through the HttpApi contract; server, use cases, ports and adapters never reach the browser bundle.",
+      from: { path: "^apps/web/" },
+      to: { path: ["^packages/", "^apps/(?!web/)"], pathNot: "^packages/(api|domain)/src" }
+    },
+    {
+      name: "web-effect-only-at-the-data-edge",
+      severity: "error",
+      comment:
+        "Components stay plain React: only apps/web/src/api runs Effect programs; everything else uses its promise facade.",
+      from: { path: "^apps/web/src", pathNot: "^apps/web/src/api/" },
+      to: { path: "node_modules/effect/" }
+    },
+    {
+      name: "web-features-do-not-import-routes",
+      severity: "error",
+      comment: "Routes compose features, not the other way round (pages read params through getRouteApi).",
+      from: { path: "^apps/web/src/(features|ui|layout|queries|i18n|preferences|safety)/" },
+      to: { path: "^apps/web/src/routes/" }
+    },
+    {
       name: "src-does-not-import-tests",
       severity: "error",
       from: { path: "/src/" },
@@ -84,7 +109,7 @@ module.exports = {
   ],
   options: {
     doNotFollow: { path: "node_modules" },
-    exclude: { path: ["node_modules", "\\.wrangler", "dist", "coverage"] },
+    exclude: { path: ["\\.wrangler", "^(apps|packages)/[^/]+/(dist|coverage)/"] },
     tsPreCompilationDeps: true,
     tsConfig: { fileName: "tsconfig.depcruise.json" },
     combinedDependencies: true,
@@ -92,7 +117,7 @@ module.exports = {
     enhancedResolveOptions: {
       exportsFields: ["exports"],
       conditionNames: ["import", "types", "default"],
-      extensions: [".ts", ".js", ".json"]
+      extensions: [".ts", ".tsx", ".js", ".json"]
     },
     reporterOptions: {
       text: { highlightFocused: true }
