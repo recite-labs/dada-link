@@ -1,0 +1,355 @@
+country: AE
+updated: 2026-10-31
+entries:
+  - id: ae-police
+    country: AE
+    kind: police
+    name:
+      en: Police (emergency)
+      am: ፖሊስ (አስቸኳይ)
+      om: Poolisii (ariifachiisaa)
+    name_status: draft-ai
+    helps_with: [emergency, abuse, sexual-violence, trafficking]
+    phone: null
+    short_code: "999"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://u.ae/en/information-and-services/justice-safety-and-the-law/handling-emergencies
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: "Call 999 if you are in danger or someone is hurting you. It works anywhere in the UAE."
+    source_url: https://u.ae/en/information-and-services/justice-safety-and-the-law/handling-emergencies
+    sources: []
+    verified: false
+    todo: "Confirm which languages the 999 operators speak (Amharic/Oromo interpretation?)."
+
+  - id: ae-ambulance
+    country: AE
+    kind: ambulance
+    name:
+      en: Ambulance
+      am: አምቡላንስ
+      om: Ambulaansii
+    name_status: draft-ai
+    helps_with: [emergency, health]
+    phone: null
+    short_code: "998"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://u.ae/en/information-and-services/justice-safety-and-the-law/handling-emergencies
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: "Call 998 if you are badly hurt or very sick."
+    source_url: https://u.ae/en/information-and-services/justice-safety-and-the-law/handling-emergencies
+    sources: []
+    verified: false
+    todo: null
+
+  - id: ae-fire
+    country: AE
+    kind: emergency
+    name:
+      en: Fire and Civil Defence
+      am: የእሳት አደጋ እና ሲቪል መከላከያ
+      om: Ibiddaa fi Ittisa Siviilii
+    name_status: draft-ai
+    helps_with: [fire, emergency]
+    phone: null
+    short_code: "997"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://u.ae/en/information-and-services/justice-safety-and-the-law/handling-emergencies
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: "Call 997 for a fire."
+    source_url: https://u.ae/en/information-and-services/justice-safety-and-the-law/handling-emergencies
+    sources: []
+    verified: false
+    todo: null
+
+  - id: ae-ethiopian-embassy-abu-dhabi
+    country: AE
+    kind: embassy
+    name:
+      en: Embassy of Ethiopia in Abu Dhabi
+      am: በአቡ ዳቢ የኢትዮጵያ ኤምባሲ
+      om: Ejjennoo Itoophiyaa Abuu Dhaabii
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation, abuse, legal, detention]
+    phone: "+97126655111"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: abudhabi.embassy@mfa.gov.et
+    website: null
+    hours: null
+    languages: []
+    city: Abu Dhabi
+    address: Al Nahyan - Al Mashajir st 19
+    notes: "Your embassy can help with a lost or kept passport, travel papers to go home, and problems with your employer."
+    source_url: https://www.protocol.dubai.ae/en/diplomatic-directory/diplomatic-directory-categories/diplomatic-consular-corps-in-uae/?_continent=1133
+    sources: []
+    verified: false
+    todo: "Directory lists phone and email only. Confirm office hours, an after-hours/emergency line for citizens, and the official website (abudhabi.mfa.gov.et could not be loaded on 2026-10-31). Non-official sites give older addresses; call to confirm."
+
+  - id: ae-ethiopian-consulate-dubai
+    country: AE
+    kind: consulate
+    name:
+      en: Consulate General of Ethiopia in Dubai and the Northern Emirates
+      am: በዱባይና ሰሜን ኤምሬቶች የኢትዮጵያ ቆንስላ ጄኔራል
+      om: Qonsilaa Jeneraalaa Itoophiyaa Dubaayii fi Imireetota Kaabaa
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation, abuse, legal, detention]
+    phone: "+97142699111"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: dubai.consulate@mfa.gov.et
+    website: https://dubai.mfa.gov.et/
+    hours: null
+    languages: []
+    city: Dubai
+    address: Omar Bin Abdul Aziz Mosque, Street No. 11, Villa 30
+    notes: "For women working in Dubai, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah."
+    source_url: https://www.protocol.dubai.ae/en/diplomatic-directory/diplomatic-directory-categories/diplomatic-consular-corps-in-uae/?_continent=1133
+    sources:
+      - url: https://dubai.mfa.gov.et/
+        title: Ethiopian Consulate General in Dubai (official site)
+        accessed: 2026-10-31
+        publisher: Ethiopian Ministry of Foreign Affairs
+    verified: false
+    todo: "Older non-official listings give a Deira (Al Wuheida) address and extra numbers (+97142722559, +97142699162); the Dubai Protocol directory gives the Al Qusais Street 11 Villa 30 address used here. Confirm address, hours and an emergency line. Confirm languages (Amharic, Afaan Oromo)."
+
+  - id: ae-mohre
+    country: AE
+    kind: labour-hotline
+    name:
+      en: Ministry of Human Resources and Emiratisation (MOHRE) call centre
+      am: የሰው ሀብትና ኤሚሬታይዜሽን ሚኒስቴር (MOHRE) የጥሪ ማዕከል
+      om: Wiirtuu Bilbilaa Ministeera Qabeenya Namaa fi Emiraatii (MOHRE)
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, passport, documents, legal]
+    phone: "+97168034000"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: ask@mohre.gov.ae
+    website: https://www.mohre.gov.ae/en/contact-us
+    hours: "24/7"
+    languages: [ar, en, ur]
+    city: Abu Dhabi
+    address: Sultan Bin Zayed the First Street, Abu Dhabi
+    notes: "Inside the UAE dial 600 590000. This is the ministry for domestic workers. You can make a labour complaint about pay, rest days, your passport or bad treatment."
+    source_url: https://www.mohre.gov.ae/en/contact-us
+    sources:
+      - url: https://www.mohre.gov.ae/en/services/register-a-labor-complaint-domestic-workers
+        title: Register a Labor Complaint (Domestic Workers)
+        accessed: 2026-10-31
+        publisher: MOHRE
+    verified: false
+    todo: "Local number 600590000 is 9 digits and cannot be stored as short_code; phone holds the international call centre. Current contact page says 00971-68034000 but an older MOHRE contact page says 00971-68027666; confirm. Older page lists WhatsApp 600590000 and 00971566891910; confirm current WhatsApp before adding. Page says 20 languages; check if Amharic or Afaan Oromo are among them. The domestic-worker complaint page lists only the mobile app and service centres as channels; confirm a worker can start a complaint by phone."
+
+  - id: ae-mohre-labour-claims
+    country: AE
+    kind: labour-hotline
+    name:
+      en: MOHRE Labour Claims and Advisory Center
+      am: የMOHRE የሠራተኛ ይገባኛል ጥያቄና ምክር ማዕከል
+      om: Wiirtuu Gaaffii Mirgaa fi Gorsa Hojjettootaa MOHRE
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, legal]
+    phone: null
+    short_code: "80084"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://www.mohre.gov.ae/en/contact-us
+    hours: null
+    languages: []
+    city: null
+    address: null
+    notes: "Free advice about labour claims, such as unpaid wages."
+    source_url: https://www.mohre.gov.ae/en/contact-us
+    sources: []
+    verified: false
+    todo: "Confirm that 80084 also serves domestic workers (not only private-sector company workers), its hours and languages."
+
+  - id: ae-ewaa-shelter
+    country: AE
+    kind: shelter
+    name:
+      en: Ewaa - Abu Dhabi Centre for Shelter and Humanitarian Care
+      am: ኤዋ - የአቡ ዳቢ የመጠለያና ሰብዓዊ እንክብካቤ ማዕከል
+      om: Ewaa - Wiirtuu Abuu Dhaabii Hirkootaa fi Kunuunsa Namummaa
+    name_status: draft-ai
+    helps_with: [shelter, trafficking, abuse, sexual-violence, mental-health]
+    phone: null
+    short_code: "8007283"
+    whatsapp: null
+    telegram: null
+    email: hotline@ewaa.gov.ae
+    website: null
+    hours: null
+    languages: []
+    city: Abu Dhabi
+    address: null
+    notes: "Hotline 800 SAVE (800 7283) inside the UAE. Shelter and care for victims of human trafficking and violence."
+    source_url: https://u.ae/en/information-and-services/justice-safety-and-the-law/Safety/handling-emergencies
+    sources:
+      - url: https://mocd.gov.ae/en/contact-us/family-violence-complaints.aspx
+        title: Channels for Reporting Family Violence
+        accessed: 2026-10-31
+        publisher: UAE Ministry of Community Development
+      - url: https://u.ae/en/about-the-uae/human-rights-in-the-uae/combatting-human-trafficking
+        title: Combatting human trafficking
+        accessed: 2026-10-31
+        publisher: UAE Government portal
+    verified: false
+    todo: "Confirm toll-free hotline 8007283 (800 SAVE) still works. Confirm hours, languages, official website, and whether a woman can self-refer (a 2019 WAM report says victims are usually referred by police, embassies, hospitals or the hotline)."
+
+  - id: ae-dfwac
+    country: AE
+    kind: shelter
+    name:
+      en: Dubai Foundation for Women and Children (DFWAC)
+      am: የዱባይ የሴቶችና ሕፃናት ፋውንዴሽን
+      om: Dhaabbata Dubaayii Dubartootaa fi Daa'immanii
+    name_status: draft-ai
+    helps_with: [shelter, abuse, sexual-violence, trafficking, mental-health, legal]
+    phone: "+97146060300"
+    short_code: "800111"
+    whatsapp: null
+    telegram: null
+    email: help@dfwac.ae
+    website: https://www.dfwac.ae/services/helpline
+    hours: "24/7"
+    languages: []
+    city: Dubai
+    address: P.O. Box 97727, Dubai
+    notes: "Free helpline 800111, open day and night. Shelter, medical care, counselling and legal help for women facing violence or trafficking. You can also send an SMS to 5111."
+    source_url: https://www.dfwac.ae/services/helpline
+    sources:
+      - url: https://u.ae/en/about-the-uae/human-rights-in-the-uae/combatting-human-trafficking
+        title: Combatting human trafficking
+        accessed: 2026-10-31
+        publisher: UAE Government portal
+    verified: false
+    todo: "MOCD reporting page lists the number as 8001111 and email help@dfwwac.ae (likely typos); DFWAC's own site says 800111 and help@dfwac.ae. Confirm. Phone +97146060300 is the office line (office hours only). Confirm languages and whether domestic workers are accepted directly."
+
+  - id: ae-dubai-police-human-trafficking
+    country: AE
+    kind: police
+    name:
+      en: Dubai Police - Control Center of Human Trafficking
+      am: የዱባይ ፖሊስ - የሰዎች ዝውውር መቆጣጠሪያ ማዕከል
+      om: Poolisii Dubaayii - Wiirtuu To'annoo Daldala Namaa
+    name_status: draft-ai
+    helps_with: [trafficking, abuse, emergency]
+    phone: "+97146082347"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: htccc@dubaipolice.gov.ae
+    website: null
+    hours: null
+    languages: []
+    city: Dubai
+    address: null
+    notes: "Report human trafficking, for example if you are locked in, not paid, or forced to work."
+    source_url: https://u.ae/en/information-and-services/justice-safety-and-the-law/Safety/handling-emergencies
+    sources: []
+    verified: false
+    todo: "Confirm hours and languages."
+
+  - id: ae-dubai-police-al-ameen
+    country: AE
+    kind: helpline
+    name:
+      en: Dubai Police Al Ameen service
+      am: የዱባይ ፖሊስ አል አሚን አገልግሎት
+      om: Tajaajila Al Ameen Poolisii Dubaayii
+    name_status: draft-ai
+    helps_with: [abuse, trafficking, sexual-violence]
+    phone: "+9718004444"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: alameen@emi.ae
+    website: null
+    hours: null
+    languages: []
+    city: Dubai
+    address: null
+    notes: "Inside the UAE dial 800 4444. A way to tell the police about a crime."
+    source_url: https://u.ae/en/information-and-services/justice-safety-and-the-law/Safety/handling-emergencies
+    sources:
+      - url: https://mocd.gov.ae/en/contact-us/family-violence-complaints.aspx
+        title: Channels for Reporting Family Violence
+        accessed: 2026-10-31
+        publisher: UAE Ministry of Community Development
+    verified: false
+    todo: "u.ae gives +9718004444 for calls from outside the UAE; confirm it also works from a UAE mobile. Confirm whether calls are confidential, hours and languages."
+
+  - id: ae-moi-women-children-hotline
+    country: AE
+    kind: helpline
+    name:
+      en: Ministry of Interior hotline for violence against women and children
+      am: የሀገር ውስጥ ሚኒስቴር በሴቶችና ሕፃናት ላይ ለሚደርስ ጥቃት የስልክ መስመር
+      om: Sarara Ministeera Dhimma Keessaa kan Miidhaa Dubartootaa fi Daa'immanii
+    name_status: draft-ai
+    helps_with: [abuse, sexual-violence]
+    phone: null
+    short_code: "116111"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: null
+    address: null
+    notes: "Toll-free number to report violence and abuse against women and children."
+    source_url: https://u.ae/en/information-and-services/justice-safety-and-the-law/Safety/handling-emergencies
+    sources: []
+    verified: false
+    todo: "MOCD page lists 116111 as the Ministry of Interior Center for Child Protection. Confirm it accepts adult women's reports, plus hours and languages."
+
+  - id: ae-sharjah-women-protection
+    country: AE
+    kind: helpline
+    name:
+      en: Sharjah Women's Protection Centre (Social Services Department)
+      am: የሻርጃ የሴቶች ጥበቃ ማዕከል
+      om: Wiirtuu Eegumsa Dubartootaa Shaarjaa
+    name_status: draft-ai
+    helps_with: [abuse, legal, mental-health]
+    phone: null
+    short_code: "800700"
+    whatsapp: null
+    telegram: null
+    email: info@sssd.shj.ae
+    website: null
+    hours: null
+    languages: []
+    city: Sharjah
+    address: null
+    notes: "Free line for social, psychological and legal advice in Sharjah."
+    source_url: https://u.ae/en/about-the-uae/human-rights-in-the-uae/combatting-human-trafficking
+    sources:
+      - url: https://mocd.gov.ae/en/contact-us/family-violence-complaints.aspx
+        title: Channels for Reporting Family Violence
+        accessed: 2026-10-31
+        publisher: UAE Ministry of Community Development
+    verified: false
+    todo: "Confirm it serves migrant domestic workers, hours and languages."
