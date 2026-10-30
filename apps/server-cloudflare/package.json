@@ -1,0 +1,28 @@
+{
+  "name": "@dadalink/server-cloudflare",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "DadaLink API on Cloudflare Workers + D1 (+ KV rate limiting, AI Gateway).",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "db:sync-migrations": "node scripts/sync-migrations.ts",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@dadalink/adapters": "workspace:*",
+    "@dadalink/api": "workspace:*",
+    "@dadalink/core": "workspace:*",
+    "@dadalink/db": "workspace:*",
+    "@dadalink/ports": "workspace:*",
+    "@dadalink/server": "workspace:*",
+    "effect": "4.1.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261030.1",
+    "wrangler": "4.156.0"
+  }
+}

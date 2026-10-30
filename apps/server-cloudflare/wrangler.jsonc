@@ -1,0 +1,49 @@
+// DadaLink API on Cloudflare Workers.
+//
+// Local development (no Cloudflare account needed):
+//   cp .dev.vars.example .dev.vars
+//   pnpm db:migrate:local && pnpm dev
+//
+// Before deploying, a maintainer must create the resources and replace the
+// placeholder ids below (never done by tooling in this repo):
+//   wrangler d1 create dadalink            -> d1_databases[0].database_id
+//   wrangler kv namespace create RATE_LIMITS -> kv_namespaces[0].id
+// and set secrets with `wrangler secret put <NAME>`:
+//   DADALINK_HASH_SALT, ANTHROPIC_API_KEY, DADALINK_AI_GATEWAY_TOKEN (optional),
+//   TELEGRAM_BOT_TOKEN, TELEGRAM_WEBHOOK_SECRET, AFRICASTALKING_API_KEY.
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "dadalink-api",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dadalink",
+      // Placeholder: replace with the id printed by `wrangler d1 create dadalink`.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "RATE_LIMITS",
+      // Placeholder: replace with the id printed by `wrangler kv namespace create RATE_LIMITS`.
+      "id": "00000000000000000000000000000000"
+    }
+  ],
+  "vars": {
+    "DADALINK_AI_PROVIDER": "anthropic",
+    "DADALINK_AI_MODEL": "claude-sonnet-5-5",
+    // Cloudflare AI Gateway endpoint for Anthropic, e.g.
+    // "https://gateway.ai.cloudflare.com/v1/<account_id>/<gateway>/anthropic"
+    "DADALINK_AI_BASE_URL": "https://api.anthropic.com",
+    "DADALINK_ASSISTANT_REVIEWED_ONLY": "true",
+    "DADALINK_ASSISTANT_DAILY_LIMIT": "30",
+    "DADALINK_SMS_PROVIDER": "log",
+    "DADALINK_MESSENGER_PROVIDER": "telegram",
+    "DADALINK_APP_URL": "https://play.google.com/store/apps/details?id=me.kibru.damakese"
+  }
+}

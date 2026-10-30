@@ -1,0 +1,10 @@
+# Local secrets for `wrangler dev --local`. Copy to `.dev.vars` (git-ignored).
+DADALINK_HASH_SALT=dev-only-salt-do-not-use-in-production
+DADALINK_AI_PROVIDER=fake
+DADALINK_ASSISTANT_REVIEWED_ONLY=false
+DADALINK_MESSENGER_PROVIDER=log
+TELEGRAM_WEBHOOK_SECRET=dev-webhook-secret
+# ANTHROPIC_API_KEY=
+# TELEGRAM_BOT_TOKEN=
+# AFRICASTALKING_USERNAME=sandbox
+# AFRICASTALKING_API_KEY=

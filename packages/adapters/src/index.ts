@@ -1,5 +1,6 @@
 export * from "./ai/index.ts"
 export * from "./background/index.ts"
 export * from "./memory/index.ts"
+export * from "./ratelimit/index.ts"
 export * from "./sms/index.ts"
 export * from "./telegram/index.ts"
