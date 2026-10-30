@@ -44,7 +44,7 @@ content/
 | `Date` | `YYYY-MM-DD` |
 | `Url` | string starting with `https://` or `http://` |
 | `E164` | `+` followed by 7 to 15 digits, no spaces (e.g. `+251111234567`) |
-| `ShortCode` | 2 to 6 digits, a local number that only works inside the country (e.g. `911`, `999`) |
+| `ShortCode` | 2 to 8 digits, a local number dialled as-is inside the country: emergency codes and local toll-free lines (e.g. `911`, `999`, `8007283`) |
 | `Source` | mapping: `url: Url` (required), `title: string` (required), `accessed: Date` (required), `publisher: string` (optional), `note: string` (optional) |
 | `Localized` | mapping of `Locale` to string. `en` required. |
 

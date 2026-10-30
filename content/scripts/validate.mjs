@@ -51,7 +51,7 @@ const REQUIRED_LOCALES = ["en", "am", "om"];
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const URL_RE = /^https?:\/\/[^\s]+$/;
 const E164_RE = /^\+[1-9]\d{6,14}$/;
-const SHORT_RE = /^\d{2,6}$/;
+const SHORT_RE = /^\d{2,8}$/;
 const KEBAB_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const TELEGRAM_RE = /^(@[A-Za-z0-9_]{4,}|https:\/\/t\.me\/\S+)$/;
 
@@ -497,7 +497,7 @@ function validateDirectory() {
           check(file, typeof e[k] === "string" && E164_RE.test(e[k]), `${w}.${k} must be E.164 like +966112345678 or null (got ${JSON.stringify(e[k])})`);
       }
       if (e.short_code !== null && e.short_code !== undefined)
-        check(file, typeof e.short_code === "string" && SHORT_RE.test(e.short_code), `${w}.short_code must be a quoted string of 2-6 digits or null`);
+        check(file, typeof e.short_code === "string" && SHORT_RE.test(e.short_code), `${w}.short_code must be a quoted string of 2-8 digits or null`);
       if (e.telegram !== null && e.telegram !== undefined)
         check(file, typeof e.telegram === "string" && TELEGRAM_RE.test(e.telegram), `${w}.telegram must be "@handle" or https://t.me/... or null`);
       if (e.email !== null && e.email !== undefined)
