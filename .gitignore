@@ -11,3 +11,5 @@ coverage/
 *.db-shm
 *.db-wal
 data/
+!.env.example
+!.env.development

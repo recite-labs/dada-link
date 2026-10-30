@@ -1,5 +1,6 @@
 import { HttpApi, OpenApi } from "effect/http-api"
 import { AgenciesApi } from "./groups/Agencies.ts"
+import { AssistantApi } from "./groups/Assistant.ts"
 import { ContentApi } from "./groups/Content.ts"
 import { DirectoryApi } from "./groups/Directory.ts"
 import { HealthApi } from "./groups/Health.ts"
@@ -10,6 +11,7 @@ export class Api extends HttpApi.make("dadalink")
   .add(ContentApi)
   .add(DirectoryApi)
   .add(AgenciesApi)
+  .add(AssistantApi)
   .annotateMerge(
     OpenApi.annotations({
       title: "DadaLink API",

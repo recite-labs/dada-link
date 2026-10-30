@@ -1,15 +1,23 @@
+import { FakeLanguageModel } from "@dadalink/adapters"
 import { Api } from "@dadalink/api"
+import { AssistantSettings, Pseudonymizer } from "@dadalink/core"
 import { CatalogWriter } from "@dadalink/ports"
 import { makeHttpApp } from "@dadalink/server"
 import { agencies, allContent, saDirectory } from "@dadalink/testing"
 import { NodeHttpServer } from "@effect/platform-node"
 import { expect, layer } from "@effect/vitest"
-import { Effect, Layer } from "effect"
+import { Effect, Layer, Redacted } from "effect"
 import { HttpRouter } from "effect/http"
 import { HttpApiClient } from "effect/http-api"
 import { PersistenceLive } from "../src/AppLayer.ts"
 
 const Persistence = PersistenceLive(":memory:")
+
+const Services = Layer.mergeAll(
+  FakeLanguageModel.layer(),
+  Pseudonymizer.layer(Redacted.make("e2e-salt")),
+  AssistantSettings.layer({ reviewedOnly: false, dailyLimit: 5, maxPassages: 3 })
+)
 
 const Seed = Layer.effectDiscard(
   Effect.gen(function* () {
@@ -24,7 +32,7 @@ const Seed = Layer.effectDiscard(
 const ServerUnderTest = HttpRouter.serve(makeHttpApp()).pipe(
   Layer.provide(Seed),
   Layer.provideMerge(NodeHttpServer.layerTest),
-  Layer.provide(Persistence),
+  Layer.provide(Layer.mergeAll(Persistence, Services)),
   Layer.orDie
 )
 
@@ -39,6 +47,21 @@ layer(ServerUnderTest)("server-node e2e (HTTP + SQLite)", (it) => {
       expect(emergency.map((c) => c.phone)).toEqual(["999", "997"])
       const check = yield* client.agencies.check({ query: { q: "selam overseas" } })
       expect(check.verdict).toBe("licensed")
+    })
+  )
+
+  it.effect("answers via the assistant with FTS5 retrieval over SQLite", () =>
+    Effect.gen(function* () {
+      const client = yield* HttpApiClient.make(Api)
+      const response = yield* client.assistant.ask({
+        payload: {
+          deviceId: "6f1c1d2e-8a3b-4c5d-9e6f-7a8b9c0d1e2f" as never,
+          locale: "am",
+          country: "SA",
+          question: "ደሞዝዎን አልተከፈለኝም"
+        }
+      })
+      expect(response.citations.map((c) => c.contentId)).toContain("abroad-unpaid-wages")
     })
   )
 })

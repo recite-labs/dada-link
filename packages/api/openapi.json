@@ -260,10 +260,615 @@
           }
         }
       }
+    },
+    "/assistant/ask": {
+      "post": {
+        "tags": [
+          "Assistant"
+        ],
+        "operationId": "assistant.ask",
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "AskResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AskResponseEncoded"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RateLimited",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateLimitedEncoded"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "UpstreamUnavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpstreamUnavailableEncoded"
+                }
+              }
+            }
+          }
+        },
+        "description": "Answers only from reviewed content, with citations, in the requested locale. When danger is detected the answer starts with SOS and local emergency numbers. Nothing is stored.",
+        "summary": "Ask Dada",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AskRequest"
+              }
+            }
+          },
+          "required": true
+        }
+      }
+    },
+    "/assistant/ask/stream": {
+      "post": {
+        "tags": [
+          "Assistant"
+        ],
+        "operationId": "assistant.askStream",
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/event-stream": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "event": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/AssistantStreamEventEncoded"
+                    }
+                  },
+                  "required": [
+                    "event",
+                    "data"
+                  ],
+                  "additionalProperties": false
+                },
+                "x-effect-stream": {
+                  "encoding": "sse",
+                  "causeSchema": {
+                    "type": "array",
+                    "items": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "_tag": {
+                              "type": "string",
+                              "enum": [
+                                "Fail"
+                              ]
+                            },
+                            "error": {
+                              "type": "object",
+                              "properties": {
+                                "_tag": {
+                                  "type": "string",
+                                  "enum": [
+                                    "UpstreamUnavailable"
+                                  ]
+                                },
+                                "service": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "_tag",
+                                "service"
+                              ],
+                              "additionalProperties": false
+                            }
+                          },
+                          "required": [
+                            "_tag",
+                            "error"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "_tag": {
+                              "type": "string",
+                              "enum": [
+                                "Die"
+                              ]
+                            },
+                            "defect": {}
+                          },
+                          "required": [
+                            "_tag",
+                            "defect"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "_tag": {
+                              "type": "string",
+                              "enum": [
+                                "Interrupt"
+                              ]
+                            },
+                            "fiberId": {
+                              "anyOf": [
+                                {
+                                  "type": "number"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "_tag",
+                            "fiberId"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "errorSchema": {
+                    "$ref": "#/components/schemas/UpstreamUnavailableEncoded"
+                  },
+                  "failureEvent": "effect/http-api/stream/failure"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RateLimited",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateLimitedEncoded"
+                }
+              }
+            }
+          }
+        },
+        "description": "Emits Emergency (optional), Citations, Delta* and Done events.",
+        "summary": "Ask Dada (server-sent events)",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AskRequest"
+              }
+            }
+          },
+          "required": true
+        }
+      }
+    },
+    "/assistant/feedback": {
+      "post": {
+        "tags": [
+          "Assistant"
+        ],
+        "operationId": "assistant.feedback",
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "204": {
+            "description": "<No Content>"
+          }
+        },
+        "description": "Helpful yes/no and cited content ids only.",
+        "summary": "Opt-in feedback",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssistantFeedback"
+              }
+            }
+          },
+          "required": true
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "AssistantFeedback": {
+        "type": "object",
+        "properties": {
+          "helpful": {
+            "type": "boolean"
+          },
+          "locale": {
+            "$ref": "#/components/schemas/Locale"
+          },
+          "contentIds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContentId"
+            },
+            "maxItems": 20
+          }
+        },
+        "required": [
+          "helpful",
+          "locale",
+          "contentIds"
+        ],
+        "additionalProperties": false
+      },
+      "ContentId": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "Locale": {
+        "type": "string",
+        "enum": [
+          "am",
+          "om",
+          "en",
+          "sw",
+          "ti"
+        ],
+        "description": "BCP-47 primary language subtag supported by DadaLink"
+      },
+      "RateLimitedEncoded": {
+        "type": "object",
+        "properties": {
+          "_tag": {
+            "type": "string",
+            "enum": [
+              "RateLimited"
+            ]
+          },
+          "scope": {
+            "type": "string"
+          },
+          "retryAfterSeconds": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "_tag",
+          "scope",
+          "retryAfterSeconds"
+        ],
+        "additionalProperties": false
+      },
+      "UpstreamUnavailableEncoded": {
+        "type": "object",
+        "properties": {
+          "_tag": {
+            "type": "string",
+            "enum": [
+              "UpstreamUnavailable"
+            ]
+          },
+          "service": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag",
+          "service"
+        ],
+        "additionalProperties": false
+      },
+      "AssistantStreamEventEncoded": {
+        "type": "string",
+        "contentMediaType": "application/json",
+        "contentSchema": {
+          "$ref": "#/components/schemas/AssistantStreamEvent"
+        }
+      },
+      "AssistantStreamEvent": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "_tag": {
+                "type": "string",
+                "enum": [
+                  "Emergency"
+                ]
+              },
+              "notice": {
+                "$ref": "#/components/schemas/EmergencyNoticeEncoded"
+              }
+            },
+            "required": [
+              "_tag",
+              "notice"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_tag": {
+                "type": "string",
+                "enum": [
+                  "Citations"
+                ]
+              },
+              "citations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CitationEncoded"
+                }
+              },
+              "grounded": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "_tag",
+              "citations",
+              "grounded"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_tag": {
+                "type": "string",
+                "enum": [
+                  "Delta"
+                ]
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "_tag",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_tag": {
+                "type": "string",
+                "enum": [
+                  "Done"
+                ]
+              }
+            },
+            "required": [
+              "_tag"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "CitationEncoded": {
+        "type": "object",
+        "properties": {
+          "contentId": {
+            "$ref": "#/components/schemas/ContentId"
+          },
+          "title": {
+            "type": "string"
+          },
+          "locale": {
+            "$ref": "#/components/schemas/Locale"
+          }
+        },
+        "required": [
+          "contentId",
+          "title",
+          "locale"
+        ],
+        "additionalProperties": false
+      },
+      "EmergencyNoticeEncoded": {
+        "type": "object",
+        "properties": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmergencyCategory"
+            }
+          },
+          "message": {
+            "type": "string"
+          },
+          "contacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmergencyContactEncoded"
+            }
+          }
+        },
+        "required": [
+          "categories",
+          "message",
+          "contacts"
+        ],
+        "additionalProperties": false
+      },
+      "EmergencyContactEncoded": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/DirectoryKind"
+          },
+          "phone": {
+            "$ref": "#/components/schemas/PhoneNumber"
+          }
+        },
+        "required": [
+          "name",
+          "kind",
+          "phone"
+        ],
+        "additionalProperties": false
+      },
+      "PhoneNumber": {
+        "type": "string"
+      },
+      "DirectoryKind": {
+        "type": "string",
+        "enum": [
+          "emergency",
+          "police",
+          "ambulance",
+          "fire",
+          "embassy",
+          "consulate",
+          "labour-ministry",
+          "labour-hotline",
+          "iom",
+          "un-agency",
+          "shelter",
+          "ngo",
+          "health",
+          "mental-health",
+          "legal-aid",
+          "returnee-service",
+          "other"
+        ]
+      },
+      "EmergencyCategory": {
+        "type": "string",
+        "enum": [
+          "violence",
+          "threat-to-life",
+          "suicidal",
+          "medical"
+        ]
+      },
+      "AskRequest": {
+        "type": "object",
+        "properties": {
+          "deviceId": {
+            "$ref": "#/components/schemas/DeviceId"
+          },
+          "locale": {
+            "$ref": "#/components/schemas/Locale"
+          },
+          "country": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "phase": {
+            "$ref": "#/components/schemas/JourneyPhase"
+          },
+          "question": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "deviceId",
+          "locale",
+          "question"
+        ],
+        "additionalProperties": false
+      },
+      "JourneyPhase": {
+        "type": "string",
+        "enum": [
+          "before",
+          "abroad",
+          "return"
+        ],
+        "description": "Stage of the migration journey: before leaving, while abroad, after returning"
+      },
+      "Country": {
+        "type": "string",
+        "enum": [
+          "SA",
+          "AE",
+          "KW",
+          "QA",
+          "LB",
+          "JO",
+          "ET"
+        ],
+        "description": "ISO 3166-1 alpha-2 code of a country covered by DadaLink"
+      },
+      "DeviceId": {
+        "type": "string",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|[fF]{8}-[fF]{4}-[fF]{4}-[fF]{4}-[fF]{12})$",
+        "format": "uuid",
+        "description": "Client-generated random UUID used only for rate limiting"
+      },
+      "AskResponseEncoded": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "$ref": "#/components/schemas/Locale"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "citations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CitationEncoded"
+            }
+          },
+          "emergency": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EmergencyNoticeEncoded"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "grounded": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "locale",
+          "answer",
+          "citations",
+          "emergency",
+          "grounded"
+        ],
+        "additionalProperties": false
+      },
       "ValidationFailedEncoded": {
         "type": "object",
         "properties": {
@@ -359,9 +964,6 @@
       "HttpUrl": {
         "type": "string"
       },
-      "PhoneNumber": {
-        "type": "string"
-      },
       "AgencyStatus": {
         "type": "string",
         "enum": [
@@ -384,72 +986,6 @@
           "unknown",
           "not-found"
         ]
-      },
-      "EmergencyContactEncoded": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "kind": {
-            "$ref": "#/components/schemas/DirectoryKind"
-          },
-          "phone": {
-            "$ref": "#/components/schemas/PhoneNumber"
-          }
-        },
-        "required": [
-          "name",
-          "kind",
-          "phone"
-        ],
-        "additionalProperties": false
-      },
-      "DirectoryKind": {
-        "type": "string",
-        "enum": [
-          "emergency",
-          "police",
-          "ambulance",
-          "fire",
-          "embassy",
-          "consulate",
-          "labour-ministry",
-          "labour-hotline",
-          "iom",
-          "un-agency",
-          "shelter",
-          "ngo",
-          "health",
-          "mental-health",
-          "legal-aid",
-          "returnee-service",
-          "other"
-        ]
-      },
-      "Locale": {
-        "type": "string",
-        "enum": [
-          "am",
-          "om",
-          "en",
-          "sw",
-          "ti"
-        ],
-        "description": "BCP-47 primary language subtag supported by DadaLink"
-      },
-      "Country": {
-        "type": "string",
-        "enum": [
-          "SA",
-          "AE",
-          "KW",
-          "QA",
-          "LB",
-          "JO",
-          "ET"
-        ],
-        "description": "ISO 3166-1 alpha-2 code of a country covered by DadaLink"
       },
       "DirectoryEntryEncoded": {
         "type": "object",
@@ -687,15 +1223,6 @@
           "return"
         ]
       },
-      "JourneyPhase": {
-        "type": "string",
-        "enum": [
-          "before",
-          "abroad",
-          "return"
-        ],
-        "description": "Stage of the migration journey: before leaving, while abroad, after returning"
-      },
       "ContentKind": {
         "type": "string",
         "enum": [
@@ -703,10 +1230,6 @@
           "rights",
           "faq"
         ]
-      },
-      "ContentId": {
-        "type": "string",
-        "maxLength": 120
       },
       "ContentSummaryEncoded": {
         "type": "object",
@@ -810,6 +1333,9 @@
     {
       "name": "Agencies",
       "description": "Check a recruitment agency against the published licensed-agency list"
+    },
+    {
+      "name": "Assistant"
     }
   ]
 }

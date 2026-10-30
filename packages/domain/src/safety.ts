@@ -4,11 +4,12 @@ import { Country } from "./country.ts"
 import { DeviceId, TelegramChatId } from "./ids.ts"
 import { Locale } from "./locale.ts"
 
-export class GeoLocation extends Schema.Class<GeoLocation>("GeoLocation")({
+export const GeoLocation = Schema.Struct({
   latitude: Schema.Finite.check(Schema.isBetween({ minimum: -90, maximum: 90 })),
   longitude: Schema.Finite.check(Schema.isBetween({ minimum: -180, maximum: 180 })),
   accuracyMeters: Schema.optionalKey(Schema.Finite.check(Schema.isGreaterThanOrEqualTo(0)))
-}) {}
+}).annotate({ identifier: "GeoLocation" })
+export type GeoLocation = typeof GeoLocation.Type
 
 const hasChannel = Schema.makeFilter<{ readonly phone?: string; readonly telegramChatId?: number }>(
   (contact) =>
@@ -27,14 +28,16 @@ export type TrustedContact = typeof TrustedContact.Type
 
 export const MAX_SOS_MESSAGE_LENGTH = 500
 
-export class SosRequest extends Schema.Class<SosRequest>("SosRequest")({
+/** Plain struct: sent by clients as JSON. */
+export const SosRequest = Schema.Struct({
   deviceId: DeviceId,
   locale: Locale,
   country: Schema.optionalKey(Country),
   trustedContact: TrustedContact,
   message: Schema.optionalKey(Text(MAX_SOS_MESSAGE_LENGTH)),
   location: Schema.optionalKey(GeoLocation)
-}) {}
+}).annotate({ identifier: "SosRequest" })
+export type SosRequest = typeof SosRequest.Type
 
 export const SosChannel = Schema.Literals(["sms", "telegram"]).annotate({ identifier: "SosChannel" })
 export type SosChannel = typeof SosChannel.Type

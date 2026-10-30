@@ -8,13 +8,15 @@ import { Locale } from "./locale.ts"
 
 export const MAX_QUESTION_LENGTH = 2000
 
-export class AskRequest extends Schema.Class<AskRequest>("AskRequest")({
+/** Request payloads are plain structs: clients send JSON objects, not class instances. */
+export const AskRequest = Schema.Struct({
   deviceId: DeviceId,
   locale: Locale,
   country: Schema.optionalKey(Country),
   phase: Schema.optionalKey(JourneyPhase),
   question: Text(MAX_QUESTION_LENGTH)
-}) {}
+}).annotate({ identifier: "AskRequest" })
+export type AskRequest = typeof AskRequest.Type
 
 export class Citation extends Schema.Class<Citation>("Citation")({
   contentId: ContentId,
@@ -58,8 +60,9 @@ export const AssistantStreamEvent = Schema.Union([
 export type AssistantStreamEvent = typeof AssistantStreamEvent.Type
 
 /** Opt-in, content-free feedback: no question or answer text is stored. */
-export class AssistantFeedback extends Schema.Class<AssistantFeedback>("AssistantFeedback")({
+export const AssistantFeedback = Schema.Struct({
   helpful: Schema.Boolean,
   locale: Locale,
   contentIds: Schema.Array(ContentId).check(Schema.isMaxLength(20))
-}) {}
+}).annotate({ identifier: "AssistantFeedback" })
+export type AssistantFeedback = typeof AssistantFeedback.Type
