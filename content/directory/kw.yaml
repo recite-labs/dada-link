@@ -1,0 +1,251 @@
+country: KW
+updated: 2026-10-31
+entries:
+  - id: kw-emergency
+    country: KW
+    kind: emergency
+    name:
+      en: Emergency (police, ambulance, fire)
+      am: አስቸኳይ ጊዜ (ፖሊስ፣ አምቡላንስ፣ እሳት)
+      om: Ariifachiisaa (poolisii, ambulaansii, ibidda)
+    name_status: draft-ai
+    helps_with: [emergency, abuse, sexual-violence, trafficking, health, fire]
+    phone: null
+    short_code: "112"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://www.moi.gov.kw
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: "One number for police, ambulance and fire. Call 112 if you are in danger or badly hurt."
+    source_url: https://kuwaithr.org/setup/media_files/news_backPeak/f8YKn2E_2024-09-11.pdf
+    sources: []
+    verified: false
+    todo: "Source is the Kuwait Society for Human Rights guide (2nd ed. 2022), which lists it under Ministry of Interior. Confirm on moi.gov.kw and check operator languages."
+
+  - id: kw-embassy-ethiopia
+    country: KW
+    kind: embassy
+    name:
+      en: Embassy of Ethiopia in Kuwait
+      am: በኩዌት የኢትዮጵያ ኤምባሲ
+      om: Embaasii Itoophiyaa Kuweet
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation, abuse, wages, legal, detention, shelter]
+    phone: "+96525348198"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: ethiokuwait@yahoo.com
+    website: null
+    hours: null
+    languages: [am, ar]
+    city: Kuwait City
+    address: null
+    notes: "The embassy can help with passports, travel documents, complaints and going home."
+    source_url: https://kuwaithr.org/setup/media_files/news_backPeak/f8YKn2E_2024-09-11.pdf
+    sources:
+      - url: https://embassies.net/ethiopia-in-kuwait
+        title: Ethiopia in Kuwait
+        accessed: 2026-10-31
+        publisher: embassies.net (unofficial directory)
+      - url: https://www.arabtimesonline.com/news/ethiopian-embassy-provides-consular-services/
+        title: Ethiopian Embassy provides consular services
+        accessed: 2026-10-31
+        publisher: Arab Times
+    verified: false
+    todo: "Address conflict: KSHR guide and embassies.net give Jabriya, Block 10, Street 107; Arab Times (July 2022) says the embassy moved to Fintas, Block 4, Street 16, Building 12. The phone numbers (+96525348198, +96525330128, +96525334291) may belong to the old Jabriya building. Confirm current address, phones and any labour/welfare hotline with the embassy or mfa.gov.et (unreachable during research)."
+
+  - id: kw-pam-domestic-labour
+    country: KW
+    kind: labour-hotline
+    name:
+      en: Public Authority for Manpower (PAM) - Domestic Labour Department
+      am: የሰው ኃይል የሕዝብ ባለሥልጣን (PAM) - የቤት ሠራተኞች መምሪያ
+      om: Abbaa Taayitaa Ummataa Humna Namaa (PAM) - Kutaa Hojjettoota Manaa
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, passport, abuse, shelter, repatriation]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://www.manpower.gov.kw
+    hours: null
+    languages: [ar, en]
+    city: Kuwait City
+    address: null
+    notes: "This is where domestic workers file complaints about pay, passports, abuse or wanting to leave. You can go in person or ask your embassy to file for you. Once your complaint is registered, your employer cannot file an absconding report against you."
+    source_url: https://kuwaithr.org/setup/media_files/news_backPeak/f8YKn2E_2024-09-11.pdf
+    sources:
+      - url: https://www.manpower.gov.kw
+        title: Public Authority for Manpower home page (Arabic)
+        accessed: 2026-10-31
+        publisher: Public Authority for Manpower
+    verified: false
+    todo: "No official PAM phone found. Press reports differ: Kuwait Moments (Dec 2024) cites a PAM hotline 24937600; Arab Times (Mar 2025) cites hotline 103. The KSHR guide lists old Ministry of Interior Domestic Labour numbers (25582226, 25582219, 25582224, 25582207, Al-Dajeej) from before the department moved to PAM. Confirm a current number and address with PAM."
+
+  - id: kw-pam-shelter
+    country: KW
+    kind: shelter
+    name:
+      en: Government shelter for women migrant workers (PAM)
+      am: ለሴት ስደተኛ ሠራተኞች የመንግሥት መጠለያ (PAM)
+      om: Iddoo baqannaa mootummaa hojjettoota godaantota dubartootaa (PAM)
+    name_status: draft-ai
+    helps_with: [shelter, abuse, trafficking, repatriation, health, legal]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://www.manpower.gov.kw
+    hours: "24/7"
+    languages: []
+    city: Jleeb Al-Shuyoukh
+    address: null
+    notes: "For women only. It gives food, medical care and help with your case or going home. Your embassy or PAM can refer you, or you can go yourself."
+    source_url: https://www.ecoi.net/en/document/2130646.html
+    sources:
+      - url: https://www.mrrors.org/2025/03/kuwait-opens-its-first-shelter-for-male-migrant/
+        title: Kuwait Opens Its First Shelter for Male Migrants
+        accessed: 2026-10-31
+        publisher: Migrant-Rights.org (MRRORS)
+    verified: false
+    todo: "No public phone found. US TIP 2025 says PAM runs a hotline at the women's shelter but gives no number. Migrant-Rights (Mar 2025) says PAM was studying moving the women's shelter from Jleeb Al-Shuyoukh to Hawalli; confirm current location. Older reports say pregnant women were refused; confirm current policy."
+
+  - id: kw-moi-anti-trafficking
+    country: KW
+    kind: helpline
+    name:
+      en: Ministry of Interior anti-trafficking hotline
+      am: የአገር ውስጥ ሚኒስቴር የሰዎች ንግድ መከላከያ የስልክ መስመር
+      om: Sarara bilbilaa daldala namaa ittisuu Ministeera Dhimma Keessaa
+    name_status: draft-ai
+    helps_with: [trafficking, abuse, sexual-violence]
+    phone: null
+    short_code: "1888688"
+    whatsapp: null
+    telegram: null
+    email: ath@moi.gov.kw
+    website: null
+    hours: null
+    languages: []
+    city: Salmiya
+    address: "Public Morals Protection and Anti-human Trafficking Department, Jawazat Roundabout, Salmiya"
+    notes: null
+    source_url: https://kuwaithr.org/setup/media_files/news_backPeak/f8YKn2E_2024-09-11.pdf
+    sources:
+      - url: https://www.ecoi.net/en/document/2130646.html
+        title: "2025 Trafficking in Persons Report: Kuwait"
+        accessed: 2026-10-31
+        publisher: US Department of State (via ecoi.net)
+    verified: false
+    todo: "Number from the KSHR guide (2022). US TIP 2025 confirms MOI runs a trafficking hotline but gives no number. Confirm number, hours and languages."
+
+  - id: kw-kshr
+    country: KW
+    kind: ngo
+    name:
+      en: Kuwait Society for Human Rights (KSHR) hotline
+      am: የኩዌት የሰብአዊ መብቶች ማኅበር የስልክ መስመር
+      om: Sarara bilbilaa Waldaa Mirgoota Namoomaa Kuweet
+    name_status: draft-ai
+    helps_with: [legal, labour-complaint, wages, abuse, trafficking]
+    phone: "+96522215150"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: info@kuwaithr.org
+    website: https://www.kuwaithr.org
+    hours: null
+    languages: [ar, en]
+    city: Hawalli
+    address: "Hawalli, Block 10, Fourth Ring Road, Union of Consumer Cooperative Societies Building, 2nd floor"
+    notes: "A rights group that gives free advice. Its guide for domestic workers was published in Amharic too."
+    source_url: https://kuwaithr.org/setup/media_files/news_backPeak/f8YKn2E_2024-09-11.pdf
+    sources: []
+    verified: false
+    todo: "Guide lists office 22215153 and hotline 22215150; back cover lists +965 22215152/3/4. Confirm which number answers workers, hours and languages."
+
+  - id: kw-social-work-society
+    country: KW
+    kind: ngo
+    name:
+      en: Social Work Society of Kuwait
+      am: የኩዌት ማኅበራዊ ሥራ ማኅበር
+      om: Waldaa Hojii Hawaasummaa Kuweet
+    name_status: draft-ai
+    helps_with: [legal, abuse, shelter]
+    phone: "+96522022082"
+    short_code: null
+    whatsapp: "+96551357557"
+    telegram: null
+    email: info@sws.org.kw
+    website: null
+    hours: null
+    languages: []
+    city: Kuwait City
+    address: "Office No. 2, 5th Floor, Al-Madina Tower, Khalid Bin Waleed Street, Block 5, Sharq"
+    notes: null
+    source_url: https://kuwaithr.org/setup/media_files/news_backPeak/f8YKn2E_2024-09-11.pdf
+    sources: []
+    verified: false
+    todo: "Listed as a supporter in the KSHR guide (2022). Confirm it still assists domestic workers and that the WhatsApp number is current."
+
+  - id: kw-ktuf
+    country: KW
+    kind: ngo
+    name:
+      en: Kuwait Trade Union Federation
+      am: የኩዌት የሠራተኛ ማኅበራት ፌዴሬሽን
+      om: Federeeshinii Waldaalee Hojjettootaa Kuweet
+    name_status: draft-ai
+    helps_with: [labour-complaint, legal, wages]
+    phone: "+96525636389"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: http://www.ktuf.org
+    hours: null
+    languages: []
+    city: Salmiya
+    address: "Block 11 (Maidan Hawalli), Abdulla Al Faraj Street, Salmiya"
+    notes: null
+    source_url: https://kuwaithr.org/setup/media_files/news_backPeak/f8YKn2E_2024-09-11.pdf
+    sources: []
+    verified: false
+    todo: "Second number listed: +96525616745. Confirm KTUF (or its migrant worker office) helps domestic workers."
+
+  - id: kw-iom
+    country: KW
+    kind: iom
+    name:
+      en: IOM Kuwait (UN Migration)
+      am: አይኦኤም ኩዌት (የተ.መ.ድ. የስደት ድርጅት)
+      om: IOM Kuweet (Dhaabbata Godaansaa UN)
+    name_status: draft-ai
+    helps_with: [repatriation, trafficking, returnee-support]
+    phone: "+96525308000"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: iomkuwait@iom.int
+    website: https://kuwait.iom.int
+    hours: null
+    languages: [ar, en]
+    city: Mishref
+    address: "UN House, Block 7A, Mishref"
+    notes: null
+    source_url: https://kuwait.iom.int
+    sources:
+      - url: https://kuwait.un.org/en/contact-us
+        title: Contact Us
+        accessed: 2026-10-31
+        publisher: United Nations in Kuwait
+    verified: false
+    todo: "+96525308000 is the shared UN House line. Confirm whether IOM takes direct requests from workers."

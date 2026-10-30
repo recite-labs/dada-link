@@ -1,0 +1,380 @@
+country: ET
+updated: 2026-10-31
+entries:
+  - id: et-police
+    country: ET
+    kind: police
+    name:
+      en: Police emergency line
+      am: የፖሊስ የአደጋ ጊዜ መስመር
+      om: Lakkoofsa ariifachiisaa poolisii
+    name_status: draft-ai
+    helps_with: [emergency, abuse, sexual-violence, trafficking]
+    phone: null
+    short_code: "991"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: [am]
+    city: null
+    address: null
+    notes: Call 991 if you are in danger now. Press 1 for the Federal Police if you are outside Addis Ababa, or press 2 for Addis Ababa police.
+    source_url: https://www.gov.uk/government/publications/ethiopia-information-for-survivors-of-rape-and-sexual-assault/ethiopia-information-for-survivors-of-rape-and-sexual-assault
+    sources:
+      - url: https://travel.gc.ca/destinations/ethiopia
+        title: Travel advice and advisories for Ethiopia
+        publisher: Government of Canada
+        accessed: 2026-10-31
+        note: "Says: In case of emergency, dial 991."
+      - url: https://workersrights.org/?p=6492
+        title: Resources and Referrals
+        publisher: Worker Rights Consortium
+        accessed: 2026-10-31
+        note: Lists 991 as a toll-free number in Addis Ababa for reporting gender-based violence and harassment.
+      - url: https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers
+        title: List of emergency telephone numbers
+        publisher: Wikipedia
+        accessed: 2026-10-31
+        note: Lists Police 991, Ambulance 907, Fire 939, Traffic police 945, and also shows 911 in the Ethiopia row.
+      - url: https://www.gov.uk/foreign-travel-advice/ethiopia/getting-help
+        title: Ethiopia travel advice - Getting help
+        publisher: UK Foreign, Commonwealth and Development Office
+        accessed: 2026-10-31
+        note: "Conflicting: lists Police and emergency: 911."
+    verified: false
+    todo: "Conflict: UK travel advice (getting-help page) lists 911 for police and emergency, while the UK survivors guide (updated 16 Dec 2025) and Canada list 991. Call both from an Ethiopian SIM to confirm which works, and which languages (Amharic, Afaan Oromo) are offered. Press-1/press-2 menu taken from the UK survivors guide."
+  - id: et-ambulance
+    country: ET
+    kind: ambulance
+    name:
+      en: Ambulance (Addis Ababa)
+      am: አምቡላንስ (አዲስ አበባ)
+      om: Ambulaansii (Finfinnee)
+    name_status: draft-ai
+    helps_with: [emergency, health]
+    phone: null
+    short_code: "907"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: [am]
+    city: Addis Ababa
+    address: null
+    notes: Ambulance number for Addis Ababa. Outside Addis Ababa, call 991 and ask for help.
+    source_url: https://www.gov.uk/foreign-travel-advice/ethiopia/getting-help
+    sources:
+      - url: https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers
+        title: List of emergency telephone numbers
+        publisher: Wikipedia
+        accessed: 2026-10-31
+        note: Lists Ambulance 907.
+    verified: false
+    todo: UK advice limits 907 to Addis Ababa. Confirm who runs 907 (some unofficial sites say Ethiopian Red Cross), hours, whether it is free, and the number to use in other regions.
+  - id: et-fire
+    country: ET
+    kind: emergency
+    name:
+      en: Fire and rescue
+      am: የእሳት አደጋ እና ድንገተኛ አደጋ መከላከል
+      om: Ibiddaa fi baraarsa
+    name_status: draft-ai
+    helps_with: [fire, emergency]
+    phone: null
+    short_code: "939"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: [am]
+    city: null
+    address: null
+    notes: For a fire. If it does not connect, call 991.
+    source_url: https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers
+    sources: []
+    verified: false
+    todo: The only source seen for 939 is Wikipedia. Confirm with the Addis Ababa Fire and Disaster Risk Management Commission or another official source. UK and Canada pages did not list a fire number.
+  - id: et-mols
+    country: ET
+    kind: labour-hotline
+    name:
+      en: Ministry of Labour and Skills (MoLS), overseas employment
+      am: የሥራና ክህሎት ሚኒስቴር (የውጭ ሀገር ሥራ ስምሪት)
+      om: Ministeera Hojii fi Ogummaa (hojii biyya alaa)
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, documents, passport, repatriation, returnee-support, legal]
+    phone: "+251116671792"
+    short_code: null
+    whatsapp: null
+    telegram: https://t.me/FDRE_MoLSofficial
+    email: info@mols.gov.et
+    website: https://mols.gov.et
+    hours: null
+    languages: [am, en]
+    city: Addis Ababa
+    address: Behind Lambert Ethiopian Technical and Vocational Institute, P.O. Box 25534, Addis Ababa
+    notes: You, a family member or your lawyer can complain here about an agency, spoken or in writing. The Ministry should decide within 15 working days. You can also ask for help with your agency or employer while you are still abroad. Regional labour bureaus also take complaints.
+    source_url: https://mols.gov.et/contact-us/
+    sources:
+      - url: https://www.metaappz.com/pdf/ethiopian_laws/federal/2025/pr_1389_2025.pdf
+        title: Ethiopia's Overseas Employment Proclamation No. 1389/2025 (Federal Negarit Gazette No. 59, 8 August 2025)
+        publisher: Federal Negarit Gazette (copy hosted by MetaAppz)
+        accessed: 2026-10-31
+        note: Articles 53 to 55 (complaints against agencies, 15 working days), 61 (complaints against employers), 72 (requests for support).
+      - url: https://ethiopia.un.org/en/node/303085
+        title: Ethiopia Launches LeMengede Mobile App to Empower and Protect Migrant Workers
+        publisher: United Nations in Ethiopia
+        accessed: 2026-10-31
+        note: MoLS and ILO app (launched 21 August 2025) with information, complaint-handling information and an SOS feature.
+    verified: false
+    todo: "No MoLS toll-free overseas-employment complaint hotline was found on any page fetched. Check whether one exists. Confirm the main line +251116671792 reaches the overseas employment directorate. Find contacts for regional labour bureaus (the 'appropriate authority' in the law). Find the official download link for the LeMengede app (ለመንገዴ) and whether its complaint and SOS features work from abroad."
+  - id: et-anti-trafficking-hotline
+    country: ET
+    kind: helpline
+    name:
+      en: National anti-trafficking hotline (Ministry of Justice)
+      am: ብሔራዊ የሕገ-ወጥ የሰዎች ዝውውር መከላከያ የስልክ መስመር (የፍትሕ ሚኒስቴር)
+      om: Bilbila biyyaalessaa daldala namootaa ittisuu (Ministeera Haqaa)
+    name_status: draft-ai
+    helps_with: [trafficking, legal, labour-complaint]
+    phone: null
+    short_code: "8797"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: null
+    address: null
+    notes: Free call anywhere in Ethiopia. Ask about safe migration, trafficking, and free legal aid.
+    source_url: https://ethiopia.un.org/en/node/293683
+    sources: []
+    verified: false
+    todo: Confirm 8797 is still active, its hours and languages, and whether it accepts reports of trafficking or only gives information. Page dated 18 April 2025 (Ministry of Justice with IOM).
+  - id: et-ewla-gbv-hotline
+    country: ET
+    kind: helpline
+    name:
+      en: EWLA free hotline for women facing violence (legal aid)
+      am: የኢትዮጵያ ሴት ሕግ ባለሙያዎች ማኅበር (ኢሴሕባማ) ነፃ የስልክ መስመር
+      om: Bilbila tolaa Waldaa Ogeeyyii Seeraa Dubartoota Itoophiyaa (EWLA)
+    name_status: draft-ai
+    helps_with: [abuse, sexual-violence, legal]
+    phone: null
+    short_code: "7711"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: [am, om, ti]
+    city: null
+    address: null
+    notes: Free call. Women lawyers give advice, free legal aid and referrals to safe houses and police.
+    source_url: https://ethiopia.unfpa.org/en/node/57553
+    sources:
+      - url: https://ethiopia.unfpa.org/en/node/136391
+        title: Hotline service helping GBV survivors seek legal aid, protection
+        publisher: UNFPA Ethiopia
+        accessed: 2026-10-31
+        note: 27 February 2023. Toll-free 7711 run by EWLA; advice, referrals to EWLA focal persons, help contacting police.
+      - url: https://workersrights.org/?p=6492
+        title: Resources and Referrals
+        publisher: Worker Rights Consortium
+        accessed: 2026-10-31
+        note: Also lists 7711 for EWLA.
+    verified: false
+    todo: "Confirm 7711 is still active in 2026 and its hours. EWLA office number seen only as +251-11-508783 (Worker Rights Consortium and UK survivors guide); it looks one digit short, so it was not used. Find EWLA's official website and office number. Setaweet's Alegnta line 6388 was left out: Setaweet's own page says it operated 2019 to 2025."
+  - id: et-one-stop-centres
+    country: ET
+    kind: helpline
+    name:
+      en: One Stop Centres for survivors of sexual violence (Addis Ababa hospitals)
+      am: ለጾታዊ ጥቃት ተጎጂዎች የአንድ ማዕከል አገልግሎት (አዲስ አበባ ሆስፒታሎች)
+      om: Giddugala Tajaajila Tokkoo miidhamtoota jeequmsa saalaa (hospitaalota Finfinnee)
+    name_status: draft-ai
+    helps_with: [sexual-violence, abuse, health, legal]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: Addis Ababa
+    address: Gandhi Memorial, St. Paul's, Menelik II, Tirunesh Beijing and Abebech Gobena hospitals
+    notes: Health care, police and legal help in one place after rape or sexual assault. Go as soon as you can.
+    source_url: https://www.gov.uk/government/publications/ethiopia-information-for-survivors-of-rape-and-sexual-assault/ethiopia-information-for-survivors-of-rape-and-sexual-assault
+    sources: []
+    verified: false
+    todo: The UK guide names the five hospitals but gives no phone numbers or hours. Find official contact numbers and check that each centre is open, and whether there are One Stop Centres outside Addis Ababa.
+  - id: et-iom
+    country: ET
+    kind: iom
+    name:
+      en: IOM Ethiopia (International Organization for Migration)
+      am: አይኦኤም ኢትዮጵያ (ዓለም አቀፍ የስደተኞች ድርጅት)
+      om: IOM Itoophiyaa (Dhaabbata Idil-addunyaa Godaansaa)
+    name_status: draft-ai
+    helps_with: [repatriation, returnee-support, trafficking, health, mental-health]
+    phone: "+251111301000"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: iomethiopia@iom.int
+    website: https://ethiopia.iom.int
+    hours: null
+    languages: [am, en]
+    city: Addis Ababa
+    address: YeMez Building (behind Zequala Building), Kirkos Sub City, Wereda 8, P.O. Box 25283, Addis Ababa
+    notes: IOM runs a transit centre near Bole airport for returnees. It offers health checks, counselling, referrals and help with travel to your home area.
+    source_url: https://ethiopia.iom.int/contact-us
+    sources:
+      - url: https://www.migrationjointinitiative.org/news/migrants-transit-centre-acquires-additional-space-wake-covid-19
+        title: Migrants' Transit Centre Acquires Additional Space in the Wake of COVID-19
+        publisher: EU-IOM Joint Initiative
+        accessed: 2026-10-31
+        note: 2021. IOM transit centre near Bole airport; medical screening, psychosocial counselling, referral, onward transport.
+    verified: false
+    todo: "The contact page shows iomethiopia@iom.int but the mailto link points to iomaddis@iom.int; confirm the right address. No direct number for the Bole transit centre or returnee reception was found; check if the centre still runs in 2026 and who to call on arrival."
+  - id: et-agar
+    country: ET
+    kind: shelter
+    name:
+      en: Agar Ethiopia Charitable Society (shelter for trafficking survivors and returnees)
+      am: አጋር ኢትዮጵያ በጎ አድራጎት ማኅበር
+      om: Waldaa Gargaarsaa Agar Itoophiyaa
+    name_status: draft-ai
+    helps_with: [shelter, trafficking, returnee-support, mental-health, abuse]
+    phone: "+251113699990"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: info@agarethiopia.org
+    website: https://agarethiopia.org
+    hours: null
+    languages: [am, om, en]
+    city: Addis Ababa
+    address: P.O. Box 28657/1000, Addis Ababa
+    notes: Safe rehabilitation shelters, counselling, skills training and help to go back to your family. Also has a safe house in Bahir Dar.
+    source_url: https://agarethiopia.org/
+    sources:
+      - url: https://humantraffickinghotline.org/es/node/12255
+        title: Agar Ethiopia Charitable Society
+        publisher: National Human Trafficking Hotline referral directory (Polaris)
+        accessed: 2026-10-31
+        note: Lists +251 11 369 9990 and +251 93 009 8695; languages English, Amharic, Oromo.
+      - url: https://www.elk-wue.de/fileadmin/News/2021/Flyer_Projekt_AEthiopien_Agar_Ethiopia_Charitable_Society_DE.pdf
+        title: Projekt Äthiopien - Agar Ethiopia Charitable Society (flyer, German)
+        publisher: Evangelische Landeskirche in Württemberg
+        accessed: 2026-10-31
+        note: 2021. Lists 00251 11 369 8073 and mobile 00251 930098695; shelter for up to 60 women returnees arriving at Addis Ababa airport.
+    verified: false
+    todo: "Phone conflict: Agar's own site lists +251 113 699 990 and mobile +251 998017856; the Polaris directory lists +251 11 369 9990 and +251 93 009 8695; a 2021 flyer lists +251 11 369 8073 and +251 930098695. Call to confirm the current landline and mobile, the shelter address, intake rules for returnee women, and whether there is a 24-hour number."
+  - id: et-good-samaritan
+    country: ET
+    kind: shelter
+    name:
+      en: Good Samaritan Association (shelter for women survivors of trafficking and violence)
+      am: ደጉ ሳምራዊ ማኅበር
+      om: Waldaa Samaariyaa Gaarii
+    name_status: draft-ai
+    helps_with: [shelter, trafficking, abuse, returnee-support, mental-health]
+    phone: "+251911407919"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: goodsamaritan1996@gmail.com
+    website: https://gsaethiopia.org
+    hours: null
+    languages: [am, en]
+    city: Addis Ababa
+    address: Gulele Sub City, Woreda 01, Addis Ababa
+    notes: Shelter, counselling, skills training and help going back to your community, for women survivors of trafficking and violence and for returnees.
+    source_url: https://gsaethiopia.org/
+    sources:
+      - url: https://humantraffickinghotline.org/es/node/12161
+        title: Good Samaritan Association
+        publisher: National Human Trafficking Hotline referral directory (Polaris)
+        accessed: 2026-10-31
+        note: Lists +251 911 407 419 and +251 111 242 952.
+    verified: false
+    todo: "Phone conflict: the official site shows +251-911 407919 but the Polaris directory shows +251 911 407 419 (one digit differs), plus a landline +251 111 242 952. Call to confirm the right mobile and landline, the shelter location and intake rules."
+  - id: et-awsad
+    country: ET
+    kind: shelter
+    name:
+      en: AWSAD (Association for Women's Sanctuary and Development), safe houses
+      am: አውሳድ (የሴቶች መጠለያና ልማት ማኅበር)
+      om: AWSAD (Waldaa Iddoo Baqannaa fi Misooma Dubartootaa)
+    name_status: draft-ai
+    helps_with: [shelter, abuse, sexual-violence, mental-health]
+    phone: "+251116672290"
+    short_code: "7200"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: Addis Ababa
+    address: null
+    notes: Safe houses for women and girls who have survived violence.
+    source_url: https://workersrights.org/?p=6492
+    sources: []
+    verified: false
+    todo: Only one source (Worker Rights Consortium, undated) gives the AWSAD office number and the 7200 hotline. Confirm both with AWSAD, find its official website, and check whether it accepts returnee women.
+  - id: et-amanuel
+    country: ET
+    kind: helpline
+    name:
+      en: St. Amanuel Mental Specialized Hospital
+      am: ቅዱስ አማኑኤል የአእምሮ ስፔሻላይዝድ ሆስፒታል
+      om: Hospitaala Addaa Fayyaa Sammuu Qulqulluu Amaanu'eel
+    name_status: draft-ai
+    helps_with: [mental-health, health]
+    phone: "+251112757699"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://www.amsh.gov.et/
+    hours: null
+    languages: [am]
+    city: Addis Ababa
+    address: P.O. Box 1971, Addis Ababa
+    notes: Public mental health hospital. You can go if you feel very sad, scared or cannot sleep after coming home.
+    source_url: https://www.moh.gov.et/node/213
+    sources: []
+    verified: false
+    todo: "Number comes from a Ministry of Health page that looks old and also contains injected spam links. Confirm the current number, outpatient hours and emergency service. DirectoryKind has no 'hospital' value, so 'helpline' was used; reviewers may want a new kind."
+  - id: et-mfa-diaspora
+    country: ET
+    kind: returnee-service
+    name:
+      en: Ministry of Foreign Affairs and Ethiopian Diaspora Service
+      am: የውጭ ጉዳይ ሚኒስቴር እና የኢትዮጵያ ዲያስፖራ አገልግሎት
+      om: Ministeera Dhimma Alaa fi Tajaajila Diyaaspooraa Itoophiyaa
+    name_status: draft-ai
+    helps_with: [repatriation, passport, documents, trafficking]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: [am]
+    city: Addis Ababa
+    address: null
+    notes: By law the Ministry of Foreign Affairs must help bring trafficking victims home and work for their release if they are detained abroad. Abroad, contact the Ethiopian embassy or consulate in your country.
+    source_url: https://www.metaappz.com/pdf/ethiopian_laws/federal/2020/pr_1178_2020.pdf
+    sources: []
+    verified: false
+    todo: "No contact details found. mfa.gov.et returned a 404/firewall page and a self-signed certificate during research. Find the official MFA consular or citizens-abroad number, and the current name, website and contacts of the Ethiopian Diaspora Service (sometimes called Diaspora Agency)."

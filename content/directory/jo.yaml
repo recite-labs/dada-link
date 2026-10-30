@@ -1,0 +1,326 @@
+country: JO
+updated: 2026-10-31
+entries:
+  - id: jo-emergency
+    country: JO
+    kind: emergency
+    name:
+      en: Emergency (police, ambulance, fire)
+      am: የአደጋ ጊዜ (ፖሊስ፣ አምቡላንስ፣ እሳት)
+      om: Ariifachiisaa (poolisii, ambulaansii, ibidda)
+    name_status: draft-ai
+    helps_with: [emergency, abuse, sexual-violence, trafficking, health, fire]
+    phone: null
+    short_code: "911"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: [ar]
+    city: null
+    address: null
+    notes: One number for police, ambulance and fire. Free. Call if you are in danger now.
+    source_url: https://jordan.gov.jo/EN/List/Contact_Us_2
+    sources:
+      - url: https://portal.jordan.gov.jo/wps/portal/Home/Connect/ImportantNumbers
+        title: Emergency numbers (Arabic)
+        publisher: Jordan government portal
+        accessed: 2026-10-31
+        note: Lists 911 as the unified emergency service of the Public Security Directorate.
+      - url: https://form.jordan.gov.jo/wps/portal/Home/GovernmentEntities/Ministries/MinistryServiceDetails_en/ministry%20of%20interior/public%20security%20directorate/services/esaaf?lang=en
+        title: Ambulance Service
+        publisher: Jordan government portal (Public Security Directorate)
+        accessed: 2026-10-31
+        note: Ambulance service is requested by calling 911.
+    verified: false
+    todo: Confirm whether 911 offers any language other than Arabic.
+  - id: jo-civil-defence
+    country: JO
+    kind: emergency
+    name:
+      en: Civil Defence (fire and rescue)
+      am: ሲቪል መከላከያ (እሳት እና ማዳን)
+      om: Ittisa Siivilii (ibidda fi baraarsa)
+    name_status: draft-ai
+    helps_with: [fire, emergency]
+    phone: null
+    short_code: "199"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: [ar]
+    city: null
+    address: null
+    notes: You can also call 911 for a fire.
+    source_url: https://jordan.gov.jo/EN/List/Contact_Us_2
+    sources:
+      - url: https://portal.jordan.gov.jo/wps/portal/Home/Connect/ImportantNumbers
+        title: Emergency numbers (Arabic)
+        publisher: Jordan government portal
+        accessed: 2026-10-31
+        note: Lists Civil Defence emergency for the governorates as 199.
+    verified: false
+    todo: The English government page lists Ambulance 193 and Emergency Medical Services 199, while the PSD service pages say ambulance and firefighting are requested on 911. Confirm 199 and 193 are still active; consider listing only 911.
+  - id: jo-family-protection
+    country: JO
+    kind: police
+    name:
+      en: Family Protection and Juvenile Department (police)
+      am: የቤተሰብ እና የታዳጊዎች ጥበቃ ክፍል (ፖሊስ)
+      om: Kutaa Eegumsa Maatii fi Dargaggootaa (poolisii)
+    name_status: draft-ai
+    helps_with: [abuse, sexual-violence]
+    phone: "+96265815826"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: [ar]
+    city: Amman
+    address: null
+    notes: Police unit for violence inside the home and sexual violence.
+    source_url: https://jordan.gov.jo/EN/List/Contact_Us_2
+    sources: []
+    verified: false
+    todo: Confirm that this unit takes cases from migrant domestic workers, its hours, and whether interpreters are available.
+  - id: jo-mol-hotline
+    country: JO
+    kind: labour-hotline
+    name:
+      en: Ministry of Labour hotline
+      am: የሠራተኛ ሚኒስቴር የስልክ መስመር
+      om: Sarara Bilbilaa Ministeera Hojii
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, passport, trafficking, abuse]
+    phone: "+96280022208"
+    short_code: null
+    whatsapp: "+962790955557"
+    telegram: null
+    email: hotline@mol.gov.jo
+    website: null
+    hours: Office hours; answering machine after 3:30pm
+    languages: [ar]
+    city: null
+    address: null
+    notes: Free line inside Jordan is 080022208. From mobiles you can also call Zain 0796580666, Orange 0777580666 or Umniah 0785602666.
+    source_url: https://help.unhcr.org/jordan/en/helpful-services-unhcr/working-in-jordan/
+    sources:
+      - url: https://www.ecoi.net/de/dokument/2130633.html
+        title: 2025 Trafficking in Persons Report - Jordan
+        publisher: US Department of State (via ecoi.net)
+        accessed: 2026-10-31
+        note: Says the Ministry of Labour and the counter-trafficking unit run a hotline for labour violations and trafficking, with interpretation in some languages.
+    verified: false
+    todo: Numbers come from a UNHCR Jordan help page (undated), not mol.gov.jo. The free line is written as E164 +962 800 22208 but may only work from inside Jordan. An ILO source (seen only in search results) says the Hemayeh online platform replaced the hotline for filing individual complaints. Confirm whether the hotline still takes domestic worker complaints and whether Amharic interpretation exists.
+  - id: jo-hemayeh-complaints
+    country: JO
+    kind: labour-hotline
+    name:
+      en: Hemayeh online labour complaints (Ministry of Labour)
+      am: ሔማያ የመስመር ላይ የሥራ ቅሬታ (የሠራተኛ ሚኒስቴር)
+      om: Hemayeh, komii hojii toora interneetaa (Ministeera Hojii)
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, passport, trafficking]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://complaint.hemayeh.jo/
+    hours: "24/7 (online)"
+    languages: [ar, en, am]
+    city: null
+    address: null
+    notes: Official website to send a labour complaint. It has an Ethiopian language option. An embassy or support group can also file for you.
+    source_url: https://complaint.hemayeh.jo/
+    sources:
+      - url: https://2021-2025.state.gov/reports/2024-trafficking-in-persons-report/jordan/
+        title: 2024 Trafficking in Persons Report - Jordan
+        publisher: US Department of State
+        accessed: 2026-10-31
+        note: Says the Ministry of Labour added Bengali and Amharic to the online complaint platform in January 2023.
+    verified: false
+    todo: The site menu shows "Ethiopian"; the 2024 TIP report says Amharic. Confirm Afaan Oromo is not available. Confirm domestic workers can file directly, and that embassies and NGOs can file for them (that claim was seen only in a search summary of an ILO document).
+  - id: jo-dar-karama
+    country: JO
+    kind: shelter
+    name:
+      en: Dar Karama shelter for trafficking survivors (Ministry of Social Development)
+      am: ዳር ከራማ የሰው ንግድ ተጎጂዎች መጠለያ (የማኅበራዊ ልማት ሚኒስቴር)
+      om: Dar Karama, iddoo daboo miidhamtoota daldala namaa (Ministeera Misooma Hawaasummaa)
+    name_status: draft-ai
+    helps_with: [shelter, trafficking, legal, health, mental-health, repatriation]
+    phone: "+96264704778"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: http://darkarama.gov.jo/
+    hours: Office Sunday to Thursday, 8:30am to 3:30pm
+    languages: [ar]
+    city: Amman
+    address: null
+    notes: Government shelter for women, men and children who were trafficked. Gives a safe place, health care, counselling and legal help. You can leave freely.
+    source_url: http://darkarama.gov.jo/
+    sources:
+      - url: https://2021-2025.state.gov/reports/2024-trafficking-in-persons-report/jordan/
+        title: 2024 Trafficking in Persons Report - Jordan
+        publisher: US Department of State
+        accessed: 2026-10-31
+        note: Describes services, capacity of 35, and that services do not depend on cooperating with police.
+    verified: false
+    todo: Phone and hours are for the office. Confirm how a worker is referred (self-referral is allowed under 2023 bylaws per the TIP report), and whether there is a 24/7 number.
+  - id: jo-tamkeen
+    country: JO
+    kind: ngo
+    name:
+      en: Tamkeen for Legal Aid and Human Rights
+      am: ታምኪን የሕግ ድጋፍ እና የሰብዓዊ መብቶች ድርጅት
+      om: Tamkeen, gargaarsa seeraa fi mirga namoomaa
+    name_status: draft-ai
+    helps_with: [legal, wages, labour-complaint, trafficking, passport, detention]
+    phone: "+96265539501"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: info@tamkeen-jo.org
+    website: https://tamkeen-jo.org/en/about-us
+    hours: null
+    languages: [ar, en]
+    city: Amman
+    address: Madinah Street, Building No. 197, 3rd Floor, Office 306-307
+    notes: Jordanian group that gives free legal help to migrant workers and trafficking survivors.
+    source_url: https://tamkeen-jo.org/en/about-us
+    sources: []
+    verified: false
+    todo: Tamkeen's Arabic home page also lists mobiles +962 79 6404406, +962 78 8510027 and +962 77 5222070. Confirm which line workers should call, hours, and language support. Older directories call it Tamkeen Fields for Aid; confirm same organisation.
+  - id: jo-ardd-legal-aid
+    country: JO
+    kind: ngo
+    name:
+      en: ARDD Legal Aid
+      am: ኤአርዲዲ የሕግ ድጋፍ
+      om: ARDD gargaarsa seeraa
+    name_status: draft-ai
+    helps_with: [legal, labour-complaint]
+    phone: "+96264617477"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: Sunday to Thursday, 9am to 6pm
+    languages: [ar]
+    city: Amman
+    address: null
+    notes: Legal advice and mediation.
+    source_url: https://help.unhcr.org/jordan/en/helpful-services-unhcr/working-in-jordan/
+    sources: []
+    verified: false
+    todo: Listed by UNHCR mainly for refugees. Confirm that ARDD helps migrant domestic workers before launch; remove if not.
+  - id: jo-iom
+    country: JO
+    kind: iom
+    name:
+      en: IOM Jordan (UN Migration)
+      am: አይኦኤም ዮርዳኖስ (የተባበሩት መንግሥታት የስደት ድርጅት)
+      om: IOM Jordaan (Dhaabbata Godaansaa UN)
+    name_status: draft-ai
+    helps_with: [repatriation, trafficking]
+    phone: "+962793625080"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: iomamman@iom.int
+    website: https://jordan.iom.int/contact-us
+    hours: null
+    languages: [ar, en]
+    city: Amman
+    address: Al Sharif Abdul Hamid Sharaf St., Buildings 62 and 64, Shmeisani
+    notes: UN agency that can help some migrants return home.
+    source_url: https://jordan.iom.int/contact-us
+    sources:
+      - url: https://2021-2025.state.gov/reports/2024-trafficking-in-persons-report/jordan/
+        title: 2024 Trafficking in Persons Report - Jordan
+        publisher: US Department of State
+        accessed: 2026-10-31
+        note: Says the government relies at times on international organizations for repatriation help.
+    verified: false
+    todo: Confirm which IOM Jordan service handles migrant domestic workers (assisted return, trafficking) and whether there is a direct line.
+  - id: jo-ethiopia-honorary-consulate
+    country: JO
+    kind: consulate
+    name:
+      en: Honorary Consulate of Ethiopia in Amman
+      am: በአማን የኢትዮጵያ የክብር ቆንስላ
+      om: Qonsilaa Kabajaa Itoophiyaa Ammaan
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation]
+    phone: "+96265850396"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://www.facebook.com/hcoeij/
+    hours: By appointment
+    languages: []
+    city: Amman
+    address: 8B Ebrahim El Kattan Street, 7th Circle
+    notes: Ethiopia has no full embassy in Jordan. This honorary consul may be able to help or pass your case on. Call first.
+    source_url: https://www.consulate-info.com/consulate/27214/Ethiopia-in-Amman
+    sources: []
+    verified: false
+    todo: Third-party directory only; it also lists mobile +962 79 880 6252 and fax +962 6 585 0387. Another directory (embassies.net) says there is no Ethiopian mission in Jordan at all. Confirm this honorary consulate exists, what it can do for workers, and the correct phone. Official mfa.gov.et could not be reached.
+  - id: jo-ethiopia-embassy-abu-dhabi
+    country: JO
+    kind: embassy
+    name:
+      en: Embassy of Ethiopia in Abu Dhabi (also covers Jordan)
+      am: በአቡ ዳቢ የኢትዮጵያ ኤምባሲ (ዮርዳኖስንም ይሸፍናል)
+      om: Embaasii Itoophiyaa Abu Daabii (Jordaanis ni haguuga)
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation, abuse, detention]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: [am, om, en]
+    city: Abu Dhabi
+    address: null
+    notes: Ethiopia's ambassador for Jordan is based in Abu Dhabi, UAE.
+    source_url: https://fanabc.com/english/ethiopian-ambassador-meets-with-king-abdullah-ii-of-jordan
+    sources: []
+    verified: false
+    todo: Fana (March 2025, seen in search results; the page timed out when fetched) says Ethiopia's ambassador to the UAE, Jordan and Syria is resident in Abu Dhabi. Add the Abu Dhabi embassy contacts from the verified AE directory entry, and confirm which mission handles consular cases for Ethiopians in Jordan.
+  - id: jo-counter-trafficking-unit
+    country: JO
+    kind: police
+    name:
+      en: Counter-Trafficking Unit (Public Security Directorate and Ministry of Labour)
+      am: የፀረ-ሰው ንግድ ክፍል (የሕዝብ ደህንነት ዳይሬክቶሬት እና የሠራተኛ ሚኒስቴር)
+      om: Kutaa Daldala Namaa Ittisuu (Nageenya Uummataa fi Ministeera Hojii)
+    name_status: draft-ai
+    helps_with: [trafficking, passport, abuse]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: [ar]
+    city: Amman
+    address: null
+    notes: Investigates trafficking and passport withholding. Reach it through 911 or the Ministry of Labour hotline.
+    source_url: https://www.ecoi.net/de/dokument/2130633.html
+    sources: []
+    verified: false
+    todo: No direct public phone number found. The 2025 TIP report says the unit and the Ministry of Labour run a joint hotline. Find an official direct contact or remove this entry.
