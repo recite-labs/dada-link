@@ -1,0 +1,17 @@
+# Fixture FAQ seed.
+updated: 2026-10-31
+items:
+  - id: faq-passport-taken
+    question:
+      en: My employer took my passport. What can I do?
+      am: አሰሪዬ ፓስፖርቴን ወሰደብኝ። ምን ማድረግ እችላለሁ?
+    answer:
+      en: "This happens to many women. It is not your fault. Keep a photo of your passport on your phone. Ask your embassy for help."
+      am: "ይህ በብዙ ሴቶች ላይ ይደርሳል። የእርስዎ ጥፋት አይደለም።"
+    status: draft-ai
+    tags: [passport, documents]
+    countries: []
+    emergency: false
+    articles: [passport-taken, rights-sa]
+    sources: []
+    verified: false

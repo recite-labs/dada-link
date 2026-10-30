@@ -1,0 +1,13 @@
+country: LB
+updated: 2026-10-31
+entries:
+  - id: lb-isf
+    country: LB
+    kind: police
+    name:
+      en: Internal Security Forces
+    helps_with: [emergency]
+    phone: null
+    short_code: "112"
+    source_url: https://www.isf.gov.lb/
+    verified: false

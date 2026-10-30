@@ -1,0 +1,11 @@
+country: SA
+entries:
+  - id: lb-wrong-country
+    country: LB
+    kind: police
+    name:
+      en: Wrong
+    helps_with: [emergency]
+    short_code: "999"
+    source_url: https://example.org/
+    verified: false

@@ -1,0 +1,11 @@
+items:
+  - id: faq-unknown
+    question:
+      en: Q?
+    answer:
+      en: A.
+    status: draft-ai
+    tags: [wages]
+    countries: []
+    articles: [does-not-exist]
+    verified: false

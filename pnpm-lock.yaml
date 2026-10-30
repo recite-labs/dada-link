@@ -69,6 +69,9 @@ importers:
       '@dadalink/api':
         specifier: workspace:*
         version: link:../../packages/api
+      '@dadalink/content-loader':
+        specifier: workspace:*
+        version: link:../../packages/content-loader
       '@dadalink/core':
         specifier: workspace:*
         version: link:../../packages/core

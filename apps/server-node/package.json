@@ -9,11 +9,13 @@
     "dev": "node --env-file-if-exists=.env.development --env-file-if-exists=.env --watch src/main.ts",
     "start": "node --env-file-if-exists=.env src/main.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "test": "vitest run --passWithNoTests"
+    "test": "vitest run --passWithNoTests",
+    "content": "node src/cli.ts"
   },
   "dependencies": {
     "@dadalink/adapters": "workspace:*",
     "@dadalink/api": "workspace:*",
+    "@dadalink/content-loader": "workspace:*",
     "@dadalink/core": "workspace:*",
     "@dadalink/db": "workspace:*",
     "@dadalink/domain": "workspace:*",

@@ -1,0 +1,49 @@
+country: SA
+updated: 2026-10-31
+entries:
+  - id: sa-police
+    country: SA
+    kind: police
+    name:
+      en: Police
+      am: ፖሊስ
+      om: Poolisii
+    name_status: draft-ai
+    helps_with: [emergency, abuse]
+    phone: null
+    short_code: "999"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: null
+    source_url: https://www.stc.com.sa/en/personal/support/support-library/emergency-numbers.html
+    sources: []
+    verified: false
+    todo: "Confirm with an official Ministry of Interior page."
+
+  - id: sa-ethiopian-embassy-riyadh
+    country: SA
+    kind: embassy
+    name:
+      en: Embassy of Ethiopia, Riyadh
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation]
+    phone: "+966114823919"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://example.org/embassy
+    hours: null
+    languages: [am, ar]
+    city: Riyadh
+    address: null
+    notes: "Bring a copy of your passport if you have one."
+    source_url: https://example.org/embassy
+    verified: false
+    todo: null

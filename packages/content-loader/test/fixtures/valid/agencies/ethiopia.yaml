@@ -1,0 +1,22 @@
+country: ET
+authority:
+  name: Ministry of Labour and Skills (MoLS)
+  website: https://mols.gov.et
+how_to_obtain: |
+  Write to MoLS for the current list.
+how_to_check_for_users: |
+  Ask to see the agency's MoLS licence.
+last_checked: 2026-10-31
+sources: []
+todo: []
+agencies:
+  - id: et-agency-fixture
+    name: Fixture Overseas Employment Agency PLC
+    licence_number: "FIXTURE/001"
+    licence_status: licensed
+    city: Addis Ababa
+    address: null
+    phone: null
+    source_url: https://mols.gov.et
+    verified: false
+    todo: "Fixture only."
