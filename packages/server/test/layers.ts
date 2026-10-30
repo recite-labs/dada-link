@@ -1,4 +1,11 @@
-import { FakeLanguageModel, MemoryCatalog, MemoryFeedback, MemoryRateLimiter } from "@dadalink/adapters"
+import {
+  FakeLanguageModel,
+  MemoryCatalog,
+  MemoryFeedback,
+  MemoryRateLimiter,
+  RecordingMessengerBot,
+  RecordingSmsSender
+} from "@dadalink/adapters"
 import { AssistantSettings, Pseudonymizer } from "@dadalink/core"
 import { CatalogWriter } from "@dadalink/ports"
 import { agencies, allContent, lbDirectory, saDirectory } from "@dadalink/testing"
@@ -22,6 +29,8 @@ export const TestInfrastructure = Layer.mergeAll(
   MemoryRateLimiter.layer,
   MemoryFeedback.layer,
   FakeLanguageModel.layer(),
+  RecordingSmsSender.layer(),
+  RecordingMessengerBot.layer(),
   Pseudonymizer.layer(Redacted.make("test-salt")),
   AssistantSettings.layer({ reviewedOnly: false, dailyLimit: 3, maxPassages: 3 })
 )

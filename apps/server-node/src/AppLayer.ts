@@ -1,6 +1,6 @@
 import { mkdirSync } from "node:fs"
 import { dirname } from "node:path"
-import { LanguageModelLive } from "@dadalink/adapters"
+import { DisabledMessengerBot, LanguageModelLive, SmsSenderLive } from "@dadalink/adapters"
 import { AssistantSettings, Pseudonymizer } from "@dadalink/core"
 import { RepositoriesLive } from "@dadalink/db"
 import { DatabaseNode } from "@dadalink/db/node"
@@ -13,7 +13,13 @@ export const PersistenceLive = (filename: string) =>
   RepositoriesLive.pipe(Layer.provide(DatabaseNode.layer({ filename })))
 
 /** Everything the use cases need that is not persistence, configured from the environment. */
-export const ServicesLive = Layer.mergeAll(LanguageModelLive, Pseudonymizer.layerConfig, AssistantSettings.layerConfig)
+export const ServicesLive = Layer.mergeAll(
+  LanguageModelLive,
+  SmsSenderLive,
+  DisabledMessengerBot.layer,
+  Pseudonymizer.layerConfig,
+  AssistantSettings.layerConfig
+)
 
 const ensureParentDirectory = (filename: string) =>
   Effect.sync(() => {

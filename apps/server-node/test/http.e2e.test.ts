@@ -1,4 +1,4 @@
-import { FakeLanguageModel } from "@dadalink/adapters"
+import { FakeLanguageModel, RecordingMessengerBot, RecordingSmsSender } from "@dadalink/adapters"
 import { Api } from "@dadalink/api"
 import { AssistantSettings, Pseudonymizer } from "@dadalink/core"
 import { CatalogWriter } from "@dadalink/ports"
@@ -15,6 +15,8 @@ const Persistence = PersistenceLive(":memory:")
 
 const Services = Layer.mergeAll(
   FakeLanguageModel.layer(),
+  RecordingSmsSender.layer(),
+  RecordingMessengerBot.layer(),
   Pseudonymizer.layer(Redacted.make("e2e-salt")),
   AssistantSettings.layer({ reviewedOnly: false, dailyLimit: 5, maxPassages: 3 })
 )
@@ -62,6 +64,20 @@ layer(ServerUnderTest)("server-node e2e (HTTP + SQLite)", (it) => {
         }
       })
       expect(response.citations.map((c) => c.contentId)).toContain("abroad-unpaid-wages")
+    })
+  )
+
+  it.effect("relays an SOS", () =>
+    Effect.gen(function* () {
+      const client = yield* HttpApiClient.make(Api)
+      const result = yield* client.safety.sos({
+        payload: {
+          deviceId: "6f1c1d2e-8a3b-4c5d-9e6f-7a8b9c0d1e2f" as never,
+          locale: "en",
+          trustedContact: { phone: "+251911000000" as never }
+        }
+      })
+      expect(result.deliveredVia).toEqual(["sms"])
     })
   )
 })

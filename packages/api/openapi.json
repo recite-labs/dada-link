@@ -500,10 +500,240 @@
           "required": true
         }
       }
+    },
+    "/safety/sos": {
+      "post": {
+        "tags": [
+          "Safety"
+        ],
+        "operationId": "safety.sos",
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "SosResult",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SosResultEncoded"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RateLimited",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateLimitedEncoded"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "UpstreamUnavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpstreamUnavailableEncoded"
+                }
+              }
+            }
+          }
+        },
+        "description": "Sends the alert (optional message and location link) by SMS and/or Telegram. Nothing is stored. 503 means no channel succeeded: the client must fall back to the phone's own SMS.",
+        "summary": "Relay an SOS to the trusted contact",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SosRequest"
+              }
+            }
+          },
+          "required": true
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "UpstreamUnavailableEncoded": {
+        "type": "object",
+        "properties": {
+          "_tag": {
+            "type": "string",
+            "enum": [
+              "UpstreamUnavailable"
+            ]
+          },
+          "service": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag",
+          "service"
+        ],
+        "additionalProperties": false
+      },
+      "RateLimitedEncoded": {
+        "type": "object",
+        "properties": {
+          "_tag": {
+            "type": "string",
+            "enum": [
+              "RateLimited"
+            ]
+          },
+          "scope": {
+            "type": "string"
+          },
+          "retryAfterSeconds": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "_tag",
+          "scope",
+          "retryAfterSeconds"
+        ],
+        "additionalProperties": false
+      },
+      "SosResultEncoded": {
+        "type": "object",
+        "properties": {
+          "deliveredVia": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SosChannel"
+            }
+          },
+          "failedVia": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SosChannel"
+            }
+          }
+        },
+        "required": [
+          "deliveredVia",
+          "failedVia"
+        ],
+        "additionalProperties": false
+      },
+      "SosChannel": {
+        "type": "string",
+        "enum": [
+          "sms",
+          "telegram"
+        ]
+      },
+      "SosRequest": {
+        "type": "object",
+        "properties": {
+          "deviceId": {
+            "$ref": "#/components/schemas/DeviceId"
+          },
+          "locale": {
+            "$ref": "#/components/schemas/Locale"
+          },
+          "country": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "trustedContact": {
+            "$ref": "#/components/schemas/TrustedContact"
+          },
+          "message": {
+            "type": "string"
+          },
+          "location": {
+            "$ref": "#/components/schemas/GeoLocation"
+          }
+        },
+        "required": [
+          "deviceId",
+          "locale",
+          "trustedContact"
+        ],
+        "additionalProperties": false
+      },
+      "GeoLocation": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+          },
+          "longitude": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          },
+          "accuracyMeters": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "latitude",
+          "longitude"
+        ],
+        "additionalProperties": false
+      },
+      "TrustedContact": {
+        "type": "object",
+        "properties": {
+          "phone": {
+            "$ref": "#/components/schemas/E164PhoneNumber"
+          },
+          "telegramChatId": {
+            "$ref": "#/components/schemas/TelegramChatId"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TelegramChatId": {
+        "type": "integer",
+        "minimum": -9007199254740991,
+        "maximum": 9007199254740991
+      },
+      "E164PhoneNumber": {
+        "type": "string"
+      },
+      "Country": {
+        "type": "string",
+        "enum": [
+          "SA",
+          "AE",
+          "KW",
+          "QA",
+          "LB",
+          "JO",
+          "ET"
+        ],
+        "description": "ISO 3166-1 alpha-2 code of a country covered by DadaLink"
+      },
+      "Locale": {
+        "type": "string",
+        "enum": [
+          "am",
+          "om",
+          "en",
+          "sw",
+          "ti"
+        ],
+        "description": "BCP-47 primary language subtag supported by DadaLink"
+      },
+      "DeviceId": {
+        "type": "string",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|[fF]{8}-[fF]{4}-[fF]{4}-[fF]{4}-[fF]{12})$",
+        "format": "uuid",
+        "description": "Client-generated random UUID used only for rate limiting"
+      },
       "AssistantFeedback": {
         "type": "object",
         "properties": {
@@ -531,61 +761,6 @@
       "ContentId": {
         "type": "string",
         "maxLength": 120
-      },
-      "Locale": {
-        "type": "string",
-        "enum": [
-          "am",
-          "om",
-          "en",
-          "sw",
-          "ti"
-        ],
-        "description": "BCP-47 primary language subtag supported by DadaLink"
-      },
-      "RateLimitedEncoded": {
-        "type": "object",
-        "properties": {
-          "_tag": {
-            "type": "string",
-            "enum": [
-              "RateLimited"
-            ]
-          },
-          "scope": {
-            "type": "string"
-          },
-          "retryAfterSeconds": {
-            "type": "integer",
-            "minimum": -9007199254740991,
-            "maximum": 9007199254740991
-          }
-        },
-        "required": [
-          "_tag",
-          "scope",
-          "retryAfterSeconds"
-        ],
-        "additionalProperties": false
-      },
-      "UpstreamUnavailableEncoded": {
-        "type": "object",
-        "properties": {
-          "_tag": {
-            "type": "string",
-            "enum": [
-              "UpstreamUnavailable"
-            ]
-          },
-          "service": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "_tag",
-          "service"
-        ],
-        "additionalProperties": false
       },
       "AssistantStreamEventEncoded": {
         "type": "string",
@@ -811,25 +986,6 @@
           "return"
         ],
         "description": "Stage of the migration journey: before leaving, while abroad, after returning"
-      },
-      "Country": {
-        "type": "string",
-        "enum": [
-          "SA",
-          "AE",
-          "KW",
-          "QA",
-          "LB",
-          "JO",
-          "ET"
-        ],
-        "description": "ISO 3166-1 alpha-2 code of a country covered by DadaLink"
-      },
-      "DeviceId": {
-        "type": "string",
-        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|[fF]{8}-[fF]{4}-[fF]{4}-[fF]{4}-[fF]{12})$",
-        "format": "uuid",
-        "description": "Client-generated random UUID used only for rate limiting"
       },
       "AskResponseEncoded": {
         "type": "object",
@@ -1336,6 +1492,9 @@
     },
     {
       "name": "Assistant"
+    },
+    {
+      "name": "Safety"
     }
   ]
 }
