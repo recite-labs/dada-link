@@ -1,6 +1,6 @@
 import { describe, expect, it } from "@effect/vitest"
 import { Schema } from "effect"
-import { DirectoryEntry, PhoneNumber } from "../src/index.ts"
+import { DirectoryEntry, dialableNumber, PhoneNumber, ShortCode } from "../src/index.ts"
 
 const entry = {
   id: "sa-police",
@@ -37,5 +37,25 @@ describe("PhoneNumber", () => {
     for (const p of ["911", "+966 11 482 3919", "+251-11-551-7055", "8001240200"]) {
       expect(Schema.decodeUnknownSync(PhoneNumber)(p)).toBe(p)
     }
+  })
+})
+
+describe("short codes", () => {
+  it("accepts 2 to 8 digit local numbers only", () => {
+    expect(Schema.decodeUnknownSync(ShortCode)("999")).toBe("999")
+    expect(() => Schema.decodeUnknownSync(ShortCode)("+966")).toThrow()
+    expect(() => Schema.decodeUnknownSync(ShortCode)("123456789")).toThrow()
+  })
+
+  it("prefers the short code as the dialable number", () => {
+    const e = Schema.decodeUnknownSync(DirectoryEntry)({
+      ...entry,
+      phone: "+966112345678",
+      shortCode: "999",
+      kind: "helpline"
+    })
+    expect(dialableNumber(e)).toBe("999")
+    expect(dialableNumber({ phone: "+966112345678", shortCode: null })).toBe("+966112345678")
+    expect(e.helpsWith).toEqual([])
   })
 })

@@ -4,7 +4,7 @@ import { type ContentFilter, ContentRepo } from "@dadalink/ports"
 import { and, asc, eq, inArray, type SQL, sql } from "drizzle-orm"
 import { Effect, Layer, Option } from "effect"
 import { Database } from "../Database.ts"
-import { decodeRow, persistence } from "../persistence.ts"
+import { decodeRow, persistence, withoutNulls } from "../persistence.ts"
 import { contentItems, contentTranslations } from "../schema/index.ts"
 
 type ItemRow = typeof contentItems.$inferSelect
@@ -34,7 +34,8 @@ const assemble = (items: ReadonlyArray<ItemRow>, translations: ReadonlyArray<Tra
       ContentItem,
       "ContentRepo.decode"
     )({
-      ...item,
+      ...withoutNulls(item),
+      phase: item.phase,
       translations: translations
         .filter((t) => t.contentId === item.id)
         .toSorted((a, b) => localeRank(a.locale) - localeRank(b.locale))

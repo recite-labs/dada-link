@@ -24,7 +24,20 @@ describe("ContentItem", () => {
   it("decodes and round-trips through encode", () => {
     const decoded = Schema.decodeUnknownSync(ContentItem)(item)
     expect(decoded.translations).toHaveLength(2)
-    expect(Schema.encodeSync(ContentItem)(decoded)).toEqual(item)
+    expect(Schema.encodeSync(ContentItem)(decoded)).toEqual({ ...item, sensitive: false, related: [] })
+  })
+
+  it("keeps the sensitive flag, related ids and rich sources", () => {
+    const decoded = Schema.decodeUnknownSync(ContentItem)({
+      ...item,
+      sensitive: true,
+      related: ["rights-sa"],
+      updated: "2026-10-31",
+      sources: [{ title: "ILO", url: "https://www.ilo.org/", publisher: "ILO", accessed: "2026-10-31" }]
+    })
+    expect(decoded.sensitive).toBe(true)
+    expect(decoded.related).toEqual(["rights-sa"])
+    expect(decoded.sources[0]?.accessed).toBe("2026-10-31")
   })
 
   it("rejects unknown topics and kinds", () => {

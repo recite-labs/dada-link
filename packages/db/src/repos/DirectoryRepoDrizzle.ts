@@ -21,7 +21,9 @@ export const DirectoryRepoDrizzle = Layer.effect(
         .orderBy(asc(directoryEntries.position))
         .pipe(
           Effect.flatMap((rows) =>
-            Effect.forEach(rows, ({ position: _, ...row }) => decode({ ...withoutNulls(row), phone: row.phone }))
+            Effect.forEach(rows, ({ position: _, ...row }) =>
+              decode({ ...withoutNulls(row), phone: row.phone, shortCode: row.shortCode })
+            )
           ),
           persistence("DirectoryRepo.listByCountry")
         )

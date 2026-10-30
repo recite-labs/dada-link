@@ -14,7 +14,15 @@ export const contentItemRow = (item: ContentItem): typeof contentItems.$inferIns
   phase: item.phase,
   countries: item.countries,
   topics: item.topics,
-  sources: item.sources.map(({ title, url }) => ({ title, url }))
+  sources: item.sources.map((source) => ({
+    title: source.title,
+    url: source.url,
+    ...(source.publisher === undefined ? {} : { publisher: source.publisher }),
+    ...(source.accessed === undefined ? {} : { accessed: source.accessed })
+  })),
+  sensitive: item.sensitive,
+  related: item.related,
+  updated: item.updated ?? null
 })
 
 export const contentTranslationRows = (item: ContentItem): Array<typeof contentTranslations.$inferInsert> =>
@@ -35,12 +43,17 @@ export const directoryEntryRow = (entry: DirectoryEntry, position: number): type
   name: entry.name,
   names: entry.names,
   phone: entry.phone,
+  shortCode: entry.shortCode,
   whatsapp: entry.whatsapp ?? null,
+  telegram: entry.telegram ?? null,
   email: entry.email ?? null,
   url: entry.url ?? null,
+  city: entry.city ?? null,
   address: entry.address ?? null,
   hours: entry.hours ?? null,
   notes: entry.notes ?? null,
+  helpsWith: entry.helpsWith,
+  languages: entry.languages,
   emergency: entry.emergency,
   sourceUrl: entry.sourceUrl,
   verified: entry.verified,

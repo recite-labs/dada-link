@@ -13,7 +13,11 @@ export const unpaidWages = decodeContent({
   phase: "abroad",
   countries: [],
   topics: ["money", "rights"],
-  sources: [{ title: "ILO Domestic Workers Convention", url: "https://www.ilo.org/" }],
+  sources: [
+    { title: "ILO Domestic Workers Convention", url: "https://www.ilo.org/", publisher: "ILO", accessed: "2026-10-31" }
+  ],
+  related: ["rights-sa"],
+  updated: "2026-10-31",
   translations: [
     {
       locale: "en",
@@ -57,6 +61,7 @@ export const contraception = decodeContent({
   countries: [],
   topics: ["health", "srh"],
   sources: [{ title: "WHO Family planning", url: "https://www.who.int/" }],
+  sensitive: true,
   translations: [
     {
       locale: "en",
@@ -77,7 +82,10 @@ export const saDirectory: ReadonlyArray<DirectoryEntry> = [
     kind: "police",
     name: "Police",
     names: { am: "ፖሊስ" },
-    phone: "999",
+    phone: null,
+    shortCode: "999",
+    helpsWith: ["emergency", "abuse"],
+    languages: ["ar", "en"],
     emergency: true,
     sourceUrl: "https://www.my.gov.sa/",
     verified: false
@@ -99,7 +107,8 @@ export const saDirectory: ReadonlyArray<DirectoryEntry> = [
     name: "Embassy of Ethiopia, Riyadh",
     phone: null,
     whatsapp: "+966 11 000 0000",
-    address: "Riyadh",
+    city: "Riyadh",
+    telegram: "@example",
     notes: "Number to be verified",
     emergency: false,
     sourceUrl: "https://mfa.gov.et/",

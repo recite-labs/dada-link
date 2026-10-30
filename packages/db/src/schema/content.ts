@@ -1,6 +1,6 @@
-import type { Country, Source, Topic } from "@dadalink/domain"
+import type { ContentId, Country, Source, Topic } from "@dadalink/domain"
 import { CONTENT_KINDS, JOURNEY_PHASES, LOCALES, REVIEW_STATUSES } from "@dadalink/domain"
-import { index, primaryKey, sqliteTable, text } from "drizzle-orm/sqlite-core"
+import { index, integer, primaryKey, sqliteTable, text } from "drizzle-orm/sqlite-core"
 
 /** One reviewed content item; language-specific text lives in `content_translations`. */
 export const contentItems = sqliteTable(
@@ -11,7 +11,12 @@ export const contentItems = sqliteTable(
     phase: text("phase", { enum: JOURNEY_PHASES }),
     countries: text("countries", { mode: "json" }).$type<ReadonlyArray<Country>>().notNull(),
     topics: text("topics", { mode: "json" }).$type<ReadonlyArray<Topic>>().notNull(),
-    sources: text("sources", { mode: "json" }).$type<ReadonlyArray<Pick<Source, "title" | "url">>>().notNull()
+    sources: text("sources", { mode: "json" })
+      .$type<ReadonlyArray<Pick<Source, "title" | "url" | "publisher" | "accessed">>>()
+      .notNull(),
+    sensitive: integer("sensitive", { mode: "boolean" }).notNull().default(false),
+    related: text("related", { mode: "json" }).$type<ReadonlyArray<ContentId>>().notNull().default([]),
+    updated: text("updated")
   },
   (t) => [index("content_items_phase_idx").on(t.phase), index("content_items_kind_idx").on(t.kind)]
 )

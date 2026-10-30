@@ -29,3 +29,9 @@ export const E164PhoneNumber = Schema.String.check(
   Schema.isPattern(/^\+[1-9][0-9]{6,14}$/, { message: "Expected an international number such as +251911000000" })
 ).annotate({ identifier: "E164PhoneNumber" })
 export type E164PhoneNumber = typeof E164PhoneNumber.Type
+
+/** Local short code dialled inside a country: 2 to 8 digits (`911`, `999`, `8007283`). */
+export const ShortCode = Schema.String.check(
+  Schema.isPattern(/^\d{2,8}$/, { message: "Expected a short code of 2 to 8 digits" })
+).annotate({ identifier: "ShortCode" })
+export type ShortCode = typeof ShortCode.Type

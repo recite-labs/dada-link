@@ -3,6 +3,7 @@
 Status: accepted (2026-10-31)
 
 ## Decision
+
 - `apps/server-cloudflare/src/worker.ts` turns the shared HTTP app into a fetch handler with `HttpRouter.toWebHandler`, built once per isolate from the bindings, and passes a per-request `BackgroundTasks` backed by `ctx.waitUntil` (see 0005).
 - Persistence: D1 (`DatabaseD1.layer(env.DB)`) for all repositories; rate limiting on KV (`RATE_LIMITS`, approximate under bursts) with automatic fallback to the D1 limiter when the binding is absent.
 - Configuration: string vars and secrets are read through `ConfigProvider.fromEnvRecord(env)`, so the same `Config` definitions serve Node (`process.env`) and Workers.

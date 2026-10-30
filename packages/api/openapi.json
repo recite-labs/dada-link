@@ -1099,6 +1099,7 @@
           "mental-health",
           "legal-aid",
           "returnee-service",
+          "helpline",
           "other"
         ]
       },
@@ -1330,14 +1331,30 @@
               }
             ]
           },
+          "shortCode": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ShortCode"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "whatsapp": {
             "$ref": "#/components/schemas/PhoneNumber"
+          },
+          "telegram": {
+            "type": "string"
           },
           "email": {
             "type": "string"
           },
           "url": {
             "$ref": "#/components/schemas/HttpUrl"
+          },
+          "city": {
+            "type": "string"
           },
           "address": {
             "type": "string"
@@ -1347,6 +1364,18 @@
           },
           "notes": {
             "type": "string"
+          },
+          "helpsWith": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Topic"
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "emergency": {
             "type": "boolean"
@@ -1372,6 +1401,36 @@
           "verified"
         ],
         "additionalProperties": false
+      },
+      "Topic": {
+        "type": "string",
+        "enum": [
+          "emergency",
+          "abuse",
+          "sexual-violence",
+          "wages",
+          "passport",
+          "documents",
+          "labour-complaint",
+          "shelter",
+          "repatriation",
+          "legal",
+          "health",
+          "mental-health",
+          "trafficking",
+          "detention",
+          "returnee-support",
+          "fire",
+          "srh",
+          "rights",
+          "money",
+          "agencies",
+          "safety",
+          "return"
+        ]
+      },
+      "ShortCode": {
+        "type": "string"
       },
       "LocalizedNames": {
         "type": "object",
@@ -1481,6 +1540,15 @@
             "items": {
               "$ref": "#/components/schemas/Locale"
             }
+          },
+          "sensitive": {
+            "type": "boolean"
+          },
+          "related": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContentId"
+            }
           }
         },
         "required": [
@@ -1496,7 +1564,9 @@
           "title",
           "summary",
           "body",
-          "availableLocales"
+          "availableLocales",
+          "sensitive",
+          "related"
         ],
         "additionalProperties": false
       },
@@ -1516,6 +1586,12 @@
           },
           "url": {
             "$ref": "#/components/schemas/HttpUrl"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "accessed": {
+            "$ref": "#/components/schemas/IsoDate"
           }
         },
         "required": [
@@ -1523,20 +1599,6 @@
           "url"
         ],
         "additionalProperties": false
-      },
-      "Topic": {
-        "type": "string",
-        "enum": [
-          "health",
-          "srh",
-          "mental-health",
-          "rights",
-          "safety",
-          "documents",
-          "money",
-          "agencies",
-          "return"
-        ]
       },
       "ContentKind": {
         "type": "string",
@@ -1588,6 +1650,9 @@
           },
           "summary": {
             "type": "string"
+          },
+          "sensitive": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -1599,7 +1664,8 @@
           "locale",
           "status",
           "title",
-          "summary"
+          "summary",
+          "sensitive"
         ],
         "additionalProperties": false
       },

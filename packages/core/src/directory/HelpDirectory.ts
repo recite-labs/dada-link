@@ -1,5 +1,5 @@
 import type { Country, DirectoryEntry, Locale } from "@dadalink/domain"
-import { displayName, EmergencyContact } from "@dadalink/domain"
+import { dialableNumber, displayName, EmergencyContact } from "@dadalink/domain"
 import { DirectoryRepo, type PersistenceError } from "@dadalink/ports"
 import { Context, Effect, Layer } from "effect"
 
@@ -8,11 +8,12 @@ export const toEmergencyContacts = (
   entries: ReadonlyArray<DirectoryEntry>,
   locale: Locale
 ): ReadonlyArray<EmergencyContact> =>
-  entries.flatMap((entry) =>
-    entry.emergency && entry.phone !== null
-      ? [new EmergencyContact({ name: displayName(entry, locale), kind: entry.kind, phone: entry.phone })]
+  entries.flatMap((entry) => {
+    const phone = dialableNumber(entry)
+    return entry.emergency && phone !== null
+      ? [new EmergencyContact({ name: displayName(entry, locale), kind: entry.kind, phone })]
       : []
-  )
+  })
 
 /** Per-country help numbers (offline copy on devices is synced from here). */
 export class HelpDirectory extends Context.Service<

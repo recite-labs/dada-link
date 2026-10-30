@@ -1,4 +1,4 @@
-import type { LocalizedNames } from "@dadalink/domain"
+import type { LocalizedNames, Topic } from "@dadalink/domain"
 import { COUNTRIES, DIRECTORY_KINDS } from "@dadalink/domain"
 import { index, integer, sqliteTable, text } from "drizzle-orm/sqlite-core"
 
@@ -13,12 +13,17 @@ export const directoryEntries = sqliteTable(
     name: text("name").notNull(),
     names: text("names", { mode: "json" }).$type<LocalizedNames>().notNull(),
     phone: text("phone"),
+    shortCode: text("short_code"),
     whatsapp: text("whatsapp"),
+    telegram: text("telegram"),
     email: text("email"),
     url: text("url"),
+    city: text("city"),
     address: text("address"),
     hours: text("hours"),
     notes: text("notes"),
+    helpsWith: text("helps_with", { mode: "json" }).$type<ReadonlyArray<Topic>>().notNull().default([]),
+    languages: text("languages", { mode: "json" }).$type<ReadonlyArray<string>>().notNull().default([]),
     emergency: integer("emergency", { mode: "boolean" }).notNull(),
     sourceUrl: text("source_url").notNull(),
     verified: integer("verified", { mode: "boolean" }).notNull(),

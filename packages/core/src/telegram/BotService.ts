@@ -1,5 +1,5 @@
 import type { Country, DirectoryEntry, Locale, TelegramChatId, TelegramUpdate } from "@dadalink/domain"
-import { displayName } from "@dadalink/domain"
+import { dialableNumber, displayName } from "@dadalink/domain"
 import { type ChatPreferences, ChatPreferencesRepo, type InlineButton, MessengerBot } from "@dadalink/ports"
 import { Context, Effect, Layer, Option } from "effect"
 import { Assistant } from "../assistant/Assistant.ts"
@@ -27,7 +27,7 @@ export const formatHelpNumbers = (
   if (entries.length === 0) return texts.noHelpEntries
   const ordered = [...entries.filter((e) => e.emergency), ...entries.filter((e) => !e.emergency)]
   const lines = ordered.map((e) => {
-    const number = e.phone ?? (e.whatsapp === undefined ? texts.numberPending : `WhatsApp ${e.whatsapp}`)
+    const number = dialableNumber(e) ?? (e.whatsapp === undefined ? texts.numberPending : `WhatsApp ${e.whatsapp}`)
     return `• ${displayName(e, locale)}: ${number}${e.verified ? "" : " *"}`
   })
   const footer = ordered.some((e) => !e.verified) ? `\n\n* ${texts.unverified}` : ""
