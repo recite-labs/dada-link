@@ -1,0 +1,88 @@
+/* Self-hosted fonts (no third-party requests). Variable files, split by unicode range. */
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/noto-sans-ethiopic/wght.css";
+@import "tailwindcss";
+
+/* DadaLink design tokens — identical to the Android app and the Paper designs. */
+@theme {
+  --color-ground: #ffffff;
+  --color-surface: #f5f4fa;
+  --color-line: #e4e2ef;
+  --color-ink: #17142b;
+  --color-muted: #5e5a73;
+  --color-indigo: #3b2f8f;
+  --color-deep: #261d63;
+  --color-tint: #eceaf7;
+  --color-lilac: #d9d5f2;
+  --color-marigold: #f2a93b;
+  --color-marigold-tint: #fdf0dc;
+  --color-marigold-ink: #7a4a05;
+  --color-sos: #d7263d;
+  --color-sos-tint: #fbe4e7;
+  --color-safe: #2e7d5b;
+  --color-safe-tint: #e3f1ea;
+
+  --font-sans: "Inter Variable", "Noto Sans Ethiopic Variable", system-ui, sans-serif;
+  --font-ethiopic: "Noto Sans Ethiopic Variable", "Inter Variable", system-ui, sans-serif;
+
+  --tracking-tight: -0.03em;
+  --tracking-snug: -0.02em;
+
+  --radius-card: 16px;
+  --radius-panel: 24px;
+
+  --container-page: 44rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-ground);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100dvh;
+    line-height: 1.5;
+  }
+
+  /* Ethiopic script needs room: diacritics collide below 1.5. */
+  :lang(am),
+  :lang(ti) {
+    font-family: var(--font-ethiopic);
+    line-height: 1.65;
+  }
+
+  :lang(am) :is(h1, h2, h3),
+  :lang(ti) :is(h1, h2, h3) {
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-marigold);
+    outline-offset: 2px;
+  }
+}
+
+/* Unlayered, so it outranks every Tailwind utility without !important. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
