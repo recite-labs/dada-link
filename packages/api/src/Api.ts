@@ -5,6 +5,7 @@ import { ContentApi } from "./groups/Content.ts"
 import { DirectoryApi } from "./groups/Directory.ts"
 import { HealthApi } from "./groups/Health.ts"
 import { SafetyApi } from "./groups/Safety.ts"
+import { TelegramApi } from "./groups/Telegram.ts"
 
 /** The DadaLink HTTP contract, shared by server, web client and OpenAPI. */
 export class Api extends HttpApi.make("dadalink")
@@ -14,6 +15,7 @@ export class Api extends HttpApi.make("dadalink")
   .add(AgenciesApi)
   .add(AssistantApi)
   .add(SafetyApi)
+  .add(TelegramApi)
   .annotateMerge(
     OpenApi.annotations({
       title: "DadaLink API",

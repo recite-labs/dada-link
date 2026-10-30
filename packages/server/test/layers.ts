@@ -1,17 +1,21 @@
 import {
   FakeLanguageModel,
+  InlineBackgroundTasks,
   MemoryCatalog,
+  MemoryChatPreferences,
   MemoryFeedback,
   MemoryRateLimiter,
   RecordingMessengerBot,
   RecordingSmsSender
 } from "@dadalink/adapters"
-import { AssistantSettings, Pseudonymizer } from "@dadalink/core"
+import { AssistantSettings, BotSettings, Pseudonymizer } from "@dadalink/core"
 import { CatalogWriter } from "@dadalink/ports"
 import { agencies, allContent, lbDirectory, saDirectory } from "@dadalink/testing"
-import { Effect, Layer, Redacted } from "effect"
-import { HttpServer } from "effect/http"
-import { HandlersLive } from "../src/index.ts"
+import { Effect, Layer, Option, Redacted } from "effect"
+import { HttpRouter, HttpServer } from "effect/http"
+import { HandlersLive, TelegramWebhookSecret } from "../src/index.ts"
+
+export const WEBHOOK_SECRET = "hook-secret"
 
 export const SeededCatalog = Layer.effectDiscard(
   Effect.gen(function* () {
@@ -31,11 +35,15 @@ export const TestInfrastructure = Layer.mergeAll(
   FakeLanguageModel.layer(),
   RecordingSmsSender.layer(),
   RecordingMessengerBot.layer(),
+  MemoryChatPreferences.layer,
+  BotSettings.layer({ appUrl: "https://example.org/app" }),
+  TelegramWebhookSecret.layer(Option.some(Redacted.make(WEBHOOK_SECRET))),
   Pseudonymizer.layer(Redacted.make("test-salt")),
   AssistantSettings.layer({ reviewedOnly: false, dailyLimit: 3, maxPassages: 3 })
 )
 
 /** Handlers wired to in-memory adapters plus the HTTP platform services. */
-export const TestServerLayer = Layer.mergeAll(HandlersLive, HttpServer.layerServices).pipe(
-  Layer.provideMerge(TestInfrastructure)
-)
+export const TestServerLayer = Layer.mergeAll(
+  HandlersLive.pipe(HttpRouter.provideRequest(InlineBackgroundTasks.layer)),
+  HttpServer.layerServices
+).pipe(Layer.provideMerge(TestInfrastructure))

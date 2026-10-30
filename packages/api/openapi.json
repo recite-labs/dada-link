@@ -554,10 +554,174 @@
           "required": true
         }
       }
+    },
+    "/telegram/webhook": {
+      "post": {
+        "tags": [
+          "Telegram"
+        ],
+        "operationId": "telegram.webhook",
+        "parameters": [
+          {
+            "name": "x-telegram-bot-api-secret-token",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "security": [],
+        "responses": {
+          "204": {
+            "description": "<No Content>"
+          },
+          "401": {
+            "description": "WebhookUnauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WebhookUnauthorizedEncoded"
+                }
+              }
+            }
+          }
+        },
+        "description": "Verified with the X-Telegram-Bot-Api-Secret-Token header. Acknowledged immediately; the update is processed in the background.",
+        "summary": "Telegram webhook",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TelegramUpdate"
+              }
+            }
+          },
+          "required": true
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "WebhookUnauthorizedEncoded": {
+        "type": "object",
+        "properties": {
+          "_tag": {
+            "type": "string",
+            "enum": [
+              "WebhookUnauthorized"
+            ]
+          }
+        },
+        "required": [
+          "_tag"
+        ],
+        "additionalProperties": false
+      },
+      "TelegramUpdate": {
+        "type": "object",
+        "properties": {
+          "update_id": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "message": {
+            "type": "object",
+            "properties": {
+              "message_id": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "chat": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "$ref": "#/components/schemas/TelegramChatId"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "additionalProperties": false
+              },
+              "from": {
+                "type": "object",
+                "properties": {
+                  "language_code": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message_id",
+              "chat"
+            ],
+            "additionalProperties": false
+          },
+          "callback_query": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "from": {
+                "type": "object",
+                "properties": {
+                  "language_code": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "data": {
+                "type": "string"
+              },
+              "message": {
+                "type": "object",
+                "properties": {
+                  "chat": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "$ref": "#/components/schemas/TelegramChatId"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "chat"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "update_id"
+        ],
+        "additionalProperties": false
+      },
+      "TelegramChatId": {
+        "type": "integer",
+        "minimum": -9007199254740991,
+        "maximum": 9007199254740991
+      },
       "UpstreamUnavailableEncoded": {
         "type": "object",
         "properties": {
@@ -695,11 +859,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "TelegramChatId": {
-        "type": "integer",
-        "minimum": -9007199254740991,
-        "maximum": 9007199254740991
       },
       "E164PhoneNumber": {
         "type": "string"
@@ -1495,6 +1654,9 @@
     },
     {
       "name": "Safety"
+    },
+    {
+      "name": "Telegram"
     }
   ]
 }

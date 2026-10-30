@@ -3,11 +3,15 @@ import { Context, Effect, Layer, Ref } from "effect"
 
 export class SentMessages extends Context.Service<SentMessages, Ref.Ref<ReadonlyArray<OutgoingMessage>>>()(
   "@dadalink/adapters/memory/SentMessages"
-) {}
+) {
+  static readonly layer = Layer.effect(SentMessages, Ref.make<ReadonlyArray<OutgoingMessage>>([]))
+}
 
 export class AnsweredCallbacks extends Context.Service<AnsweredCallbacks, Ref.Ref<ReadonlyArray<string>>>()(
   "@dadalink/adapters/memory/AnsweredCallbacks"
-) {}
+) {
+  static readonly layer = Layer.effect(AnsweredCallbacks, Ref.make<ReadonlyArray<string>>([]))
+}
 
 /** Fake bot client: records outgoing messages and answered callbacks. */
 export const RecordingMessengerBot = {
@@ -24,14 +28,7 @@ export const RecordingMessengerBot = {
           answerCallback: (id) => (options.fail === true ? unavailable : Ref.update(answered, (all) => [...all, id]))
         })
       })
-    ).pipe(
-      Layer.provideMerge(
-        Layer.mergeAll(
-          Layer.effect(SentMessages, Ref.make<ReadonlyArray<OutgoingMessage>>([])),
-          Layer.effect(AnsweredCallbacks, Ref.make<ReadonlyArray<string>>([]))
-        )
-      )
-    )
+    ).pipe(Layer.provideMerge(Layer.mergeAll(SentMessages.layer, AnsweredCallbacks.layer)))
 }
 
 /** Used when no bot token is configured: every call fails, so callers can degrade gracefully. */

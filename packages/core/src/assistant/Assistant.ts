@@ -14,9 +14,22 @@ const DAY_SECONDS = 24 * 60 * 60
 
 export type AskError = RateLimited | UpstreamUnavailable | PersistenceError
 
+/** A question independent of the channel it came from. */
+export type Question = Omit<AskRequest, "deviceId">
+
+/**
+ * Who the daily quota is counted for, e.g. `{ namespace: "device", id }` for
+ * the app or `{ namespace: "telegram-chat", id }` for the bot. Only a salted
+ * hash of it is ever used as a key.
+ */
+export interface QuotaSubject {
+  readonly namespace: string
+  readonly id: string
+}
+
 /** Everything decided before the model is (possibly) called. */
 interface Preparation {
-  readonly request: AskRequest
+  readonly request: Question
   readonly categories: ReadonlyArray<EmergencyCategory>
   readonly notice: EmergencyNotice | null
   readonly passages: ReadonlyArray<Passage>
@@ -37,6 +50,8 @@ export class Assistant extends Context.Service<
   Assistant,
   {
     ask(request: AskRequest): Effect.Effect<AskResponse, AskError>
+    /** Same as `ask` for channels without a device id (Telegram). */
+    askAs(subject: QuotaSubject, question: Question): Effect.Effect<AskResponse, AskError>
     /** Quota and retrieval run before streaming starts, so they fail as ordinary errors. */
     askStream(
       request: AskRequest
@@ -53,16 +68,18 @@ export class Assistant extends Context.Service<
       const pseudonymizer = yield* Pseudonymizer
       const settings = yield* AssistantSettings
 
-      const enforceQuota = Effect.fn("Assistant.enforceQuota")(function* (request: AskRequest) {
-        const key = `assistant:${yield* pseudonymizer.hash("device", request.deviceId)}`
+      const enforceQuota = Effect.fn("Assistant.enforceQuota")(function* (subject: QuotaSubject) {
+        const key = `assistant:${yield* pseudonymizer.hash(subject.namespace, subject.id)}`
         const decision = yield* rateLimiter.consume({ key, limit: settings.dailyLimit, windowSeconds: DAY_SECONDS })
         if (!decision.allowed) {
           return yield* new RateLimited({ scope: "assistant", retryAfterSeconds: decision.retryAfterSeconds })
         }
       })
 
-      const prepare = Effect.fn("Assistant.prepare")(function* (request: AskRequest) {
-        yield* enforceQuota(request)
+      const deviceSubject = (request: AskRequest): QuotaSubject => ({ namespace: "device", id: request.deviceId })
+
+      const prepare = Effect.fn("Assistant.prepare")(function* (subject: QuotaSubject, request: Question) {
+        yield* enforceQuota(subject)
         const categories = detectEmergency(request.question)
         const contacts =
           categories.length > 0 && request.country !== undefined
@@ -97,8 +114,10 @@ export class Assistant extends Context.Service<
           { role: "user", content: buildUserMessage(p.request.question) }
         ])
 
-      const ask = Effect.fn("Assistant.ask")(function* (request: AskRequest) {
-        const p = yield* prepare(request)
+      const toQuestion = ({ deviceId: _, ...question }: AskRequest): Question => question
+
+      const askAs = Effect.fn("Assistant.askAs")(function* (subject: QuotaSubject, request: Question) {
+        const p = yield* prepare(subject, request)
         const grounded = p.passages.length > 0
         const body = grounded
           ? (yield* model.generateText({ prompt: promptFor(p) }).pipe(Effect.mapError(toUpstream))).text
@@ -112,8 +131,10 @@ export class Assistant extends Context.Service<
         })
       })
 
+      const ask = (request: AskRequest) => askAs(deviceSubject(request), toQuestion(request))
+
       const askStream = Effect.fn("Assistant.askStream")(function* (request: AskRequest) {
-        const p = yield* prepare(request)
+        const p = yield* prepare(deviceSubject(request), toQuestion(request))
         const grounded = p.passages.length > 0
         const head: Array<AssistantStreamEvent> = [
           ...(p.notice === null ? [] : [{ _tag: "Emergency" as const, notice: p.notice }]),
@@ -132,7 +153,7 @@ export class Assistant extends Context.Service<
         )
       })
 
-      return Assistant.of({ ask, askStream })
+      return Assistant.of({ ask, askAs, askStream })
     })
   )
 }

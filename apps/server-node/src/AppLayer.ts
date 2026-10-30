@@ -1,11 +1,12 @@
 import { mkdirSync } from "node:fs"
 import { dirname } from "node:path"
-import { DisabledMessengerBot, LanguageModelLive, SmsSenderLive } from "@dadalink/adapters"
-import { AssistantSettings, Pseudonymizer } from "@dadalink/core"
+import { DetachedBackgroundTasks, LanguageModelLive, MessengerBotLive, SmsSenderLive } from "@dadalink/adapters"
+import { AssistantSettings, BotSettings, Pseudonymizer } from "@dadalink/core"
 import { RepositoriesLive } from "@dadalink/db"
 import { DatabaseNode } from "@dadalink/db/node"
-import { makeHttpApp } from "@dadalink/server"
+import { makeHttpApp, TelegramWebhookSecret } from "@dadalink/server"
 import { Effect, Layer, Option } from "effect"
+import { HttpRouter } from "effect/http"
 import { ServerConfig } from "./config.ts"
 
 /** SQLite file (created on first start) + migrations + every repository. */
@@ -16,9 +17,11 @@ export const PersistenceLive = (filename: string) =>
 export const ServicesLive = Layer.mergeAll(
   LanguageModelLive,
   SmsSenderLive,
-  DisabledMessengerBot.layer,
+  MessengerBotLive,
   Pseudonymizer.layerConfig,
-  AssistantSettings.layerConfig
+  AssistantSettings.layerConfig,
+  BotSettings.layerConfig,
+  TelegramWebhookSecret.layerConfig
 )
 
 const ensureParentDirectory = (filename: string) =>
@@ -34,6 +37,10 @@ export const AppLive = Layer.unwrap(
     const app = makeHttpApp(
       Option.match(config.allowedOrigins, { onNone: () => ({}), onSome: (allowedOrigins) => ({ allowedOrigins }) })
     )
-    return app.pipe(Layer.provide(Layer.mergeAll(PersistenceLive(config.databaseFile), ServicesLive)))
+    return app.pipe(
+      // Long-lived process: background work (Telegram updates) runs on detached fibers.
+      HttpRouter.provideRequest(DetachedBackgroundTasks.layer),
+      Layer.provide(Layer.mergeAll(PersistenceLive(config.databaseFile), ServicesLive))
+    )
   })
 )

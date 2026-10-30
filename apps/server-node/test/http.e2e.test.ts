@@ -1,13 +1,19 @@
-import { FakeLanguageModel, RecordingMessengerBot, RecordingSmsSender } from "@dadalink/adapters"
+import {
+  FakeLanguageModel,
+  InlineBackgroundTasks,
+  RecordingMessengerBot,
+  RecordingSmsSender,
+  SentMessages
+} from "@dadalink/adapters"
 import { Api } from "@dadalink/api"
-import { AssistantSettings, Pseudonymizer } from "@dadalink/core"
+import { AssistantSettings, BotSettings, Pseudonymizer } from "@dadalink/core"
 import { CatalogWriter } from "@dadalink/ports"
-import { makeHttpApp } from "@dadalink/server"
+import { makeHttpApp, TelegramWebhookSecret } from "@dadalink/server"
 import { agencies, allContent, saDirectory } from "@dadalink/testing"
 import { NodeHttpServer } from "@effect/platform-node"
 import { expect, layer } from "@effect/vitest"
-import { Effect, Layer, Redacted } from "effect"
-import { HttpRouter } from "effect/http"
+import { Effect, Layer, Option, Redacted, Ref } from "effect"
+import { HttpClient, HttpClientRequest, HttpRouter } from "effect/http"
 import { HttpApiClient } from "effect/http-api"
 import { PersistenceLive } from "../src/AppLayer.ts"
 
@@ -17,6 +23,8 @@ const Services = Layer.mergeAll(
   FakeLanguageModel.layer(),
   RecordingSmsSender.layer(),
   RecordingMessengerBot.layer(),
+  BotSettings.layer({ appUrl: "https://example.org/app" }),
+  TelegramWebhookSecret.layer(Option.some(Redacted.make("e2e-hook"))),
   Pseudonymizer.layer(Redacted.make("e2e-salt")),
   AssistantSettings.layer({ reviewedOnly: false, dailyLimit: 5, maxPassages: 3 })
 )
@@ -31,10 +39,12 @@ const Seed = Layer.effectDiscard(
 )
 
 /** Real Node HTTP server on a random port, real SQLite (in memory), real HTTP client. */
-const ServerUnderTest = HttpRouter.serve(makeHttpApp()).pipe(
+const ServerUnderTest = HttpRouter.serve(
+  makeHttpApp().pipe(HttpRouter.provideRequest(InlineBackgroundTasks.layer))
+).pipe(
   Layer.provide(Seed),
   Layer.provideMerge(NodeHttpServer.layerTest),
-  Layer.provide(Layer.mergeAll(Persistence, Services)),
+  Layer.provideMerge(Layer.mergeAll(Persistence, Services)),
   Layer.orDie
 )
 
@@ -78,6 +88,26 @@ layer(ServerUnderTest)("server-node e2e (HTTP + SQLite)", (it) => {
         }
       })
       expect(result.deliveredVia).toEqual(["sms"])
+    })
+  )
+
+  it.effect("accepts a verified Telegram webhook and rejects an unverified one", () =>
+    Effect.gen(function* () {
+      const http = yield* HttpClient.HttpClient
+      const update = {
+        update_id: 99,
+        message: { message_id: 1, date: 0, chat: { id: 31337, type: "private" }, text: "/start" }
+      }
+      const post = (secret: string | undefined) =>
+        HttpClientRequest.post("/telegram/webhook").pipe(
+          HttpClientRequest.bodyJsonUnsafe(update),
+          secret === undefined ? (r) => r : HttpClientRequest.setHeader("x-telegram-bot-api-secret-token", secret),
+          http.execute
+        )
+      expect((yield* post(undefined)).status).toBe(401)
+      expect((yield* post("e2e-hook")).status).toBe(204)
+      const sent = yield* Ref.get(yield* SentMessages)
+      expect(sent.at(-1)?.chatId).toBe(31337)
     })
   )
 })
