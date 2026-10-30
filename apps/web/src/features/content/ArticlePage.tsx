@@ -1,8 +1,8 @@
 import { useSuspenseQuery } from "@tanstack/react-query"
 import { getRouteApi } from "@tanstack/react-router"
+import { useI18n } from "../../i18n/index.ts"
 import { useApi } from "../../queries/ApiProvider.tsx"
 import { contentQueries } from "../../queries/queries.ts"
-import { useI18n } from "../../i18n/index.ts"
 import { ArticleView } from "./ArticleView.tsx"
 
 const route = getRouteApi("/$locale/articles/$id")

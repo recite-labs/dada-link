@@ -1,9 +1,9 @@
 import { QueryClientProvider } from "@tanstack/react-query"
 import { RouterProvider } from "@tanstack/react-router"
 import { StrictMode } from "react"
-import { ApiProvider } from "./queries/ApiProvider.tsx"
 import { ChatProvider } from "./features/assistant/ChatProvider.tsx"
 import { PreferencesProvider } from "./preferences/index.ts"
+import { ApiProvider } from "./queries/ApiProvider.tsx"
 import type { RouterContext } from "./routes/context.ts"
 import type { AppRouter } from "./routes/router.ts"
 
