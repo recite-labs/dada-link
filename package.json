@@ -1,0 +1,27 @@
+{
+  "name": "dadalink",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "depcruise": "depcruise packages apps --config .dependency-cruiser.cjs",
+    "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm depcruise"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.4",
+    "@effect/vitest": "4.1.1",
+    "@types/node": "24.19.2",
+    "dependency-cruiser": "18.7.0",
+    "turbo": "2.11.10",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@dadalink/domain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Pure domain model: schemas, branded ids and tagged errors.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "effect": "4.1.1"
+  },
+  "devDependencies": {}
+}

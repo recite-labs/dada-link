@@ -1,0 +1,23 @@
+{
+  "name": "@dadalink/testing",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Shared port contract suites and fixtures.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@dadalink/domain": "workspace:*",
+    "@dadalink/ports": "workspace:*",
+    "@effect/vitest": "4.1.1",
+    "effect": "4.1.1",
+    "vitest": "5.0.5"
+  },
+  "devDependencies": {}
+}

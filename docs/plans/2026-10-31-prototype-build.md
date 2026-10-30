@@ -20,6 +20,7 @@
 ## Track A — Backend (worktree branch `feat/backend`)
 
 ### File structure
+
 ```
 package.json, pnpm-workspace.yaml, turbo.json, biome.json, tsconfig.base.json, .dependency-cruiser.cjs
 packages/domain/src/      ids.ts, locale.ts, country.ts, journey.ts, content.ts, directory.ts, agency.ts,
@@ -39,6 +40,7 @@ apps/server-node/         src/main.ts (NodeHttpServer + SQLite/libSQL + memory/r
 ```
 
 ### Tasks
+
 - [ ] A1 Monorepo scaffold: workspace, turbo tasks (build/test/typecheck/lint), Biome, tsconfig strict + exactOptionalPropertyTypes, dependency-cruiser rules, GitHub Actions CI.
 - [ ] A2 `domain`: Schemas + branded ids; Locale `am|om|en|sw|ti`; Country (SA, AE, KW, QA, LB, JO, ET); JourneyPhase `before|abroad|return`; tagged errors (NotFound, Validation, RateLimited, UpstreamUnavailable). Unit tests for decode/encode.
 - [ ] A3 `db`: Drizzle sqlite schema (content items + translations, directory entries, agencies, assistant feedback (opt-in), rate limits); drizzle-kit RC migrations; Effect Schemas via `effect-schema`; repos implementing ports with `effect-sqlite-node` (in-memory for tests) and `effect-d1`. Port contract tests.
@@ -49,18 +51,20 @@ apps/server-node/         src/main.ts (NodeHttpServer + SQLite/libSQL + memory/r
 - [ ] A8 Telegram: webhook (secret-token header verified), `/start`, menu buttons (Ask Dada, Help numbers, My rights, Get the app), free text → Assistant, via MessengerBot port. Tests with a fake bot client.
 - [ ] A9 `server-cloudflare`: Worker entry composing D1 + KV rate limiter + AI Gateway config + secrets (`ANTHROPIC_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_WEBHOOK_SECRET`, SMS credentials) — no Cloudflare resources created by the agent. `wrangler dev --local` smoke test.
 - [ ] A10 Content seeding: loader validating Track B files with domain Schemas, upserting into the DB (`effect/cli`), used by both server targets.
-Done when: `pnpm test`, `pnpm typecheck`, `pnpm lint`, dependency-cruiser pass; server-node and wrangler dev serve all endpoints locally.
+  Done when: `pnpm test`, `pnpm typecheck`, `pnpm lint`, dependency-cruiser pass; server-node and wrangler dev serve all endpoints locally.
 
 ## Track B — Content (worktree branch `feat/content`)
+
 Reviewable data files under `content/` (YAML front matter + Markdown), English source + Amharic and Afaan Oromo drafts marked `status: draft-ai` for human review. Shapes documented in `content/README.md`; validated by a small script now and by A10 later.
 - [ ] B1 `content/directory/<country>.yaml`: Ethiopian embassy/consulates, labour hotlines, police/ambulance, IOM, shelters/NGOs for SA, AE, KW, QA, LB, JO + Ethiopian returnee services. Only publicly published numbers, each with `source_url` and `verified: false`; never invent numbers (use `phone: null` + TODO).
 - [ ] B2 `content/rights/<country>.md`: contract, wages, hours/rest day, passport retention law, health insurance, ending a contract, complaint channels — with sources.
 - [ ] B3 `content/journey/{before,abroad,return}/*.md`: ~8 articles per phase (licensed agencies vs illegal brokers, health prep incl. SRH/contraception, documents to copy, isolation and mental health, abuse: what to do, pregnancy abroad legal risks and options, returning home, claiming unpaid wages).
 - [ ] B4 `content/agencies/ethiopia.yaml`: shape + how to obtain the MoLS licensed-agency list; only verifiable public entries (or empty + instructions).
 - [ ] B5 `content/assistant/faq-seed.yaml`: 20 common questions with short grounded answers linking to articles.
-Done when: all files validate; `content/SOURCES.md` lists every source.
+  Done when: all files validate; `content/SOURCES.md` lists every source.
 
 ## Track C — Android (worktree branch `feat/android`, folder `apps/android`)
+
 Multi-module Gradle (Kotlin DSL, version catalog): `:app`, `:core:designsystem` (Paper "dadalink" tokens: ground #FFFFFF, surface #F5F4FA, line #E4E2EF, ink #17142B, muted #5E5A73, indigo #3B2F8F, deep #261D63, tint #ECEAF7, marigold #F2A93B, sos #D7263D, safe #2E7D5B; Inter + Noto Sans Ethiopic), `:core:model`, `:core:network` (Ktor; interface + fake until openapi.json exists), `:core:database` (Room + SQLCipher), `:core:security` (PIN, Keystore-wrapped DB key, quick exit), `:core:content` (offline bundle), `:feature:onboarding|home|assistant|help|sos|log|journey|health|disguise`.
 - [ ] C1 Skeleton, version catalog, design system + typography, navigation, Hilt; theme tests; `assembleDebug` builds.
 - [ ] C2 Onboarding + safe setup (language, PIN, disguise choice, trusted contact) in encrypted DataStore.
@@ -68,7 +72,8 @@ Multi-module Gradle (Kotlin DSL, version catalog): `:app`, `:core:designsystem` 
 - [ ] C4 Private log (Room + SQLCipher; wage, hours, incident + photo in app-private encrypted storage), export/share.
 - [ ] C5 Ask Dada (streaming client behind an interface; fake until backend), quick exit, no notification previews, FLAG_SECURE on sensitive screens.
 - [ ] C6 Disguise: calculator launcher alias; PIN + "=" opens the app.
-Done when: `./gradlew test lint assembleDebug` pass; screens match the Paper designs.
+  Done when: `./gradlew test lint assembleDebug` pass; screens match the Paper designs.
 
 ## Track D — Web (after A5)
+
 React 19 + Vite + TanStack Router/Query + Tailwind 4 in `apps/web`, typed client from `packages/api`, same tokens and screens as Android minus device-only features (log, disguise), plus content pages for families and partners. Served as static assets by the Cloudflare server or by server-node.

@@ -1,0 +1,27 @@
+{
+  "name": "@dadalink/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Drizzle (SQLite/D1) schema, migrations and repositories.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@dadalink/domain": "workspace:*",
+    "@dadalink/ports": "workspace:*",
+    "@effect/sql-d1": "4.1.1",
+    "@effect/sql-sqlite-node": "4.1.1",
+    "drizzle-orm": "1.0.0-rc.5",
+    "effect": "4.1.1"
+  },
+  "devDependencies": {
+    "@dadalink/testing": "workspace:*",
+    "drizzle-kit": "1.0.0-rc.5"
+  }
+}

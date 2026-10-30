@@ -1,0 +1,26 @@
+{
+  "name": "@dadalink/server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "HttpApi handlers and HTTP composition (platform-agnostic).",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@dadalink/api": "workspace:*",
+    "@dadalink/core": "workspace:*",
+    "@dadalink/domain": "workspace:*",
+    "@dadalink/ports": "workspace:*",
+    "effect": "4.1.1"
+  },
+  "devDependencies": {
+    "@dadalink/adapters": "workspace:*",
+    "@dadalink/testing": "workspace:*"
+  }
+}

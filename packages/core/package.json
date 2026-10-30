@@ -1,0 +1,24 @@
+{
+  "name": "@dadalink/core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Use cases depending only on domain and ports.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@dadalink/domain": "workspace:*",
+    "@dadalink/ports": "workspace:*",
+    "effect": "4.1.1"
+  },
+  "devDependencies": {
+    "@dadalink/adapters": "workspace:*",
+    "@dadalink/testing": "workspace:*"
+  }
+}
