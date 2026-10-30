@@ -1,0 +1,410 @@
+country: SA
+updated: 2026-10-31
+entries:
+  - id: sa-unified-emergency
+    country: SA
+    kind: emergency
+    name:
+      en: Unified emergency number
+      am: የተዋሃደ የአስቸኳይ ጊዜ ቁጥር
+      om: Lakkoofsa ariifachiisaa tokkoomfame
+    name_status: draft-ai
+    helps_with: [emergency, abuse, sexual-violence, trafficking, health, fire]
+    phone: null
+    short_code: "911"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: "Call 911 if you are in danger. If 911 does not connect where you are, call 999 for police or 997 for an ambulance. Say your city, district and street if you can."
+    source_url: https://www.stc.com.sa/en/personal/support/support-library/emergency-numbers.html
+    sources: []
+    verified: false
+    todo: "stc lists 911 as the Unified Emergency Number and 112 as Emergency. Secondary sources say 911 may not yet work in every region; confirm national coverage and whether 112 connects. Confirm languages spoken by operators."
+
+  - id: sa-police
+    country: SA
+    kind: police
+    name:
+      en: Police
+      am: ፖሊስ
+      om: Poolisii
+    name_status: draft-ai
+    helps_with: [emergency, abuse, sexual-violence, trafficking]
+    phone: null
+    short_code: "999"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: null
+    source_url: https://www.stc.com.sa/en/personal/support/support-library/emergency-numbers.html
+    sources: []
+    verified: false
+    todo: "Confirm with an official Ministry of Interior page."
+
+  - id: sa-ambulance
+    country: SA
+    kind: ambulance
+    name:
+      en: Ambulance (Saudi Red Crescent)
+      am: አምቡላንስ (የሳዑዲ ቀይ ጨረቃ)
+      om: Ambulaansii (Hilaal Diimaa Saudi)
+    name_status: draft-ai
+    helps_with: [emergency, health, sexual-violence]
+    phone: null
+    short_code: "997"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: null
+    source_url: https://www.stc.com.sa/en/personal/support/support-library/emergency-numbers.html
+    sources: []
+    verified: false
+    todo: "Confirm with the Saudi Red Crescent Authority. One UAE embassy guide lists different numbers; stc (the telecom operator) lists 997 as Ambulance."
+
+  - id: sa-civil-defense
+    country: SA
+    kind: emergency
+    name:
+      en: Civil Defense (fire)
+      am: ሲቪል መከላከያ (እሳት)
+      om: Ittisa Siivilii (ibidda)
+    name_status: draft-ai
+    helps_with: [fire, emergency]
+    phone: null
+    short_code: "998"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: null
+    source_url: https://www.stc.com.sa/en/personal/support/support-library/emergency-numbers.html
+    sources: []
+    verified: false
+    todo: "Confirm with the General Directorate of Civil Defense."
+
+  - id: sa-embassy-ethiopia-riyadh
+    country: SA
+    kind: embassy
+    name:
+      en: Embassy of Ethiopia in Riyadh
+      am: በሪያድ የኢትዮጵያ ኤምባሲ
+      om: Embaasii Itoophiyaa Riyaad
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation, abuse, wages, legal, detention, shelter]
+    phone: "+966114823919"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: [am, ar]
+    city: Riyadh
+    address: "Abu Bakr Al Karkhi, Diplomatic Quarter (Safarat), Riyadh 11693"
+    notes: "The embassy can help with passports, travel documents and going home."
+    source_url: https://embassies.net/ethiopia-in-saudi-arabia
+    sources:
+      - url: https://embassies.net/ethiopia-in-saudi-arabia/riyadh
+        title: Embassy of Ethiopia in Riyadh
+        accessed: 2026-10-31
+        publisher: embassies.net (unofficial directory)
+    verified: false
+    todo: "Number is from an unofficial directory (embassies.net), which also lists +966114824055. The Ethiopian MoFA site (mfa.gov.et) could not be reached. Confirm numbers, email, hours, any labour/welfare desk or WhatsApp line, and whether staff speak Afaan Oromo."
+
+  - id: sa-consulate-ethiopia-jeddah
+    country: SA
+    kind: consulate
+    name:
+      en: Consulate General of Ethiopia in Jeddah
+      am: በጅዳ የኢትዮጵያ ቆንስላ ጄኔራል
+      om: Qonsilaa Jeneraala Itoophiyaa Jiddaa
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation, abuse, wages, legal, detention, shelter]
+    phone: "+966126653444"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: ethcons@gmail.com
+    website: null
+    hours: null
+    languages: [am, ar]
+    city: Jeddah
+    address: "Villa No. 18, Al-Andalus Street, near Sulaiman Mosque Street, Al Hamra District, Jeddah"
+    notes: "For workers in the western region (Jeddah, Makkah, Madinah, Taif)."
+    source_url: https://embassy-finder.com/ethiopia_in_jeddah_saudi-arabia
+    sources:
+      - url: https://embassies.net/ethiopia-in-saudi-arabia
+        title: Ethiopia in Saudi Arabia
+        accessed: 2026-10-31
+        publisher: embassies.net (unofficial directory)
+    verified: false
+    todo: "Unofficial directories only. embassy-finder gives +966 12 665 3444; embassies.net gives the old format +966 2 665-3444 plus +966 2 665-0450. Confirm current number, email and consular district with the consulate or mfa.gov.et."
+
+  - id: sa-mhrsd-call-center
+    country: SA
+    kind: labour-hotline
+    name:
+      en: Ministry of Human Resources (MHRSD) call center
+      am: የሰው ሀብትና ማኅበራዊ ልማት ሚኒስቴር የጥሪ ማዕከል
+      om: Giddugala bilbilaa Ministeera Qabeenya Namaa fi Misooma Hawaasummaa
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, passport, abuse, trafficking, shelter]
+    phone: null
+    short_code: "19911"
+    whatsapp: null
+    telegram: null
+    email: info@hrsd.gov.sa
+    website: https://www.hrsd.gov.sa/en/contact-us
+    hours: "Sun-Thu 08:00-17:00 (per ministry site)"
+    languages: [ar, en, am]
+    city: null
+    address: null
+    notes: "For unpaid wages, passport taken, too much work or no day off. Ask for an Amharic speaker."
+    source_url: https://www.hrsd.gov.sa/en/contact-us
+    sources:
+      - url: https://my.gov.sa/en/agencies/17900
+        title: Ministry of Human Resource and Social Development
+        accessed: 2026-10-31
+        publisher: Saudi National Portal (my.gov.sa)
+      - url: https://2021-2025.state.gov/reports/2024-trafficking-in-persons-report/saudi-arabia/
+        title: "2024 Trafficking in Persons Report: Saudi Arabia"
+        accessed: 2026-10-31
+        publisher: US Department of State
+    verified: false
+    todo: "Hours conflict: hrsd.gov.sa contact pages say Sun-Thu 08:00-17:00 or 08:00-14:20; the 2024 US TIP report says a 24-hour center takes calls in nine languages including Amharic. Confirm hours and Amharic/Afaan Oromo availability by calling."
+
+  - id: sa-musaned
+    country: SA
+    kind: labour-hotline
+    name:
+      en: Musaned (domestic worker contracts and complaints platform)
+      am: ሙሳነድ (የቤት ሠራተኞች ውልና አቤቱታ መድረክ)
+      om: Musaned (waltajjii waliigaltee fi komii hojjettoota manaa)
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, documents]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://musaned.com.sa
+    hours: null
+    languages: [ar, en]
+    city: null
+    address: null
+    notes: "Your contract and salary payments are recorded on Musaned. Requests to move to a new employer also go through Musaned."
+    source_url: https://www.hrsd.gov.sa/sites/default/files/2024-05/Controls%20to%20Improve%20the%20Contractual%20Relationship%20%20of%20Domestic%20Workers%20and%20their%20Equivalents.pdf
+    sources: []
+    verified: false
+    todo: "Confirm how a worker (not an employer) files a complaint on Musaned today, which languages it supports, and the exact official URL."
+
+  - id: sa-hrc
+    country: SA
+    kind: helpline
+    name:
+      en: Human Rights Commission (HRC)
+      am: የሰብአዊ መብቶች ኮሚሽን
+      om: Komishinii Mirgoota Namoomaa
+    name_status: draft-ai
+    helps_with: [abuse, trafficking, legal, labour-complaint, detention]
+    phone: "+966114185100"
+    short_code: "19922"
+    whatsapp: null
+    telegram: null
+    email: info@hrc.gov.sa
+    website: https://e-services.hrc.gov.sa/en/service/details/3
+    hours: "Call center Sun-Thu 08:30-24:00"
+    languages: [ar, en]
+    city: Riyadh
+    address: null
+    notes: "You can complain about abuse, trafficking or labour rights. Complaints are kept confidential."
+    source_url: https://www.hrc.gov.sa/website/contact-us?lang=en
+    sources:
+      - url: https://www.hrc.gov.sa/website/faq?lang=en
+        title: HRC Common Questions
+        accessed: 2026-10-31
+        publisher: Saudi Human Rights Commission
+      - url: https://www.ncct.gov.sa/sites/default/files/KSA%20Shelters%20Contact%20Information%20.pdf
+        title: KSA Shelters Contact Information
+        accessed: 2026-10-31
+        publisher: National Committee to Combat Human Trafficking
+        note: "Source of the +966114185100 landline. Read via a search-engine copy; the ncct.gov.sa server did not respond."
+    verified: false
+    todo: "19922 is from the official HRC site. The landline 0114185100 is from an older NCCT document; confirm it still works. The 2024 US TIP report says HRC also takes texts and WhatsApp; no WhatsApp number was found."
+
+  - id: sa-family-violence-1919
+    country: SA
+    kind: helpline
+    name:
+      en: Domestic violence reporting line (MHRSD)
+      am: የቤት ውስጥ ጥቃት ሪፖርት ማድረጊያ መስመር
+      om: Sarara gabaasa miidhaa manaa keessaa
+    name_status: draft-ai
+    helps_with: [abuse, sexual-violence, shelter]
+    phone: null
+    short_code: "1919"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: null
+    address: null
+    notes: null
+    source_url: https://www.ncct.gov.sa/sites/default/files/KSA%20Shelters%20Contact%20Information%20.pdf
+    sources: []
+    verified: false
+    todo: "Listed by NCCT as 'Child Abuse and Domestic Violence: 1919' (read via a search-engine copy of the PDF). Confirm on hrsd.gov.sa that it accepts reports from or about adult migrant domestic workers, its hours and languages."
+
+  - id: sa-ncct
+    country: SA
+    kind: helpline
+    name:
+      en: National Committee to Combat Human Trafficking (online reporting)
+      am: ሰዎችን መነገድን ለመዋጋት ብሔራዊ ኮሚቴ (በኦንላይን ሪፖርት)
+      om: Koree Biyyaalessaa Daldala Namaa Ittisuu (gabaasa toora interneetii)
+    name_status: draft-ai
+    helps_with: [trafficking, abuse]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://www.ncct.gov.sa
+    hours: null
+    languages: []
+    city: null
+    address: null
+    notes: "Anyone can report possible trafficking on the website."
+    source_url: https://2021-2025.state.gov/reports/2024-trafficking-in-persons-report/saudi-arabia/
+    sources: []
+    verified: false
+    todo: "ncct.gov.sa did not respond during research. NCCT said a 24/7 hotline and app were under development; check whether a hotline number now exists."
+
+  - id: sa-shelter-riyadh
+    country: SA
+    kind: shelter
+    name:
+      en: Government shelter for domestic workers - Riyadh (MHRSD)
+      am: የመንግሥት የቤት ሠራተኞች መጠለያ - ሪያድ
+      om: Iddoo baqannaa mootummaa hojjettoota manaa - Riyaad
+    name_status: draft-ai
+    helps_with: [shelter, abuse, trafficking, repatriation]
+    phone: "+966540659565"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: Riyadh
+    address: null
+    notes: "Women can also ask the Ethiopian embassy or 19911 to refer them to a shelter."
+    source_url: https://www.ncct.gov.sa/sites/default/files/KSA%20Shelters%20Contact%20Information%20.pdf
+    sources:
+      - url: https://2021-2025.state.gov/reports/2024-trafficking-in-persons-report/saudi-arabia/
+        title: "2024 Trafficking in Persons Report: Saudi Arabia"
+        accessed: 2026-10-31
+        publisher: US Department of State
+    verified: false
+    todo: "Number is the shelter manager's mobile in an undated NCCT document using old mlsd.gov.sa emails, read via a search-engine copy. Likely out of date. Confirm a current, public shelter contact with MHRSD before publishing; do not publish a personal mobile if it has changed hands."
+
+  - id: sa-shelter-jeddah
+    country: SA
+    kind: shelter
+    name:
+      en: Government shelter for domestic workers - Jeddah (MHRSD)
+      am: የመንግሥት የቤት ሠራተኞች መጠለያ - ጅዳ
+      om: Iddoo baqannaa mootummaa hojjettoota manaa - Jiddaa
+    name_status: draft-ai
+    helps_with: [shelter, abuse, trafficking, repatriation]
+    phone: "+966506695076"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: Jeddah
+    address: null
+    notes: null
+    source_url: https://www.ncct.gov.sa/sites/default/files/KSA%20Shelters%20Contact%20Information%20.pdf
+    sources: []
+    verified: false
+    todo: "Same caveats as sa-shelter-riyadh: manager's mobile from an undated NCCT list. Confirm before publishing."
+
+  - id: sa-shelter-dammam
+    country: SA
+    kind: shelter
+    name:
+      en: Government shelter for domestic workers - Dammam (MHRSD)
+      am: የመንግሥት የቤት ሠራተኞች መጠለያ - ዳማም
+      om: Iddoo baqannaa mootummaa hojjettoota manaa - Dammaam
+    name_status: draft-ai
+    helps_with: [shelter, abuse, trafficking, repatriation]
+    phone: "+966505193284"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: Dammam
+    address: null
+    notes: null
+    source_url: https://www.ncct.gov.sa/sites/default/files/KSA%20Shelters%20Contact%20Information%20.pdf
+    sources: []
+    verified: false
+    todo: "Same caveats as sa-shelter-riyadh. The NCCT list also has shelters in Hail, Tabuk, Madinah, Taif, Al-Ahsa, Qassim, Abha and Arar; add them if MHRSD confirms current contacts."
+
+  - id: sa-iom
+    country: SA
+    kind: iom
+    name:
+      en: IOM Saudi Arabia (UN Migration)
+      am: አይኦኤም ሳዑዲ ዓረቢያ (የተ.መ.ድ. የስደት ድርጅት)
+      om: IOM Saudi Arabiyaa (Dhaabbata Godaansaa UN)
+    name_status: draft-ai
+    helps_with: [repatriation, trafficking, returnee-support]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: iomriyadh@iom.int
+    website: https://ksa.iom.int
+    hours: null
+    languages: [ar, en]
+    city: Riyadh
+    address: "UN Building no. 9, Diplomatic District, Riyadh 11614"
+    notes: null
+    source_url: https://ksa.iom.int
+    sources:
+      - url: https://saudiarabia.un.org/en/contact-us
+        title: Contact Us
+        accessed: 2026-10-31
+        publisher: United Nations in Saudi Arabia
+    verified: false
+    todo: "Email and an old-format phone (+966 1 488 53 01 ext. 223, c/o UNDP) come from the UN Saudi Arabia contact page and may be outdated. Confirm a current phone and whether IOM takes direct requests from workers."

@@ -1,0 +1,97 @@
+country: ET
+authority:
+  name: Ministry of Labour and Skills (MoLS)
+  website: https://mols.gov.et
+how_to_obtain: |
+  Legal basis: Overseas Employment Proclamation No. 1389/2025 (Federal Negarit
+  Gazette No. 59, 8 August 2025) repealed Proclamations No. 923/2016 and
+  No. 1246/2021. Under it, only MoLS issues agency licences (Art. 30), licences
+  are processed through the Labour Market Information System (Art. 30(4)), a
+  licence is valid for one year and must be renewed every year (Art. 36, 41),
+  and agencies licensed under the old law had to obtain a new licence within
+  three months of the new law taking effect or their old licence became void
+  (Art. 88(2)). So any list from before late 2025 is out of date.
+
+  MoLS must notify the public "through appropriate means" whenever it suspends
+  or revokes a licence (Art. 51(2), 52(2)). Agencies also must announce office
+  moves in the mass media (Art. 40(3)).
+
+  Research pass on 2026-10-31 found NO public, machine-readable list of
+  licensed agencies:
+  - mols.gov.et (WordPress site): contact page and homepage fetched; no agency
+    list found. The announcements page and the WordPress REST API timed out or
+    refused connection during research. Retry and check announcements, the
+    "Online Services" page, and the Amharic site (mols.gov.et/am/).
+  - lmis.gov.et: a JavaScript single-page app (module-federation micro
+    frontends, including an "eowsv2-agency" agency module). No public agency
+    search was reachable without a browser/login. A human should open it in a
+    browser and check whether there is a public "verify agency" search.
+  - LeMengede (ለመንገዴ) mobile app by MoLS and ILO (launched 21 Aug 2025):
+    check whether it lists licensed agencies.
+
+  Method to refresh:
+  1. Write to MoLS (info@mols.gov.et, +251116671792, P.O. Box 25534) asking
+     for the current list of licensed overseas employment agencies, with licence
+     number, level (1 to 5), licensed destination countries and expiry date.
+  2. Check lmis.gov.et and the LeMengede app in a browser for a public lookup.
+  3. Monitor MoLS official channels (Telegram t.me/FDRE_MoLSofficial, Facebook
+     MolsFDRE, mols.gov.et announcements) and newspapers for suspension and
+     revocation notices.
+  4. Only add an agency here if it appears on an official government source,
+     with that page as source_url.
+how_to_check_for_users: |
+  Before you pay or sign anything, check the agency:
+
+  1. Ask to see the agency's MoLS licence. By law it must be on the wall of the
+     office. Check the agency name, the countries it may send workers to, and
+     the date. A licence lasts only one year.
+  2. Call or visit the Ministry of Labour and Skills (+251116671792) or your
+     regional labour office and ask if the agency is licensed now.
+  3. Make sure you are registered in the government Labour Market Information
+     System (LMIS), starting at a One Stop Service Center. Hiring outside LMIS
+     is not allowed.
+  4. Your contract must be approved by the Ministry before you travel.
+
+  Red flags. Stop and ask MoLS if:
+  - Someone asks you for money for the job. The law says agencies may not take
+    any money or gifts from you. You pay only for your passport, police
+    clearance, birth certificate, and your training and COC.
+  - They offer a tourist or visit visa to go and work.
+  - They want to keep your passport.
+  - There is no real office, or they meet you in a cafe or on the street.
+  - They say you can skip training, the COC, or the medical check.
+  - They want to send someone under 18.
+  - They work from a travel agency or ticket office. The law forbids this.
+last_checked: 2026-10-31
+sources:
+  - url: https://www.metaappz.com/pdf/ethiopian_laws/federal/2025/pr_1389_2025.pdf
+    title: Ethiopia's Overseas Employment Proclamation No. 1389/2025
+    publisher: Federal Negarit Gazette No. 59, 8 August 2025 (copy hosted by MetaAppz)
+    accessed: 2026-10-31
+    note: Art. 5, 30, 32, 36, 37, 40, 41, 44, 50, 51, 52, 83, 86, 88.
+  - url: https://mols.gov.et/contact-us/
+    title: Contact Us
+    publisher: Ministry of Labor and Skills
+    accessed: 2026-10-31
+  - url: https://lmis.gov.et/
+    title: LMIS
+    publisher: Ministry of Labor and Skills
+    accessed: 2026-10-31
+    note: JavaScript app; no public agency list could be read without a browser.
+  - url: https://ethiopia.un.org/en/node/303085
+    title: Ethiopia Launches LeMengede Mobile App to Empower and Protect Migrant Workers
+    publisher: United Nations in Ethiopia
+    accessed: 2026-10-31
+  - url: https://etcareers.com/blog/verified-overseas-agencies-ethiopia
+    title: "Verified Overseas Agencies: How to Safely Find Work Abroad from Ethiopia (2026)"
+    publisher: ETCareers (commercial job site, secondary)
+    accessed: 2026-10-31
+    note: Used only for user red flags (tourist visa offers, no office, large upfront payments, skipping COC or medical).
+todo:
+  - "No official public list of licensed agencies was found, so agencies is empty. Get the list from MoLS or a public LMIS lookup and add entries with source_url pointing to that official source."
+  - "mols.gov.et announcements and REST API were unreachable during research (connection refused / timeouts). Retry and look for licence suspension and revocation notices."
+  - "Open lmis.gov.et in a browser to see if there is a public agency verification page; record its exact URL."
+  - "Check if the LeMengede app shows licensed agencies and where to download it."
+  - "Confirm the exact date Proclamation No. 1389/2025 took effect, to know when the three-month re-licensing window (Art. 88(2)) ended."
+  - "Old press reports (The Reporter: 20 agencies licensed; 97 licences revoked) were seen only as undated search snippets, not used."
+agencies: []

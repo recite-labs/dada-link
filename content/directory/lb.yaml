@@ -1,0 +1,293 @@
+country: LB
+updated: 2026-10-31
+entries:
+  - id: lb-police
+    country: LB
+    kind: police
+    name:
+      en: Police (Internal Security Forces)
+      am: ፖሊስ (የውስጥ ደህንነት ኃይሎች)
+      om: Poolisii (Humnoota Nageenya Keessaa)
+    name_status: draft-ai
+    helps_with: [emergency, abuse, sexual-violence, trafficking]
+    phone: null
+    short_code: "112"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: [ar]
+    city: null
+    address: null
+    notes: Call if you are in danger now. Free from any phone in Lebanon.
+    source_url: https://um.dk/libanon/en/travel-and-residence/usefulcontacts/
+    sources:
+      - url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/%40arabstates/%40ro-beirut/documents/publication/wcms_234373.pdf
+        title: Information Guide for Migrant Domestic Workers in Lebanon
+        publisher: Ministry of Labour Lebanon and ILO
+        accessed: 2026-10-31
+        note: Annex 2 and Annex 3 list Police 112 (published 2012).
+    verified: false
+    todo: Confirm 112 is answered 24/7 and whether any language other than Arabic is available.
+  - id: lb-red-cross-ambulance
+    country: LB
+    kind: ambulance
+    name:
+      en: Lebanese Red Cross ambulance
+      am: የሊባኖስ ቀይ መስቀል አምቡላንስ
+      om: Ambulaansii Fannoo Diimaa Libaanoon
+    name_status: draft-ai
+    helps_with: [emergency, health]
+    phone: null
+    short_code: "140"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: [ar]
+    city: null
+    address: null
+    notes: Call for an ambulance if you are badly hurt or very sick.
+    source_url: https://um.dk/libanon/en/travel-and-residence/usefulcontacts/
+    sources:
+      - url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/%40arabstates/%40ro-beirut/documents/publication/wcms_234373.pdf
+        title: Information Guide for Migrant Domestic Workers in Lebanon
+        publisher: Ministry of Labour Lebanon and ILO
+        accessed: 2026-10-31
+        note: Annex 3 lists Red Cross 140.
+    verified: false
+    todo: Check on the Lebanese Red Cross official site. News reports (LBCI, Sept 2024) said 140 went down in Beirut and Mount Lebanon during an Ogero outage, so a backup number may be needed.
+  - id: lb-civil-defence-fire
+    country: LB
+    kind: emergency
+    name:
+      en: Civil Defence and fire brigade
+      am: ሲቪል መከላከያ እና የእሳት አደጋ ተከላካይ
+      om: Ittisa Siivilii fi Ibidda Dhaamsuu
+    name_status: draft-ai
+    helps_with: [fire, emergency]
+    phone: null
+    short_code: "125"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: [ar]
+    city: null
+    address: null
+    notes: Call if there is a fire.
+    source_url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/%40arabstates/%40ro-beirut/documents/publication/wcms_234373.pdf
+    sources:
+      - url: https://um.dk/libanon/en/travel-and-residence/usefulcontacts/
+        title: Useful Contacts and Information when you are in Lebanon
+        publisher: Embassy of Denmark in Lebanon
+        accessed: 2026-10-31
+        note: Lists Fire Brigade as 175, which conflicts with 125 in the ILO guide.
+    verified: false
+    todo: CONFLICT. ILO/Ministry of Labour guide (2012) says Fire Brigade 125; Danish Embassy page says Fire Brigade 175. Likely 125 is Civil Defence and 175 is Beirut Fire Brigade, but confirm with an official Lebanese source before launch.
+  - id: lb-mol-domestic-workers-hotline
+    country: LB
+    kind: labour-hotline
+    name:
+      en: Ministry of Labour complaints line for domestic workers
+      am: የሠራተኛ ሚኒስቴር የቤት ሠራተኞች የቅሬታ መስመር
+      om: Sarara Komii Hojjettoota Manaa Ministeera Hojii
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, passport, abuse, documents]
+    phone: null
+    short_code: "1741"
+    whatsapp: null
+    telegram: null
+    email: info@labor.gov.lb
+    website: https://www.labor.gov.lb
+    hours: Monday to Friday, 8am to 2pm
+    languages: []
+    city: Beirut
+    address: Al-Barraj Building, Chiyah Highway, Mcharrafieh, Baabda
+    notes: For problems with your employer such as unpaid pay, no day off, or a kept passport. The general complaints line is 1740.
+    source_url: https://www.labor.gov.lb/contactus.aspx
+    sources:
+      - url: https://www.imlebanon.org/2025/11/28/ministry-of-work-10/
+        title: Activation of the Ministry of Labour hotline (Arabic)
+        publisher: IMLebanon
+        accessed: 2026-10-31
+        note: Nov 2025 memo by the Minister of Labour activating 1741 for domestic worker complaints, Monday to Friday 8am to 2pm.
+      - url: https://www.ilo.org/resource/news/ilo-funded-hotline-women-migrant-domestic-workers-launched-lebanon%E2%80%99s
+        title: ILO-funded hotline for women migrant domestic workers launched by Lebanon's Ministry of Labour
+        publisher: ILO
+        accessed: 2026-10-31
+        note: 2015 article gave 1740 as a 24-hour line. Hours have since changed.
+    verified: false
+    todo: The official contact page lists 1741 for domestic worker complaints with "(1740)" next to it, and 1740 as general complaints. The 2015 ILO article described 1740 as 24-hour. Confirm current number, hours and whether interpreters (Amharic, Afaan Oromo) are available. Address translated from Arabic on the contact page.
+  - id: lb-general-security
+    country: LB
+    kind: police
+    name:
+      en: General Security (residence and work permits)
+      am: ጠቅላላ ደህንነት (የመኖሪያ እና የሥራ ፈቃድ)
+      om: Nageenya Waliigalaa (hayyama jireenyaa fi hojii)
+    name_status: draft-ai
+    helps_with: [documents, passport, detention, repatriation, abuse]
+    phone: "+9611424668"
+    short_code: "1717"
+    whatsapp: null
+    telegram: null
+    email: complaints@general-security.gov.lb
+    website: https://www.general-security.gov.lb
+    hours: null
+    languages: [ar]
+    city: Beirut
+    address: Adliyeh, Sami el Solh Street (Central Directorate)
+    notes: General Security handles your residence papers. Use 1717 inside Lebanon. The +961 number is for calls from outside Lebanon.
+    source_url: https://www.general-security.gov.lb/en/posts/141
+    sources:
+      - url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/%40arabstates/%40ro-beirut/documents/publication/wcms_234373.pdf
+        title: Information Guide for Migrant Domestic Workers in Lebanon
+        publisher: Ministry of Labour Lebanon and ILO
+        accessed: 2026-10-31
+        note: Says abuse can be reported to the General Security "Security Room" (01/612401, 01/612402, 01/612405) within 48 hours.
+    verified: false
+    todo: Kind is set to police (General Security is a Ministry of Interior security agency) because there is no immigration kind; reviewer may change. Confirm hours of 1717 and whether migrant workers can report abuse on it. The 2012 guide lists Security Room numbers 01/612401-2-5; the GS site lists Operation Room Mathaf 01/612401/2/5. Contacting General Security can carry risk for a worker without valid papers; reviewers should decide how to present this.
+  - id: lb-ethiopia-consulate
+    country: LB
+    kind: consulate
+    name:
+      en: Consulate General of Ethiopia in Beirut
+      am: በቤይሩት የኢትዮጵያ ቆንስላ ጄኔራል
+      om: Qonsilaa Jeneraala Itoophiyaa Beeruut
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation, abuse, detention, shelter]
+    phone: "+9615953597"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: Monday to Friday (times not confirmed)
+    languages: [am, om, en]
+    city: Beirut
+    address: null
+    notes: Your consulate can help with a new passport, travel papers and going home. Call before you go.
+    source_url: https://embassies.net/ethiopia-in-lebanon/beirut
+    sources:
+      - url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/%40arabstates/%40ro-beirut/documents/publication/wcms_234373.pdf
+        title: Information Guide for Migrant Domestic Workers in Lebanon
+        publisher: Ministry of Labour Lebanon and ILO
+        accessed: 2026-10-31
+        note: 2012 listing gave 01/707333 and 01/388933 in Badaro. Probably outdated.
+    verified: false
+    todo: Phone comes from a third-party directory (embassies.net), which also lists +961 5 953 656 and fax +961 5 953 651. Search results showed email general.beirut@mfa.gov.et but it was not visible on a fetched page. Address CONFLICT across directories (Hazmieh Said Freiha St Old Bank Audi Bldg; Tayouneh Zein Bldg; Hadath Seman Bldg), so address left null. Hours conflict (08:00-15:00 vs 09:00-17:00). Official mfa.gov.et could not be reached. Languages assumed, confirm. Confirm everything by phone.
+  - id: lb-kafa
+    country: LB
+    kind: helpline
+    name:
+      en: KAFA (Enough) Violence and Exploitation helpline
+      am: ካፋ (በቃ) የጥቃት እና ብዝበዛ የእርዳታ መስመር
+      om: KAFA (Ga'a) sarara gargaarsa miidhaa fi saamichaa
+    name_status: draft-ai
+    helps_with: [abuse, sexual-violence, legal, shelter, trafficking, mental-health]
+    phone: "+9613018019"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://kafa.org.lb/en
+    hours: "24/7"
+    languages: [ar, en]
+    city: Beirut
+    address: 43 Badaro Street, Beydoun Building, 1st Floor
+    notes: Lebanese women's organisation. Helps women facing violence, including migrant domestic workers, with counselling, legal help and referral to a shelter.
+    source_url: https://kafa.org.lb/en
+    sources:
+      - url: https://www.ilo.org/sites/default/files/wcmsp5/groups/public/%40arabstates/%40ro-beirut/documents/publication/wcms_234373.pdf
+        title: Information Guide for Migrant Domestic Workers in Lebanon
+        publisher: Ministry of Labour Lebanon and ILO
+        accessed: 2026-10-31
+        note: Says victims of violence can contact KAFA 24/7 at 03 018 019 and describes its services.
+    verified: false
+    todo: 24/7 and the services list come from the 2012 ILO guide; confirm still true. A 2020 services mapping reportedly listed a separate KAFA migrant hotline 76-090910 (seen only in a search summary, page could not be opened). Confirm languages.
+  - id: lb-caritas-migrants-center
+    country: LB
+    kind: shelter
+    name:
+      en: Caritas Lebanon Migrants Center
+      am: የካሪታስ ሊባኖስ የስደተኞች ማዕከል
+      om: Giddugala Godaantotaa Caritas Libaanoon
+    name_status: draft-ai
+    helps_with: [shelter, legal, health, mental-health, trafficking, detention, repatriation]
+    phone: "+9611517012"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: info@caritas.org.lb
+    website: https://caritas.org.lb/migrants-safe-shelters/
+    hours: 8am to 4pm
+    languages: []
+    city: Sin El Fil
+    address: Caritas Lebanon Headquarters, Dr Youssef Hajjar Street, Sin El Fil
+    notes: Runs safe shelters for women domestic workers who faced abuse or trafficking. Also gives legal, medical and mental health help, even if you left your employer.
+    source_url: https://caritas.org.lb/migrants-safe-shelters/
+    sources:
+      - url: https://www.iom.int/sites/g/files/tmzbdl486/files/country/docs/lebanon/contact_list_lebanon_2_nov.pdf
+        title: Contact list of services, Lebanon
+        publisher: IOM Lebanon
+        accessed: 2026-10-31
+        note: Lists Caritas migrant contacts 03-092538 and 76-555335 (undated list).
+    verified: false
+    todo: Official Caritas page gives 01 517 012 (8am-4pm). Older ILO 2012 guide and an IOM list give a migrant hotline 03 092538. Confirm which number a worker should call, and whether a 24/7 line exists. Caritas also has staff at the Retention Center for Foreign Detainees.
+  - id: lb-arm-migrant-community-center
+    country: LB
+    kind: ngo
+    name:
+      en: Anti-Racism Movement, Migrant Community Center
+      am: ፀረ-ዘረኝነት ንቅናቄ፣ የስደተኞች ማኅበረሰብ ማዕከል
+      om: Sochii Sanyummaa Mormuu, Giddugala Hawaasa Godaantotaa
+    name_status: draft-ai
+    helps_with: [legal, health, documents, mental-health]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: contact@armlebanon.org
+    website: https://armlebanon.org/contact-us
+    hours: null
+    languages: []
+    city: Beirut
+    address: Jisr El-Wati, Street 90, Zone 66, Building 110, 1st Floor
+    notes: A community space for migrant workers with case support and classes.
+    source_url: https://armlebanon.org/contact-us
+    sources: []
+    verified: false
+    todo: The ARM contact page shows "(+961) 21 428 338", which does not look like a normal Lebanese prefix, so phone left null. A third-party listing gave WhatsApp voice-note numbers 76600476 and 76051169 for the casework team, not confirmed on ARM's own site. Confirm current MCC address, hours, phone and casework channel.
+  - id: lb-iom
+    country: LB
+    kind: iom
+    name:
+      en: IOM Lebanon (UN Migration)
+      am: አይኦኤም ሊባኖስ (የተባበሩት መንግሥታት የስደት ድርጅት)
+      om: IOM Libaanoon (Dhaabbata Godaansaa UN)
+    name_status: draft-ai
+    helps_with: [repatriation, trafficking, health]
+    phone: "+9611841701"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://www.iom.int/countries/lebanon
+    hours: Monday to Friday, 8:30am to 5pm
+    languages: [ar, en]
+    city: Beirut
+    address: Nicolas Ibrahim Sursock Street, Jnah
+    notes: Can help some migrants return home safely and supports trafficking survivors, case by case.
+    source_url: https://www.e-doc.admin.ch/dam/e-doc/de/data/sem/rueckkehrhilfe/iom/kontaktadressen-iom-df.pdf.download.pdf/kontaktadressen-iom-df.pdf
+    sources:
+      - url: https://www.iom.int/sites/g/files/tmzbdl486/files/country/docs/lebanon/contact_list_lebanon_2_nov.pdf
+        title: Contact list of services, Lebanon
+        publisher: IOM Lebanon
+        accessed: 2026-10-31
+        note: Lists IOM for trafficking case management and assisted voluntary return, case by case.
+    verified: false
+    todo: Phone from a Swiss government list of IOM offices, and the same number appears on a map listing. The lebanon.iom.int contact page returned an error. Hours come from a map listing. Confirm whether IOM takes direct calls from domestic workers.

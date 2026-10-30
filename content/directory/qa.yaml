@@ -1,0 +1,251 @@
+country: QA
+updated: 2026-10-31
+entries:
+  - id: qa-emergency
+    country: QA
+    kind: emergency
+    name:
+      en: Emergency (police, ambulance, fire)
+      am: አስቸኳይ ጊዜ (ፖሊስ፣ አምቡላንስ፣ እሳት)
+      om: Ariifachiisaa (poolisii, ambulaansii, ibidda)
+    name_status: draft-ai
+    helps_with: [emergency, abuse, sexual-violence, health, fire, trafficking]
+    phone: null
+    short_code: "999"
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: "24/7"
+    languages: []
+    city: null
+    address: null
+    notes: "One number for police, ambulance and civil defence. Call 999 if you are in danger or badly hurt. Say your area, street and building number."
+    source_url: https://portal.moi.gov.qa/UNCCPCJDoha/English/Important_Numbers.html
+    sources:
+      - url: https://hamad.qa/EN/Hospitals-and-services/Emergency-Care-Services/Pages/Emergency-and-Urgent-Care-Services.aspx
+        title: Emergency and Urgent Care Services
+        accessed: 2026-10-31
+        publisher: Hamad Medical Corporation
+      - url: https://portal.moi.gov.qa/NCC/awareness.html
+        title: Emergency call guidance (Arabic)
+        accessed: 2026-10-31
+        publisher: Qatar Ministry of Interior, National Command Center
+    verified: false
+    todo: "MOI Arabic guidance says 999 answers in several languages; confirm whether Amharic or Afaan Oromo interpretation exists."
+
+  - id: qa-hamad-emergency
+    country: QA
+    kind: ambulance
+    name:
+      en: Hamad General Hospital - Accident and Emergency
+      am: ሃማድ ጠቅላላ ሆስፒታል - የአደጋና ድንገተኛ ክፍል
+      om: Hospitaala Waliigalaa Hamad - Kutaa Balaa fi Ariifachiisaa
+    name_status: draft-ai
+    helps_with: [health, emergency, sexual-violence]
+    phone: "+97444392111"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://hamad.qa/EN/Hospitals-and-services/Emergency-Care-Services/Pages/Emergency-and-Urgent-Care-Services.aspx
+    hours: null
+    languages: []
+    city: Doha
+    address: null
+    notes: "For a life-threatening emergency call 999 first. This is the hospital emergency department line."
+    source_url: https://portal.moi.gov.qa/UNCCPCJDoha/English/Important_Numbers.html
+    sources: []
+    verified: false
+    todo: "Number comes from an MOI page made for a UN conference; confirm it is still current with HMC. Confirm hours."
+
+  - id: qa-ethiopian-embassy-doha
+    country: QA
+    kind: embassy
+    name:
+      en: Embassy of Ethiopia in Doha
+      am: በዶሃ የኢትዮጵያ ኤምባሲ
+      om: Ejjennoo Itoophiyaa Dohaa
+    name_status: draft-ai
+    helps_with: [passport, documents, repatriation, abuse, legal, detention, shelter]
+    phone: "+97440207000"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: ethioembassydoha@gmail.com
+    website: null
+    hours: null
+    languages: []
+    city: Doha
+    address: P.O. Box 24856, Doha
+    notes: "Your embassy can help with your passport, travel papers to go home, and problems with your employer."
+    source_url: https://portal.moi.gov.qa/UNCCPCJDoha/English/Embassies.html
+    sources: []
+    verified: false
+    todo: "Email differs between sources (ethioembassydoha@gmail.com on the MOI page; non-official listings also give doha.embassy@mfa.gov.et and ethiopiaembassyindoha@mail.com). Official site doha.mfa.gov.et could not be loaded on 2026-10-31. Confirm email, street address (listings say Al Qutaifiya/Legtaifiya, Dafna), hours, and any emergency or shelter line for citizens."
+
+  - id: qa-mol-hotline
+    country: QA
+    kind: labour-hotline
+    name:
+      en: Ministry of Labour complaints hotline
+      am: የሠራተኛ ሚኒስቴር የቅሬታ መቀበያ ስልክ
+      om: Sarara Komii Ministeera Hojii
+    name_status: draft-ai
+    helps_with: [labour-complaint, wages, passport, documents, abuse, legal]
+    phone: "+97440280661"
+    short_code: "16008"
+    whatsapp: null
+    telegram: null
+    email: info@mol.gov.qa
+    website: https://www.mol.gov.qa
+    hours: "24/7"
+    languages: []
+    city: Doha
+    address: null
+    notes: "Free. You can also send an SMS to 92727. Type 5, then your QID number or visa number. Keep your complaint number."
+    source_url: https://www.ilo.org/media/384576/download
+    sources:
+      - url: https://www.ilo.org/media/374051/download
+        title: What is the procedure to change jobs in Qatar? (flowchart)
+        accessed: 2026-10-31
+        publisher: ILO / Qatar Ministry of Labour
+    verified: false
+    todo: "Hotline numbers come from the ILO 2021 booklet, written when the ministry was called ADLSA (email then info@adlsa.gov.qa). Newer non-official sources also list 16505 and 44068979; confirm the current hotline on mol.gov.qa (site could not be loaded on 2026-10-31). Confirm languages and the current online complaints platform URL."
+
+  - id: qa-ncht-hotline
+    country: QA
+    kind: helpline
+    name:
+      en: National Committee to Combat Human Trafficking hotline
+      am: የሰዎች ዝውውርን ለመከላከል የብሔራዊ ኮሚቴ የስልክ መስመር
+      om: Sarara Koree Biyyaalessaa Daldala Namaa Ittisuu
+    name_status: draft-ai
+    helps_with: [trafficking, shelter, abuse, legal]
+    phone: null
+    short_code: "16044"
+    whatsapp: null
+    telegram: null
+    email: ht@mol.gov.qa
+    website: null
+    hours: null
+    languages: []
+    city: Doha
+    address: null
+    notes: "Report trafficking or forced work. The committee can refer you to the Humanitarian Care House shelter."
+    source_url: https://www.mol.gov.qa/admin/Publications/National%20Report%20for%20Combating%20Human%20Trafficking%202022(NEW).pdf
+    sources:
+      - url: https://www.ilo.org/sites/default/files/2024-07/Qatar_P29%202023.pdf
+        title: Qatar government report on the Forced Labour Protocol (P29), 2023
+        accessed: 2026-10-31
+        publisher: ILO
+    verified: false
+    todo: "MOL 2022 report names the committee website www.ahtnc.gov.qa; confirm it is live before adding. Confirm hours and languages."
+
+  - id: qa-humanitarian-care-house
+    country: QA
+    kind: shelter
+    name:
+      en: Humanitarian Care House (shelter for trafficking victims)
+      am: የሰብዓዊ እንክብካቤ ቤት (ለሰዎች ዝውውር ተጠቂዎች መጠለያ)
+      om: Mana Kunuunsa Namummaa (hirkoo miidhamtoota daldala namaa)
+    name_status: draft-ai
+    helps_with: [shelter, trafficking, legal, health, repatriation]
+    phone: null
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: null
+    hours: null
+    languages: []
+    city: Doha
+    address: Abu Hamour
+    notes: "You cannot walk in. Ask the trafficking hotline 16044, the Ministry of Labour or your embassy to refer you."
+    source_url: https://www.mol.gov.qa/admin/Publications/National%20Report%20for%20Combating%20Human%20Trafficking%202022(NEW).pdf
+    sources:
+      - url: https://qa.usembassy.gov/2023-trafficking-in-persons-report-qatar/
+        title: 2023 Trafficking in Persons Report - Qatar
+        accessed: 2026-10-31
+        publisher: U.S. Embassy in Qatar
+    verified: false
+    todo: "No direct public contact found. The 2023 US TIP report says only the NCCHT can refer victims, victims cannot self-refer, and freedom of movement is limited. Abu Hamour location is from a 2023 Peninsula news report; confirm."
+
+  - id: qa-aman-centre
+    country: QA
+    kind: shelter
+    name:
+      en: Aman Protection and Social Rehabilitation Centre
+      am: የአማን የጥበቃና ማኅበራዊ ማቋቋሚያ ማዕከል
+      om: Wiirtuu Eegumsaa fi Deebisanii Dhaabuu Hawaasummaa Amaan
+    name_status: draft-ai
+    helps_with: [abuse, sexual-violence, shelter, mental-health, legal]
+    phone: "+97444090999"
+    short_code: "919"
+    whatsapp: null
+    telegram: null
+    email: info@aman.org.qa
+    website: https://www.aman.org.qa/en/faq
+    hours: "24/7"
+    languages: [ar, en, fr, pt, es, ur, tl, zh]
+    city: Doha
+    address: null
+    notes: "Free hotline 919, day and night, for women facing violence. Open to all residents, not only Qataris. Can arrange temporary shelter."
+    source_url: https://www.aman.org.qa/en/faq
+    sources:
+      - url: https://www.aman.org.qa/en/news/community-partnership-between-aman-center-and-doha-festival-city-mall-raise-public-awareness
+        title: Aman Center hotline awareness campaign
+        accessed: 2026-10-31
+        publisher: Aman Centre
+    verified: false
+    todo: "24/7 applies to the 919 hotline; the office line +97444090999 is 7:30-2:00. Confirm it takes domestic workers abused by employers (its mandate is violence and family breakdown). Languages from an older Aman news item; confirm."
+
+  - id: qa-nhrc
+    country: QA
+    kind: ngo
+    name:
+      en: National Human Rights Committee (NHRC)
+      am: ብሔራዊ የሰብዓዊ መብቶች ኮሚቴ
+      om: Koree Biyyaalessaa Mirgoota Namoomaa
+    name_status: draft-ai
+    helps_with: [labour-complaint, legal, abuse, detention, passport]
+    phone: "+97444048844"
+    short_code: "8002222"
+    whatsapp: null
+    telegram: null
+    email: c@nhrc.org.qa
+    website: https://www.nhrc-qa.org/
+    hours: null
+    languages: []
+    city: Doha
+    address: null
+    notes: "Inside Qatar the hotline is 800 2222. You can send a complaint by email with a copy of your passport or visa."
+    source_url: https://www.nhrc-qa.org/
+    sources: []
+    verified: false
+    todo: "Confirm toll-free hotline 8002222 still works. Site also lists +97466626663 and +97433296666. NHRC is a state-created national human rights institution, not an independent NGO; kind 'ngo' is the closest enum. Confirm hours and languages."
+
+  - id: qa-iom
+    country: QA
+    kind: iom
+    name:
+      en: IOM Qatar (UN Migration)
+      am: አይኦኤም ኳታር (የተባበሩት መንግሥታት የፍልሰት ድርጅት)
+      om: IOM Qaxar (Dhaabbata Godaansaa UN)
+    name_status: draft-ai
+    helps_with: [repatriation, trafficking, returnee-support]
+    phone: "+97441415279"
+    short_code: null
+    whatsapp: null
+    telegram: null
+    email: null
+    website: https://mena.iom.int/qatar
+    hours: null
+    languages: []
+    city: Doha
+    address: Zone No. 69, Street No. 133, Building No. 20, Lusail
+    notes: "UN agency for migrants. May help with going home and with trafficking cases."
+    source_url: https://mena.iom.int/qatar
+    sources: []
+    verified: false
+    todo: "Confirm IOM Qatar gives direct help to individual domestic workers and how to reach it."
