@@ -1,5 +1,3 @@
-import { mkdirSync } from "node:fs"
-import { dirname } from "node:path"
 import { DetachedBackgroundTasks, LanguageModelLive, MessengerBotLive, SmsSenderLive } from "@dadalink/adapters"
 import { AssistantSettings, BotSettings, Pseudonymizer } from "@dadalink/core"
 import { RepositoriesLive } from "@dadalink/db"
@@ -24,16 +22,10 @@ export const ServicesLive = Layer.mergeAll(
   TelegramWebhookSecret.layerConfig
 )
 
-const ensureParentDirectory = (filename: string) =>
-  Effect.sync(() => {
-    if (filename !== ":memory:") mkdirSync(dirname(filename), { recursive: true })
-  })
-
 /** The whole HTTP application for the self-hosted target. */
 export const AppLive = Layer.unwrap(
   Effect.gen(function* () {
     const config = yield* ServerConfig
-    yield* ensureParentDirectory(config.databaseFile)
     const app = makeHttpApp(
       Option.match(config.allowedOrigins, { onNone: () => ({}), onSome: (allowedOrigins) => ({ allowedOrigins }) })
     )

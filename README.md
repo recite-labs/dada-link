@@ -16,6 +16,20 @@ An employer may look at her phone. DadaLink can look like a calculator, has a on
 
 New project by [Recite Labs](https://recitelabs.com), Addis Ababa. Early development; see [`docs/specs`](docs/specs) for the product design.
 
+## Development (backend)
+
+Requires Node 24 and pnpm 9.
+
+```sh
+pnpm install
+pnpm check                      # typecheck, lint (Biome), test, dependency rules
+pnpm content seed <content-dir> # load reviewed content into apps/server-node/data/dadalink.db
+pnpm --filter @dadalink/server-node dev   # http://localhost:3000 (offline: fake model, log-only SMS/Telegram)
+cd apps/server-cloudflare && cp .dev.vars.example .dev.vars && pnpm db:migrate:local && pnpm dev   # Workers, local D1
+```
+
+API contract: `packages/api` (OpenAPI in `packages/api/openapi.json`, served at `/openapi.json`). Architecture decisions: [`docs/decisions`](docs/decisions). Content file format: [`docs/content-format.md`](docs/content-format.md).
+
 ## License
 
 [GNU AGPL-3.0](LICENSE). If you run a modified version as a service, you must share your changes.
