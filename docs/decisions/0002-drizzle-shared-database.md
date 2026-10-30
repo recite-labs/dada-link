@@ -3,9 +3,11 @@
 Status: accepted (2026-10-31)
 
 ## Context
+
 `drizzle-orm@1.0.0-rc.5` ships separate Effect drivers: `drizzle-orm/effect-sqlite-node` (on `@effect/sql-sqlite-node`, i.e. `node:sqlite`) and `drizzle-orm/effect-d1` (on `@effect/sql-d1`). Their database classes differ only in the raw `run()` result type; both use a query HKT failing with `EffectDrizzleQueryError` and requiring no context.
 
 ## Decision
+
 - `packages/db/src/Database.ts` defines `DrizzleDatabase = SQLiteEffectDatabase<DrizzleQueryHKT, unknown>` and a `Database` service. Repositories are written once against it.
 - `@dadalink/db/node` (`DatabaseNode.layer`) and `@dadalink/db/d1` (`DatabaseD1.layer`) build the driver-specific database and widen it to `DrizzleDatabase` with a single documented cast (`as unknown as`), because TypeScript cannot prove the class types compatible even though the HKTs are structurally identical. We never call `run()` results, so the widening is safe.
 - The D1 driver's `makeWithDefaults` requires a config argument (`{}`), unlike the node one.
@@ -14,4 +16,5 @@ Status: accepted (2026-10-31)
 - `content_translations` order is not persisted; repos return translations in `LOCALES` order and contract tests compare order-insensitively.
 
 ## Consequences
+
 Every repository is covered by the shared contract suite on node:sqlite. D1 runs the very same repository code; it is exercised by the `wrangler dev --local` smoke test rather than unit tests.
