@@ -13,3 +13,5 @@ coverage/
 data/
 !.env.example
 !.env.development
+test-results/
+playwright-report/
