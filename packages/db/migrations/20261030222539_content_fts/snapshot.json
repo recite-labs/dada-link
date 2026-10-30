@@ -1,0 +1,712 @@
+{
+  "id": "e1e5d879-0d59-400f-aa83-4fbdd72cb0c7",
+  "prevIds": [
+    "d9bada7f-fc94-4d7a-be2b-c9d018f0e1e9"
+  ],
+  "version": "7",
+  "dialect": "sqlite",
+  "ddl": [
+    {
+      "name": "agencies",
+      "entityType": "tables"
+    },
+    {
+      "name": "assistant_feedback",
+      "entityType": "tables"
+    },
+    {
+      "name": "chat_preferences",
+      "entityType": "tables"
+    },
+    {
+      "name": "content_items",
+      "entityType": "tables"
+    },
+    {
+      "name": "content_translations",
+      "entityType": "tables"
+    },
+    {
+      "name": "directory_entries",
+      "entityType": "tables"
+    },
+    {
+      "name": "rate_limits",
+      "entityType": "tables"
+    },
+    {
+      "table": "agencies",
+      "name": "id",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "name",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "name_normalized",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "licence_number",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "licence_normalized",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "status",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "region",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "phone",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "address",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "source_url",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "verified_at",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "assistant_feedback",
+      "name": "id",
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "assistant_feedback",
+      "name": "day",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "assistant_feedback",
+      "name": "helpful",
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "assistant_feedback",
+      "name": "locale",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "assistant_feedback",
+      "name": "content_ids",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "chat_preferences",
+      "name": "chat_hash",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "chat_preferences",
+      "name": "locale",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "chat_preferences",
+      "name": "country",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "chat_preferences",
+      "name": "updated_at_ms",
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_items",
+      "name": "id",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_items",
+      "name": "kind",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_items",
+      "name": "phase",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_items",
+      "name": "countries",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_items",
+      "name": "topics",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_items",
+      "name": "sources",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_translations",
+      "name": "content_id",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_translations",
+      "name": "locale",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_translations",
+      "name": "status",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_translations",
+      "name": "title",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_translations",
+      "name": "summary",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "content_translations",
+      "name": "body",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "id",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "country",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "position",
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "kind",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "name",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "names",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "phone",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "whatsapp",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "email",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "url",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "address",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "hours",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "notes",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "emergency",
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "source_url",
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "verified",
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "directory_entries",
+      "name": "last_verified",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "rate_limits",
+      "name": "key",
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "rate_limits",
+      "name": "window_start_ms",
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "rate_limits",
+      "name": "count",
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "entityType": "columns"
+    },
+    {
+      "table": "agencies",
+      "name": "agencies_licence_idx",
+      "columns": [
+        {
+          "value": "licence_normalized",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "entityType": "indexes"
+    },
+    {
+      "table": "agencies",
+      "name": "agencies_name_idx",
+      "columns": [
+        {
+          "value": "name_normalized",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "entityType": "indexes"
+    },
+    {
+      "table": "content_items",
+      "name": "content_items_phase_idx",
+      "columns": [
+        {
+          "value": "phase",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "entityType": "indexes"
+    },
+    {
+      "table": "content_items",
+      "name": "content_items_kind_idx",
+      "columns": [
+        {
+          "value": "kind",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "entityType": "indexes"
+    },
+    {
+      "table": "directory_entries",
+      "name": "directory_entries_country_idx",
+      "columns": [
+        {
+          "value": "country",
+          "isExpression": false
+        },
+        {
+          "value": "position",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "entityType": "indexes"
+    },
+    {
+      "table": "content_translations",
+      "name": "fk_content_translations_content_id_content_items_id_fk",
+      "columns": [
+        "content_id"
+      ],
+      "tableTo": "content_items",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "CASCADE",
+      "nameExplicit": false,
+      "entityType": "fks"
+    },
+    {
+      "table": "content_translations",
+      "name": "content_translations_pk",
+      "columns": [
+        "content_id",
+        "locale"
+      ],
+      "nameExplicit": false,
+      "entityType": "pks"
+    },
+    {
+      "table": "agencies",
+      "name": "agencies_pk",
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "entityType": "pks"
+    },
+    {
+      "table": "assistant_feedback",
+      "name": "assistant_feedback_pk",
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "entityType": "pks"
+    },
+    {
+      "table": "chat_preferences",
+      "name": "chat_preferences_pk",
+      "columns": [
+        "chat_hash"
+      ],
+      "nameExplicit": false,
+      "entityType": "pks"
+    },
+    {
+      "table": "content_items",
+      "name": "content_items_pk",
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "entityType": "pks"
+    },
+    {
+      "table": "directory_entries",
+      "name": "directory_entries_pk",
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "entityType": "pks"
+    },
+    {
+      "table": "rate_limits",
+      "name": "rate_limits_pk",
+      "columns": [
+        "key"
+      ],
+      "nameExplicit": false,
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}
