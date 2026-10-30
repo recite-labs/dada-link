@@ -2,11 +2,10 @@
   "$schema": "https://turborepo.com/schema.json",
   "tasks": {
     "typecheck": {
-      "dependsOn": ["^typecheck"],
-      "inputs": ["src/**", "test/**", "tsconfig.json", "package.json"]
+      "dependsOn": ["^typecheck"]
     },
     "test": {
-      "inputs": ["src/**", "test/**", "migrations/**", "vitest.config.ts", "package.json"],
+      "dependsOn": ["^typecheck"],
       "outputs": []
     },
     "lint": {},

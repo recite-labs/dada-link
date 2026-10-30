@@ -1,0 +1,8 @@
+**/node_modules
+**/.turbo
+**/.wrangler
+**/data
+**/*.db
+.git
+.env*
+.dev.vars

@@ -3,15 +3,15 @@ import { Schema } from "effect"
 import { AgencyId, ContentId, DeviceId, DirectoryEntryId, TelegramChatId } from "../src/index.ts"
 
 describe("ContentId", () => {
-  it("accepts lower-case slugs with dashes and slashes", () => {
-    expect(Schema.decodeUnknownSync(ContentId)("abroad/isolation-and-loneliness")).toBe(
-      "abroad/isolation-and-loneliness"
+  it("accepts lower-case slugs with dashes", () => {
+    expect(Schema.decodeUnknownSync(ContentId)("abroad-isolation-and-loneliness")).toBe(
+      "abroad-isolation-and-loneliness"
     )
     expect(Schema.decodeUnknownSync(ContentId)("rights-sa")).toBe("rights-sa")
   })
 
   it("rejects spaces, upper case and empty strings", () => {
-    for (const bad of ["", "Has Space", "UPPER", "-leading", "trailing/"]) {
+    for (const bad of ["", "Has Space", "UPPER", "-leading", "with/slash", "double--dash"]) {
       expect(() => Schema.decodeUnknownSync(ContentId)(bad), bad).toThrow()
     }
   })

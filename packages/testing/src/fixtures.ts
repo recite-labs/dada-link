@@ -8,7 +8,7 @@ const decodeAgency = Schema.decodeUnknownSync(Agency)
 export const DEVICE_ID = "6f1c1d2e-8a3b-4c5d-9e6f-7a8b9c0d1e2f"
 
 export const unpaidWages = decodeContent({
-  id: "abroad/unpaid-wages",
+  id: "abroad-unpaid-wages",
   kind: "article",
   phase: "abroad",
   countries: [],
@@ -51,7 +51,7 @@ export const passportRetention = decodeContent({
 })
 
 export const contraception = decodeContent({
-  id: "before/contraception",
+  id: "before-contraception",
   kind: "article",
   phase: "before",
   countries: [],

@@ -1,0 +1,28 @@
+{
+  "name": "@dadalink/server-node",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Self-hosted DadaLink server: Node HTTP + SQLite.",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/main.ts",
+    "start": "node --env-file-if-exists=.env src/main.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@dadalink/adapters": "workspace:*",
+    "@dadalink/api": "workspace:*",
+    "@dadalink/core": "workspace:*",
+    "@dadalink/db": "workspace:*",
+    "@dadalink/domain": "workspace:*",
+    "@dadalink/ports": "workspace:*",
+    "@dadalink/server": "workspace:*",
+    "@effect/platform-node": "4.1.1",
+    "effect": "4.1.1"
+  },
+  "devDependencies": {
+    "@dadalink/testing": "workspace:*"
+  }
+}

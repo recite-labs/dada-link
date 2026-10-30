@@ -1,0 +1,815 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DadaLink API",
+    "version": "0.1.0",
+    "description": "Safety-first companion for African women migrant domestic workers."
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "operationId": "health",
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "HealthStatus",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthStatusEncoded"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/content": {
+      "get": {
+        "tags": [
+          "Content"
+        ],
+        "operationId": "content.list",
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Locale"
+            },
+            "required": false
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Country"
+            },
+            "required": false
+          },
+          {
+            "name": "phase",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/JourneyPhase"
+            },
+            "required": false
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ContentKind"
+            },
+            "required": false
+          },
+          {
+            "name": "topic",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Topic"
+            },
+            "required": false
+          }
+        ],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ContentSummaryEncoded"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/content/{id}": {
+      "get": {
+        "tags": [
+          "Content"
+        ],
+        "operationId": "content.get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "$ref": "#/components/schemas/ContentId"
+            },
+            "required": true
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Locale"
+            },
+            "required": false
+          }
+        ],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "LocalizedContent",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalizedContentEncoded"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotFoundEncoded"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/directory/{country}": {
+      "get": {
+        "tags": [
+          "Help directory"
+        ],
+        "operationId": "directory.forCountry",
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "schema": {
+              "$ref": "#/components/schemas/Country"
+            },
+            "required": true
+          }
+        ],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DirectoryEntryEncoded"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/directory/{country}/emergency": {
+      "get": {
+        "tags": [
+          "Help directory"
+        ],
+        "operationId": "directory.emergency",
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "schema": {
+              "$ref": "#/components/schemas/Country"
+            },
+            "required": true
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Locale"
+            },
+            "required": false
+          }
+        ],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmergencyContactEncoded"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/agencies/check": {
+      "get": {
+        "tags": [
+          "Agencies"
+        ],
+        "operationId": "agencies.check",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "required": true
+          }
+        ],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "AgencyCheck",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgencyCheckEncoded"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ValidationFailed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationFailedEncoded"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValidationFailedEncoded": {
+        "type": "object",
+        "properties": {
+          "_tag": {
+            "type": "string",
+            "enum": [
+              "ValidationFailed"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "AgencyCheckEncoded": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "verdict": {
+            "$ref": "#/components/schemas/AgencyVerdict"
+          },
+          "matches": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AgencyEncoded"
+            }
+          }
+        },
+        "required": [
+          "query",
+          "verdict",
+          "matches"
+        ],
+        "additionalProperties": false
+      },
+      "AgencyEncoded": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/AgencyId"
+          },
+          "name": {
+            "type": "string"
+          },
+          "licenceNumber": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "$ref": "#/components/schemas/AgencyStatus"
+          },
+          "region": {
+            "type": "string"
+          },
+          "phone": {
+            "$ref": "#/components/schemas/PhoneNumber"
+          },
+          "address": {
+            "type": "string"
+          },
+          "sourceUrl": {
+            "$ref": "#/components/schemas/HttpUrl"
+          },
+          "verifiedAt": {
+            "$ref": "#/components/schemas/IsoDate"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "licenceNumber",
+          "status",
+          "sourceUrl"
+        ],
+        "additionalProperties": false
+      },
+      "IsoDate": {
+        "type": "string"
+      },
+      "HttpUrl": {
+        "type": "string"
+      },
+      "PhoneNumber": {
+        "type": "string"
+      },
+      "AgencyStatus": {
+        "type": "string",
+        "enum": [
+          "licensed",
+          "suspended",
+          "revoked",
+          "unknown"
+        ]
+      },
+      "AgencyId": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "AgencyVerdict": {
+        "type": "string",
+        "enum": [
+          "licensed",
+          "suspended",
+          "revoked",
+          "unknown",
+          "not-found"
+        ]
+      },
+      "EmergencyContactEncoded": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/DirectoryKind"
+          },
+          "phone": {
+            "$ref": "#/components/schemas/PhoneNumber"
+          }
+        },
+        "required": [
+          "name",
+          "kind",
+          "phone"
+        ],
+        "additionalProperties": false
+      },
+      "DirectoryKind": {
+        "type": "string",
+        "enum": [
+          "emergency",
+          "police",
+          "ambulance",
+          "fire",
+          "embassy",
+          "consulate",
+          "labour-ministry",
+          "labour-hotline",
+          "iom",
+          "un-agency",
+          "shelter",
+          "ngo",
+          "health",
+          "mental-health",
+          "legal-aid",
+          "returnee-service",
+          "other"
+        ]
+      },
+      "Locale": {
+        "type": "string",
+        "enum": [
+          "am",
+          "om",
+          "en",
+          "sw",
+          "ti"
+        ],
+        "description": "BCP-47 primary language subtag supported by DadaLink"
+      },
+      "Country": {
+        "type": "string",
+        "enum": [
+          "SA",
+          "AE",
+          "KW",
+          "QA",
+          "LB",
+          "JO",
+          "ET"
+        ],
+        "description": "ISO 3166-1 alpha-2 code of a country covered by DadaLink"
+      },
+      "DirectoryEntryEncoded": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/DirectoryEntryId"
+          },
+          "country": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/DirectoryKind"
+          },
+          "name": {
+            "type": "string"
+          },
+          "names": {
+            "$ref": "#/components/schemas/LocalizedNames"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PhoneNumber"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "whatsapp": {
+            "$ref": "#/components/schemas/PhoneNumber"
+          },
+          "email": {
+            "type": "string"
+          },
+          "url": {
+            "$ref": "#/components/schemas/HttpUrl"
+          },
+          "address": {
+            "type": "string"
+          },
+          "hours": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "emergency": {
+            "type": "boolean"
+          },
+          "sourceUrl": {
+            "$ref": "#/components/schemas/HttpUrl"
+          },
+          "verified": {
+            "type": "boolean"
+          },
+          "lastVerified": {
+            "$ref": "#/components/schemas/IsoDate"
+          }
+        },
+        "required": [
+          "id",
+          "country",
+          "kind",
+          "name",
+          "phone",
+          "emergency",
+          "sourceUrl",
+          "verified"
+        ],
+        "additionalProperties": false
+      },
+      "LocalizedNames": {
+        "type": "object",
+        "properties": {
+          "am": {
+            "type": "string"
+          },
+          "om": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          },
+          "sw": {
+            "type": "string"
+          },
+          "ti": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DirectoryEntryId": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "NotFoundEncoded": {
+        "type": "object",
+        "properties": {
+          "_tag": {
+            "type": "string",
+            "enum": [
+              "NotFound"
+            ]
+          },
+          "entity": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag",
+          "entity",
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "LocalizedContentEncoded": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ContentId"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/ContentKind"
+          },
+          "phase": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/JourneyPhase"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "countries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Country"
+            }
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Topic"
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceEncoded"
+            }
+          },
+          "locale": {
+            "$ref": "#/components/schemas/Locale"
+          },
+          "requestedLocale": {
+            "$ref": "#/components/schemas/Locale"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ReviewStatus"
+          },
+          "title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "availableLocales": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Locale"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "phase",
+          "countries",
+          "topics",
+          "sources",
+          "locale",
+          "requestedLocale",
+          "status",
+          "title",
+          "summary",
+          "body",
+          "availableLocales"
+        ],
+        "additionalProperties": false
+      },
+      "ReviewStatus": {
+        "type": "string",
+        "enum": [
+          "draft-ai",
+          "draft",
+          "reviewed"
+        ]
+      },
+      "SourceEncoded": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "$ref": "#/components/schemas/HttpUrl"
+          }
+        },
+        "required": [
+          "title",
+          "url"
+        ],
+        "additionalProperties": false
+      },
+      "Topic": {
+        "type": "string",
+        "enum": [
+          "health",
+          "srh",
+          "mental-health",
+          "rights",
+          "safety",
+          "documents",
+          "money",
+          "agencies",
+          "return"
+        ]
+      },
+      "JourneyPhase": {
+        "type": "string",
+        "enum": [
+          "before",
+          "abroad",
+          "return"
+        ],
+        "description": "Stage of the migration journey: before leaving, while abroad, after returning"
+      },
+      "ContentKind": {
+        "type": "string",
+        "enum": [
+          "article",
+          "rights",
+          "faq"
+        ]
+      },
+      "ContentId": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "ContentSummaryEncoded": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ContentId"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/ContentKind"
+          },
+          "phase": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/JourneyPhase"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "countries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Country"
+            }
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Topic"
+            }
+          },
+          "locale": {
+            "$ref": "#/components/schemas/Locale"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ReviewStatus"
+          },
+          "title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "phase",
+          "countries",
+          "topics",
+          "locale",
+          "status",
+          "title",
+          "summary"
+        ],
+        "additionalProperties": false
+      },
+      "HealthStatusEncoded": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok"
+            ]
+          },
+          "service": {
+            "type": "string",
+            "enum": [
+              "dadalink"
+            ]
+          },
+          "version": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "service",
+          "version"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {}
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "Health"
+    },
+    {
+      "name": "Content",
+      "description": "Reviewed articles, rights per country and FAQs, resolved to the requested locale (English fallback)"
+    },
+    {
+      "name": "Help directory",
+      "description": "Per-country help and emergency numbers"
+    },
+    {
+      "name": "Agencies",
+      "description": "Check a recruitment agency against the published licensed-agency list"
+    }
+  ]
+}

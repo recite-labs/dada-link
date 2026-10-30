@@ -11,7 +11,7 @@ const translation = (locale: string, status = "reviewed") => ({
 })
 
 const item = {
-  id: "abroad/isolation",
+  id: "abroad-isolation",
   kind: "article",
   phase: "abroad",
   countries: [],
