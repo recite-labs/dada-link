@@ -931,14 +931,16 @@ function main() {
 
   const articleFiles = [...articles.values()].reduce((n, m) => n + m.size, 0)
   const dirTotal = Object.values(directoryCounts).reduce((a, b) => a + b, 0)
-  console.log(
+  const out = (line) => process.stdout.write(`${line}\n`)
+  const err = (line) => process.stderr.write(`${line}\n`)
+  out(
     `directory entries: ${dirTotal} ${JSON.stringify(directoryCounts)} | article files: ${articleFiles} | agencies: ${agencyCount ?? "-"} | faq: ${faqCount ?? "-"} | sources: ${sourceIndex.size}`
   )
-  for (const w of warnings) console.warn(`warning: ${w}`)
+  for (const w of warnings) err(`warning: ${w}`)
   if (errors.length) {
-    for (const e of errors) console.error(`error: ${e}`)
-    console.error(`\n${errors.length} error(s)`)
+    for (const e of errors) err(`error: ${e}`)
+    err(`\n${errors.length} error(s)`)
     process.exit(1)
   }
-  console.log("content OK")
+  out("content OK")
 }
