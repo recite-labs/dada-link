@@ -6,6 +6,7 @@ import { makeHttpApp, TelegramWebhookSecret } from "@dadalink/server"
 import { Effect, Layer, Option } from "effect"
 import { HttpRouter } from "effect/http"
 import { ServerConfig } from "./config.ts"
+import { WebAppLive } from "./WebApp.ts"
 
 /** SQLite file (created on first start) + migrations + every repository. */
 export const PersistenceLive = (filename: string) =>
@@ -29,7 +30,7 @@ export const AppLive = Layer.unwrap(
     const app = makeHttpApp(
       Option.match(config.allowedOrigins, { onNone: () => ({}), onSome: (allowedOrigins) => ({ allowedOrigins }) })
     )
-    return app.pipe(
+    return Layer.mergeAll(app, WebAppLive).pipe(
       // Long-lived process: background work (Telegram updates) runs on detached fibers.
       HttpRouter.provideRequest(DetachedBackgroundTasks.layer),
       Layer.provide(Layer.mergeAll(PersistenceLive(config.databaseFile), ServicesLive))
