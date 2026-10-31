@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="health_title">My health</string>
+    <string name="health_intro">Private answers about your body and your mind. Nothing you ask is saved.</string>
+    <string name="health_ask_period">My period is late</string>
+    <string name="health_ask_pregnancy">I think I might be pregnant</string>
+    <string name="health_ask_sleep">I can’t sleep and I feel sad</string>
+    <string name="health_quick_questions">Ask Dada privately</string>
+    <string name="health_topics">Read</string>
+    <string name="health_talk_title">Need to talk to someone now?</string>
+    <string name="health_talk_body">Help numbers work offline.</string>
+</resources>

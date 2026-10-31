@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="health_title">Fayyaa koo</string>
+    <string name="health_intro">Deebii dhuunfaa waa’ee qaama fi sammuu keetii. Wanti gaafattu hin olkaa’amu.</string>
+    <string name="health_ask_period">Laguun koo tureera</string>
+    <string name="health_ask_pregnancy">Ulfa ta’uu danda’a jedheen yaada</string>
+    <string name="health_ask_sleep">Rafuu hin danda’u, gaddeera</string>
+    <string name="health_quick_questions">Daadaa dhuunfaan gaafadhu</string>
+    <string name="health_topics">Dubbisi</string>
+    <string name="health_talk_title">Amma nama waliin dubbachuu barbaaddaa?</string>
+    <string name="health_talk_body">Lakkoofsi gargaarsaa interneetii malee hojjeta.</string>
+</resources>
