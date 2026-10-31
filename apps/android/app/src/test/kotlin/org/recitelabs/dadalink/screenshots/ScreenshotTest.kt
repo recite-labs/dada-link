@@ -103,7 +103,7 @@ class ScreenshotTest {
                         "2", ChatRole.ASSISTANT,
                         "No. In Saudi Arabia your employer is not allowed to keep your passport or iqama without your agreement. " +
                             "Write down the date it was taken in your private log.",
-                        sources = listOf(SourceRef("Your rights in Saudi Arabia (draft)", "DadaLink content team")),
+                        sources = listOf(SourceRef("Your rights as a domestic worker in Saudi Arabia", "DadaLink content team")),
                         followUps = listOf("How do I report it?", "Call the embassy"),
                     ),
                 ),
@@ -152,9 +152,10 @@ class ScreenshotTest {
             ArticlesUiState(
                 category = ArticleCategory.RIGHTS,
                 articles = listOf(
-                    Article("a", ArticleCategory.RIGHTS, null, "Your passport is yours", "Your employer is not allowed to keep your passport or residence card.", "", null, true),
-                    Article("b", ArticleCategory.RIGHTS, null, "Your wages", "Wages must be paid every month, in full, as written in your contract.", "", null, true),
-                    Article("c", ArticleCategory.RIGHTS, null, "Rest, hours and your day off", "You have the right to daily rest and a weekly day off.", "", null, true),
+                    Article("rights-sa", ArticleCategory.RIGHTS, Country.SAUDI_ARABIA, "Your rights as a domestic worker in Saudi Arabia", "Saudi Arabia has a special regulation for domestic workers. It gives you a contract, monthly pay, a weekly day off, limits on working hours, and says your employer must not keep your passport.", "", null, false),
+                    Article("passport-taken", ArticleCategory.RIGHTS, null, "My employer took my passport", "Your passport belongs to you. Here is what the law says in some countries, and safe steps you can take if your employer keeps it.", "", null, false),
+                    Article("unpaid-wages", ArticleCategory.RIGHTS, null, "My employer is not paying my salary", "You have the right to be paid for your work. Keep a record of every payment and know where to complain.", "", null, false),
+                    Article("rest-and-working-hours", ArticleCategory.RIGHTS, null, "Rest, sleep and my day off", "You need rest to stay healthy. Many countries give domestic workers daily rest and a weekly day off. Keep a log and know where to complain.", "", null, false),
                 ),
                 isLoading = false,
             ),
@@ -165,8 +166,8 @@ class ScreenshotTest {
     @Test fun health() = snap("10_health") {
         HealthScreen(
             listOf(
-                Article("h1", ArticleCategory.HEALTH, null, "Stress and your period", "Stress can make your period late or irregular. This is common.", "", null, true),
-                Article("h2", ArticleCategory.HEALTH, null, "Pregnancy abroad: know your options", "In some countries pregnancy outside marriage is a crime.", "", null, true),
+                Article("pregnancy-abroad", ArticleCategory.HEALTH, null, "I think I am pregnant", "Finding out you are pregnant far from home can be frightening. You are not alone. Here is how to look after your health and get confidential help.", "", null, false),
+                Article("loneliness-and-mental-health", ArticleCategory.HEALTH, null, "Feeling lonely, sad or stressed", "Missing home, feeling sad or worried is normal. Here are small things that can help, signs you need more help, and what to do if you feel you cannot go on.", "", null, false),
             ),
             {}, {}, {}, {},
         )
@@ -177,8 +178,8 @@ class ScreenshotTest {
             ArticlesUiState(
                 category = ArticleCategory.RETURN,
                 articles = listOf(
-                    Article("r1", ArticleCategory.RETURN, null, "Coming home: talk to someone", "Returning can be hard. Feelings of shame or fear are normal and they pass.", "", null, true),
-                    Article("r2", ArticleCategory.RETURN, null, "Claiming unpaid wages", "You can still claim money you are owed after you return.", "", null, true),
+                    Article("arriving-home", ArticleCategory.RETURN, null, "Arriving home at Bole airport", "What usually happens when returnees land in Addis Ababa, and what help you can ask for with food, shelter, health, counselling and getting home.", "", null, false),
+                    Article("claiming-unpaid-wages-after-return", ArticleCategory.RETURN, null, "Claiming unpaid wages after you are home", "Getting your unpaid pay from home is hard, but you can still try. Keep your evidence and ask the embassy, your agency and legal helpers.", "", null, false),
                 ),
                 services = TestData.saudiDirectory.sections.last().contacts,
                 isLoading = false,
