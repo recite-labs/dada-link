@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_tagline">በኪስሽ ያለች እህት።</string>
+    <string name="onboarding_welcome_body">ከመሄድሽ በፊት፣ በውጭ ሳለሽ እና ስትመለሺ።</string>
+    <string name="onboarding_choose_language">ቋንቋሽን ምረጪ</string>
+    <string name="onboarding_soon">በቅርቡ</string>
+    <string name="onboarding_promise_private_title">ሚስጥራዊ</string>
+    <string name="onboarding_promise_private_body">የምትጽፊው በዚህ ስልክ ላይ ተቆልፎ ይቀራል።</string>
+    <string name="onboarding_promise_hidden_title">የተደበቀ</string>
+    <string name="onboarding_promise_hidden_body">ካልኩሌተር መስሎ ሊታይ ይችላል። በአንድ ንክኪ ይደበቃል።</string>
+    <string name="onboarding_promise_sos_title">ፈጣን እርዳታ</string>
+    <string name="onboarding_promise_sos_body">ያለ ኢንተርኔትም ለምታምኚው ሰው ለማሳወቅ SOS ተጭነሽ ያዢ።</string>
+    <string name="onboarding_get_started">እንጀምር</string>
+    <string name="onboarding_setup_title">ደህንነቱ የተጠበቀ ዝግጅት</string>
+    <string name="onboarding_setup_intro">አንቺን እና መረጃሽን ለመጠበቅ ሦስት እርምጃዎች። በኋላ መቀየር ትችያለሽ።</string>
+    <string name="onboarding_nickname">ዳዳ ምን ብላ ትጥራሽ? (አማራጭ)</string>
+    <string name="onboarding_nickname_hint">ማንኛውም ስም፣ በዚህ ስልክ ላይ ብቻ ይቀራል</string>
+    <string name="onboarding_pin_title">1 · ባለ 4 አሃዝ ፒን ምረጪ</string>
+    <string name="onboarding_pin_body">ዳዳሊንክን ለመክፈት ያስፈልግሻል። የልደት ቀንሽን አትጠቀሚ።</string>
+    <string name="onboarding_pin_description">ፒን፣ 4 አሃዞች</string>
+    <string name="onboarding_pin_error_length">4 አሃዞች አስገቢ።</string>
+    <string name="onboarding_pin_error_simple">በቀላሉ ይገመታል። ሌላ አሃዞች ሞክሪ።</string>
+    <string name="onboarding_disguise_title">2 · መተግበሪያው እንዴት ይታይ?</string>
+    <string name="onboarding_disguise_calculator">ካልኩሌተር</string>
+    <string name="onboarding_disguise_calculator_body">የሚሠራ ካልኩሌተር። ለመክፈት ፒንሽን ጽፈሽ = ተጫኚ።</string>
+    <string name="onboarding_disguise_notes">ማስታወሻ</string>
+    <string name="onboarding_disguise_notes_body">ቀላል የማስታወሻ መተግበሪያ። ለመክፈት ፒንሽን ፈልጊ።</string>
+    <string name="onboarding_disguise_none">ምንም መደበቂያ የለም</string>
+    <string name="onboarding_disguise_none_body">ዳዳሊንክን ያሳያል፣ ፒን ይጠይቃል።</string>
+    <string name="onboarding_contact_title">3 · የምታምኚው ሰው</string>
+    <string name="onboarding_contact_body">የSOS ማስጠንቀቂያዎች ወደዚህ ሰው ይሄዳሉ። ዘልለሽ በኋላ መጨመር ትችያለሽ።</string>
+    <string name="onboarding_contact_name">ስም</string>
+    <string name="onboarding_contact_relation">ዝምድና (እህት፣ ጓደኛ…)</string>
+    <string name="onboarding_contact_phone">ስልክ ቁጥር ከአገር ኮድ ጋር</string>
+    <string name="onboarding_contact_telegram">ወይም የቴሌግራም ስም</string>
+    <string name="onboarding_contact_error_name">ስም ጨምሪ።</string>
+    <string name="onboarding_contact_error_channel">ስልክ ቁጥር ወይም የቴሌግራም ስም ጨምሪ።</string>
+    <string name="onboarding_contact_error_phone">ይህ ስልክ ቁጥር የተሳሳተ ይመስላል።</string>
+    <string name="onboarding_contact_error_telegram">ይህ የቴሌግራም ስም የተሳሳተ ይመስላል።</string>
+    <string name="onboarding_hide_notifications">የማሳወቂያ ጽሑፍ ደብቅ</string>
+    <string name="onboarding_hide_notifications_body">ማሳወቂያዎች “ዝማኔ” ብቻ ይላሉ።</string>
+    <string name="onboarding_finish">ዝግጅቱን ጨርሺ</string>
+    <string name="onboarding_skip_contact">ለአሁን ዝለዪ</string>
+    <string name="onboarding_settings_title">የደህንነት ቅንብሮች</string>
+    <string name="onboarding_settings_saved">ተቀምጧል</string>
+    <string name="onboarding_language">ቋንቋ</string>
+</resources>
