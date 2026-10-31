@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sos_title">SOS</string>
+    <string name="sos_hold_title">SOS ለመላክ ተጭነሽ ያዢ</string>
+    <string name="sos_hold_body">ለ3 ሰከንድ ተጭነሽ ያዢ። ለመሰረዝ ልቀቂ።</string>
+    <string name="sos_hold_button">SOS ለመላክ ለ3 ሰከንድ ተጭነሽ ያዢ</string>
+    <string name="sos_sending">በመላክ ላይ…</string>
+    <string name="sos_what_sent">የሚላከው</string>
+    <string name="sos_to">ለ%1$s (%2$s)</string>
+    <string name="sos_by_sms">በኤስኤምኤስ ወደ %1$s — ያለ ኢንተርኔት ይሠራል</string>
+    <string name="sos_by_telegram">ኢንተርኔት ሲኖር በቴሌግራም ወደ %1$s</string>
+    <string name="sos_your_location">ያለሽበት ቦታ (ካለ)</string>
+    <string name="sos_time">ሰዓቱ</string>
+    <string name="sos_message">%1$s እርዳታ ያስፈልጋታል። ይህ ከዳዳሊንክ የተላከ SOS ነው። እባክሽ ደውዪላት ወይም እርዳታ አፈላልጊ።</string>
+    <string name="sos_message_someone">እርዳታ እፈልጋለሁ</string>
+    <string name="sos_label_location">ቦታ</string>
+    <string name="sos_label_time">ሰዓት</string>
+    <string name="sos_label_unknown">አልታወቀም</string>
+    <string name="sos_call_emergency">%1$s ደውዪ</string>
+    <string name="sos_call_embassy">ኤምባሲ ደውዪ</string>
+    <string name="sos_permission_title">SOS ያለ ኢንተርኔት እንዲሠራ ፍቀጂ</string>
+    <string name="sos_permission_body">ማስጠንቀቂያው ከሲምሽ ያለሽበትን ቦታ ይዞ በቀጥታ እንዲላክ ኤስኤምኤስ እና ቦታን ፍቀጂ።</string>
+    <string name="sos_permission_allow">ፍቀጂ</string>
+    <string name="sos_no_contact_title">እስካሁን የታመነ ሰው የለም</string>
+    <string name="sos_no_contact_body">SOS እንዲደርሳቸው የምታምኚውን ሰው ጨምሪ። አሁንም ወደ ድንገተኛ መደወል ትችያለሽ።</string>
+    <string name="sos_add_contact">የታመነ ሰው ጨምሪ</string>
+    <string name="sos_sent_title">SOS ወደ %1$s ተልኳል</string>
+    <string name="sos_not_sent_title">SOSሽ %1$s ላይደርስ ይችላል</string>
+    <string name="sos_sent_body">በጣም ደህንነት በሚሰማሽ ቦታ ቆዪ። ስልክሽን ያዢ።</string>
+    <string name="sos_channel_sms">ኤስኤምኤስ</string>
+    <string name="sos_channel_share">የመልእክት መተግበሪያ</string>
+    <string name="sos_channel_relay">የዳዳሊንክ ሰርቨር (ቴሌግራም)</string>
+    <string name="sos_status_sent">ተልኳል</string>
+    <string name="sos_status_queued">ሲቻል ይላካል</string>
+    <string name="sos_status_failed">አልተላከም</string>
+    <string name="sos_status_opened">ተከፍቷል — ላክን ተጫኚ</string>
+    <string name="sos_next">ቀጥሎ ምን</string>
+    <string name="sos_send_again">እንደገና ላኪ</string>
+    <string name="sos_safe_now">አሁን ደህና ነኝ</string>
+</resources>

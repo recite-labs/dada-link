@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_title">Help numbers</string>
+    <string name="help_country">Country</string>
+    <string name="help_emergency">Emergency</string>
+    <string name="help_call_number">Call %1$s</string>
+    <string name="help_copy_number">Copy %1$s</string>
+    <string name="help_last_checked">Works offline · last checked %1$s</string>
+    <string name="help_unverified_note">Numbers marked “not yet verified” are being checked by our team.</string>
+    <string name="help_no_directory">No help numbers for this country yet.</string>
+</resources>

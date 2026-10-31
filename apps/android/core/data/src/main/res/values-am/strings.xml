@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_notification_channel">አጠቃላይ</string>
+    <string name="data_notification_generic">ዝማኔ</string>
+    <string name="data_notification_relay_delivered">መልእክትሽ ደርሷል።</string>
+</resources>

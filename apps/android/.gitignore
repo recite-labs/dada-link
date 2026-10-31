@@ -1,0 +1,13 @@
+# Gradle / IDE
+.gradle/
+.kotlin/
+build/
+/local.properties
+/captures
+.idea/
+*.iml
+.cxx/
+.externalNativeBuild/
+
+# Machine-specific
+/gradle-local.properties

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="journey_agency_title">Ejansii mirkaneessi</string>
+    <string name="journey_agency_intro">Osoo kaffaltii hin raawwatin ykn paaspoortii hin kennin dura, ejansiin Ministeera Hojii fi Ogummaan hayyamamuu isaa mirkaneessi.</string>
+    <string name="journey_agency_input">Maqaa ejansii ykn lakkoofsa hayyamaa</string>
+    <string name="journey_agency_check">Mirkaneessi</string>
+    <string name="journey_agency_found">Hayyama qaba</string>
+    <string name="journey_agency_found_body">%1$s · hayyama %2$s</string>
+    <string name="journey_agency_suspended">Hayyamni dhorkameera — ejansii kana hin fayyadamin.</string>
+    <string name="journey_agency_not_found">Tarree hayyamamoota keessatti hin argamne</string>
+    <string name="journey_agency_not_found_body">Ammaaf hin kaffalin, paaspoortii hin kennin. Ministeera Hojii fi Ogummaa gaafadhu ykn Daadaa gaafadhu.</string>
+    <string name="journey_agency_sample_note">Tarreen kun fakkeenya qofa. Tarreen sirrii dhiyootti ida’ama.</string>
+    <string name="journey_rights_title">Waliigaltee fi mirgoota</string>
+    <string name="journey_rights_intro">Wanta hojjechiisaan kee %1$s keessatti gochuu qabuu fi hin qabne.</string>
+    <string name="journey_before_title">Osoo hin deemin</string>
+    <string name="journey_return_title">Gara manaa deebi’uu</string>
+    <string name="journey_return_intro">Baga gara manaatti deebite. Deebi’uun ulfaataa ta’uu danda’a — kophaa kee hin taatu.</string>
+    <string name="journey_return_services">Tajaajila deebi’ootaa</string>
+    <string name="journey_read_more">Dubbisi</string>
+    <string name="journey_reviewed_by">Kan ilaale: %1$s</string>
+    <string name="journey_ask_about">Waa’ee kanaa Daadaa gaafadhu</string>
+    <string name="journey_article">Barreeffama</string>
+</resources>

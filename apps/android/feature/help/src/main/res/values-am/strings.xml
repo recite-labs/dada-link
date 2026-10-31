@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_title">የእርዳታ ቁጥሮች</string>
+    <string name="help_country">አገር</string>
+    <string name="help_emergency">ድንገተኛ</string>
+    <string name="help_call_number">%1$s ደውዪ</string>
+    <string name="help_copy_number">%1$s ቅዳ</string>
+    <string name="help_last_checked">ያለ ኢንተርኔት ይሠራል · ለመጨረሻ ጊዜ የተረጋገጠው %1$s</string>
+    <string name="help_unverified_note">“ገና አልተረጋገጠም” የተባሉት ቁጥሮች በቡድናችን እየተረጋገጡ ነው።</string>
+    <string name="help_no_directory">ለዚህ አገር እስካሁን የእርዳታ ቁጥሮች የሉም።</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="disguise_calculator">ካልኩሌተር</string>
+    <string name="disguise_notes">ማስታወሻ</string>
+    <string name="disguise_notes_search">ማስታወሻ ፈልግ</string>
+    <string name="disguise_notes_empty">ማስታወሻ የለም</string>
+    <string name="disguise_notes_no_results">ምንም ውጤት የለም</string>
+    <string name="disguise_delete">ሰርዝ</string>
+    <string name="disguise_clear">አጽዳ</string>
+    <string name="disguise_unlock_title">ፒንሽን አስገቢ</string>
+    <string name="disguise_unlock_wrong">የተሳሳተ ፒን። እንደገና ሞክሪ።</string>
+    <plurals name="disguise_unlock_wait">
+        <item quantity="one">ብዙ ሙከራዎች። %1$d ሰከንድ ጠብቂ።</item>
+        <item quantity="other">ብዙ ሙከራዎች። %1$d ሰከንድ ጠብቂ።</item>
+    </plurals>
+    <string name="disguise_pin_dots">ከ4 አሃዞች %1$d ገብተዋል</string>
+</resources>

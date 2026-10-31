@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_tagline">Obboleettii kiisii kee keessaa.</string>
+    <string name="onboarding_welcome_body">Osoo hin deemin, yeroo alaa jirtu fi yeroo deebitu.</string>
+    <string name="onboarding_choose_language">Afaan kee filadhu</string>
+    <string name="onboarding_soon">Dhiyootti</string>
+    <string name="onboarding_promise_private_title">Dhuunfaa</string>
+    <string name="onboarding_promise_private_body">Wanti barreessitu bilbila kana irratti cufamee hafa.</string>
+    <string name="onboarding_promise_hidden_title">Dhokataa</string>
+    <string name="onboarding_promise_hidden_body">Akka herreegduu fakkaachuu danda\'a. Tuqaa tokkoon dhokata.</string>
+    <string name="onboarding_promise_sos_title">Gargaarsa saffisaa</string>
+    <string name="onboarding_promise_sos_body">Interneetii malee illee nama amantuuf beeksisuuf SOS qabadhu.</string>
+    <string name="onboarding_get_started">Jalqabi</string>
+    <string name="onboarding_setup_title">Qindaa\'ina nageenyaa</string>
+    <string name="onboarding_setup_intro">Si fi odeeffannoo kee eeguuf tarkaanfii sadii. Booda jijjiiruu dandeessa.</string>
+    <string name="onboarding_nickname">Daadaan maal jettee si haa waamtu? (filannoo)</string>
+    <string name="onboarding_nickname_hint">Maqaa kamiyyuu, bilbila kana irra qofa</string>
+    <string name="onboarding_pin_title">1 · PIN lakkoofsa 4 filadhu</string>
+    <string name="onboarding_pin_body">DadaLink banuuf si barbaachisa. Guyyaa dhaloota kee hin fayyadamin.</string>
+    <string name="onboarding_pin_description">PIN, lakkoofsa 4</string>
+    <string name="onboarding_pin_error_length">Lakkoofsa 4 galchi.</string>
+    <string name="onboarding_pin_error_simple">Salphaatti tilmaamama. Lakkoofsa biraa yaali.</string>
+    <string name="onboarding_disguise_title">2 · Appiin akkamitti haa mul\'atu?</string>
+    <string name="onboarding_disguise_calculator">Herreegduu</string>
+    <string name="onboarding_disguise_calculator_body">Herreegduu hojjetu. Banuuf PIN kee barreessiitii = tuqi.</string>
+    <string name="onboarding_disguise_notes">Yaadannoo</string>
+    <string name="onboarding_disguise_notes_body">Appii yaadannoo salphaa. Banuuf PIN kee barbaadi.</string>
+    <string name="onboarding_disguise_none">Dhoksaa hin qabu</string>
+    <string name="onboarding_disguise_none_body">DadaLink agarsiisa, PIN gaafata.</string>
+    <string name="onboarding_contact_title">3 · Nama amantu</string>
+    <string name="onboarding_contact_body">Akeekkachiisni SOS nama kanaaf ergama. Dabartee booda dabaluu dandeessa.</string>
+    <string name="onboarding_contact_name">Maqaa</string>
+    <string name="onboarding_contact_relation">Firummaa (obboleettii, hiriyaa…)</string>
+    <string name="onboarding_contact_phone">Lakkoofsa bilbilaa koodii biyyaa waliin</string>
+    <string name="onboarding_contact_telegram">ykn maqaa Telegram</string>
+    <string name="onboarding_contact_error_name">Maqaa dabali.</string>
+    <string name="onboarding_contact_error_channel">Lakkoofsa bilbilaa ykn maqaa Telegram dabali.</string>
+    <string name="onboarding_contact_error_phone">Lakkoofsi bilbilaa kun dogoggora fakkaata.</string>
+    <string name="onboarding_contact_error_telegram">Maqaan Telegram kun dogoggora fakkaata.</string>
+    <string name="onboarding_hide_notifications">Barreeffama beeksisaa dhoksi</string>
+    <string name="onboarding_hide_notifications_body">Beeksisni “Haaromsa” qofa jedha.</string>
+    <string name="onboarding_finish">Qindaa\'ina xumuri</string>
+    <string name="onboarding_skip_contact">Amma dabarsi</string>
+    <string name="onboarding_settings_title">Qindaa\'ina nageenyaa</string>
+    <string name="onboarding_settings_saved">Olkaa\'ameera</string>
+    <string name="onboarding_language">Afaan</string>
+</resources>

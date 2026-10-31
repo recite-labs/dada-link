@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">DadaLink</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_ask">Ask</string>
+    <string name="nav_help">Help</string>
+    <string name="nav_more">More</string>
+    <string name="nav_sos">SOS — send an alert</string>
+    <string name="more_title">More</string>
+    <string name="more_journey">Your journey</string>
+    <string name="more_before">Before you go</string>
+    <string name="more_before_body">Documents, health, what to know</string>
+    <string name="more_agency">Check an agency</string>
+    <string name="more_agency_body">Is it licensed?</string>
+    <string name="more_rights">Contract &amp; rights</string>
+    <string name="more_rights_body">Passport, wages, rest</string>
+    <string name="more_health">My health</string>
+    <string name="more_health_body">Period, pregnancy, mood</string>
+    <string name="more_return">Coming home</string>
+    <string name="more_return_body">Support, unpaid wages</string>
+    <string name="more_private">Private &amp; safe</string>
+    <string name="more_log">My private log</string>
+    <string name="more_log_body">Encrypted, on this phone only</string>
+    <string name="more_settings">Safety settings</string>
+    <string name="more_settings_body">Trusted contact, disguise, language</string>
+    <string name="more_about">DadaLink %1$s · open source (AGPL-3.0) · no trackers</string>
+    <string name="launcher_calculator">Calculator</string>
+    <string name="launcher_notes">Notes</string>
+</resources>

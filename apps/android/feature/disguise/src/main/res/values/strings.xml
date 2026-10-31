@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="disguise_calculator">Calculator</string>
+    <string name="disguise_notes">Notes</string>
+    <string name="disguise_notes_search">Search notes</string>
+    <string name="disguise_notes_empty">No notes</string>
+    <string name="disguise_notes_no_results">No results</string>
+    <string name="disguise_delete">Delete</string>
+    <string name="disguise_clear">Clear</string>
+    <string name="disguise_unlock_title">Enter your PIN</string>
+    <string name="disguise_unlock_wrong">Wrong PIN. Try again.</string>
+    <plurals name="disguise_unlock_wait">
+        <item quantity="one">Too many tries. Wait %1$d second.</item>
+        <item quantity="other">Too many tries. Wait %1$d seconds.</item>
+    </plurals>
+    <string name="disguise_pin_dots">%1$d of 4 digits entered</string>
+</resources>

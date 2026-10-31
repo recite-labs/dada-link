@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="journey_agency_title">ኤጀንሲ አረጋግጪ</string>
+    <string name="journey_agency_intro">ለማንም ከመክፈልሽ ወይም ፓስፖርትሽን ከመስጠትሽ በፊት ኤጀንሲው በሥራና ክህሎት ሚኒስቴር ፈቃድ ያለው መሆኑን አረጋግጪ።</string>
+    <string name="journey_agency_input">የኤጀንሲው ስም ወይም የፈቃድ ቁጥር</string>
+    <string name="journey_agency_check">አረጋግጪ</string>
+    <string name="journey_agency_found">ፈቃድ ያለው</string>
+    <string name="journey_agency_found_body">%1$s · ፈቃድ %2$s</string>
+    <string name="journey_agency_suspended">ፈቃዱ ታግዷል ወይም ተሰርዟል — ይህን ኤጀንሲ አትጠቀሚ።</string>
+    <string name="journey_agency_not_found">በፈቃድ ዝርዝሩ ውስጥ አልተገኘም</string>
+    <string name="journey_agency_not_found_body">ገና አትክፈዪ፣ ፓስፖርትሽንም አትስጪ። የሥራና ክህሎት ሚኒስቴርን ጠይቂ ወይም ምን ማረጋገጥ እንዳለብሽ ዳዳን ጠይቂ።</string>
+    <string name="journey_agency_sample_note">በዚህ ቅድመ እይታ ያለው የፈቃድ ዝርዝር ናሙና ነው። ኦፊሴላዊው ዝርዝር ከመጀመሩ በፊት ይጨመራል።</string>
+    <string name="journey_rights_title">ውል እና መብቶች</string>
+    <string name="journey_rights_intro">በ%1$s አሠሪሽ ማድረግ ያለበትና የሌለበት።</string>
+    <string name="journey_before_title">ከመሄድሽ በፊት</string>
+    <string name="journey_return_title">ወደ ቤት መመለስ</string>
+    <string name="journey_return_intro">እንኳን ወደ ቤት መጣሽ። መመለስ ከባድ ሊሆን ይችላል — ብቻሽን ማድረግ የለብሽም።</string>
+    <string name="journey_return_services">የተመላሾች አገልግሎቶች</string>
+    <string name="journey_read_more">አንብቢ</string>
+    <string name="journey_reviewed_by">የገመገመው፡ %1$s</string>
+    <string name="journey_ask_about">ስለዚህ ዳዳን ጠይቂ</string>
+    <string name="journey_article">ጽሑፍ</string>
+</resources>

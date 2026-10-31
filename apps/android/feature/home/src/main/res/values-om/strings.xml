@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_greeting_named">Akkam %1$s.\nHar’a akkam jirta?</string>
+    <string name="home_greeting">Akkam.\nHar’a akkam jirta?</string>
+    <string name="home_location">%1$s keessa · gargaarsi qophaa’aa</string>
+    <string name="home_mood_good">Gaarii</string>
+    <string name="home_mood_tired">Dadhabeera</string>
+    <string name="home_mood_low">Gaddeera</string>
+    <string name="home_mood_not_safe">Nageenya hin qabu</string>
+    <string name="home_mood_thanks">Waan beeksiifteef galatoomi. Daadaan yeroo barbaaddu as jirti.</string>
+    <string name="home_mood_low_hint">Gadduun rakkoo miti. Daadaa waliin dubbachuu barbaaddaa?</string>
+    <string name="home_mood_low_question">Gaddeera, kophummaanis natti dhagahama</string>
+    <string name="home_ask_title">Daadaa gaafadhu</string>
+    <string name="home_ask_body">Mirga, fayyaa, maal gochuu akka qabdu… Dhuunfaa fi afaan keetiin.</string>
+    <string name="home_ask_placeholder">Gaaffii kee barreessi…</string>
+    <string name="home_ask_send">Gaaffii ergi</string>
+    <string name="home_ask_voice">Sagaleedhaan gaafadhu</string>
+    <string name="home_tile_help">Lakkoofsa gargaarsaa</string>
+    <string name="home_tile_help_body">Embaasii, poolisii, buufata</string>
+    <string name="home_tile_log">Galmee dhuunfaa koo</string>
+    <string name="home_tile_log_body">Mindaa, sa’aatii, waan ta’e</string>
+    <string name="home_tile_health">Fayyaa koo</string>
+    <string name="home_tile_health_body">Laguu, ulfa, miira</string>
+    <string name="home_tile_rights">Mirgoota koo</string>
+    <string name="home_tile_rights_body">Waliigaltee, paaspoortii, kaffaltii</string>
+    <string name="home_contact_ok">%1$s nagaa akka jirtu beekti</string>
+    <string name="home_contact_never">%1$s nagaa akka jirtu himi</string>
+    <string name="home_contact_last">Beeksisa dhumaa: %1$s</string>
+    <string name="home_check_in">Beeksisi</string>
+    <string name="home_check_in_message">Akkam %1$s, ana dha. Nagaa jira. ❤️</string>
+    <string name="home_add_contact">Nama amantu dabali</string>
+    <string name="home_add_contact_body">SOS fi beeksisni isaaniif ergama</string>
+    <string name="home_language">Afaan jijjiiri</string>
+</resources>

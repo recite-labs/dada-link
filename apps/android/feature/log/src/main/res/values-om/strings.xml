@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="log_title">Galmee dhuunfaa koo</string>
+    <string name="log_encrypted">Iccitii · bilbila kana qofa irra</string>
+    <string name="log_wages_owed">Mindaa siif hin kaffalamne</string>
+    <string name="log_wages_none">Mindaan hin kaffalamne hin galmoofne</string>
+    <string name="log_wages_basis">Galmee mindaa kee irratti hundaa’e</string>
+    <string name="log_empty">Ammaaf homtuu hin jiru. Mindaa, sa’aatii ykn waan ta’e barreessi — guyyaan booda barbaachisa.</string>
+    <string name="log_add">Galmee dabali</string>
+    <string name="log_share">Qoodi</string>
+    <string name="log_share_warning_title">Galmee kee qooddaa?</string>
+    <string name="log_share_warning_body">Garagalchi bilbila kana irraa ba’a. Nama amantu qofaaf ergi.</string>
+    <string name="log_share_confirm">Qoodi</string>
+    <string name="log_delete">Galmee haqi</string>
+    <string name="log_delete_body">Kun deebi’uu hin danda’u.</string>
+    <string name="log_kind_wage">Mindaa</string>
+    <string name="log_kind_hours">Sa’aatii</string>
+    <string name="log_kind_incident">Waan ta’e</string>
+    <string name="log_wage_line">Eegamu %1$s · fudhatame %2$s</string>
+    <string name="log_wage_owed">%1$s hafe</string>
+    <string name="log_hours_line">Sa’aatii %1$s hojjedhe</string>
+    <string name="log_no_rest">Guyyaa boqonnaa hin qabu</string>
+    <plurals name="log_photos">
+        <item quantity="one">Suuraa %1$d, iccitii</item>
+        <item quantity="other">Suuraa %1$d, iccitii</item>
+    </plurals>
+    <string name="log_add_title">Galmee haaraa</string>
+    <string name="log_date">Guyyaa</string>
+    <string name="log_today">Har’a</string>
+    <string name="log_yesterday">Kaleessa</string>
+    <string name="log_pick_date">Guyyaa filadhu</string>
+    <string name="log_expected">Mindaa eegamu</string>
+    <string name="log_received">Kan fudhatame</string>
+    <string name="log_currency">Maallaqa</string>
+    <string name="log_hours">Sa’aatii guyyaa sana hojjette</string>
+    <string name="log_rest_day">Torban kana guyyaa boqonnaa qabadhe</string>
+    <string name="log_what_happened">Maaltu ta’e?</string>
+    <string name="log_note">Yaadannoo (filannoo)</string>
+    <string name="log_add_photo">Suuraa dabali</string>
+    <plurals name="log_photo_added">
+        <item quantity="one">Suuraa %1$d walqabatee</item>
+        <item quantity="other">Suuraa %1$d walqabatee</item>
+    </plurals>
+    <string name="log_save">Galmee olkaa’i</string>
+    <string name="log_invalid">Maaloo bakka mul’ate guuti.</string>
+    <string name="log_export_header">Galmee dhuunfaa DadaLink — %1$s</string>
+</resources>

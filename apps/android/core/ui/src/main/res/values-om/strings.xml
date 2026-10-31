@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_ui_hide">Dhoksi</string>
+    <string name="core_ui_back">Duubatti</string>
+    <string name="core_ui_call">Bilbili</string>
+    <string name="core_ui_copy">Garagalchi</string>
+    <string name="core_ui_copied">Garagalfameera</string>
+    <string name="core_ui_cancel">Dhiisi</string>
+    <string name="core_ui_save">Olkaa\'i</string>
+    <string name="core_ui_continue">Itti fufi</string>
+    <string name="core_ui_share_with">Waliin qoodi…</string>
+    <string name="core_ui_draft_content">Wixineessa — ogeessaan hanga ilaalamutti</string>
+    <string name="core_ui_number_pending">Lakkoofsi mirkanaa\'aa jira</string>
+    <string name="core_ui_disclaimer">Daadaan odeeffannoo kenniti malee gorsa seeraa ykn yaalaa miti. Balaa keessa jirtaa? SOS tuqi.</string>
+    <string name="core_ui_country_sa">Saawudii Arabiyaa</string>
+    <string name="core_ui_country_ae">Emereetota Arabaa Tokkoomanii</string>
+    <string name="core_ui_country_kw">Kuweet</string>
+    <string name="core_ui_country_qa">Qaxar</string>
+    <string name="core_ui_country_lb">Libaanoon</string>
+    <string name="core_ui_country_jo">Joordaan</string>
+    <string name="core_ui_country_et">Itoophiyaa</string>
+    <string name="core_ui_works_offline">Interneetii malee hojjeta</string>
+    <string name="core_ui_unverified">Ammallee hin mirkanoofne</string>
+</resources>

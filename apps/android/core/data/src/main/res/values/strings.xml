@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_notification_channel">General</string>
+    <string name="data_notification_generic">Update</string>
+    <string name="data_notification_relay_delivered">Your message was delivered.</string>
+</resources>

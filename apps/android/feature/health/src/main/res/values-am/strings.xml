@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="health_title">ጤናዬ</string>
+    <string name="health_intro">ስለ ሰውነትሽ እና ስለ አእምሮሽ ሚስጥራዊ መልሶች። የምትጠይቂው አይቀመጥም።</string>
+    <string name="health_ask_period">የወር አበባዬ ዘገየ</string>
+    <string name="health_ask_pregnancy">እርጉዝ ልሆን እችላለሁ ብዬ አስባለሁ</string>
+    <string name="health_ask_sleep">መተኛት አልቻልኩም፣ አዝኛለሁ</string>
+    <string name="health_quick_questions">ዳዳን በሚስጥር ጠይቂ</string>
+    <string name="health_topics">አንብቢ</string>
+    <string name="health_talk_title">አሁን ከአንድ ሰው ጋር ማውራት ትፈልጊያለሽ?</string>
+    <string name="health_talk_body">የእርዳታ ቁጥሮች ያለ ኢንተርኔት ይሠራሉ።</string>
+</resources>

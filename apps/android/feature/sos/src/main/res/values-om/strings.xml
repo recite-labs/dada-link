@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sos_title">SOS</string>
+    <string name="sos_hold_title">SOS erguuf qabadhu</string>
+    <string name="sos_hold_body">Sekondii 3f qabadhu. Haquuf gadi dhiisi.</string>
+    <string name="sos_hold_button">SOS erguuf sekondii 3f tuqii qabadhu</string>
+    <string name="sos_sending">Ergaa jira…</string>
+    <string name="sos_what_sent">Wanti ergamu</string>
+    <string name="sos_to">Gara %1$s (%2$s)</string>
+    <string name="sos_by_sms">SMS-dhaan gara %1$s — interneetii malee</string>
+    <string name="sos_by_telegram">Yeroo interneetii jiru Telegram-iin gara %1$s</string>
+    <string name="sos_your_location">Bakka itti argamtu (yoo jiraate)</string>
+    <string name="sos_time">Yeroo</string>
+    <string name="sos_message">%1$s gargaarsa barbaaddi. Kun SOS DadaLink irraa ti. Maaloo bilbili ykn gargaarsa barbaadi.</string>
+    <string name="sos_message_someone">Gargaarsa nan barbaada</string>
+    <string name="sos_label_location">Bakka</string>
+    <string name="sos_label_time">Yeroo</string>
+    <string name="sos_label_unknown">hin beekamu</string>
+    <string name="sos_call_emergency">%1$s bilbili</string>
+    <string name="sos_call_embassy">Embaasii bilbili</string>
+    <string name="sos_permission_title">SOS interneetii malee akka hojjetu hayyami</string>
+    <string name="sos_permission_body">Akeekkachiisni SIM kee irraa bakka kee waliin akka ergamuuf SMS fi bakka hayyami.</string>
+    <string name="sos_permission_allow">Hayyami</string>
+    <string name="sos_no_contact_title">Ammallee namni amanamaan hin jiru</string>
+    <string name="sos_no_contact_body">SOS akka isaan ga\'uuf nama amantu dabali. Amma illee balaa tasaa bilbiluu dandeessa.</string>
+    <string name="sos_add_contact">Nama amanamaa dabali</string>
+    <string name="sos_sent_title">SOS gara %1$s ergameera</string>
+    <string name="sos_not_sent_title">SOS kee %1$s ga’uu dhiisuu danda’a</string>
+    <string name="sos_sent_body">Bakka nageenya qabdu turi. Bilbila kee qabadhu.</string>
+    <string name="sos_channel_sms">SMS</string>
+    <string name="sos_channel_share">Appii ergaa</string>
+    <string name="sos_channel_relay">Saarvara DadaLink (Telegram)</string>
+    <string name="sos_status_sent">Ergameera</string>
+    <string name="sos_status_queued">Yeroo danda’ametti ergama</string>
+    <string name="sos_status_failed">Hin ergamne</string>
+    <string name="sos_status_opened">Baname — ergi tuqi</string>
+    <string name="sos_next">Itti aanee maal</string>
+    <string name="sos_send_again">Irra deebi’ii ergi</string>
+    <string name="sos_safe_now">Amma nagaa dha</string>
+</resources>

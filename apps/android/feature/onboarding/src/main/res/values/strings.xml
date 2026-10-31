@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_tagline">A sister in your pocket.</string>
+    <string name="onboarding_welcome_body">Before you go, while you are away, and when you come home.</string>
+    <string name="onboarding_choose_language">Choose your language</string>
+    <string name="onboarding_soon">Soon</string>
+    <string name="onboarding_promise_private_title">Private</string>
+    <string name="onboarding_promise_private_body">What you write stays on this phone, locked.</string>
+    <string name="onboarding_promise_hidden_title">Hidden</string>
+    <string name="onboarding_promise_hidden_body">It can look like a calculator. One tap hides it.</string>
+    <string name="onboarding_promise_sos_title">Help, fast</string>
+    <string name="onboarding_promise_sos_body">Hold SOS to alert someone you trust, even without internet.</string>
+    <string name="onboarding_get_started">Get started</string>
+    <string name="onboarding_setup_title">Safe setup</string>
+    <string name="onboarding_setup_intro">Three steps to keep you and your information safe. You can change these later.</string>
+    <string name="onboarding_nickname">What should Dada call you? (optional)</string>
+    <string name="onboarding_nickname_hint">Any name, it stays on this phone</string>
+    <string name="onboarding_pin_title">1 · Choose a 4-digit PIN</string>
+    <string name="onboarding_pin_body">You will need it to open DadaLink. Don\'t use your birthday.</string>
+    <string name="onboarding_pin_description">PIN, 4 digits</string>
+    <string name="onboarding_pin_error_length">Enter 4 digits.</string>
+    <string name="onboarding_pin_error_simple">Too easy to guess. Try different digits.</string>
+    <string name="onboarding_disguise_title">2 · How should the app look?</string>
+    <string name="onboarding_disguise_calculator">Calculator</string>
+    <string name="onboarding_disguise_calculator_body">A working calculator. Type your PIN then = to open.</string>
+    <string name="onboarding_disguise_notes">Notes</string>
+    <string name="onboarding_disguise_notes_body">A plain notes app. Search your PIN to open.</string>
+    <string name="onboarding_disguise_none">No disguise</string>
+    <string name="onboarding_disguise_none_body">Shows DadaLink and asks for your PIN.</string>
+    <string name="onboarding_contact_title">3 · Someone you trust</string>
+    <string name="onboarding_contact_body">SOS alerts go to this person. You can skip and add later.</string>
+    <string name="onboarding_contact_name">Name</string>
+    <string name="onboarding_contact_relation">Relation (sister, friend…)</string>
+    <string name="onboarding_contact_phone">Phone number with country code</string>
+    <string name="onboarding_contact_telegram">or Telegram username</string>
+    <string name="onboarding_contact_error_name">Add a name.</string>
+    <string name="onboarding_contact_error_channel">Add a phone number or a Telegram username.</string>
+    <string name="onboarding_contact_error_phone">This phone number looks wrong.</string>
+    <string name="onboarding_contact_error_telegram">This Telegram username looks wrong.</string>
+    <string name="onboarding_hide_notifications">Hide notification text</string>
+    <string name="onboarding_hide_notifications_body">Notifications will only say “Update”.</string>
+    <string name="onboarding_finish">Finish setup</string>
+    <string name="onboarding_skip_contact">Skip for now</string>
+    <string name="onboarding_settings_title">Safety settings</string>
+    <string name="onboarding_settings_saved">Saved</string>
+    <string name="onboarding_language">Language</string>
+</resources>

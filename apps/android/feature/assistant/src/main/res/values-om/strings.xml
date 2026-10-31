@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="assistant_title">Daadaa gaafadhu</string>
+    <string name="assistant_intro">Akkam. Ani Daadaa dha. Waa’ee hojii, mirgaa ykn fayyaa kee jechoota keetiin na gaafadhu. Haasaan keenya hin olkaa’amu.</string>
+    <string name="assistant_input">Gaaffii kee barreessi…</string>
+    <string name="assistant_send">Ergi</string>
+    <string name="assistant_voice">Gaaffii kee dubbadhu</string>
+    <string name="assistant_source">Madda: %1$s</string>
+    <string name="assistant_reviewed_by">Kan ilaale: %1$s</string>
+    <string name="assistant_error">Daadaan amma deebisuu hin dandeenye. Walqunnamtii kee mirkaneessii irra deebi’ii yaali.</string>
+    <string name="assistant_retry">Irra deebi’ii yaali</string>
+    <string name="assistant_emergency_title">Balaa keessa jirtaa?</string>
+    <string name="assistant_emergency_body">Yoo dandeesse SOS tuqi. Nama amantu bakka kee beeksisa.</string>
+    <string name="assistant_open_sos">SOS bani</string>
+    <string name="assistant_typing">Daadaan barreessaa jirti</string>
+</resources>

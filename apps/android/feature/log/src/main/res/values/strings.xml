@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="log_title">My private log</string>
+    <string name="log_encrypted">Encrypted · only on this phone</string>
+    <string name="log_wages_owed">Wages owed to you</string>
+    <string name="log_wages_none">No unpaid wages recorded</string>
+    <string name="log_wages_basis">Based on your wage entries</string>
+    <string name="log_empty">Nothing here yet. Write down wages, hours, or anything that happened — dates matter later.</string>
+    <string name="log_add">Add entry</string>
+    <string name="log_share">Share</string>
+    <string name="log_share_warning_title">Share your log?</string>
+    <string name="log_share_warning_body">A copy will leave this phone. Only send it to someone you trust, like a lawyer or your embassy.</string>
+    <string name="log_share_confirm">Share</string>
+    <string name="log_delete">Delete entry</string>
+    <string name="log_delete_body">This cannot be undone.</string>
+    <string name="log_kind_wage">Wage</string>
+    <string name="log_kind_hours">Hours</string>
+    <string name="log_kind_incident">Something happened</string>
+    <string name="log_wage_line">Expected %1$s · received %2$s</string>
+    <string name="log_wage_owed">%1$s owed</string>
+    <string name="log_hours_line">%1$s hours worked</string>
+    <string name="log_no_rest">No rest day</string>
+    <plurals name="log_photos">
+        <item quantity="one">%1$d photo, encrypted</item>
+        <item quantity="other">%1$d photos, encrypted</item>
+    </plurals>
+    <string name="log_add_title">New entry</string>
+    <string name="log_date">Date</string>
+    <string name="log_today">Today</string>
+    <string name="log_yesterday">Yesterday</string>
+    <string name="log_pick_date">Pick date</string>
+    <string name="log_expected">Salary expected</string>
+    <string name="log_received">Amount received</string>
+    <string name="log_currency">Currency</string>
+    <string name="log_hours">Hours worked that day</string>
+    <string name="log_rest_day">I had a rest day this week</string>
+    <string name="log_what_happened">What happened?</string>
+    <string name="log_note">Note (optional)</string>
+    <string name="log_add_photo">Add photo</string>
+    <plurals name="log_photo_added">
+        <item quantity="one">%1$d photo attached</item>
+        <item quantity="other">%1$d photos attached</item>
+    </plurals>
+    <string name="log_save">Save entry</string>
+    <string name="log_invalid">Please fill in the highlighted field.</string>
+    <string name="log_export_header">DadaLink private log — exported %1$s</string>
+</resources>

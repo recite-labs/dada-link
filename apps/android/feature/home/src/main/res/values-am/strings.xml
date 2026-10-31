@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_greeting_named">ሰላም %1$s።\nዛሬ እንዴት ነሽ?</string>
+    <string name="home_greeting">ሰላም።\nዛሬ እንዴት ነሽ?</string>
+    <string name="home_location">%1$s · እርዳታ ያለ ኢንተርኔት ዝግጁ</string>
+    <string name="home_mood_good">ደህና</string>
+    <string name="home_mood_tired">ደክሞኛል</string>
+    <string name="home_mood_low">አዝኛለሁ</string>
+    <string name="home_mood_not_safe">ደህንነት አይሰማኝም</string>
+    <string name="home_mood_thanks">ስላሳወቅሽ እናመሰግናለን። ዳዳ ስትፈልጊያት እዚህ ናት።</string>
+    <string name="home_mood_low_hint">ማዘን ችግር የለውም። ከዳዳ ጋር ማውራት ትፈልጊያለሽ?</string>
+    <string name="home_mood_low_question">አዝኛለሁ ብቸኝነትም ይሰማኛል</string>
+    <string name="home_ask_title">ዳዳን ጠይቂ</string>
+    <string name="home_ask_body">መብቶች፣ ጤና፣ ምን ማድረግ እንዳለብሽ… በሚስጥር እና በቋንቋሽ።</string>
+    <string name="home_ask_placeholder">ጥያቄሽን ጻፊ…</string>
+    <string name="home_ask_send">ጥያቄ ላኪ</string>
+    <string name="home_ask_voice">በድምፅ ጠይቂ</string>
+    <string name="home_tile_help">የእርዳታ ቁጥሮች</string>
+    <string name="home_tile_help_body">ኤምባሲ፣ ፖሊስ፣ መጠለያ</string>
+    <string name="home_tile_log">የግል መዝገቤ</string>
+    <string name="home_tile_log_body">ደሞዝ፣ ሰዓት፣ የተፈጠረው</string>
+    <string name="home_tile_health">ጤናዬ</string>
+    <string name="home_tile_health_body">የወር አበባ፣ እርግዝና፣ ስሜት</string>
+    <string name="home_tile_rights">መብቶቼ</string>
+    <string name="home_tile_rights_body">ውል፣ ፓስፖርት፣ ክፍያ</string>
+    <string name="home_contact_ok">%1$s ደህና መሆንሽን ታውቃለች</string>
+    <string name="home_contact_never">ለ%1$s ደህና መሆንሽን ንገሪ</string>
+    <string name="home_contact_last">የመጨረሻ ማሳወቂያ፡ %1$s</string>
+    <string name="home_check_in">አሳውቂ</string>
+    <string name="home_check_in_message">ሰላም %1$s፣ እኔ ነኝ። ደህና ነኝ። ❤️</string>
+    <string name="home_add_contact">የምታምኚውን ሰው ጨምሪ</string>
+    <string name="home_add_contact_body">SOS እና ማሳወቂያዎች ወደዚህ ሰው ይሄዳሉ</string>
+    <string name="home_language">ቋንቋ ቀይሪ</string>
+</resources>

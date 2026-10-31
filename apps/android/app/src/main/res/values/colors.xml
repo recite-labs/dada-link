@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dada_ground">#FFFFFF</color>
+    <color name="calculator_background">#E9E9E9</color>
+    <color name="notes_background">#FFF8E1</color>
+</resources>

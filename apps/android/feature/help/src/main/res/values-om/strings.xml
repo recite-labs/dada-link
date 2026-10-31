@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_title">Lakkoofsa gargaarsaa</string>
+    <string name="help_country">Biyya</string>
+    <string name="help_emergency">Balaa tasaa</string>
+    <string name="help_call_number">%1$s bilbili</string>
+    <string name="help_copy_number">%1$s garagalchi</string>
+    <string name="help_last_checked">Interneetii malee hojjeta · yeroo dhumaa %1$s</string>
+    <string name="help_unverified_note">Lakkoofsonni “ammallee hin mirkanoofne” jedhaman garee keenyaan mirkanaa\'aa jiru.</string>
+    <string name="help_no_directory">Biyya kanaaf lakkoofsi gargaarsaa ammallee hin jiru.</string>
+</resources>

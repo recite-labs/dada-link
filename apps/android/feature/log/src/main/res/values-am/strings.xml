@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="log_title">የግል መዝገቤ</string>
+    <string name="log_encrypted">የተመሰጠረ · በዚህ ስልክ ላይ ብቻ</string>
+    <string name="log_wages_owed">ያልተከፈለሽ ደሞዝ</string>
+    <string name="log_wages_none">ያልተከፈለ ደሞዝ አልተመዘገበም</string>
+    <string name="log_wages_basis">በደሞዝ መዝገቦችሽ ላይ የተመሠረተ</string>
+    <string name="log_empty">እስካሁን ምንም የለም። ደሞዝ፣ የሥራ ሰዓት ወይም የተፈጠረን ነገር ጻፊ — ቀኖች በኋላ ይጠቅማሉ።</string>
+    <string name="log_add">መዝገብ ጨምሪ</string>
+    <string name="log_share">አጋሪ</string>
+    <string name="log_share_warning_title">መዝገብሽን ታጋሪያለሽ?</string>
+    <string name="log_share_warning_body">ቅጂው ከዚህ ስልክ ይወጣል። ለምታምኚው ሰው ብቻ ላኪ፣ ለምሳሌ ጠበቃ ወይም ኤምባሲ።</string>
+    <string name="log_share_confirm">አጋሪ</string>
+    <string name="log_delete">መዝገብ ሰርዝ</string>
+    <string name="log_delete_body">ይህ ሊመለስ አይችልም።</string>
+    <string name="log_kind_wage">ደሞዝ</string>
+    <string name="log_kind_hours">የሥራ ሰዓት</string>
+    <string name="log_kind_incident">የተፈጠረ ነገር</string>
+    <string name="log_wage_line">የሚጠበቅ %1$s · የተቀበልሽው %2$s</string>
+    <string name="log_wage_owed">%1$s ቀሪ</string>
+    <string name="log_hours_line">%1$s ሰዓት ሠርቻለሁ</string>
+    <string name="log_no_rest">የእረፍት ቀን የለም</string>
+    <plurals name="log_photos">
+        <item quantity="one">%1$d ፎቶ(ዎች)፣ የተመሰጠረ</item>
+        <item quantity="other">%1$d ፎቶ(ዎች)፣ የተመሰጠረ</item>
+    </plurals>
+    <string name="log_add_title">አዲስ መዝገብ</string>
+    <string name="log_date">ቀን</string>
+    <string name="log_today">ዛሬ</string>
+    <string name="log_yesterday">ትናንት</string>
+    <string name="log_pick_date">ቀን ምረጪ</string>
+    <string name="log_expected">የሚጠበቅ ደሞዝ</string>
+    <string name="log_received">የተቀበልሽው</string>
+    <string name="log_currency">ገንዘብ</string>
+    <string name="log_hours">በዚያ ቀን የሠራሽው ሰዓት</string>
+    <string name="log_rest_day">በዚህ ሳምንት የእረፍት ቀን ነበረኝ</string>
+    <string name="log_what_happened">ምን ተፈጠረ?</string>
+    <string name="log_note">ማስታወሻ (አማራጭ)</string>
+    <string name="log_add_photo">ፎቶ ጨምሪ</string>
+    <plurals name="log_photo_added">
+        <item quantity="one">%1$d ፎቶ(ዎች) ተያይዘዋል</item>
+        <item quantity="other">%1$d ፎቶ(ዎች) ተያይዘዋል</item>
+    </plurals>
+    <string name="log_save">መዝገቡን አስቀምጪ</string>
+    <string name="log_invalid">እባክሽ የተመለከተውን ቦታ ሙዪ።</string>
+    <string name="log_export_header">የዳዳሊንክ የግል መዝገብ — የተላከው %1$s</string>
+</resources>

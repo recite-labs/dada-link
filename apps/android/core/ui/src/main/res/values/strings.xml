@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_ui_hide">Hide</string>
+    <string name="core_ui_back">Back</string>
+    <string name="core_ui_call">Call</string>
+    <string name="core_ui_copy">Copy</string>
+    <string name="core_ui_copied">Copied</string>
+    <string name="core_ui_cancel">Cancel</string>
+    <string name="core_ui_save">Save</string>
+    <string name="core_ui_continue">Continue</string>
+    <string name="core_ui_share_with">Share with…</string>
+    <string name="core_ui_draft_content">Draft — waiting for expert review</string>
+    <string name="core_ui_number_pending">Number being verified</string>
+    <string name="core_ui_disclaimer">Dada gives information, not legal or medical advice. In danger? Press SOS.</string>
+    <string name="core_ui_country_sa">Saudi Arabia</string>
+    <string name="core_ui_country_ae">United Arab Emirates</string>
+    <string name="core_ui_country_kw">Kuwait</string>
+    <string name="core_ui_country_qa">Qatar</string>
+    <string name="core_ui_country_lb">Lebanon</string>
+    <string name="core_ui_country_jo">Jordan</string>
+    <string name="core_ui_country_et">Ethiopia</string>
+    <string name="core_ui_works_offline">Works offline</string>
+    <string name="core_ui_unverified">Not yet verified</string>
+</resources>
