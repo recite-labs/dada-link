@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.dadalink.android.application)
     alias(libs.plugins.dadalink.hilt)
@@ -5,7 +7,31 @@ plugins {
     alias(libs.plugins.roborazzi)
 }
 
+/**
+ * Play upload key, read from a private file outside the repository:
+ * `-Pdadalink.signing=<path>` or `~/.config/dadalink/upload-signing.properties`
+ * with `storeFile`, `storePassword`, `keyAlias`, `keyPassword`.
+ * Without it, release builds are produced unsigned.
+ */
+val uploadSigning: Properties? =
+    (providers.gradleProperty("dadalink.signing").orNull
+        ?: "${System.getProperty("user.home")}/.config/dadalink/upload-signing.properties")
+        .let(::file)
+        .takeIf { it.isFile }
+        ?.let { file -> Properties().apply { file.inputStream().use(::load) } }
+
 android {
+    signingConfigs {
+        uploadSigning?.let { props ->
+            create("upload") {
+                storeFile = file(props.getProperty("storeFile"))
+                storePassword = props.getProperty("storePassword")
+                keyAlias = props.getProperty("keyAlias")
+                keyPassword = props.getProperty("keyPassword")
+            }
+        }
+    }
+
     namespace = "org.recitelabs.dadalink"
 
     defaultConfig {
@@ -27,6 +53,7 @@ android {
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.findByName("upload")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
