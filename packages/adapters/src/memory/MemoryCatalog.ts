@@ -1,5 +1,5 @@
 import type { Agency, ContentId, ContentItem, Country, DirectoryEntry } from "@dadalink/domain"
-import { appliesToCountry, FALLBACK_LOCALE, normalizeAgencyName, normalizeLicence, searchTerms } from "@dadalink/domain"
+import { appliesToCountry, FALLBACK_LOCALE, normalizeAgencyName, normalizeLicence, queryTerms } from "@dadalink/domain"
 import {
   AgencyRepo,
   CatalogWriter,
@@ -101,7 +101,7 @@ const FIELD_WEIGHTS = { title: 5, summary: 2, body: 1 } as const
 
 /** BM25 retriever with the same semantics as the FTS5 adapter. */
 export const retrieveFrom = (content: ReadonlyArray<ContentItem>, query: RetrievalQuery): ReadonlyArray<Passage> => {
-  const terms = searchTerms(query.text)
+  const terms = queryTerms(query.text)
   if (terms.length === 0) return []
   const candidates = content
     .filter((item) => query.country === undefined || appliesToCountry(item, query.country))
