@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="disguise_calculator">Herreegduu</string>
+    <string name="disguise_notes">Yaadannoo</string>
+    <string name="disguise_notes_search">Yaadannoo barbaadi</string>
+    <string name="disguise_notes_empty">Yaadannoon hin jiru</string>
+    <string name="disguise_notes_no_results">Bu’aan hin jiru</string>
+    <string name="disguise_delete">Haqi</string>
+    <string name="disguise_clear">Qulqulleessi</string>
+    <string name="disguise_unlock_title">PIN kee galchi</string>
+    <string name="disguise_unlock_wrong">PIN dogoggoraa. Irra deebi’ii yaali.</string>
+    <plurals name="disguise_unlock_wait">
+        <item quantity="one">Yaalii baay’ee. Sekondii %1$d eegi.</item>
+        <item quantity="other">Yaalii baay’ee. Sekondii %1$d eegi.</item>
+    </plurals>
+    <string name="disguise_pin_dots">Lakkoofsa 4 keessaa %1$d galfameera</string>
+</resources>
