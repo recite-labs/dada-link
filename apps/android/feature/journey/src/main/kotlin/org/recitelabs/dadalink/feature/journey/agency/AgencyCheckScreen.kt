@@ -73,6 +73,8 @@ fun AgencyCheckScreen(
             when (val result = state.result) {
                 is AgencyCheckResult.Found -> FoundCard(result.agency)
                 AgencyCheckResult.NotFound -> NotFoundCard(onAsk = { onAsk(state.query) })
+                AgencyCheckResult.Offline -> NoticeCard(stringResource(R.string.journey_agency_offline))
+                is AgencyCheckResult.Invalid -> NoticeCard(stringResource(R.string.journey_agency_invalid))
                 null -> Unit
             }
             Text(stringResource(R.string.journey_agency_sample_note), style = DadaTheme.typography.caption, color = DadaTheme.colors.muted)
@@ -83,6 +85,10 @@ fun AgencyCheckScreen(
 @Composable
 private fun FoundCard(agency: Agency) {
     val colors = DadaTheme.colors
+    if (agency.status == AgencyStatus.UNKNOWN) {
+        NoticeCard(stringResource(R.string.journey_agency_unknown), title = agency.name)
+        return
+    }
     val ok = agency.status == AgencyStatus.LICENSED
     DadaCard(
         modifier = Modifier.fillMaxWidth(),
@@ -97,7 +103,17 @@ private fun FoundCard(agency: Agency) {
                 color = if (ok) colors.safe else colors.sos,
             )
         }
-        Text(stringResource(R.string.journey_agency_found_body, agency.name, agency.licenceNumber), style = DadaTheme.typography.bodySmall, color = colors.ink)
+        val body = agency.licenceNumber?.let { stringResource(R.string.journey_agency_found_body, agency.name, it) } ?: agency.name
+        Text(body, style = DadaTheme.typography.bodySmall, color = colors.ink)
+    }
+}
+
+@Composable
+private fun NoticeCard(text: String, title: String? = null) {
+    val colors = DadaTheme.colors
+    DadaCard(modifier = Modifier.fillMaxWidth(), containerColor = colors.accentTint, border = BorderStroke(1.dp, colors.accent.copy(alpha = 0.4f))) {
+        title?.let { Text(it, style = DadaTheme.typography.titleSmall, color = colors.ink) }
+        Text(text, style = DadaTheme.typography.bodySmall, color = colors.ink)
     }
 }
 

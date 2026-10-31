@@ -8,4 +8,12 @@
     <string name="help_last_checked">ያለ ኢንተርኔት ይሠራል · ለመጨረሻ ጊዜ የተረጋገጠው %1$s</string>
     <string name="help_unverified_note">“ገና አልተረጋገጠም” የተባሉት ቁጥሮች በቡድናችን እየተረጋገጡ ነው።</string>
     <string name="help_no_directory">ለዚህ አገር እስካሁን የእርዳታ ቁጥሮች የሉም።</string>
+    <string name="help_group_emergency">ሌሎች የድንገተኛ ቁጥሮች</string>
+    <string name="help_group_embassy">የኢትዮጵያ ኤምባሲ</string>
+    <string name="help_group_labour">የሥራ ችግሮች</string>
+    <string name="help_group_support">ድጋፍ እና መጠለያ</string>
+    <string name="help_group_health">ጤና</string>
+    <string name="help_group_legal">የሕግ እርዳታ</string>
+    <string name="help_group_returnee">ወደ ቤት መመለስ</string>
+    <string name="help_group_other">ሌሎች አገልግሎቶች</string>
 </resources>

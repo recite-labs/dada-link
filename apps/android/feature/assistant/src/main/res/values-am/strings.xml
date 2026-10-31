@@ -13,4 +13,11 @@
     <string name="assistant_emergency_body">ከቻልሽ SOS ተጫኚ። ለታማኝ ሰውሽ ያለሽበትን ቦታ ያሳውቃል።</string>
     <string name="assistant_open_sos">SOS ክፈቺ</string>
     <string name="assistant_typing">ዳዳ እየጻፈች ነው</string>
+    <string name="assistant_offline">ኢንተርኔት የለም። ዳዳ ለመመለስ ኢንተርኔት ያስፈልጋታል — የእርዳታ ቁጥሮችና SOS ያለ ኢንተርኔት ይሠራሉ።</string>
+    <string name="assistant_quota">ዛሬ ብዙ ጥያቄዎችን ጠይቀሻል። ዳዳ ነገ እንደገና መመለስ ትችላለች። የእርዳታ ቁጥሮችና SOS ሁልጊዜ ይሠራሉ።</string>
+    <string name="assistant_call_number">%1$s ደውዪ</string>
+    <string name="assistant_feedback_question">ይህ ጠቅሞሻል?</string>
+    <string name="assistant_feedback_yes">አዎ</string>
+    <string name="assistant_feedback_no">አይ</string>
+    <string name="assistant_feedback_thanks">ስለነገርሽን እናመሰግናለን።</string>
 </resources>

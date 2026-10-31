@@ -8,4 +8,12 @@
     <string name="help_last_checked">Works offline · last checked %1$s</string>
     <string name="help_unverified_note">Numbers marked “not yet verified” are being checked by our team.</string>
     <string name="help_no_directory">No help numbers for this country yet.</string>
+    <string name="help_group_emergency">More emergency numbers</string>
+    <string name="help_group_embassy">Ethiopian embassy</string>
+    <string name="help_group_labour">Work problems</string>
+    <string name="help_group_support">Support and shelter</string>
+    <string name="help_group_health">Health</string>
+    <string name="help_group_legal">Legal help</string>
+    <string name="help_group_returnee">Coming home</string>
+    <string name="help_group_other">Other services</string>
 </resources>

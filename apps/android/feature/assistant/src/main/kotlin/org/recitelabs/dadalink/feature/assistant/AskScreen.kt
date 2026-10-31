@@ -43,6 +43,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.core.os.ConfigurationCompat
@@ -55,11 +56,16 @@ import org.recitelabs.dadalink.core.designsystem.component.DadaChip
 import org.recitelabs.dadalink.core.designsystem.component.DadaTextButton
 import org.recitelabs.dadalink.core.designsystem.icon.DadaIcons
 import org.recitelabs.dadalink.core.designsystem.theme.DadaTheme
+import org.recitelabs.dadalink.core.model.AssistantError
 import org.recitelabs.dadalink.core.model.ChatMessage
 import org.recitelabs.dadalink.core.model.ChatRole
+import org.recitelabs.dadalink.core.model.EmergencyContact
+import org.recitelabs.dadalink.core.model.EmergencyNotice
 import org.recitelabs.dadalink.core.model.SourceRef
 import org.recitelabs.dadalink.core.ui.DadaScreen
 import org.recitelabs.dadalink.core.ui.PhonePreviews
+import org.recitelabs.dadalink.core.ui.dial
+import org.recitelabs.dadalink.core.ui.simpleMarkdown
 import org.recitelabs.dadalink.core.ui.R as CoreUiR
 
 @Composable
@@ -84,7 +90,15 @@ internal fun AskDestination(onBack: (() -> Unit)?, onSos: () -> Unit, viewModel:
             startVoice()
         }
     }
-    AskScreen(state = state, onAction = viewModel::onAction, onBack = onBack, onSos = onSos, onVoice = startVoice)
+    val context = androidx.compose.ui.platform.LocalContext.current
+    AskScreen(
+        state = state,
+        onAction = viewModel::onAction,
+        onBack = onBack,
+        onSos = onSos,
+        onVoice = startVoice,
+        onCall = { context.dial(it) },
+    )
 }
 
 /** 02 Ask Dada. FLAG_SECURE: the conversation can't be screenshotted or seen in Recents. */
@@ -97,6 +111,7 @@ fun AskScreen(
     onSos: () -> Unit,
     onVoice: () -> Unit,
     modifier: Modifier = Modifier,
+    onCall: (String) -> Unit = {},
 ) {
     val listState = rememberLazyListState()
     LaunchedEffect(state.messages.size, state.messages.lastOrNull()?.text?.length) {
@@ -110,14 +125,23 @@ fun AskScreen(
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             item { AssistantBubble(stringResource(R.string.assistant_intro)) }
-            if (state.showEmergency) item { EmergencyBanner(onSos) }
+            if (state.showEmergencyBanner) item { EmergencyBanner(onSos) }
             items(state.messages, key = { it.id }) { message ->
                 when {
                     message.role == ChatRole.USER -> UserBubble(message.text)
-                    message.isError -> ErrorBubble(onRetry = { onAction(AskAction.Retry) })
                     else -> Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        // The server puts SOS and local numbers first in a dangerous answer: so do we.
+                        message.emergency?.let { EmergencyNoticeCard(it, onSos, onCall) }
+                        val error = message.error
+                        if (error != null) {
+                            ErrorBubble(error, onRetry = { onAction(AskAction.Retry) })
+                            return@Column
+                        }
                         AssistantBubble(message.text, streaming = message.isStreaming)
                         message.sources.forEach { SourceCard(it) }
+                        if (!message.isStreaming && message.sources.any { it.contentId != null }) {
+                            FeedbackRow(message.feedback) { helpful -> onAction(AskAction.Feedback(message.id, helpful)) }
+                        }
                         if (!message.isStreaming && message == state.messages.lastOrNull() && message.followUps.isNotEmpty()) {
                             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                                 message.followUps.forEach { DadaChip(text = it, onClick = { onAction(AskAction.Ask(it)) }) }
@@ -156,7 +180,7 @@ private fun UserBubble(text: String) {
 private fun AssistantBubble(text: String, streaming: Boolean = false) {
     val typing = stringResource(R.string.assistant_typing)
     Text(
-        text = if (streaming && text.isEmpty()) "…" else text + if (streaming) " ▍" else "",
+        text = if (streaming && text.isEmpty()) AnnotatedString("…") else simpleMarkdown(text + if (streaming) " ▍" else ""),
         style = DadaTheme.typography.body,
         color = DadaTheme.colors.ink,
         modifier = Modifier
@@ -184,11 +208,53 @@ private fun SourceCard(source: SourceRef) {
     }
 }
 
+/** Calm, specific failure messages; SOS and Help numbers never depend on this working. */
 @Composable
-private fun ErrorBubble(onRetry: () -> Unit) {
+private fun ErrorBubble(error: AssistantError, onRetry: () -> Unit) {
+    val text = when (error) {
+        AssistantError.OFFLINE -> R.string.assistant_offline
+        AssistantError.QUOTA -> R.string.assistant_quota
+        AssistantError.UNAVAILABLE -> R.string.assistant_error
+    }
     DadaCard(containerColor = DadaTheme.colors.accentTint, modifier = Modifier.widthIn(max = 320.dp)) {
-        Text(stringResource(R.string.assistant_error), style = DadaTheme.typography.bodySmall, color = DadaTheme.colors.ink)
-        DadaTextButton(stringResource(R.string.assistant_retry), onClick = onRetry)
+        Text(stringResource(text), style = DadaTheme.typography.bodySmall, color = DadaTheme.colors.ink)
+        if (error != AssistantError.QUOTA) DadaTextButton(stringResource(R.string.assistant_retry), onClick = onRetry)
+    }
+}
+
+@Composable
+private fun EmergencyNoticeCard(notice: EmergencyNotice, onSos: () -> Unit, onCall: (String) -> Unit) {
+    val colors = DadaTheme.colors
+    DadaCard(modifier = Modifier.fillMaxWidth(), containerColor = colors.sosTint, border = BorderStroke(1.dp, colors.sos.copy(alpha = 0.3f))) {
+        Text(stringResource(R.string.assistant_emergency_title), style = DadaTheme.typography.titleSmall, color = colors.sos)
+        Text(notice.message, style = DadaTheme.typography.bodySmall, color = colors.ink)
+        Spacer(Modifier.size(8.dp))
+        DadaButton(stringResource(R.string.assistant_open_sos), onClick = onSos, style = DadaButtonStyle.Danger)
+        notice.contacts.forEach { contact ->
+            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                Column(Modifier.weight(1f)) {
+                    Text(contact.phone, style = DadaTheme.typography.titleSmall, color = colors.sos)
+                    Text(contact.name, style = DadaTheme.typography.caption, color = colors.ink)
+                }
+                IconButton(onClick = { onCall(contact.phone) }) {
+                    Icon(DadaIcons.Call, contentDescription = stringResource(R.string.assistant_call_number, contact.phone), tint = colors.sos)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun FeedbackRow(given: Boolean?, onFeedback: (Boolean) -> Unit) {
+    val colors = DadaTheme.colors
+    if (given != null) {
+        Text(stringResource(R.string.assistant_feedback_thanks), style = DadaTheme.typography.caption, color = colors.muted)
+        return
+    }
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text(stringResource(R.string.assistant_feedback_question), style = DadaTheme.typography.caption, color = colors.muted)
+        DadaTextButton(stringResource(R.string.assistant_feedback_yes), onClick = { onFeedback(true) })
+        DadaTextButton(stringResource(R.string.assistant_feedback_no), onClick = { onFeedback(false) })
     }
 }
 
@@ -248,7 +314,11 @@ private fun AskPreview() = DadaTheme {
                 ChatMessage(
                     "2", ChatRole.ASSISTANT,
                     "No. In Saudi Arabia your employer is not allowed to keep your passport or iqama without your agreement.",
-                    sources = listOf(SourceRef("Your rights in Saudi Arabia", "DadaLink content team")),
+                    sources = listOf(SourceRef("Your rights in Saudi Arabia", "DadaLink content team", "rights-sa")),
+                    emergency = EmergencyNotice(
+                        "If you are in danger right now, press SOS, and call: Police 999.",
+                        listOf(EmergencyContact("Police", "999")),
+                    ),
                     followUps = listOf("How do I report it?", "Call the embassy"),
                 ),
             ),

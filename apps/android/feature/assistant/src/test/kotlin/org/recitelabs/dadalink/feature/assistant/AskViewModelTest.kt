@@ -9,7 +9,12 @@ import org.junit.Rule
 import org.junit.Test
 import org.recitelabs.dadalink.core.domain.safety.EmergencyDetector
 import org.recitelabs.dadalink.core.domain.usecase.AskDadaUseCase
+import org.recitelabs.dadalink.core.domain.usecase.SendAssistantFeedbackUseCase
+import org.recitelabs.dadalink.core.model.AssistantError
 import org.recitelabs.dadalink.core.model.AssistantEvent
+import org.recitelabs.dadalink.core.model.AssistantException
+import org.recitelabs.dadalink.core.model.EmergencyContact
+import org.recitelabs.dadalink.core.model.EmergencyNotice
 import org.recitelabs.dadalink.core.model.ChatRole
 import org.recitelabs.dadalink.core.model.SourceRef
 import org.recitelabs.dadalink.core.testing.MainDispatcherRule
@@ -33,7 +38,13 @@ class AskViewModelTest {
         ),
     )
 
-    private fun viewModel() = AskViewModel(AskDadaUseCase(assistant, FakeSettingsRepository(), EmergencyDetector()), SavedStateHandle())
+    private val settings = FakeSettingsRepository()
+
+    private fun viewModel(handle: SavedStateHandle = SavedStateHandle()) = AskViewModel(
+        AskDadaUseCase(assistant, settings, EmergencyDetector()),
+        SendAssistantFeedbackUseCase(assistant, settings),
+        handle,
+    )
 
     @Test fun `streams an answer into a single assistant message`() = runTest {
         val vm = viewModel()
@@ -55,7 +66,7 @@ class AskViewModelTest {
         assistant.failure = IOException("offline")
         val vm = viewModel()
         vm.onAction(AskAction.Ask("hello"))
-        assertTrue(vm.uiState.value.messages.last().isError)
+        assertEquals(AssistantError.OFFLINE, vm.uiState.value.messages.last().error)
 
         assistant.failure = null
         vm.onAction(AskAction.Retry)
@@ -70,10 +81,45 @@ class AskViewModelTest {
     }
 
     @Test fun `initial question from the route is sent automatically`() = runTest {
-        val vm = AskViewModel(
-            AskDadaUseCase(assistant, FakeSettingsRepository(), EmergencyDetector()),
-            SavedStateHandle(mapOf("question" to "My salary is late", "voice" to false)),
-        )
+        val vm = viewModel(SavedStateHandle(mapOf("question" to "My salary is late", "voice" to false)))
         assertEquals("My salary is late", vm.uiState.value.messages.first().text)
+    }
+
+    @Test fun `server emergency notice is attached to the answer and replaces the generic banner`() = runTest {
+        val notice = EmergencyNotice("If you are in danger right now, press SOS…", listOf(EmergencyContact("Police", "999")))
+        assistant.events = listOf(AssistantEvent.Emergency(notice), AssistantEvent.TextDelta("I'm so sorry."))
+        val vm = viewModel()
+
+        vm.onAction(AskAction.Ask("he hits me"))
+
+        val state = vm.uiState.value
+        assertEquals(notice, state.messages.last().emergency)
+        assertTrue(state.showEmergency)
+        assertFalse(state.showEmergencyBanner)
+    }
+
+    @Test fun `quota and outage map to their own messages`() = runTest {
+        assistant.events = emptyList()
+        assistant.failure = AssistantException(AssistantError.QUOTA, retryAfterSeconds = 3600)
+        val vm = viewModel()
+        vm.onAction(AskAction.Ask("salary"))
+        assertEquals(AssistantError.QUOTA, vm.uiState.value.messages.last().error)
+
+        assistant.failure = AssistantException(AssistantError.UNAVAILABLE)
+        vm.onAction(AskAction.Retry)
+        assertEquals(AssistantError.UNAVAILABLE, vm.uiState.value.messages.last().error)
+    }
+
+    @Test fun `feedback is sent once with cited content ids only`() = runTest {
+        assistant.events = listOf(AssistantEvent.TextDelta("Yes."), AssistantEvent.Sources(listOf(SourceRef("Wages", null, "abroad-unpaid-wages"))))
+        val vm = viewModel()
+        vm.onAction(AskAction.Ask("salary"))
+        val id = vm.uiState.value.messages.last().id
+
+        vm.onAction(AskAction.Feedback(id, helpful = true))
+        vm.onAction(AskAction.Feedback(id, helpful = false))
+
+        assertEquals(listOf(true to listOf("abroad-unpaid-wages")), assistant.feedback)
+        assertEquals(true, vm.uiState.value.messages.last().feedback)
     }
 }

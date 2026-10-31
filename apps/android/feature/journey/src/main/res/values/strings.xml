@@ -20,4 +20,7 @@
     <string name="journey_reviewed_by">Reviewed by %1$s</string>
     <string name="journey_ask_about">Ask Dada about this</string>
     <string name="journey_article">Article</string>
+    <string name="journey_agency_unknown">Licence status unknown — ask the Ministry of Labor and Skills before you pay.</string>
+    <string name="journey_agency_offline">You are offline. Checking an agency needs the internet — try again when you are connected.</string>
+    <string name="journey_agency_invalid">Please type at least 3 letters or digits.</string>
 </resources>

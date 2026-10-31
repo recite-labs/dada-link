@@ -20,4 +20,7 @@
     <string name="journey_reviewed_by">የገመገመው፡ %1$s</string>
     <string name="journey_ask_about">ስለዚህ ዳዳን ጠይቂ</string>
     <string name="journey_article">ጽሑፍ</string>
+    <string name="journey_agency_unknown">የፈቃዱ ሁኔታ አይታወቅም — ከመክፈልሽ በፊት የሥራና ክህሎት ሚኒስቴርን ጠይቂ።</string>
+    <string name="journey_agency_offline">ኢንተርኔት የለም። ኤጀንሲ ለማረጋገጥ ኢንተርኔት ያስፈልጋል — ስትገናኚ እንደገና ሞክሪ።</string>
+    <string name="journey_agency_invalid">እባክሽ ቢያንስ 3 ፊደሎች ወይም ቁጥሮች ጻፊ።</string>
 </resources>
