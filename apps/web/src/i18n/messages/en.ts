@@ -29,6 +29,7 @@ export const en = {
     sos: "SOS",
     help: "Help",
     about: "About",
+    privacy: "Privacy",
     language: "Language",
     homeLink: "DadaLink home"
   },

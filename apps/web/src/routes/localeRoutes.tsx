@@ -146,3 +146,10 @@ export const aboutRoute = createRoute({
   path: "about",
   component: lazyRouteComponent(() => import("../features/about/AboutPage.tsx"), "AboutPage")
 })
+
+/** Privacy policy (English legal text), also the Google Play privacy policy URL. */
+export const privacyRoute = createRoute({
+  getParentRoute: () => localeRoute,
+  path: "privacy",
+  component: lazyRouteComponent(() => import("../features/privacy/PrivacyPage.tsx"), "PrivacyPage")
+})

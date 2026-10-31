@@ -29,6 +29,7 @@ export const am: Messages = {
     sos: "SOS",
     help: "እርዳታ",
     about: "ስለ እኛ",
+    privacy: "ግላዊነት",
     language: "ቋንቋ",
     homeLink: "የDadaLink መነሻ ገጽ"
   },

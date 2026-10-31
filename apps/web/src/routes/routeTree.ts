@@ -9,6 +9,7 @@ import {
   indexRoute,
   journeyRoute,
   localeRoute,
+  privacyRoute,
   rightsIndexRoute,
   rightsRoute
 } from "./localeRoutes.tsx"
@@ -26,6 +27,7 @@ export const routeTree = rootRoute.addChildren([
     journeyRoute,
     articleRoute,
     agenciesRoute,
-    aboutRoute
+    aboutRoute,
+    privacyRoute
   ])
 ])

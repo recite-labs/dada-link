@@ -14,6 +14,10 @@ export const Footer = () => {
         {t.footer.madeBy} ·{" "}
         <Link to="/$locale/about" params={{ locale }} className="underline underline-offset-2 hover:text-ink">
           {t.nav.about}
+        </Link>{" "}
+        ·{" "}
+        <Link to="/$locale/privacy" params={{ locale }} className="underline underline-offset-2 hover:text-ink">
+          {t.nav.privacy}
         </Link>
       </p>
       {t.meta.status === "draft-ai" ? <p>{t.footer.draftNotice}</p> : null}

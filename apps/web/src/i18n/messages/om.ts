@@ -29,6 +29,7 @@ export const om: Messages = {
     sos: "SOS",
     help: "Gargaarsa",
     about: "Waa'ee keenya",
+    privacy: "Dhuunfummaa",
     language: "Afaan",
     homeLink: "Fuula jalqabaa DadaLink"
   },
