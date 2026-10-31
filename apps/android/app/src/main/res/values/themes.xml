@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DadaLink" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/dada_ground</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Neutral splash: a plain white screen, so a disguised app does not flash the DadaLink logo. -->
+    <style name="Theme.DadaLink.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/dada_ground</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="postSplashScreenTheme">@style/Theme.DadaLink</item>
+    </style>
+</resources>

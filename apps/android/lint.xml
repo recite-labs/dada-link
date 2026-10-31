@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Version freshness is managed in libs.versions.toml, not by lint. -->
+    <issue id="GradleDependency" severity="ignore" />
+    <issue id="NewerVersionAvailable" severity="ignore" />
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
+    <!-- targetSdk stays at 36 on purpose until Android 17 behaviour changes are tested on devices
+         (compileSdk is already 37). -->
+    <issue id="OldTargetApi" severity="informational" />
+</lint>

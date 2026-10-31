@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_ui_hide">ደብቅ</string>
+    <string name="core_ui_back">ተመለስ</string>
+    <string name="core_ui_call">ደውይ</string>
+    <string name="core_ui_copy">ቅዳ</string>
+    <string name="core_ui_copied">ተቀድቷል</string>
+    <string name="core_ui_cancel">ይቅር</string>
+    <string name="core_ui_save">አስቀምጪ</string>
+    <string name="core_ui_continue">ቀጥዪ</string>
+    <string name="core_ui_share_with">አጋሪ በ…</string>
+    <string name="core_ui_draft_content">ረቂቅ — በባለሙያ እስኪገመገም በመጠበቅ ላይ</string>
+    <string name="core_ui_number_pending">ቁጥሩ እየተረጋገጠ ነው</string>
+    <string name="core_ui_disclaimer">ዳዳ መረጃ ትሰጣለች እንጂ የሕግ ወይም የሕክምና ምክር አይደለም። አደጋ ላይ ነሽ? SOS ተጫኚ።</string>
+    <string name="core_ui_country_sa">ሳውዲ አረቢያ</string>
+    <string name="core_ui_country_ae">የተባበሩት አረብ ኤምሬቶች</string>
+    <string name="core_ui_country_kw">ኩዌት</string>
+    <string name="core_ui_country_qa">ኳታር</string>
+    <string name="core_ui_country_lb">ሊባኖስ</string>
+    <string name="core_ui_country_jo">ዮርዳኖስ</string>
+    <string name="core_ui_country_et">ኢትዮጵያ</string>
+    <string name="core_ui_works_offline">ያለ ኢንተርኔት ይሠራል</string>
+    <string name="core_ui_unverified">ገና አልተረጋገጠም</string>
+</resources>
