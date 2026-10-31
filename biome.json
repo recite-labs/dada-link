@@ -11,7 +11,9 @@
       "!**/coverage",
       "!**/migrations/**/snapshot.json",
       "!packages/api/openapi.json",
-      "!**/worker-configuration.d.ts"
+      "!**/worker-configuration.d.ts",
+      "!apps/android/core/content/src/main/assets/content/bundle.json",
+      "!apps/android/core/database/schemas"
     ]
   },
   "css": {
