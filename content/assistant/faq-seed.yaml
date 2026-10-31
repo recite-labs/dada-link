@@ -294,6 +294,23 @@ items:
     sources: []
     verified: false
 
+  - id: faq-check-agency-licence
+    question:
+      en: How do I know if my agency is legal and licensed?
+      am: ኤጀንሲዬ ሕጋዊና ፈቃድ ያለው መሆኑን እንዴት ማወቅ እችላለሁ?
+      om: Ejensiin koo seeraan kan hojjetu fi hayyama kan qabu ta'uu isaa akkamiin beekuu danda'a?
+    answer:
+      en: "Under Ethiopia's Overseas Employment Proclamation No. 1389/2025, only the Ministry of Labour and Skills (MoLS) licenses agencies, through the Labour Market Information System (LMIS). A licence lasts one year and must be renewed every year. Before you pay or sign: ask to see the licence on the office wall and check the name, countries and date; ask MoLS or your regional labour office if the agency is licensed now (the number is in the help directory); and make sure you are registered in LMIS. A legal agency may not take any money or gifts from you for the job. If it does, report it to MoLS. Read 'Licensed agencies and illegal brokers'."
+      am: "በኢትዮጵያ የውጭ አገር ሥራ ስምሪት አዋጅ ቁጥር 1389/2025 መሠረት ለኤጀንሲዎች ፈቃድ የሚሰጠው የሥራና ክህሎት ሚኒስቴር ብቻ ነው፤ በሥራ ገበያ መረጃ ሥርዓት (LMIS) በኩል። ፈቃድ የሚያገለግለው ለአንድ ዓመት ሲሆን በየዓመቱ መታደስ አለበት። ከመክፈልሽ ወይም ከመፈረምሽ በፊት፦ በቢሮው ግድግዳ ላይ ያለውን ፈቃድ እንዲያሳዩሽ ጠይቂና ስሙን፣ አገሮቹንና ቀኑን ተመልከቺ፤ ኤጀንሲው አሁን ፈቃድ እንዳለው ሚኒስቴሩን ወይም የክልልሽን የሥራ ቢሮ ጠይቂ (ስልክ ቁጥሩ በእርዳታ ማውጫው ውስጥ አለ)፤ በLMIS መመዝገብሽንም አረጋግጪ። ሕጋዊ ኤጀንሲ ለሥራው ከአንቺ ምንም ገንዘብ ወይም ስጦታ መቀበል የለበትም። ከተቀበለ ለሚኒስቴሩ አሳውቂ። «ፈቃድ ያላቸው ኤጀንሲዎችና ሕገ ወጥ ደላሎች»ን አንብቢ።"
+      om: "Akka Labsii Hojii Biyya Alaa Itoophiyaa Lakk. 1389/2025tti, ejansiiwwaniif hayyama kan kennu Ministeera Hojii fi Ogummaa (MoLS) qofa, Sirna Odeeffannoo Gabaa Hojii (LMIS) keessaan. Hayyamni waggaa tokkoof hojjeta, waggaa waggaanis haaromfamuu qaba. Osoo hin kaffalin ykn hin mallatteessin dura: hayyama keenyan waajjiraa irra jiru akka si agarsiisan gaafadhuu maqaa, biyyoota fi guyyaa isaa ilaali; ejansichi amma hayyama qabaachuu isaa Ministeerichaa ykn waajjira hojii naannoo kee gaafadhu (lakkoofsi isaa galmee gargaarsaa keessa jira); LMIS keessatti galmaa'uu kees mirkaneeffadhu. Ejansiin seeraan hojjetu hojii kanaaf maallaqa ykn kennaa kamiyyuu si irraa fudhachuu hin qabu. Yoo fudhate, Ministeerichatti gabaasi. 'Ejansiiwwan hayyama qaban fi deelaalota seeraan alaa' dubbisi."
+    status: reviewed
+    tags: [legal, trafficking, labour-complaint]
+    countries: []
+    emergency: false
+    articles: [licensed-agencies-vs-brokers, rights-et]
+    sources: []
+    verified: false
+
   - id: faq-documents-to-keep
     question:
       en: Which documents should I copy before I leave?
