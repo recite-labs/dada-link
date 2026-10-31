@@ -1,0 +1,34 @@
+DadaLink is a free, private companion for African women who go to work as domestic workers in Saudi Arabia, the UAE, Kuwait, Qatar, Lebanon and Jordan. It helps before you go, while you are abroad and when you come home. In Amharic, Afaan Oromo and English.
+
+"Dada" means sister. DadaLink is the sister in your pocket.
+
+WHILE YOU ARE ABROAD
+• SOS: hold the button for three seconds to alert the person you trust, with your location, by SMS or Telegram.
+• Help numbers that work offline: police, ambulance, Ethiopian embassies and consulates, labour ministries, domestic violence lines and shelters, country by country.
+• A private log: write down your hours, unpaid wages and what happened, with photos. It stays on your phone, encrypted, until you choose to share it.
+
+ASK DADA
+Ask anything about your contract, pay, passport, health or safety, in your own language. Dada answers only from guides our team has reviewed, and shows where each answer comes from. If you write that you are in danger, Dada shows emergency numbers first. Your questions are not saved.
+
+BEFORE YOU GO
+• Your contract and your rights in each country, explained simply.
+• How to tell a licensed agency from an illegal broker, and the fees you should never pay.
+• Which documents to copy, how to plan for your health, and how to make a safety plan with someone you trust.
+
+YOUR HEALTH
+Ask private questions about your period, pregnancy, sleep and stress, read short guides, and find helplines when you need to talk to someone.
+
+COMING HOME
+Support for the return home: talking to someone, claiming wages you are still owed, and returnee services.
+
+PRIVATE BY DESIGN
+• No account, no name, no phone number needed.
+• No ads, no analytics, no trackers.
+• Your private log and trusted contacts are encrypted on your phone.
+• "Hide" closes DadaLink in one tap.
+
+DadaLink also works on Telegram and on the web at dadalink.recitelabs.com.
+
+DadaLink gives information, not legal or medical advice. In an emergency, call the local emergency number.
+
+Made by Recite Labs in Addis Ababa, Ethiopia. Free and open source (AGPL-3.0).
