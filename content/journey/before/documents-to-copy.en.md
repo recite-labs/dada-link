@@ -8,7 +8,7 @@ summary: Take photos of your passport, visa, contract and other papers before yo
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [documents, passport]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [your-contract, trusted-contact-and-safety-plan, passport-taken, contacting-your-embassy]

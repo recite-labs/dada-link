@@ -8,7 +8,7 @@ summary: Your body, your choice. Learn about contraception, protection from infe
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [health, legal, sexual-violence]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [health-preparation, legal-risks-abroad, pregnancy-abroad, sexual-violence-what-to-do]

@@ -8,7 +8,7 @@ summary: Your passport belongs to you. Here is what the law says in some countri
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [passport, documents, labour-complaint, trafficking]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [contacting-your-embassy, leaving-a-bad-employer, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

@@ -5,7 +5,7 @@ country: JO
 locale: am
 title: በዮርዳኖስ የቤት ሠራተኛ ሆነሽ ያሉሽ መብቶች
 summary: በዮርዳኖስ በሠራተኛ ሕጉ ሥር ያለ ልዩ ደንብ ለቤት ሠራተኞች የደመወዝ፣ የዕረፍት፣ የፈቃድ እና የጤና እንክብካቤ መብቶችን ይሰጣል። ፓስፖርትሽን መያዝ ወንጀል ነው፤ ቅሬታ የምታቀርቢበት እና እርዳታ የምታገኚበት ቦታ አለ።
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-jo
 updated: 2026-10-31

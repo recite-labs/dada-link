@@ -8,7 +8,7 @@ summary: Protect your savings, look for skills and business support, and if you 
 countries: [ET]
 tags: [returnee-support, trafficking]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [licensed-agencies-vs-brokers, money-fees-and-debt, family-and-community-after-return, claiming-unpaid-wages-after-return]

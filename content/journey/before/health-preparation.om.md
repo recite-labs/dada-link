@@ -8,7 +8,7 @@ summary: "Osoo hin deemin dura qorannoo fayyaa si barbaachisa. Qorichoonni tokko
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [health]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: health-preparation
 related: [contraception-and-srh-before-you-go, legal-risks-abroad, sick-or-injured]

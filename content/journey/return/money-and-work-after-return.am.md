@@ -8,7 +8,7 @@ summary: "ቁጠባሽን ጠብቂ፣ የክህሎትና የንግድ ድጋፍ
 countries: [ET]
 tags: [returnee-support, trafficking]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: money-and-work-after-return
 related: [licensed-agencies-vs-brokers, money-fees-and-debt, family-and-community-after-return, claiming-unpaid-wages-after-return]

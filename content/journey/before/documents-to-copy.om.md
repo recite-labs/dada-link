@@ -8,7 +8,7 @@ summary: "Osoo hin deemin dura suuraa paaspoortii, viizaa, waliigaltee fi ragaal
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [documents, passport]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: documents-to-copy
 related: [your-contract, trusted-contact-and-safety-plan, passport-taken, contacting-your-embassy]

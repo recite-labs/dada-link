@@ -8,7 +8,7 @@ summary: "Yeroo deebi'oonni Finfinnee ga'an waan baay'inaan ta'u, akkasumas nyaa
 countries: [ET]
 tags: [repatriation, returnee-support, shelter, health, mental-health]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: arriving-home
 related: [preparing-to-return, health-check-after-return, mental-health-after-return, family-and-community-after-return, detention-and-deportation]

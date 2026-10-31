@@ -8,7 +8,7 @@ summary: "Osoo hin deemin dura, mindaa kee walitti qabachuuf yaali, garagalcha s
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [wages, documents, passport, repatriation]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: preparing-to-return
 related: [unpaid-wages, contacting-your-embassy, documents-to-copy, claiming-unpaid-wages-after-return, arriving-home, rights-sa]

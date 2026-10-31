@@ -8,7 +8,7 @@ summary: "Muuxannoo ulfaataa booda dhiphinni, gaddi, aariin, abjuun sodaachisaa 
 countries: [ET]
 tags: [mental-health, returnee-support, emergency]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: mental-health-after-return
 related: [loneliness-and-mental-health, family-and-community-after-return, health-check-after-return, arriving-home]

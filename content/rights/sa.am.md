@@ -5,7 +5,7 @@ country: SA
 locale: am
 title: በሳዑዲ ዓረቢያ እንደ ቤት ሠራተኛ ያለዎት መብቶች
 summary: ሳዑዲ ዓረቢያ ለቤት ሠራተኞች የተለየ ደንብ አላት። ይህ ደንብ ውል፣ ወርሃዊ ደመወዝ፣ የሳምንት እረፍት ቀን እና የሥራ ሰዓት ገደብ ይሰጥዎታል፤ አሠሪዎ ፓስፖርትዎን መያዝ እንደሌለበትም ይገልጻል።
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-sa
 updated: 2026-10-31

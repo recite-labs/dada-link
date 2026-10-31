@@ -5,7 +5,7 @@ country: LB
 locale: en
 title: Your rights as a domestic worker in Lebanon
 summary: In Lebanon, domestic workers are not covered by the Labour Law. Your rights come mainly from the standard contract you sign, and there are people who can help if those rights are broken.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 updated: 2026-10-31

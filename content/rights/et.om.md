@@ -5,7 +5,7 @@ country: ET
 locale: om
 title: Mirgoota kee osoo hin deemin dura fi yeroo biyyatti deebitu (Itoophiyaa)
 summary: Labsiin Hojii Biyya Alaa Itoophiyaa Lakk. 1389/2025 osoo hin deemin dura, yeroo biyya alaatti hojjettu fi yeroo biyyatti deebitu si eega. Ejensiiwwan hojii siif argachuu isaaniif maallaqa sirraa fudhachuu hin danda'an; Ministeera Hojii fi Ogummaatti komii dhiyeessuu ni dandeessa.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-et
 updated: 2026-10-31

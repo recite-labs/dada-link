@@ -8,7 +8,7 @@ summary: "Erga deebitee booda qorannoon fayyaa rakkoowwan, infekshinii mallattoo
 countries: [ET]
 tags: [health, returnee-support]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: health-check-after-return
 related: [mental-health-after-return, arriving-home, sexual-violence-what-to-do, health-preparation]

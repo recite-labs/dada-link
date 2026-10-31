@@ -8,7 +8,7 @@ summary: "በአገር ቤት ሁልጊዜ የሚጠብቅሽ አንድ ሰው �
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [emergency, abuse, documents]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: trusted-contact-and-safety-plan
 related: [documents-to-copy, contacting-your-embassy, abuse-what-to-do, licensed-agencies-vs-brokers]

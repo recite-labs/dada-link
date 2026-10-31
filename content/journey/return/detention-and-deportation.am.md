@@ -8,7 +8,7 @@ summary: "በማባረሪያ ማዕከል መያዝ ያስፈራል፣ ግን �
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [detention, repatriation, documents, passport, health]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: detention-and-deportation
 related: [contacting-your-embassy, passport-taken, arriving-home, mental-health-after-return, rights-sa, rights-lb]

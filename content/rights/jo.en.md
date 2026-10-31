@@ -5,7 +5,7 @@ country: JO
 locale: en
 title: Your rights as a domestic worker in Jordan
 summary: In Jordan, a special regulation under the Labour Law gives domestic workers rights to pay, rest, leave and health care. Keeping your passport from you is a crime, and there are places to complain and get help.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 updated: 2026-10-31

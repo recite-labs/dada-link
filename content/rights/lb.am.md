@@ -5,7 +5,7 @@ country: LB
 locale: am
 title: በሊባኖስ የቤት ሠራተኛ ሆነሽ ያሉሽ መብቶች
 summary: በሊባኖስ የቤት ሠራተኞች በሠራተኛ ሕጉ አልተሸፈኑም። መብቶችሽ በአብዛኛው የሚመጡት ከምትፈርሚው መደበኛ ውል ነው፤ እነዚህ መብቶች ቢጣሱ የሚረዱሽ ሰዎች አሉ።
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-lb
 updated: 2026-10-31

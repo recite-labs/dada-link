@@ -8,7 +8,7 @@ entries:
       en: Police emergency line
       am: የፖሊስ የአደጋ ጊዜ መስመር
       om: Lakkoofsa ariifachiisaa poolisii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, abuse, sexual-violence, trafficking]
     phone: null
     short_code: "991"
@@ -52,7 +52,7 @@ entries:
       en: Ambulance (Addis Ababa)
       am: አምቡላንስ (አዲስ አበባ)
       om: Ambulaansii (Finfinnee)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, health]
     phone: null
     short_code: "907"
@@ -81,7 +81,7 @@ entries:
       en: Fire and rescue
       am: የእሳት አደጋ እና ድንገተኛ አደጋ መከላከል
       om: Ibiddaa fi baraarsa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [fire, emergency]
     phone: null
     short_code: "939"
@@ -105,7 +105,7 @@ entries:
       en: Ministry of Labour and Skills (MoLS), overseas employment
       am: የሥራና ክህሎት ሚኒስቴር (የውጭ ሀገር ሥራ ስምሪት)
       om: Ministeera Hojii fi Ogummaa (hojii biyya alaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, documents, passport, repatriation, returnee-support, legal]
     phone: "+251116671792"
     short_code: null
@@ -139,7 +139,7 @@ entries:
       en: National anti-trafficking hotline (Ministry of Justice)
       am: ብሔራዊ የሕገ-ወጥ የሰዎች ዝውውር መከላከያ የስልክ መስመር (የፍትሕ ሚኒስቴር)
       om: Bilbila biyyaalessaa daldala namootaa ittisuu (Ministeera Haqaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [trafficking, legal, labour-complaint]
     phone: null
     short_code: "8797"
@@ -163,7 +163,7 @@ entries:
       en: EWLA free hotline for women facing violence (legal aid)
       am: የኢትዮጵያ ሴት ሕግ ባለሙያዎች ማኅበር (ኢሴሕባማ) ነፃ የስልክ መስመር
       om: Bilbila tolaa Waldaa Ogeeyyii Seeraa Dubartoota Itoophiyaa (EWLA)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, sexual-violence, legal]
     phone: null
     short_code: "7711"
@@ -197,7 +197,7 @@ entries:
       en: One Stop Centres for survivors of sexual violence (Addis Ababa hospitals)
       am: ለጾታዊ ጥቃት ተጎጂዎች የአንድ ማዕከል አገልግሎት (አዲስ አበባ ሆስፒታሎች)
       om: Giddugala Tajaajila Tokkoo miidhamtoota jeequmsa saalaa (hospitaalota Finfinnee)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [sexual-violence, abuse, health, legal]
     phone: null
     short_code: null
@@ -221,7 +221,7 @@ entries:
       en: IOM Ethiopia (International Organization for Migration)
       am: አይኦኤም ኢትዮጵያ (ዓለም አቀፍ የስደተኞች ድርጅት)
       om: IOM Itoophiyaa (Dhaabbata Idil-addunyaa Godaansaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [repatriation, returnee-support, trafficking, health, mental-health]
     phone: "+251111301000"
     short_code: null
@@ -250,7 +250,7 @@ entries:
       en: Agar Ethiopia Charitable Society (shelter for trafficking survivors and returnees)
       am: አጋር ኢትዮጵያ በጎ አድራጎት ማኅበር
       om: Waldaa Gargaarsaa Agar Itoophiyaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, trafficking, returnee-support, mental-health, abuse]
     phone: "+251113699990"
     short_code: null
@@ -284,7 +284,7 @@ entries:
       en: Good Samaritan Association (shelter for women survivors of trafficking and violence)
       am: ደጉ ሳምራዊ ማኅበር
       om: Waldaa Samaariyaa Gaarii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, trafficking, abuse, returnee-support, mental-health]
     phone: "+251911407919"
     short_code: null
@@ -313,7 +313,7 @@ entries:
       en: AWSAD (Association for Women's Sanctuary and Development), safe houses
       am: አውሳድ (የሴቶች መጠለያና ልማት ማኅበር)
       om: AWSAD (Waldaa Iddoo Baqannaa fi Misooma Dubartootaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, abuse, sexual-violence, mental-health]
     phone: "+251116672290"
     short_code: "7200"
@@ -337,7 +337,7 @@ entries:
       en: St. Amanuel Mental Specialized Hospital
       am: ቅዱስ አማኑኤል የአእምሮ ስፔሻላይዝድ ሆስፒታል
       om: Hospitaala Addaa Fayyaa Sammuu Qulqulluu Amaanu'eel
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [mental-health, health]
     phone: "+251112757699"
     short_code: null
@@ -361,7 +361,7 @@ entries:
       en: Ministry of Foreign Affairs and Ethiopian Diaspora Service
       am: የውጭ ጉዳይ ሚኒስቴር እና የኢትዮጵያ ዲያስፖራ አገልግሎት
       om: Ministeera Dhimma Alaa fi Tajaajila Diyaaspooraa Itoophiyaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [repatriation, passport, documents, trafficking]
     phone: null
     short_code: null

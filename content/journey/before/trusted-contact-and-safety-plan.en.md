@@ -8,7 +8,7 @@ summary: Choose one person at home who will always look out for you. Agree a pla
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [emergency, abuse, documents]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [documents-to-copy, contacting-your-embassy, abuse-what-to-do, licensed-agencies-vs-brokers]

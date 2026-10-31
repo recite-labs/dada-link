@@ -5,7 +5,7 @@ country: ET
 locale: en
 title: Your rights before you go and when you come home (Ethiopia)
 summary: Ethiopia's Overseas Employment Proclamation No. 1389/2025 protects you before you leave, while you work abroad, and when you come home. Agencies may not take money from you for finding you a job, and you can complain to the Ministry of Labour and Skills.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 updated: 2026-10-31

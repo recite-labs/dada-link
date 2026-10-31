@@ -8,7 +8,7 @@ summary: You have the right to be paid for your work. Keep a record of every pay
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [wages, labour-complaint]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [contacting-your-embassy, leaving-a-bad-employer, claiming-unpaid-wages-after-return, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

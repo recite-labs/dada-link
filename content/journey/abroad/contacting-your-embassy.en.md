@@ -8,7 +8,7 @@ summary: The Ethiopian embassy or consulate is there to help Ethiopians abroad. 
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [documents, passport, repatriation, shelter, legal, wages]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [passport-taken, unpaid-wages, leaving-a-bad-employer, abuse-what-to-do, preparing-to-return, detention-and-deportation]

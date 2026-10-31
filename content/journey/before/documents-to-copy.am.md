@@ -8,7 +8,7 @@ summary: "ከመሄድሽ በፊት የፓስፖርትሽን፣ የቪዛሽን�
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [documents, passport]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: documents-to-copy
 related: [your-contract, trusted-contact-and-safety-plan, passport-taken, contacting-your-embassy]

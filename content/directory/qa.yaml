@@ -8,7 +8,7 @@ entries:
       en: Emergency (police, ambulance, fire)
       am: አስቸኳይ ጊዜ (ፖሊስ፣ አምቡላንስ፣ እሳት)
       om: Ariifachiisaa (poolisii, ambulaansii, ibidda)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, abuse, sexual-violence, health, fire, trafficking]
     phone: null
     short_code: "999"
@@ -41,7 +41,7 @@ entries:
       en: Hamad General Hospital - Accident and Emergency
       am: ሃማድ ጠቅላላ ሆስፒታል - የአደጋና ድንገተኛ ክፍል
       om: Hospitaala Waliigalaa Hamad - Kutaa Balaa fi Ariifachiisaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [health, emergency, sexual-violence]
     phone: "+97444392111"
     short_code: null
@@ -66,7 +66,7 @@ entries:
       en: Embassy of Ethiopia in Doha
       am: በዶሃ የኢትዮጵያ ኤምባሲ
       om: Ejjennoo Itoophiyaa Dohaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation, abuse, legal, detention, shelter]
     phone: "+97440207000"
     short_code: null
@@ -91,7 +91,7 @@ entries:
       en: Ministry of Labour complaints hotline
       am: የሠራተኛ ሚኒስቴር የቅሬታ መቀበያ ስልክ
       om: Sarara Komii Ministeera Hojii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, passport, documents, abuse, legal]
     phone: "+97440280661"
     short_code: "16008"
@@ -120,7 +120,7 @@ entries:
       en: National Committee to Combat Human Trafficking hotline
       am: የሰዎች ዝውውርን ለመከላከል የብሔራዊ ኮሚቴ የስልክ መስመር
       om: Sarara Koree Biyyaalessaa Daldala Namaa Ittisuu
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [trafficking, shelter, abuse, legal]
     phone: null
     short_code: "16044"
@@ -149,7 +149,7 @@ entries:
       en: Humanitarian Care House (shelter for trafficking victims)
       am: የሰብዓዊ እንክብካቤ ቤት (ለሰዎች ዝውውር ተጠቂዎች መጠለያ)
       om: Mana Kunuunsa Namummaa (hirkoo miidhamtoota daldala namaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, trafficking, legal, health, repatriation]
     phone: null
     short_code: null
@@ -178,7 +178,7 @@ entries:
       en: Aman Protection and Social Rehabilitation Centre
       am: የአማን የጥበቃና ማኅበራዊ ማቋቋሚያ ማዕከል
       om: Wiirtuu Eegumsaa fi Deebisanii Dhaabuu Hawaasummaa Amaan
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, sexual-violence, shelter, mental-health, legal]
     phone: "+97444090999"
     short_code: "919"
@@ -207,7 +207,7 @@ entries:
       en: National Human Rights Committee (NHRC)
       am: ብሔራዊ የሰብዓዊ መብቶች ኮሚቴ
       om: Koree Biyyaalessaa Mirgoota Namoomaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, legal, abuse, detention, passport]
     phone: "+97444048844"
     short_code: "8002222"
@@ -232,7 +232,7 @@ entries:
       en: IOM Qatar (UN Migration)
       am: አይኦኤም ኳታር (የተባበሩት መንግሥታት የፍልሰት ድርጅት)
       om: IOM Qaxar (Dhaabbata Godaansaa UN)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [repatriation, trafficking, returnee-support]
     phone: "+97441415279"
     short_code: null

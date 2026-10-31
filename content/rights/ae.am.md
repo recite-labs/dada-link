@@ -5,7 +5,7 @@ country: AE
 locale: am
 title: በተባበሩት ዓረብ ኤሚሬቶች እንደ ቤት ሠራተኛ ያለዎት መብቶች
 summary: የUAE ሕግ የቤት ሠራተኞችን ይጠብቃል። የጽሑፍ ውል፣ በሰዓቱ የሚከፈል ደመወዝ፣ የዕለትና የሳምንት እረፍት እንዲሁም የራስዎን ፓስፖርት የመያዝ መብት አለዎት።
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-ae
 updated: 2026-10-31

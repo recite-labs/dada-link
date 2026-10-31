@@ -8,7 +8,7 @@ summary: If your job is unsafe or unfair, there are legal ways to leave. Running
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [labour-complaint, shelter, trafficking, documents, legal, detention]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [abuse-what-to-do, passport-taken, unpaid-wages, contacting-your-embassy, detention-and-deportation, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

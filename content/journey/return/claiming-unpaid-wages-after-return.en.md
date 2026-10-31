@@ -8,7 +8,7 @@ summary: Getting your unpaid pay from home is hard, but you can still try. Keep 
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [wages, labour-complaint, legal, returnee-support]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [unpaid-wages, preparing-to-return, contacting-your-embassy, licensed-agencies-vs-brokers, mental-health-after-return]

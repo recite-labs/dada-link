@@ -8,7 +8,7 @@ summary: You will need a medical check before you go. Plan for your medicines, b
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [health]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [contraception-and-srh-before-you-go, legal-risks-abroad, sick-or-injured]

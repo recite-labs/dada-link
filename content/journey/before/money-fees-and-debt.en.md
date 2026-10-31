@@ -8,7 +8,7 @@ summary: Know which costs you may have to pay and which you should not pay. Avoi
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [wages, trafficking, legal]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [licensed-agencies-vs-brokers, your-contract, unpaid-wages, money-and-work-after-return]

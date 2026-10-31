@@ -8,7 +8,7 @@ summary: Go abroad only through an agency licensed by the Ministry of Labour and
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [trafficking, legal, documents]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [rights-et, your-contract, money-fees-and-debt, trusted-contact-and-safety-plan]

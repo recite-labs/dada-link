@@ -8,7 +8,7 @@ summary: "Namni tokko fedhii kee malee yoo si tuqe ykn gocha saalqunnamtii akka 
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [sexual-violence, emergency, health, legal, shelter]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: sexual-violence-what-to-do
 related: [abuse-what-to-do, pregnancy-abroad, loneliness-and-mental-health, contacting-your-embassy, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

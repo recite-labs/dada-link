@@ -8,7 +8,7 @@ entries:
       en: Police (Internal Security Forces)
       am: ፖሊስ (የውስጥ ደህንነት ኃይሎች)
       om: Poolisii (Humnoota Nageenya Keessaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, abuse, sexual-violence, trafficking]
     phone: null
     short_code: "112"
@@ -37,7 +37,7 @@ entries:
       en: Lebanese Red Cross ambulance
       am: የሊባኖስ ቀይ መስቀል አምቡላንስ
       om: Ambulaansii Fannoo Diimaa Libaanoon
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, health]
     phone: null
     short_code: "140"
@@ -66,7 +66,7 @@ entries:
       en: Civil Defence and fire brigade
       am: ሲቪል መከላከያ እና የእሳት አደጋ ተከላካይ
       om: Ittisa Siivilii fi Ibidda Dhaamsuu
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [fire, emergency]
     phone: null
     short_code: "125"
@@ -95,7 +95,7 @@ entries:
       en: Ministry of Labour complaints line for domestic workers
       am: የሠራተኛ ሚኒስቴር የቤት ሠራተኞች የቅሬታ መስመር
       om: Sarara Komii Hojjettoota Manaa Ministeera Hojii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, passport, abuse, documents]
     phone: null
     short_code: "1741"
@@ -129,7 +129,7 @@ entries:
       en: General Security (residence and work permits)
       am: ጠቅላላ ደህንነት (የመኖሪያ እና የሥራ ፈቃድ)
       om: Nageenya Waliigalaa (hayyama jireenyaa fi hojii)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [documents, passport, detention, repatriation, abuse]
     phone: "+9611424668"
     short_code: "1717"
@@ -158,7 +158,7 @@ entries:
       en: Consulate General of Ethiopia in Beirut
       am: በቤይሩት የኢትዮጵያ ቆንስላ ጄኔራል
       om: Qonsilaa Jeneraala Itoophiyaa Beeruut
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation, abuse, detention, shelter]
     phone: "+9615953597"
     short_code: null
@@ -187,7 +187,7 @@ entries:
       en: KAFA (Enough) Violence and Exploitation helpline
       am: ካፋ (በቃ) የጥቃት እና ብዝበዛ የእርዳታ መስመር
       om: KAFA (Ga'a) sarara gargaarsa miidhaa fi saamichaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, sexual-violence, legal, shelter, trafficking, mental-health]
     phone: "+9613018019"
     short_code: null
@@ -216,7 +216,7 @@ entries:
       en: Caritas Lebanon Migrants Center
       am: የካሪታስ ሊባኖስ የስደተኞች ማዕከል
       om: Giddugala Godaantotaa Caritas Libaanoon
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, legal, health, mental-health, trafficking, detention, repatriation]
     phone: "+9611517012"
     short_code: null
@@ -245,7 +245,7 @@ entries:
       en: Anti-Racism Movement, Migrant Community Center
       am: ፀረ-ዘረኝነት ንቅናቄ፣ የስደተኞች ማኅበረሰብ ማዕከል
       om: Sochii Sanyummaa Mormuu, Giddugala Hawaasa Godaantotaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [legal, health, documents, mental-health]
     phone: null
     short_code: null
@@ -269,7 +269,7 @@ entries:
       en: IOM Lebanon (UN Migration)
       am: አይኦኤም ሊባኖስ (የተባበሩት መንግሥታት የስደት ድርጅት)
       om: IOM Libaanoon (Dhaabbata Godaansaa UN)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [repatriation, trafficking, health]
     phone: "+9611841701"
     short_code: null

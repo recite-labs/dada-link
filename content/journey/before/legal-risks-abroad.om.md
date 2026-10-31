@@ -8,7 +8,7 @@ summary: "Wantoonni biyya keessatti baramoo ta'an tokko tokko biyya kee haaraa k
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [legal, detention]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: legal-risks-abroad
 related: [health-preparation, contraception-and-srh-before-you-go, leaving-a-bad-employer, detention-and-deportation]

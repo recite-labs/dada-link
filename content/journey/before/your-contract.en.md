@@ -8,7 +8,7 @@ summary: Before you leave, get a written contract in a language you understand. 
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [legal, wages, documents]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo, licensed-agencies-vs-brokers, documents-to-copy]

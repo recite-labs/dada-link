@@ -5,7 +5,7 @@ country: SA
 locale: en
 title: Your rights as a domestic worker in Saudi Arabia
 summary: Saudi Arabia has a special regulation for domestic workers. It gives you a contract, monthly pay, a weekly day off, limits on working hours, and says your employer must not keep your passport.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 updated: 2026-10-31

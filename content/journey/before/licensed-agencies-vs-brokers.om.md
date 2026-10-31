@@ -8,7 +8,7 @@ summary: "Biyya alaa kan deemtu ejansii Ministeerri Hojii fi Ogummaa hayyama ken
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [trafficking, legal, documents]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: licensed-agencies-vs-brokers
 related: [rights-et, your-contract, money-fees-and-debt, trusted-contact-and-safety-plan]

@@ -5,7 +5,7 @@ country: QA
 locale: en
 title: Your rights as a domestic worker in Qatar
 summary: Qatar's Domestic Workers Law (Law No. 15 of 2017) and the minimum wage law protect you. You have the right to a contract, at least QAR 1,000 a month, a weekly day off, and to change jobs or go home.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 updated: 2026-10-31

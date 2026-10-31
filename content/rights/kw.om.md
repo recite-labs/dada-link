@@ -5,7 +5,7 @@ country: KW
 locale: om
 title: Mirgoota keessan akka hojjettuu manaa Kuweet keessatti
 summary: Seerri Hojjettoota Manaa Kuweet (Seera Lakk. 68 bara 2015) isin eega. Waliigaltee, mindaa ji'aa hir'isa malee, guyyaa boqonnaa torbanii, boqonnaa guyyaa 30 mindaa qabu fi paaspoortii keessan ofii qabachuuf mirga qabdu.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-kw
 updated: 2026-10-31

@@ -8,7 +8,7 @@ summary: "ቤትን መናፈቅ፣ ማዘን ወይም መጨነቅ የተለ�
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [mental-health, emergency]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: loneliness-and-mental-health
 related: [abuse-what-to-do, sexual-violence-what-to-do, contacting-your-embassy, mental-health-after-return]

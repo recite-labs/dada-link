@@ -8,7 +8,7 @@ summary: A check-up after you return helps you find and treat problems early, in
 countries: [ET]
 tags: [health, returnee-support]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [mental-health-after-return, arriving-home, sexual-violence-what-to-do, health-preparation]

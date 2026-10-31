@@ -8,7 +8,7 @@ summary: Your health comes first. In many countries your employer must give you 
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [health, emergency]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [rest-and-working-hours, abuse-what-to-do, contacting-your-embassy, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

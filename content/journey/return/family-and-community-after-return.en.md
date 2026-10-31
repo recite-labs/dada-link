@@ -8,7 +8,7 @@ summary: Coming home can bring money pressure, gossip and shame. What happened i
 countries: [ET]
 tags: [returnee-support, mental-health]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [mental-health-after-return, money-and-work-after-return, arriving-home]

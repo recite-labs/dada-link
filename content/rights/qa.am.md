@@ -5,7 +5,7 @@ country: QA
 locale: am
 title: በኳታር እንደ ቤት ሠራተኛ ያለዎት መብቶች
 summary: የኳታር የቤት ሠራተኞች ሕግ (ሕግ ቁጥር 15/2017) እና የዝቅተኛ ደመወዝ ሕግ ይጠብቁዎታል። ውል፣ በወር ቢያንስ QAR 1,000፣ የሳምንት እረፍት ቀን እንዲሁም ሥራ የመቀየር ወይም ወደ ሀገር የመመለስ መብት አለዎት።
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-qa
 updated: 2026-10-31

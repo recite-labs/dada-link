@@ -8,7 +8,7 @@ summary: Stress, sadness, anger, bad dreams and shame are common after hard expe
 countries: [ET]
 tags: [mental-health, returnee-support, emergency]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [loneliness-and-mental-health, family-and-community-after-return, health-check-after-return, arriving-home]

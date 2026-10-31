@@ -8,7 +8,7 @@ entries:
       en: Police (emergency)
       am: ፖሊስ (አስቸኳይ)
       om: Poolisii (ariifachiisaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, abuse, sexual-violence, trafficking]
     phone: null
     short_code: "999"
@@ -33,7 +33,7 @@ entries:
       en: Ambulance
       am: አምቡላንስ
       om: Ambulaansii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, health]
     phone: null
     short_code: "998"
@@ -58,7 +58,7 @@ entries:
       en: Fire and Civil Defence
       am: የእሳት አደጋ እና ሲቪል መከላከያ
       om: Ibiddaa fi Ittisa Siviilii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [fire, emergency]
     phone: null
     short_code: "997"
@@ -83,7 +83,7 @@ entries:
       en: Embassy of Ethiopia in Abu Dhabi
       am: በአቡ ዳቢ የኢትዮጵያ ኤምባሲ
       om: Ejjennoo Itoophiyaa Abuu Dhaabii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation, abuse, legal, detention]
     phone: "+97126655111"
     short_code: null
@@ -108,7 +108,7 @@ entries:
       en: Consulate General of Ethiopia in Dubai and the Northern Emirates
       am: በዱባይና ሰሜን ኤምሬቶች የኢትዮጵያ ቆንስላ ጄኔራል
       om: Qonsilaa Jeneraalaa Itoophiyaa Dubaayii fi Imireetota Kaabaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation, abuse, legal, detention]
     phone: "+97142699111"
     short_code: null
@@ -137,7 +137,7 @@ entries:
       en: Ministry of Human Resources and Emiratisation (MOHRE) call centre
       am: የሰው ሀብትና ኤሚሬታይዜሽን ሚኒስቴር (MOHRE) የጥሪ ማዕከል
       om: Wiirtuu Bilbilaa Ministeera Qabeenya Namaa fi Emiraatii (MOHRE)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, passport, documents, legal]
     phone: "+97168034000"
     short_code: null
@@ -166,7 +166,7 @@ entries:
       en: MOHRE Labour Claims and Advisory Center
       am: የMOHRE የሠራተኛ ይገባኛል ጥያቄና ምክር ማዕከል
       om: Wiirtuu Gaaffii Mirgaa fi Gorsa Hojjettootaa MOHRE
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, legal]
     phone: null
     short_code: "80084"
@@ -191,7 +191,7 @@ entries:
       en: Ewaa - Abu Dhabi Centre for Shelter and Humanitarian Care
       am: ኤዋ - የአቡ ዳቢ የመጠለያና ሰብዓዊ እንክብካቤ ማዕከል
       om: Ewaa - Wiirtuu Abuu Dhaabii Hirkootaa fi Kunuunsa Namummaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, trafficking, abuse, sexual-violence, mental-health]
     phone: null
     short_code: "8007283"
@@ -224,7 +224,7 @@ entries:
       en: Dubai Foundation for Women and Children (DFWAC)
       am: የዱባይ የሴቶችና ሕፃናት ፋውንዴሽን
       om: Dhaabbata Dubaayii Dubartootaa fi Daa'immanii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, abuse, sexual-violence, trafficking, mental-health, legal]
     phone: "+97146060300"
     short_code: "800111"
@@ -253,7 +253,7 @@ entries:
       en: Dubai Police - Control Center of Human Trafficking
       am: የዱባይ ፖሊስ - የሰዎች ዝውውር መቆጣጠሪያ ማዕከል
       om: Poolisii Dubaayii - Wiirtuu To'annoo Daldala Namaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [trafficking, abuse, emergency]
     phone: "+97146082347"
     short_code: null
@@ -278,7 +278,7 @@ entries:
       en: Dubai Police Al Ameen service
       am: የዱባይ ፖሊስ አል አሚን አገልግሎት
       om: Tajaajila Al Ameen Poolisii Dubaayii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, trafficking, sexual-violence]
     phone: "+9718004444"
     short_code: null
@@ -307,7 +307,7 @@ entries:
       en: Ministry of Interior hotline for violence against women and children
       am: የሀገር ውስጥ ሚኒስቴር በሴቶችና ሕፃናት ላይ ለሚደርስ ጥቃት የስልክ መስመር
       om: Sarara Ministeera Dhimma Keessaa kan Miidhaa Dubartootaa fi Daa'immanii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, sexual-violence]
     phone: null
     short_code: "116111"
@@ -332,7 +332,7 @@ entries:
       en: Sharjah Women's Protection Centre (Social Services Department)
       am: የሻርጃ የሴቶች ጥበቃ ማዕከል
       om: Wiirtuu Eegumsa Dubartootaa Shaarjaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, legal, mental-health]
     phone: null
     short_code: "800700"

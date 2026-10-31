@@ -8,7 +8,7 @@ summary: "ልትከፍዪ የምትችዪባቸውንና መክፈል የሌለ�
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [wages, trafficking, legal]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: money-fees-and-debt
 related: [licensed-agencies-vs-brokers, your-contract, unpaid-wages, money-and-work-after-return]

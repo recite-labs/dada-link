@@ -8,7 +8,7 @@ summary: Before you leave, try to collect your pay, keep copies of your papers a
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [wages, documents, passport, repatriation]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [unpaid-wages, contacting-your-embassy, documents-to-copy, claiming-unpaid-wages-after-return, arriving-home, rights-sa]

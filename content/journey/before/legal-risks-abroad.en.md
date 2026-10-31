@@ -8,7 +8,7 @@ summary: Some things that are normal at home can be against the law in your new 
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [legal, detention]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [health-preparation, contraception-and-srh-before-you-go, leaving-a-bad-employer, detention-and-deportation]

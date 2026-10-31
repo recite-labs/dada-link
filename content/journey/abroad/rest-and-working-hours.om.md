@@ -8,7 +8,7 @@ summary: "Fayyaa qabaachuuf boqonnaan si barbaachisa. Biyyoonni baay'een hojjett
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [labour-complaint, health]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rest-and-working-hours
 related: [unpaid-wages, sick-or-injured, contacting-your-embassy, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

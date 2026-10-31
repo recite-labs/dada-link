@@ -8,7 +8,7 @@ summary: Finding out you are pregnant far from home can be frightening. You are 
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [health, legal]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [sexual-violence-what-to-do, sick-or-injured, contacting-your-embassy, loneliness-and-mental-health, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

@@ -5,7 +5,7 @@ country: QA
 locale: om
 title: Mirgoota keessan akka hojjettuu manaatti Qaxar keessatti
 summary: Seerri Hojjettoota Manaa Qaxar (Seera Lakk. 15 bara 2017) fi seerri mindaa xiqqaa isin eegu. Waliigaltee, ji'atti yoo xiqqaate QAR 1,000, guyyaa boqonnaa torbanii, akkasumas hojii jijjiiruu ykn biyyatti deebi'uuf mirga qabdu.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-qa
 updated: 2026-10-31

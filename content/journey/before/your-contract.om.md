@@ -8,7 +8,7 @@ summary: "Osoo hin deemin dura waliigaltee afaan ati hubattuun barreeffame fudha
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [legal, wages, documents]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: your-contract
 related: [rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo, licensed-agencies-vs-brokers, documents-to-copy]

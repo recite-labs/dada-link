@@ -8,7 +8,7 @@ summary: Missing home, feeling sad or worried is normal. Here are small things t
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [mental-health, emergency]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [abuse-what-to-do, sexual-violence-what-to-do, contacting-your-embassy, mental-health-after-return]

@@ -8,7 +8,7 @@ summary: "ወደ ውጭ አገር የምትሄጂው በሥራና ክህሎት �
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [trafficking, legal, documents]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: licensed-agencies-vs-brokers
 related: [rights-et, your-contract, money-fees-and-debt, trusted-contact-and-safety-plan]

@@ -8,7 +8,7 @@ summary: If someone touched you or forced you into a sexual act, it is not your 
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [sexual-violence, emergency, health, legal, shelter]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [abuse-what-to-do, pregnancy-abroad, loneliness-and-mental-health, contacting-your-embassy, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

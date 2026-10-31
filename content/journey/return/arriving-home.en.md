@@ -8,7 +8,7 @@ summary: What usually happens when returnees land in Addis Ababa, and what help 
 countries: [ET]
 tags: [repatriation, returnee-support, shelter, health, mental-health]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [preparing-to-return, health-check-after-return, mental-health-after-return, family-and-community-after-return, detention-and-deportation]

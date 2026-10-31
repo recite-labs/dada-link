@@ -5,7 +5,7 @@ country: AE
 locale: en
 title: Your rights as a domestic worker in the United Arab Emirates
 summary: A UAE law protects domestic workers. You have the right to a written contract, pay on time, rest every day and every week, and to keep your own passport.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 updated: 2026-10-31

@@ -8,7 +8,7 @@ summary: If someone hits you, insults you, locks you in or keeps food from you, 
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [abuse, emergency, shelter, trafficking, labour-complaint]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [sexual-violence-what-to-do, leaving-a-bad-employer, contacting-your-embassy, loneliness-and-mental-health, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

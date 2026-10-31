@@ -8,7 +8,7 @@ summary: Being held in a deportation centre is frightening, but you still have r
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [detention, repatriation, documents, passport, health]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 related: [contacting-your-embassy, passport-taken, arriving-home, mental-health-after-return, rights-sa, rights-lb]

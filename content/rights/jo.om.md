@@ -5,7 +5,7 @@ country: JO
 locale: om
 title: Mirga kee akka hojjettuu manaa Jordaan keessatti
 summary: Jordaan keessatti danbiin addaa Seera Hojjettootaa jalatti jiru hojjettoota manaatiif mirga mindaa, boqonnaa, hayyamaa fi kunuunsa fayyaa kenna. Paaspoortii kee qabachuun yakka; iddoon itti komattuu fi gargaarsa argattu ni jira.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-jo
 updated: 2026-10-31

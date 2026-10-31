@@ -5,7 +5,7 @@ country: AE
 locale: om
 title: Mirgoota keessan akka hojjettuu manaatti Imireetota Arabaa Tokkoomanii keessatti
 summary: Seerri UAE hojjettoota manaa ni eega. Waliigaltee barreeffamaa, mindaa yeroon kaffalamu, boqonnaa guyyaa fi torbanii, akkasumas paaspoortii ofii qabachuuf mirga qabdu.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-ae
 updated: 2026-10-31

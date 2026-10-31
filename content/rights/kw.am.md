@@ -5,7 +5,7 @@ country: KW
 locale: am
 title: በኩዌት እንደ ቤት ሠራተኛ ያለዎት መብቶች
 summary: የኩዌት የቤት ሠራተኞች ሕግ (ሕግ ቁጥር 68/2015) ይጠብቅዎታል። ውል፣ ያለ ቅናሽ የሚከፈል ወርሃዊ ደመወዝ፣ የሳምንት እረፍት ቀን፣ ደመወዝ ያለው የ30 ቀን ፈቃድ እና ፓስፖርትዎን ራስዎ የመያዝ መብት አለዎት።
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-kw
 updated: 2026-10-31

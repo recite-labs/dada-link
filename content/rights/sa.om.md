@@ -5,7 +5,7 @@ country: SA
 locale: om
 title: Mirgoota keessan akka hojjettuu manaa Saudi Arabiyaa keessatti
 summary: Saudi Arabiyaan hojjettoota manaaf dambii addaa qabdi. Dambiin kun waliigaltee, mindaa ji'aa, guyyaa boqonnaa torbanii fi daangaa sa'aatii hojii isiniif kenna; hojjechiisaan paaspoortii keessan qabachuu akka hin qabnes ibsa.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-sa
 updated: 2026-10-31

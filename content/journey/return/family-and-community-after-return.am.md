@@ -8,7 +8,7 @@ summary: "ወደ ቤት መመለስ የገንዘብ ጫና፣ ሐሜትና ኀ�
 countries: [ET]
 tags: [returnee-support, mental-health]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: family-and-community-after-return
 related: [mental-health-after-return, money-and-work-after-return, arriving-home]

@@ -5,7 +5,7 @@ country: ET
 locale: am
 title: ከመሄድዎ በፊት እና ወደ ሀገር ሲመለሱ ያሉዎት መብቶች (ኢትዮጵያ)
 summary: የኢትዮጵያ የውጭ ሀገር ሥራ ስምሪት አዋጅ ቁጥር 1389/2025 ከመሄድዎ በፊት፣ በውጭ ሀገር ሲሠሩ እና ወደ ሀገር ሲመለሱ ይጠብቅዎታል። ኤጀንሲዎች ሥራ ስላገኙልዎት ከእርስዎ ገንዘብ መቀበል አይችሉም፤ ለሥራና ክህሎት ሚኒስቴርም ቅሬታ ማቅረብ ይችላሉ።
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-et
 updated: 2026-10-31

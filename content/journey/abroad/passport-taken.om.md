@@ -8,7 +8,7 @@ summary: "Paaspoortiin kee kan keeti. Biyyoota tokko tokko keessatti seerri maal
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [passport, documents, labour-complaint, trafficking]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: passport-taken
 related: [contacting-your-embassy, leaving-a-bad-employer, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

@@ -8,7 +8,7 @@ entries:
       en: Emergency (police, ambulance, fire)
       am: የአደጋ ጊዜ (ፖሊስ፣ አምቡላንስ፣ እሳት)
       om: Ariifachiisaa (poolisii, ambulaansii, ibidda)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, abuse, sexual-violence, trafficking, health, fire]
     phone: null
     short_code: "911"
@@ -42,7 +42,7 @@ entries:
       en: Civil Defence (fire and rescue)
       am: ሲቪል መከላከያ (እሳት እና ማዳን)
       om: Ittisa Siivilii (ibidda fi baraarsa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [fire, emergency]
     phone: null
     short_code: "199"
@@ -71,7 +71,7 @@ entries:
       en: Family Protection and Juvenile Department (police)
       am: የቤተሰብ እና የታዳጊዎች ጥበቃ ክፍል (ፖሊስ)
       om: Kutaa Eegumsa Maatii fi Dargaggootaa (poolisii)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, sexual-violence]
     phone: "+96265815826"
     short_code: null
@@ -95,7 +95,7 @@ entries:
       en: Ministry of Labour hotline
       am: የሠራተኛ ሚኒስቴር የስልክ መስመር
       om: Sarara Bilbilaa Ministeera Hojii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, passport, trafficking, abuse]
     phone: "+96280022208"
     short_code: null
@@ -124,7 +124,7 @@ entries:
       en: Hemayeh online labour complaints (Ministry of Labour)
       am: ሔማያ የመስመር ላይ የሥራ ቅሬታ (የሠራተኛ ሚኒስቴር)
       om: Hemayeh, komii hojii toora interneetaa (Ministeera Hojii)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, passport, trafficking]
     phone: null
     short_code: null
@@ -153,7 +153,7 @@ entries:
       en: Dar Karama shelter for trafficking survivors (Ministry of Social Development)
       am: ዳር ከራማ የሰው ንግድ ተጎጂዎች መጠለያ (የማኅበራዊ ልማት ሚኒስቴር)
       om: Dar Karama, iddoo daboo miidhamtoota daldala namaa (Ministeera Misooma Hawaasummaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, trafficking, legal, health, mental-health, repatriation]
     phone: "+96264704778"
     short_code: null
@@ -182,7 +182,7 @@ entries:
       en: Tamkeen for Legal Aid and Human Rights
       am: ታምኪን የሕግ ድጋፍ እና የሰብዓዊ መብቶች ድርጅት
       om: Tamkeen, gargaarsa seeraa fi mirga namoomaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [legal, wages, labour-complaint, trafficking, passport, detention]
     phone: "+96265539501"
     short_code: null
@@ -206,7 +206,7 @@ entries:
       en: ARDD Legal Aid
       am: ኤአርዲዲ የሕግ ድጋፍ
       om: ARDD gargaarsa seeraa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [legal, labour-complaint]
     phone: "+96264617477"
     short_code: null
@@ -230,7 +230,7 @@ entries:
       en: IOM Jordan (UN Migration)
       am: አይኦኤም ዮርዳኖስ (የተባበሩት መንግሥታት የስደት ድርጅት)
       om: IOM Jordaan (Dhaabbata Godaansaa UN)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [repatriation, trafficking]
     phone: "+962793625080"
     short_code: null
@@ -259,7 +259,7 @@ entries:
       en: Honorary Consulate of Ethiopia in Amman
       am: በአማን የኢትዮጵያ የክብር ቆንስላ
       om: Qonsilaa Kabajaa Itoophiyaa Ammaan
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation]
     phone: "+96265850396"
     short_code: null
@@ -283,7 +283,7 @@ entries:
       en: Embassy of Ethiopia in Abu Dhabi (also covers Jordan)
       am: በአቡ ዳቢ የኢትዮጵያ ኤምባሲ (ዮርዳኖስንም ይሸፍናል)
       om: Embaasii Itoophiyaa Abu Daabii (Jordaanis ni haguuga)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation, abuse, detention]
     phone: null
     short_code: null
@@ -307,7 +307,7 @@ entries:
       en: Counter-Trafficking Unit (Public Security Directorate and Ministry of Labour)
       am: የፀረ-ሰው ንግድ ክፍል (የሕዝብ ደህንነት ዳይሬክቶሬት እና የሠራተኛ ሚኒስቴር)
       om: Kutaa Daldala Namaa Ittisuu (Nageenya Uummataa fi Ministeera Hojii)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [trafficking, passport, abuse]
     phone: null
     short_code: null

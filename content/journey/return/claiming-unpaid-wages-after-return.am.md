@@ -8,7 +8,7 @@ summary: "ካልተከፈለሽ ደሞዝ ከቤት ሆነሽ ማግኘት ከ�
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [wages, labour-complaint, legal, returnee-support]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: claiming-unpaid-wages-after-return
 related: [unpaid-wages, preparing-to-return, contacting-your-embassy, licensed-agencies-vs-brokers, mental-health-after-return]

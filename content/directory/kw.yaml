@@ -8,7 +8,7 @@ entries:
       en: Emergency (police, ambulance, fire)
       am: አስቸኳይ ጊዜ (ፖሊስ፣ አምቡላንስ፣ እሳት)
       om: Ariifachiisaa (poolisii, ambulaansii, ibidda)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, abuse, sexual-violence, trafficking, health, fire]
     phone: null
     short_code: "112"
@@ -33,7 +33,7 @@ entries:
       en: Embassy of Ethiopia in Kuwait
       am: በኩዌት የኢትዮጵያ ኤምባሲ
       om: Embaasii Itoophiyaa Kuweet
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation, abuse, wages, legal, detention, shelter]
     phone: "+96525348198"
     short_code: null
@@ -66,7 +66,7 @@ entries:
       en: Public Authority for Manpower (PAM) - Domestic Labour Department
       am: የሰው ኃይል የሕዝብ ባለሥልጣን (PAM) - የቤት ሠራተኞች መምሪያ
       om: Abbaa Taayitaa Ummataa Humna Namaa (PAM) - Kutaa Hojjettoota Manaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, passport, abuse, shelter, repatriation]
     phone: null
     short_code: null
@@ -95,7 +95,7 @@ entries:
       en: Government shelter for women migrant workers (PAM)
       am: ለሴት ስደተኛ ሠራተኞች የመንግሥት መጠለያ (PAM)
       om: Iddoo baqannaa mootummaa hojjettoota godaantota dubartootaa (PAM)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, abuse, trafficking, repatriation, health, legal]
     phone: null
     short_code: null
@@ -124,7 +124,7 @@ entries:
       en: Ministry of Interior anti-trafficking hotline
       am: የአገር ውስጥ ሚኒስቴር የሰዎች ንግድ መከላከያ የስልክ መስመር
       om: Sarara bilbilaa daldala namaa ittisuu Ministeera Dhimma Keessaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [trafficking, abuse, sexual-violence]
     phone: null
     short_code: "1888688"
@@ -153,7 +153,7 @@ entries:
       en: Kuwait Society for Human Rights (KSHR) hotline
       am: የኩዌት የሰብአዊ መብቶች ማኅበር የስልክ መስመር
       om: Sarara bilbilaa Waldaa Mirgoota Namoomaa Kuweet
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [legal, labour-complaint, wages, abuse, trafficking]
     phone: "+96522215150"
     short_code: null
@@ -178,7 +178,7 @@ entries:
       en: Social Work Society of Kuwait
       am: የኩዌት ማኅበራዊ ሥራ ማኅበር
       om: Waldaa Hojii Hawaasummaa Kuweet
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [legal, abuse, shelter]
     phone: "+96522022082"
     short_code: null
@@ -203,7 +203,7 @@ entries:
       en: Kuwait Trade Union Federation
       am: የኩዌት የሠራተኛ ማኅበራት ፌዴሬሽን
       om: Federeeshinii Waldaalee Hojjettootaa Kuweet
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, legal, wages]
     phone: "+96525636389"
     short_code: null
@@ -228,7 +228,7 @@ entries:
       en: IOM Kuwait (UN Migration)
       am: አይኦኤም ኩዌት (የተ.መ.ድ. የስደት ድርጅት)
       om: IOM Kuweet (Dhaabbata Godaansaa UN)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [repatriation, trafficking, returnee-support]
     phone: "+96525308000"
     short_code: null

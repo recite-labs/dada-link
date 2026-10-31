@@ -8,7 +8,7 @@ summary: "Namni tokko yoo si rukute, si arrabse, mana keessatti si cufe ykn nyaa
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [abuse, emergency, shelter, trafficking, labour-complaint]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: abuse-what-to-do
 related: [sexual-violence-what-to-do, leaving-a-bad-employer, contacting-your-embassy, loneliness-and-mental-health, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

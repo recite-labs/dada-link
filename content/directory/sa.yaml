@@ -8,7 +8,7 @@ entries:
       en: Unified emergency number
       am: የተዋሃደ የአስቸኳይ ጊዜ ቁጥር
       om: Lakkoofsa ariifachiisaa tokkoomfame
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, abuse, sexual-violence, trafficking, health, fire]
     phone: null
     short_code: "911"
@@ -33,7 +33,7 @@ entries:
       en: Police
       am: ፖሊስ
       om: Poolisii
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, abuse, sexual-violence, trafficking]
     phone: null
     short_code: "999"
@@ -58,7 +58,7 @@ entries:
       en: Ambulance (Saudi Red Crescent)
       am: አምቡላንስ (የሳዑዲ ቀይ ጨረቃ)
       om: Ambulaansii (Hilaal Diimaa Saudi)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [emergency, health, sexual-violence]
     phone: null
     short_code: "997"
@@ -83,7 +83,7 @@ entries:
       en: Civil Defense (fire)
       am: ሲቪል መከላከያ (እሳት)
       om: Ittisa Siivilii (ibidda)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [fire, emergency]
     phone: null
     short_code: "998"
@@ -108,7 +108,7 @@ entries:
       en: Embassy of Ethiopia in Riyadh
       am: በሪያድ የኢትዮጵያ ኤምባሲ
       om: Embaasii Itoophiyaa Riyaad
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation, abuse, wages, legal, detention, shelter]
     phone: "+966114823919"
     short_code: null
@@ -137,7 +137,7 @@ entries:
       en: Consulate General of Ethiopia in Jeddah
       am: በጅዳ የኢትዮጵያ ቆንስላ ጄኔራል
       om: Qonsilaa Jeneraala Itoophiyaa Jiddaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [passport, documents, repatriation, abuse, wages, legal, detention, shelter]
     phone: "+966126653444"
     short_code: null
@@ -166,7 +166,7 @@ entries:
       en: Ministry of Human Resources (MHRSD) call center
       am: የሰው ሀብትና ማኅበራዊ ልማት ሚኒስቴር የጥሪ ማዕከል
       om: Giddugala bilbilaa Ministeera Qabeenya Namaa fi Misooma Hawaasummaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, passport, abuse, trafficking, shelter]
     phone: null
     short_code: "19911"
@@ -199,7 +199,7 @@ entries:
       en: Musaned (domestic worker contracts and complaints platform)
       am: ሙሳነድ (የቤት ሠራተኞች ውልና አቤቱታ መድረክ)
       om: Musaned (waltajjii waliigaltee fi komii hojjettoota manaa)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [labour-complaint, wages, documents]
     phone: null
     short_code: null
@@ -224,7 +224,7 @@ entries:
       en: Human Rights Commission (HRC)
       am: የሰብአዊ መብቶች ኮሚሽን
       om: Komishinii Mirgoota Namoomaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, trafficking, legal, labour-complaint, detention]
     phone: "+966114185100"
     short_code: "19922"
@@ -258,7 +258,7 @@ entries:
       en: Domestic violence reporting line (MHRSD)
       am: የቤት ውስጥ ጥቃት ሪፖርት ማድረጊያ መስመር
       om: Sarara gabaasa miidhaa manaa keessaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [abuse, sexual-violence, shelter]
     phone: null
     short_code: "1919"
@@ -283,7 +283,7 @@ entries:
       en: National Committee to Combat Human Trafficking (online reporting)
       am: ሰዎችን መነገድን ለመዋጋት ብሔራዊ ኮሚቴ (በኦንላይን ሪፖርት)
       om: Koree Biyyaalessaa Daldala Namaa Ittisuu (gabaasa toora interneetii)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [trafficking, abuse]
     phone: null
     short_code: null
@@ -308,7 +308,7 @@ entries:
       en: Government shelter for domestic workers - Riyadh (MHRSD)
       am: የመንግሥት የቤት ሠራተኞች መጠለያ - ሪያድ
       om: Iddoo baqannaa mootummaa hojjettoota manaa - Riyaad
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, abuse, trafficking, repatriation]
     phone: "+966540659565"
     short_code: null
@@ -337,7 +337,7 @@ entries:
       en: Government shelter for domestic workers - Jeddah (MHRSD)
       am: የመንግሥት የቤት ሠራተኞች መጠለያ - ጅዳ
       om: Iddoo baqannaa mootummaa hojjettoota manaa - Jiddaa
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, abuse, trafficking, repatriation]
     phone: "+966506695076"
     short_code: null
@@ -362,7 +362,7 @@ entries:
       en: Government shelter for domestic workers - Dammam (MHRSD)
       am: የመንግሥት የቤት ሠራተኞች መጠለያ - ዳማም
       om: Iddoo baqannaa mootummaa hojjettoota manaa - Dammaam
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [shelter, abuse, trafficking, repatriation]
     phone: "+966505193284"
     short_code: null
@@ -387,7 +387,7 @@ entries:
       en: IOM Saudi Arabia (UN Migration)
       am: አይኦኤም ሳዑዲ ዓረቢያ (የተ.መ.ድ. የስደት ድርጅት)
       om: IOM Saudi Arabiyaa (Dhaabbata Godaansaa UN)
-    name_status: draft-ai
+    name_status: reviewed
     helps_with: [repatriation, trafficking, returnee-support]
     phone: null
     short_code: null

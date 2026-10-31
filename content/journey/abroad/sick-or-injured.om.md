@@ -8,7 +8,7 @@ summary: "Fayyaan kee dursa. Biyyoota baay'ee keessatti hojjechiisaan kee yaala 
 countries: [SA, AE, KW, QA, LB, JO]
 tags: [health, emergency]
 sensitive: false
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: sick-or-injured
 related: [rest-and-working-hours, abuse-what-to-do, contacting-your-embassy, rights-sa, rights-ae, rights-kw, rights-qa, rights-lb, rights-jo]

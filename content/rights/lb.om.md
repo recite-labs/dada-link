@@ -5,7 +5,7 @@ country: LB
 locale: om
 title: Mirga kee akka hojjettuu manaa Libaanoon keessatti
 summary: Libaanoon keessatti hojjettoonni manaa Seera Hojjettootaatiin hin eegaman. Mirgi kee irra caalaan waliigaltee idilee ati mallatteessitu irraa dhufa; yoo mirgi kun cabe namoonni si gargaaran ni jiru.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: rights-lb
 updated: 2026-10-31

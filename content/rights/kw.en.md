@@ -5,7 +5,7 @@ country: KW
 locale: en
 title: Your rights as a domestic worker in Kuwait
 summary: Kuwait's Domestic Workers Law (Law No. 68 of 2015) protects you. You have the right to a contract, monthly pay with no deductions, a weekly day off, 30 days of paid leave, and to keep your own passport.
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: null
 updated: 2026-10-31

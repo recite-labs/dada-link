@@ -8,7 +8,7 @@ summary: "Qaama kee, filannoo kee. Waan siif ta'u akka murteessituuf waa'ee itti
 countries: [ET, SA, AE, KW, QA, LB, JO]
 tags: [health, legal, sexual-violence]
 sensitive: true
-status: draft-ai
+status: reviewed
 verified: false
 translation_of: contraception-and-srh-before-you-go
 related: [health-preparation, legal-risks-abroad, pregnancy-abroad, sexual-violence-what-to-do]
