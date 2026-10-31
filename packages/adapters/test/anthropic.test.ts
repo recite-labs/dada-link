@@ -32,7 +32,7 @@ describe("Anthropic LanguageModel adapter", () => {
   it.effect("calls the configured base URL (AI Gateway) with model, key and gateway token", () => {
     const seen: Array<{ url: string; headers: Record<string, string>; body: unknown }> = []
     const layer = anthropicLanguageModel({
-      apiKey: Redacted.make("sk-test"),
+      apiKey: Option.some(Redacted.make("sk-test")),
       model: "claude-sonnet-5-5",
       baseUrl: Option.some("https://gateway.ai.cloudflare.com/v1/acct/gw/anthropic"),
       gatewayToken: Option.some(Redacted.make("gw-token")),
@@ -51,18 +51,44 @@ describe("Anthropic LanguageModel adapter", () => {
     }).pipe(Effect.provide(layer))
   })
 
+  it.effect("uses a key stored in AI Gateway: sends only the gateway token, no x-api-key", () => {
+    const seen: Array<{ url: string; headers: Record<string, string>; body: unknown }> = []
+    const layer = anthropicLanguageModel({
+      apiKey: Option.none(),
+      model: "claude-sonnet-5-5",
+      baseUrl: Option.some("https://gateway.ai.cloudflare.com/v1/acct/gw/anthropic"),
+      gatewayToken: Option.some(Redacted.make("gw-token")),
+      maxOutputTokens: 256
+    }).pipe(Layer.provide(Layer.succeed(HttpClient.HttpClient, capturingClient(seen))))
+
+    return Effect.gen(function* () {
+      yield* LanguageModel.generateText({ prompt: "Hi" }).pipe(Effect.result)
+      const [request] = seen
+      expect(request?.headers["cf-aig-authorization"]).toBe("Bearer gw-token")
+      expect(request?.headers["x-api-key"]).toBeUndefined()
+    }).pipe(Effect.provide(layer))
+  })
+
+  it.effect("accepts a gateway token without an API key", () =>
+    Effect.gen(function* () {
+      const settings = yield* AnthropicSettings
+      expect(Option.isNone(settings.apiKey)).toBe(true)
+      expect(Option.isSome(settings.gatewayToken)).toBe(true)
+    }).pipe(Effect.provide(ConfigProvider.layer(ConfigProvider.fromEnvRecord({ DADALINK_AI_GATEWAY_TOKEN: "gw-env" }))))
+  )
+
   it.effect("reads settings from the environment with sensible defaults", () =>
     Effect.gen(function* () {
       const settings = yield* AnthropicSettings
       expect(settings.model).toBe(DEFAULT_MODEL)
       expect(DEFAULT_MODEL).toBe("claude-sonnet-5-5")
-      expect(Redacted.value(settings.apiKey)).toBe("sk-env")
+      expect(Option.map(settings.apiKey, Redacted.value)).toEqual(Option.some("sk-env"))
       expect(Option.isNone(settings.baseUrl)).toBe(true)
       expect(settings.maxOutputTokens).toBe(1024)
     }).pipe(Effect.provide(ConfigProvider.layer(ConfigProvider.fromEnvRecord({ ANTHROPIC_API_KEY: "sk-env" }))))
   )
 
-  it.effect("fails fast without an API key", () =>
+  it.effect("fails fast without an API key or a gateway token", () =>
     Effect.gen(function* () {
       const error = yield* Effect.flip(
         Effect.gen(function* () {
@@ -70,6 +96,7 @@ describe("Anthropic LanguageModel adapter", () => {
         })
       )
       expect(String(error)).toContain("ANTHROPIC_API_KEY")
+      expect(String(error)).toContain("DADALINK_AI_GATEWAY_TOKEN")
     }).pipe(Effect.provide(ConfigProvider.layer(ConfigProvider.fromEnvRecord({}))))
   )
 })
