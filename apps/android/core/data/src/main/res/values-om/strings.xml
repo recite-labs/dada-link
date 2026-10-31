@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_notification_channel">Waliigalaa</string>
+    <string name="data_notification_generic">Haaromsa</string>
+    <string name="data_notification_relay_delivered">Ergaan kee ga’eera.</string>
+</resources>

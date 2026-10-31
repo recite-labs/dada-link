@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_home">መነሻ</string>
+    <string name="nav_ask">ጠይቂ</string>
+    <string name="nav_help">እርዳታ</string>
+    <string name="nav_more">ተጨማሪ</string>
+    <string name="nav_sos">SOS — ማስጠንቀቂያ ላኪ</string>
+    <string name="more_title">ተጨማሪ</string>
+    <string name="more_journey">ጉዞሽ</string>
+    <string name="more_before">ከመሄድሽ በፊት</string>
+    <string name="more_before_body">ሰነዶች፣ ጤና፣ ማወቅ ያለብሽ</string>
+    <string name="more_agency">ኤጀንሲ አረጋግጪ</string>
+    <string name="more_agency_body">ፈቃድ አለው?</string>
+    <string name="more_rights">ውል እና መብቶች</string>
+    <string name="more_rights_body">ፓስፖርት፣ ደሞዝ፣ እረፍት</string>
+    <string name="more_health">ጤናዬ</string>
+    <string name="more_health_body">የወር አበባ፣ እርግዝና፣ ስሜት</string>
+    <string name="more_return">ወደ ቤት መመለስ</string>
+    <string name="more_return_body">ድጋፍ፣ ያልተከፈለ ደሞዝ</string>
+    <string name="more_private">ሚስጥራዊ እና ደህንነቱ የተጠበቀ</string>
+    <string name="more_log">የግል መዝገቤ</string>
+    <string name="more_log_body">የተመሰጠረ፣ በዚህ ስልክ ብቻ</string>
+    <string name="more_settings">የደህንነት ቅንብሮች</string>
+    <string name="more_settings_body">የታመነ ሰው፣ መደበቂያ፣ ቋንቋ</string>
+    <string name="more_about">ዳዳሊንክ %1$s · ክፍት ምንጭ (AGPL-3.0) · ምንም መከታተያ የለም</string>
+    <string name="launcher_calculator">ካልኩሌተር</string>
+    <string name="launcher_notes">ማስታወሻ</string>
+</resources>

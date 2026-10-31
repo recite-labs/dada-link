@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sos_title">SOS</string>
+    <string name="sos_hold_title">Hold to send SOS</string>
+    <string name="sos_hold_body">Keep pressing for 3 seconds. Let go to cancel.</string>
+    <string name="sos_hold_button">Press and hold for 3 seconds to send SOS</string>
+    <string name="sos_sending">Sending…</string>
+    <string name="sos_what_sent">What will be sent</string>
+    <string name="sos_to">To %1$s (%2$s)</string>
+    <string name="sos_by_sms">By SMS to %1$s — works without internet</string>
+    <string name="sos_by_telegram">By Telegram to %1$s when online</string>
+    <string name="sos_your_location">Your location (if available)</string>
+    <string name="sos_time">The time</string>
+    <string name="sos_message">%1$s needs help. This is an SOS from DadaLink. Please call her or get help.</string>
+    <string name="sos_message_someone">I need help</string>
+    <string name="sos_label_location">Location</string>
+    <string name="sos_label_time">Time</string>
+    <string name="sos_label_unknown">unknown</string>
+    <string name="sos_call_emergency">Call %1$s</string>
+    <string name="sos_call_embassy">Call embassy</string>
+    <string name="sos_permission_title">Let SOS work without internet</string>
+    <string name="sos_permission_body">Allow SMS and location so the alert is sent straight from your SIM with where you are.</string>
+    <string name="sos_permission_allow">Allow</string>
+    <string name="sos_no_contact_title">No trusted contact yet</string>
+    <string name="sos_no_contact_body">Add someone you trust so SOS can reach them. You can still call emergency now.</string>
+    <string name="sos_add_contact">Add trusted contact</string>
+    <string name="sos_sent_title">SOS sent to %1$s</string>
+    <string name="sos_not_sent_title">Your SOS may not have reached %1$s</string>
+    <string name="sos_sent_body">Stay where you are safest. Keep your phone with you.</string>
+    <string name="sos_channel_sms">SMS</string>
+    <string name="sos_channel_share">Message app</string>
+    <string name="sos_channel_relay">DadaLink server (Telegram)</string>
+    <string name="sos_status_sent">Sent</string>
+    <string name="sos_status_queued">Will send when possible</string>
+    <string name="sos_status_failed">Not sent</string>
+    <string name="sos_status_opened">Opened — press send</string>
+    <string name="sos_next">What next</string>
+    <string name="sos_send_again">Send again</string>
+    <string name="sos_safe_now">I’m safe now</string>
+</resources>

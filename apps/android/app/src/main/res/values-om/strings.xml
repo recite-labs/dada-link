@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_home">Mana</string>
+    <string name="nav_ask">Gaafadhu</string>
+    <string name="nav_help">Gargaarsa</string>
+    <string name="nav_more">Dabalata</string>
+    <string name="nav_sos">SOS — akeekkachiisa ergi</string>
+    <string name="more_title">Dabalata</string>
+    <string name="more_journey">Imala kee</string>
+    <string name="more_before">Osoo hin deemin</string>
+    <string name="more_before_body">Galmee, fayyaa, wanta beekuu qabdu</string>
+    <string name="more_agency">Ejansii mirkaneessi</string>
+    <string name="more_agency_body">Hayyama qabaa?</string>
+    <string name="more_rights">Waliigaltee fi mirgoota</string>
+    <string name="more_rights_body">Paaspoortii, mindaa, boqonnaa</string>
+    <string name="more_health">Fayyaa koo</string>
+    <string name="more_health_body">Laguu, ulfa, miira</string>
+    <string name="more_return">Gara manaa deebi’uu</string>
+    <string name="more_return_body">Deeggarsa, mindaa hin kaffalamne</string>
+    <string name="more_private">Dhuunfaa fi nageenya</string>
+    <string name="more_log">Galmee dhuunfaa koo</string>
+    <string name="more_log_body">Iccitii, bilbila kana qofa</string>
+    <string name="more_settings">Qindaa’ina nageenyaa</string>
+    <string name="more_settings_body">Nama amanamaa, dhoksaa, afaan</string>
+    <string name="more_about">DadaLink %1$s · madda banaa (AGPL-3.0) · hordoftuun hin jiru</string>
+    <string name="launcher_calculator">Herreegduu</string>
+    <string name="launcher_notes">Yaadannoo</string>
+</resources>

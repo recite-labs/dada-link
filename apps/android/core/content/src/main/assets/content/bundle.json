@@ -1,0 +1,921 @@
+{
+ "version": 1,
+ "generated_at": "2026-10-31",
+ "directories": [
+  {
+   "country": "SA",
+   "last_reviewed": "2026-10",
+   "emergency": {
+    "id": "emergency",
+    "name": {
+     "en": "Emergency — police, ambulance, fire",
+     "am": "ድንገተኛ — ፖሊስ፣ አምቡላንስ፣ እሳት",
+     "om": "Balaa tasaa — poolisii, ambulaansii, ibidda"
+    },
+    "description": {
+     "en": "Free, 24 hours. Arabic and English.",
+     "am": "ነፃ፣ 24 ሰዓት። አረብኛ እና እንግሊዝኛ።",
+     "om": "Bilisa, sa'aatii 24."
+    },
+    "phone": "911",
+    "hours": "24/7",
+    "verified": true
+   },
+   "sections": [
+    {
+     "title": {
+      "en": "Ethiopian embassy",
+      "am": "የኢትዮጵያ ኤምባሲ",
+      "om": "Embaasii Itoophiyaa"
+     },
+     "contacts": [
+      {
+       "id": "embassy-riyadh",
+       "name": {
+        "en": "Ethiopian Embassy, Riyadh",
+        "am": "የኢትዮጵያ ኤምባሲ፣ ሪያድ",
+        "om": "Embaasii Itoophiyaa, Riyaad"
+       },
+       "description": {
+        "en": "Passport, documents, help to go home",
+        "am": "ፓስፖርት፣ ሰነዶች፣ ወደ ቤት ለመመለስ እገዛ",
+        "om": "Paaspoortii, galmee, gargaarsa deebi'uuf"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      },
+      {
+       "id": "consulate-jeddah",
+       "name": {
+        "en": "Ethiopian Consulate, Jeddah",
+        "am": "የኢትዮጵያ ቆንስላ፣ ጅዳ",
+        "om": "Qonsilaa Itoophiyaa, Jiddaa"
+       },
+       "description": {
+        "en": "For the Western region",
+        "am": "ለምዕራብ ክልል",
+        "om": "Naannoo Lixaatiif"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Work problems",
+      "am": "የሥራ ችግሮች",
+      "om": "Rakkoo hojii"
+     },
+     "contacts": [
+      {
+       "id": "labour-sa",
+       "name": {
+        "en": "Ministry of Human Resources",
+        "am": "የሰው ሀብት ሚኒስቴር",
+        "om": "Ministeera Qabeenya Namaa"
+       },
+       "description": {
+        "en": "Unpaid wages, contract problems",
+        "am": "ያልተከፈለ ደሞዝ፣ የውል ችግሮች",
+        "om": "Mindaa hin kaffalamne, rakkoo waliigaltee"
+       },
+       "phone": "19911",
+       "hours": "24/7",
+       "verified": true
+      },
+      {
+       "id": "police-sa",
+       "name": {
+        "en": "Police",
+        "am": "ፖሊስ",
+        "om": "Poolisii"
+       },
+       "description": {
+        "en": "Direct police line",
+        "am": "ቀጥታ የፖሊስ መስመር",
+        "om": "Sarara poolisii kallattii"
+       },
+       "phone": "999",
+       "hours": "24/7",
+       "verified": true
+      },
+      {
+       "id": "ambulance-sa",
+       "name": {
+        "en": "Ambulance",
+        "am": "አምቡላንስ",
+        "om": "Ambulaansii"
+       },
+       "description": {
+        "en": "Red Crescent",
+        "am": "ቀይ ጨረቃ",
+        "om": "Jiinfuu Diimaa"
+       },
+       "phone": "997",
+       "hours": "24/7",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Support and shelter",
+      "am": "ድጋፍ እና መጠለያ",
+      "om": "Deeggarsa fi bakka buufataa"
+     },
+     "contacts": [
+      {
+       "id": "iom-sa",
+       "name": {
+        "en": "IOM (UN migration agency)",
+        "am": "አይኦኤም (የተባበሩት መንግሥታት የፍልሰት ድርጅት)",
+        "om": "IOM (Dhaabbata godaansaa UN)"
+       },
+       "description": {
+        "en": "Help to return home safely",
+        "am": "በሰላም ወደ ቤት ለመመለስ እገዛ",
+        "om": "Gargaarsa nagaan manatti deebi'uuf"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "country": "AE",
+   "last_reviewed": "2026-10",
+   "emergency": {
+    "id": "emergency",
+    "name": {
+     "en": "Police",
+     "am": "ፖሊስ",
+     "om": "Poolisii"
+    },
+    "description": {
+     "en": "Free, 24 hours",
+     "am": "ነፃ፣ 24 ሰዓት",
+     "om": "Bilisa, sa'aatii 24"
+    },
+    "phone": "999",
+    "hours": "24/7",
+    "verified": true
+   },
+   "sections": [
+    {
+     "title": {
+      "en": "Ethiopian embassy",
+      "am": "የኢትዮጵያ ኤምባሲ",
+      "om": "Embaasii Itoophiyaa"
+     },
+     "contacts": [
+      {
+       "id": "embassy-abudhabi",
+       "name": {
+        "en": "Ethiopian Embassy, Abu Dhabi",
+        "am": "የኢትዮጵያ ኤምባሲ፣ አቡ ዳቢ",
+        "om": "Embaasii Itoophiyaa, Abuu Dhaabii"
+       },
+       "description": {
+        "en": "Passport, documents, help to go home",
+        "am": "ፓስፖርት፣ ሰነዶች፣ ወደ ቤት ለመመለስ እገዛ",
+        "om": "Paaspoortii, galmee"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      },
+      {
+       "id": "consulate-dubai",
+       "name": {
+        "en": "Ethiopian Consulate, Dubai",
+        "am": "የኢትዮጵያ ቆንስላ፣ ዱባይ",
+        "om": "Qonsilaa Itoophiyaa, Dubaay"
+       },
+       "description": {
+        "en": "Consular help",
+        "am": "የቆንስላ እገዛ",
+        "om": "Gargaarsa qonsilaa"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Work problems",
+      "am": "የሥራ ችግሮች",
+      "om": "Rakkoo hojii"
+     },
+     "contacts": [
+      {
+       "id": "labour-ae",
+       "name": {
+        "en": "Ministry of Human Resources (MOHRE)",
+        "am": "የሰው ሀብት ሚኒስቴር (MOHRE)",
+        "om": "MOHRE"
+       },
+       "description": {
+        "en": "Domestic worker complaints",
+        "am": "የቤት ሠራተኛ አቤቱታዎች",
+        "om": "Komii hojjettoota manaa"
+       },
+       "phone": "600590000",
+       "hours": null,
+       "verified": true
+      },
+      {
+       "id": "ambulance-ae",
+       "name": {
+        "en": "Ambulance",
+        "am": "አምቡላንስ",
+        "om": "Ambulaansii"
+       },
+       "description": {
+        "en": "Medical emergency",
+        "am": "የሕክምና ድንገተኛ",
+        "om": "Balaa fayyaa"
+       },
+       "phone": "998",
+       "hours": "24/7",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Support and shelter",
+      "am": "ድጋፍ እና መጠለያ",
+      "om": "Deeggarsa fi bakka buufataa"
+     },
+     "contacts": [
+      {
+       "id": "iom-ae",
+       "name": {
+        "en": "IOM (UN migration agency)",
+        "am": "አይኦኤም (የተባበሩት መንግሥታት የፍልሰት ድርጅት)",
+        "om": "IOM (Dhaabbata godaansaa UN)"
+       },
+       "description": {
+        "en": "Help to return home safely",
+        "am": "በሰላም ወደ ቤት ለመመለስ እገዛ",
+        "om": "Gargaarsa nagaan manatti deebi'uuf"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "country": "LB",
+   "last_reviewed": "2026-10",
+   "emergency": {
+    "id": "emergency",
+    "name": {
+     "en": "Police (Internal Security Forces)",
+     "am": "ፖሊስ",
+     "om": "Poolisii"
+    },
+    "description": {
+     "en": "Free, 24 hours",
+     "am": "ነፃ፣ 24 ሰዓት",
+     "om": "Bilisa, sa'aatii 24"
+    },
+    "phone": "112",
+    "hours": "24/7",
+    "verified": true
+   },
+   "sections": [
+    {
+     "title": {
+      "en": "Ethiopian embassy",
+      "am": "የኢትዮጵያ ኤምባሲ",
+      "om": "Embaasii Itoophiyaa"
+     },
+     "contacts": [
+      {
+       "id": "embassy-beirut",
+       "name": {
+        "en": "Ethiopian Consulate, Beirut",
+        "am": "የኢትዮጵያ ቆንስላ፣ ቤይሩት",
+        "om": "Qonsilaa Itoophiyaa, Beeruut"
+       },
+       "description": {
+        "en": "Passport, documents, help to go home",
+        "am": "ፓስፖርት፣ ሰነዶች፣ ወደ ቤት ለመመለስ እገዛ",
+        "om": "Paaspoortii, galmee"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Work problems",
+      "am": "የሥራ ችግሮች",
+      "om": "Rakkoo hojii"
+     },
+     "contacts": [
+      {
+       "id": "labour-lb",
+       "name": {
+        "en": "Ministry of Labour hotline",
+        "am": "የሠራተኛ ሚኒስቴር የስልክ መስመር",
+        "om": "Sarara Ministeera Hojii"
+       },
+       "description": {
+        "en": "Migrant domestic worker complaints",
+        "am": "የስደተኛ የቤት ሠራተኞች አቤቱታ",
+        "om": "Komii hojjettoota manaa godaantotaa"
+       },
+       "phone": "1740",
+       "hours": null,
+       "verified": false
+      },
+      {
+       "id": "redcross-lb",
+       "name": {
+        "en": "Lebanese Red Cross ambulance",
+        "am": "የሊባኖስ ቀይ መስቀል አምቡላንስ",
+        "om": "Ambulaansii Fannoo Diimaa"
+       },
+       "description": {
+        "en": "Medical emergency",
+        "am": "የሕክምና ድንገተኛ",
+        "om": "Balaa fayyaa"
+       },
+       "phone": "140",
+       "hours": "24/7",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Support and shelter",
+      "am": "ድጋፍ እና መጠለያ",
+      "om": "Deeggarsa fi bakka buufataa"
+     },
+     "contacts": [
+      {
+       "id": "iom-lb",
+       "name": {
+        "en": "IOM (UN migration agency)",
+        "am": "አይኦኤም (የተባበሩት መንግሥታት የፍልሰት ድርጅት)",
+        "om": "IOM (Dhaabbata godaansaa UN)"
+       },
+       "description": {
+        "en": "Help to return home safely",
+        "am": "በሰላም ወደ ቤት ለመመለስ እገዛ",
+        "om": "Gargaarsa nagaan manatti deebi'uuf"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "country": "KW",
+   "last_reviewed": "2026-10",
+   "emergency": {
+    "id": "emergency",
+    "name": {
+     "en": "Emergency",
+     "am": "ድንገተኛ",
+     "om": "Balaa tasaa"
+    },
+    "description": {
+     "en": "Police, ambulance, fire",
+     "am": "ፖሊስ፣ አምቡላንስ፣ እሳት",
+     "om": "Poolisii, ambulaansii, ibidda"
+    },
+    "phone": "112",
+    "hours": "24/7",
+    "verified": true
+   },
+   "sections": [
+    {
+     "title": {
+      "en": "Ethiopian embassy",
+      "am": "የኢትዮጵያ ኤምባሲ",
+      "om": "Embaasii Itoophiyaa"
+     },
+     "contacts": [
+      {
+       "id": "embassy-kuwait",
+       "name": {
+        "en": "Ethiopian Embassy, Kuwait City",
+        "am": "የኢትዮጵያ ኤምባሲ፣ ኩዌት",
+        "om": "Embaasii Itoophiyaa, Kuweet"
+       },
+       "description": {
+        "en": "Consular help",
+        "am": "የቆንስላ እገዛ",
+        "om": "Gargaarsa qonsilaa"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Support and shelter",
+      "am": "ድጋፍ እና መጠለያ",
+      "om": "Deeggarsa fi bakka buufataa"
+     },
+     "contacts": [
+      {
+       "id": "iom-kw",
+       "name": {
+        "en": "IOM (UN migration agency)",
+        "am": "አይኦኤም (የተባበሩት መንግሥታት የፍልሰት ድርጅት)",
+        "om": "IOM (Dhaabbata godaansaa UN)"
+       },
+       "description": {
+        "en": "Help to return home safely",
+        "am": "በሰላም ወደ ቤት ለመመለስ እገዛ",
+        "om": "Gargaarsa nagaan manatti deebi'uuf"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "country": "QA",
+   "last_reviewed": "2026-10",
+   "emergency": {
+    "id": "emergency",
+    "name": {
+     "en": "Emergency",
+     "am": "ድንገተኛ",
+     "om": "Balaa tasaa"
+    },
+    "description": {
+     "en": "Police, ambulance, fire",
+     "am": "ፖሊስ፣ አምቡላንስ፣ እሳት",
+     "om": "Poolisii, ambulaansii, ibidda"
+    },
+    "phone": "999",
+    "hours": "24/7",
+    "verified": true
+   },
+   "sections": [
+    {
+     "title": {
+      "en": "Ethiopian embassy",
+      "am": "የኢትዮጵያ ኤምባሲ",
+      "om": "Embaasii Itoophiyaa"
+     },
+     "contacts": [
+      {
+       "id": "embassy-doha",
+       "name": {
+        "en": "Ethiopian Embassy, Doha",
+        "am": "የኢትዮጵያ ኤምባሲ፣ ዶሃ",
+        "om": "Embaasii Itoophiyaa, Doohaa"
+       },
+       "description": {
+        "en": "Consular help",
+        "am": "የቆንስላ እገዛ",
+        "om": "Gargaarsa qonsilaa"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Support and shelter",
+      "am": "ድጋፍ እና መጠለያ",
+      "om": "Deeggarsa fi bakka buufataa"
+     },
+     "contacts": [
+      {
+       "id": "iom-qa",
+       "name": {
+        "en": "IOM (UN migration agency)",
+        "am": "አይኦኤም (የተባበሩት መንግሥታት የፍልሰት ድርጅት)",
+        "om": "IOM (Dhaabbata godaansaa UN)"
+       },
+       "description": {
+        "en": "Help to return home safely",
+        "am": "በሰላም ወደ ቤት ለመመለስ እገዛ",
+        "om": "Gargaarsa nagaan manatti deebi'uuf"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "country": "JO",
+   "last_reviewed": "2026-10",
+   "emergency": {
+    "id": "emergency",
+    "name": {
+     "en": "Emergency",
+     "am": "ድንገተኛ",
+     "om": "Balaa tasaa"
+    },
+    "description": {
+     "en": "Police, ambulance, fire",
+     "am": "ፖሊስ፣ አምቡላንስ፣ እሳት",
+     "om": "Poolisii, ambulaansii, ibidda"
+    },
+    "phone": "911",
+    "hours": "24/7",
+    "verified": true
+   },
+   "sections": [
+    {
+     "title": {
+      "en": "Ethiopian embassy",
+      "am": "የኢትዮጵያ ኤምባሲ",
+      "om": "Embaasii Itoophiyaa"
+     },
+     "contacts": [
+      {
+       "id": "embassy-amman",
+       "name": {
+        "en": "Ethiopian Consulate, Amman",
+        "am": "የኢትዮጵያ ቆንስላ፣ አማን",
+        "om": "Qonsilaa Itoophiyaa, Amaan"
+       },
+       "description": {
+        "en": "Consular help",
+        "am": "የቆንስላ እገዛ",
+        "om": "Gargaarsa qonsilaa"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Support and shelter",
+      "am": "ድጋፍ እና መጠለያ",
+      "om": "Deeggarsa fi bakka buufataa"
+     },
+     "contacts": [
+      {
+       "id": "iom-jo",
+       "name": {
+        "en": "IOM (UN migration agency)",
+        "am": "አይኦኤም (የተባበሩት መንግሥታት የፍልሰት ድርጅት)",
+        "om": "IOM (Dhaabbata godaansaa UN)"
+       },
+       "description": {
+        "en": "Help to return home safely",
+        "am": "በሰላም ወደ ቤት ለመመለስ እገዛ",
+        "om": "Gargaarsa nagaan manatti deebi'uuf"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "country": "ET",
+   "last_reviewed": "2026-10",
+   "emergency": {
+    "id": "emergency",
+    "name": {
+     "en": "Police",
+     "am": "ፖሊስ",
+     "om": "Poolisii"
+    },
+    "description": {
+     "en": "Free, 24 hours",
+     "am": "ነፃ፣ 24 ሰዓት",
+     "om": "Bilisa, sa'aatii 24"
+    },
+    "phone": "991",
+    "hours": "24/7",
+    "verified": true
+   },
+   "sections": [
+    {
+     "title": {
+      "en": "Coming home",
+      "am": "ወደ ቤት መመለስ",
+      "om": "Gara manaa deebi'uu"
+     },
+     "contacts": [
+      {
+       "id": "ambulance-et",
+       "name": {
+        "en": "Ambulance",
+        "am": "አምቡላንስ",
+        "om": "Ambulaansii"
+       },
+       "description": {
+        "en": "Medical emergency",
+        "am": "የሕክምና ድንገተኛ",
+        "om": "Balaa fayyaa"
+       },
+       "phone": "907",
+       "hours": "24/7",
+       "verified": true
+      },
+      {
+       "id": "returnee-mols",
+       "name": {
+        "en": "Ministry of Labor and Skills — returnee desk",
+        "am": "የሥራና ክህሎት ሚኒስቴር — የተመላሾች ዴስክ",
+        "om": "Ministeera Hojii fi Ogummaa — deebi'ootaaf"
+       },
+       "description": {
+        "en": "Reintegration support",
+        "am": "የመልሶ ማቋቋም ድጋፍ",
+        "om": "Deeggarsa deebisanii dhaabuu"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      },
+      {
+       "id": "iom-et",
+       "name": {
+        "en": "IOM (UN migration agency)",
+        "am": "አይኦኤም (የተባበሩት መንግሥታት የፍልሰት ድርጅት)",
+        "om": "IOM (Dhaabbata godaansaa UN)"
+       },
+       "description": {
+        "en": "Help to return home safely",
+        "am": "በሰላም ወደ ቤት ለመመለስ እገዛ",
+        "om": "Gargaarsa nagaan manatti deebi'uuf"
+       },
+       "phone": null,
+       "hours": null,
+       "verified": false
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "articles": [
+  {
+   "id": "rights-sa-passport",
+   "category": "rights",
+   "country": "SA",
+   "title": {
+    "en": "Your passport is yours",
+    "am": "ፓስፖርትሽ የአንቺ ነው",
+    "om": "Paaspoortiin kee kan keeti"
+   },
+   "summary": {
+    "en": "Your employer is not allowed to keep your passport or residence card.",
+    "am": "አሠሪሽ ፓስፖርትሽን ወይም የመኖሪያ ካርድሽን መያዝ አይፈቀድለትም።",
+    "om": "Hojjechiisaan kee paaspoortii kee qabachuu hin danda'u."
+   },
+   "body": {
+    "en": "In Saudi Arabia, employers may not keep a worker's passport or iqama without her agreement. If your passport was taken, write down the date in your private log and ask the labour ministry (19911) or your embassy for help. Keep a photo of your passport on a safe place outside your phone if you can.",
+    "am": "በሳውዲ አረቢያ አሠሪዎች ያለ ሠራተኛዋ ፈቃድ ፓስፖርቷን ወይም ኢቃማዋን መያዝ አይፈቀድላቸውም። ፓስፖርትሽ ከተወሰደ ቀኑን በግል መዝገብሽ ጻፊ እና የሠራተኛ ሚኒስቴርን (19911) ወይም ኤምባሲሽን እርዳታ ጠይቂ።"
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "rights-sa-wages",
+   "category": "rights",
+   "country": "SA",
+   "title": {
+    "en": "Your wages",
+    "am": "ደሞዝሽ",
+    "om": "Mindaa kee"
+   },
+   "summary": {
+    "en": "Wages must be paid every month, in full, as written in your contract.",
+    "am": "ደሞዝ በየወሩ ሙሉ በሙሉ በውልሽ መሠረት መከፈል አለበት።",
+    "om": "Mindaan ji'a ji'aan guutummaatti kaffalamuu qaba."
+   },
+   "body": {
+    "en": "Your salary must be paid monthly and in full. Record every payment (or missing payment) in your private log — dates and amounts are strong evidence later. Unpaid wages can be reported to the Ministry of Human Resources (19911), also after you return home.",
+    "am": "ደሞዝሽ በየወሩ ሙሉ በሙሉ መከፈል አለበት። እያንዳንዱን ክፍያ (ወይም ያልተከፈለውን) በግል መዝገብሽ መዝግቢ — ቀኖችና መጠኖች በኋላ ጠንካራ ማስረጃ ናቸው።"
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "rights-sa-rest",
+   "category": "rights",
+   "country": "SA",
+   "title": {
+    "en": "Rest, hours and your day off",
+    "am": "እረፍት፣ የሥራ ሰዓት እና የእረፍት ቀን",
+    "om": "Boqonnaa, sa'aatii fi guyyaa boqonnaa"
+   },
+   "summary": {
+    "en": "You have the right to daily rest and a weekly day off.",
+    "am": "በየቀኑ እረፍት እና በሳምንት አንድ የእረፍት ቀን የማግኘት መብት አለሽ።",
+    "om": "Boqonnaa guyyaa fi guyyaa boqonnaa torbanii qabda."
+   },
+   "body": {
+    "en": "Domestic workers are entitled to daily rest and a weekly day off, and to paid leave after two years of work. Write down your working hours in the log; long hours with no rest day are a sign of exploitation."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "rights-general-contract",
+   "category": "rights",
+   "country": null,
+   "title": {
+    "en": "Your contract",
+    "am": "ውልሽ",
+    "om": "Waliigaltee kee"
+   },
+   "summary": {
+    "en": "Keep a copy of your contract and make sure you understand it.",
+    "am": "የውልሽን ቅጂ ያዢ እና መረዳትሽን አረጋግጪ።",
+    "om": "Garagalcha waliigaltee keetii qabadhu."
+   },
+   "body": {
+    "en": "Before you sign, ask for the contract in a language you read. Take a photo of every page. Check salary, hours, day off, and who pays your ticket home. A contract that is changed after you arrive is a warning sign."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "health-period-stress",
+   "category": "health",
+   "country": null,
+   "title": {
+    "en": "Stress and your period",
+    "am": "ጭንቀት እና የወር አበባ",
+    "om": "Dhiphina fi laguu"
+   },
+   "summary": {
+    "en": "Stress can make your period late or irregular. This is common.",
+    "am": "ጭንቀት የወር አበባሽን ሊያዘገይ ይችላል። ይህ የተለመደ ነው።",
+    "om": "Dhiphinni laguu kee tursiisuu danda'a."
+   },
+   "body": {
+    "en": "Long hours, little sleep and worry can delay your period by days or weeks. If you might be pregnant, or you have strong pain or heavy bleeding, ask Dada or a clinic. You are not alone — many women feel this."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "health-pregnancy-abroad",
+   "category": "health",
+   "country": null,
+   "title": {
+    "en": "Pregnancy abroad: know your options",
+    "am": "በውጭ አገር እርግዝና፡ አማራጮችሽን እወቂ",
+    "om": "Ulfa biyya alaa: filannoo kee beeki"
+   },
+   "summary": {
+    "en": "In some countries pregnancy outside marriage is a crime. Get safe advice early.",
+    "am": "በአንዳንድ አገሮች ከጋብቻ ውጭ እርግዝና ወንጀል ነው። ቀድመሽ አስተማማኝ ምክር አግኚ።",
+    "om": "Biyyoota tokko keessatti ulfi gaa'ela malee yakka."
+   },
+   "body": {
+    "en": "Laws differ by country. In several Gulf countries a pregnancy outside marriage can lead to arrest. Talk early and privately to your embassy or a trusted organisation. Dada can explain your options without judging you."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "health-feeling-low",
+   "category": "health",
+   "country": null,
+   "title": {
+    "en": "When you feel low",
+    "am": "ስትከፊ",
+    "om": "Yeroo gadda itti dhagahamtu"
+   },
+   "summary": {
+    "en": "Feeling sad, alone or hopeless is common far from home. Help exists.",
+    "am": "ከቤት ርቆ ማዘን ወይም ብቸኝነት መሰማት የተለመደ ነው። እርዳታ አለ።",
+    "om": "Gaddi fi kophummaan beekamaa dha. Gargaarsi jira."
+   },
+   "body": {
+    "en": "Try to keep small routines: a short prayer or walk, a call with someone you trust. If you think about hurting yourself, press SOS or tell Dada now — you deserve help."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "before-agency",
+   "category": "before_you_go",
+   "country": null,
+   "title": {
+    "en": "Use a licensed agency",
+    "am": "ፈቃድ ያለው ኤጀንሲ ተጠቀሚ",
+    "om": "Ejansii hayyama qabu fayyadami"
+   },
+   "summary": {
+    "en": "Illegal brokers are the biggest risk. Check the licence before you pay anything.",
+    "am": "ሕገ-ወጥ ደላሎች ትልቁ አደጋ ናቸው። ምንም ከመክፈልሽ በፊት ፈቃዱን አረጋግጪ።",
+    "om": "Daldaltoonni seeraan alaa balaa guddaa dha."
+   },
+   "body": {
+    "en": "Only agencies licensed by Ethiopia's Ministry of Labor and Skills may send workers abroad. Ask for the licence number and check it here. Never give your passport to someone without a receipt."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "before-documents",
+   "category": "before_you_go",
+   "country": null,
+   "title": {
+    "en": "Copy your documents",
+    "am": "ሰነዶችሽን ቅጂ አድርጊ",
+    "om": "Galmee kee garagalchi"
+   },
+   "summary": {
+    "en": "Leave copies of your passport, visa and contract with family.",
+    "am": "የፓስፖርትሽን፣ ቪዛሽን እና ውልሽን ቅጂ ለቤተሰብ ተዪ።",
+    "om": "Garagalcha paaspoortii, viizaa fi waliigaltee maatiif dhiisi."
+   },
+   "body": {
+    "en": "Give a trusted person copies of your passport, visa, contract and the agency's details. Save their phone number in DadaLink as your trusted contact."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "return-talk",
+   "category": "return",
+   "country": null,
+   "title": {
+    "en": "Coming home: talk to someone",
+    "am": "ወደ ቤት መመለስ፡ ለአንድ ሰው ተናገሪ",
+    "om": "Gara manaa deebi'uu: nama tokkoon dubbadhu"
+   },
+   "summary": {
+    "en": "Returning can be hard. Feelings of shame or fear are normal and they pass.",
+    "am": "መመለስ ከባድ ሊሆን ይችላል። የሀፍረት ወይም የፍርሃት ስሜት የተለመደ ነው።",
+    "om": "Deebi'uun ulfaataa ta'uu danda'a."
+   },
+   "body": {
+    "en": "Many women feel tired, ashamed or afraid after returning. Returnee services and IOM can help with health care, counselling and starting work again."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  },
+  {
+   "id": "return-wages",
+   "category": "return",
+   "country": null,
+   "title": {
+    "en": "Claiming unpaid wages",
+    "am": "ያልተከፈለ ደሞዝ መጠየቅ",
+    "om": "Mindaa hin kaffalamne gaafachuu"
+   },
+   "summary": {
+    "en": "You can still claim money you are owed after you return.",
+    "am": "ከተመለስሽ በኋላም የሚገባሽን ገንዘብ መጠየቅ ትችያለሽ።",
+    "om": "Erga deebitee booda illee mindaa kee gaafachuu dandeessa."
+   },
+   "body": {
+    "en": "Your private log is your evidence: dates, amounts, hours. Ask the Ministry of Labor and Skills returnee desk or a legal-aid organisation to help you file a claim with the destination country."
+   },
+   "reviewed_by": null,
+   "status": "draft"
+  }
+ ],
+ "agencies": [
+  {
+   "name": "Example Licensed Agency",
+   "licence": "SAMPLE-0001",
+   "status": "licensed",
+   "city": "Addis Ababa",
+   "sample": true
+  }
+ ]
+}
