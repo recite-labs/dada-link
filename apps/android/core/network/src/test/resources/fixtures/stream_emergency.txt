@@ -1,0 +1,150 @@
+data: {"_tag":"Emergency","notice":{"categories":["violence"],"message":"If you are in danger right now, press SOS in DadaLink to alert your trusted contact, and call: Unified emergency number 911 · Police 999 · Ambulance (Saudi Red Crescent) 997 · Civil Defense (fire) 998.","contacts":[{"name":"Unified emergency number","kind":"emergency","phone":"911"},{"name":"Police","kind":"police","phone":"999"},{"name":"Ambulance (Saudi Red Crescent)","kind":"ambulance","phone":"997"},{"name":"Civil Defense (fire)","kind":"emergency","phone":"998"}]}}
+
+data: {"_tag":"Citations","citations":[{"contentId":"faq-employer-hits-me","title":"My employer hits me or threatens me. What can I do?","locale":"en"},{"contentId":"passport-taken","title":"My employer took my passport","locale":"en"},{"contentId":"faq-passport-taken","title":"My employer took my passport. What can I do?","locale":"en"},{"contentId":"faq-sick-no-care","title":"I am sick and my employer will not take me to a doctor. What should I do?","locale":"en"}],"grounded":true}
+
+data: {"_tag":"Delta","text":"I'm so"}
+
+data: {"_tag":"Delta","text":" sorry this"}
+
+data: {"_tag":"Delta","text":" is happening to you. It"}
+
+data: {"_tag":"Delta","text":" is not your fault, and no"}
+
+data: {"_tag":"Delta","text":" one has the right to hurt"}
+
+data: {"_tag":"Delta","text":" you."}
+
+data: {"_tag":"Delta","text":" [1]\n\n**If you are"}
+
+data: {"_tag":"Delta","text":" in danger now**\n-"}
+
+data: {"_tag":"Delta","text":" Press SOS, or call the"}
+
+data: {"_tag":"Delta","text":" police or emergency number in"}
+
+data: {"_tag":"Delta","text":" Help numbers. [1]"}
+
+data: {"_tag":"Delta","text":"\n\n**When"}
+
+data: {"_tag":"Delta","text":" you are safe**\n-"}
+
+data: {"_tag":"Delta","text":" Contact your embassy, a"}
+
+data: {"_tag":"Delta","text":" shelter or a support organis"}
+
+data: {"_tag":"Delta","text":"ation."}
+
+data: {"_tag":"Delta","text":" Their numbers are in"}
+
+data: {"_tag":"Delta","text":" Help numbers. [1]"}
+
+data: {"_tag":"Delta","text":"\n-"}
+
+data: {"_tag":"Delta","text":" Keep evidence if you can"}
+
+data: {"_tag":"Delta","text":"."}
+
+data: {"_tag":"Delta","text":" Take"}
+
+data: {"_tag":"Delta","text":" photos of injuries, and"}
+
+data: {"_tag":"Delta","text":" write down d"}
+
+data: {"_tag":"Delta","text":"ates and what happened in your private"}
+
+data: {"_tag":"Delta","text":" log. [1]\n- You"}
+
+data: {"_tag":"Delta","text":" can compl"}
+
+data: {"_tag":"Delta","text":"ain to the labour ministry"}
+
+data: {"_tag":"Delta","text":" or the"}
+
+data: {"_tag":"Delta","text":" police. [1]"}
+
+data: {"_tag":"Delta","text":"\n\n**About your"}
+
+data: {"_tag":"Delta","text":" passport**\n- In Sa"}
+
+data: {"_tag":"Delta","text":"udi Arabia, a"}
+
+data: {"_tag":"Delta","text":" workers' rights guide says"}
+
+data: {"_tag":"Delta","text":" it is against the rules for an"}
+
+data: {"_tag":"Delta","text":" employer to ke"}
+
+data: {"_tag":"Delta","text":"ep your passport."}
+
+data: {"_tag":"Delta","text":" The"}
+
+data: {"_tag":"Delta","text":" only exception is a short time for"}
+
+data: {"_tag":"Delta","text":" official papers, like"}
+
+data: {"_tag":"Delta","text":" your residence permit. [2"}
+
+data: {"_tag":"Delta","text":"]\n- Write"}
+
+data: {"_tag":"Delta","text":" down the date it"}
+
+data: {"_tag":"Delta","text":" was taken in your private"}
+
+data: {"_tag":"Delta","text":" log. [3]\n- If"}
+
+data: {"_tag":"Delta","text":" you can, ke"}
+
+data: {"_tag":"Delta","text":"ep a photo of your passport"}
+
+data: {"_tag":"Delta","text":" and visa on your phone and"}
+
+data: {"_tag":"Delta","text":" with someone you trust at home"}
+
+data: {"_tag":"Delta","text":". [3]\n- Your"}
+
+data: {"_tag":"Delta","text":" embassy or the"}
+
+data: {"_tag":"Delta","text":" labour ministry can help you"}
+
+data: {"_tag":"Delta","text":" with"}
+
+data: {"_tag":"Delta","text":" this. [3"}
+
+data: {"_tag":"Delta","text":"]\n\nYou do not have to face"}
+
+data: {"_tag":"Delta","text":" this alone."}
+
+data: {"_tag":"Delta","text":" This is general information, not legal"}
+
+data: {"_tag":"Delta","text":" advice. The"}
+
+data: {"_tag":"Delta","text":" services"}
+
+data: {"_tag":"Delta","text":" in"}
+
+data: {"_tag":"Delta","text":" Help numbers can"}
+
+data: {"_tag":"Delta","text":" gu"}
+
+data: {"_tag":"Delta","text":"ide you on"}
+
+data: {"_tag":"Delta","text":" your r"}
+
+data: {"_tag":"Delta","text":"ights.\n\nSources:"}
+
+data: {"_tag":"Delta","text":"\n[1] My employer h"}
+
+data: {"_tag":"Delta","text":"its me or threatens me."}
+
+data: {"_tag":"Delta","text":" What can I do?\n[2"}
+
+data: {"_tag":"Delta","text":"] My employer took my passport"}
+
+data: {"_tag":"Delta","text":"\n[3] My employer took"}
+
+data: {"_tag":"Delta","text":" my passport. What can I do"}
+
+data: {"_tag":"Delta","text":"?"}
+
+data: {"_tag":"Done"}
+

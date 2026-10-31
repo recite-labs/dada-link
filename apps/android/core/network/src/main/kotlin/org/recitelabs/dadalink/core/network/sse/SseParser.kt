@@ -5,13 +5,14 @@ data class SseEvent(val event: String, val data: String)
 
 /**
  * Incremental parser for the `text/event-stream` format (subset: `event:` and `data:` fields,
- * blank line dispatch, comments). Feed it lines; it returns completed events.
+ * blank line dispatch, comments; `id:`/`retry:` are ignored). Feed it lines; it returns completed events.
  */
 class SseParser {
     private var event: String? = null
     private val data = StringBuilder()
 
-    fun feed(line: String): SseEvent? {
+    fun feed(raw: String): SseEvent? {
+        val line = raw.removeSuffix("\r")
         when {
             line.isEmpty() -> return dispatch()
             line.startsWith(":") -> Unit
