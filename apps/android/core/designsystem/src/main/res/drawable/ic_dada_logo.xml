@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- DadaLink mark: two interlocking rings (indigo + marigold). The short indigo arc is drawn last
-     so the rings pass over and under each other. -->
+<!-- DadaLink mark: two interlocking rings (indigo + marigold). The short indigo arc (the indigo
+     circle from -86° to -34°) is drawn last so the rings pass over and under each other; both of its
+     ends sit outside the marigold stroke band so the crossing has no notches. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="48dp"
     android:height="48dp"
@@ -17,8 +18,9 @@
         android:strokeColor="#F2A93B"
         android:fillColor="#00000000" />
     <path
-        android:pathData="M10.553,6.204A6,6 0 0,1 13.243,7.757"
+        android:pathData="M9.419,6.015L9.934,6.073L10.442,6.176L10.939,6.322L11.422,6.511L11.887,6.740L12.330,7.009L12.749,7.315L13.139,7.656L13.499,8.030L13.825,8.433L13.974,8.645"
         android:strokeWidth="2.4"
         android:strokeColor="#3B2F8F"
+        android:strokeLineJoin="round"
         android:fillColor="#00000000" />
 </vector>
