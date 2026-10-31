@@ -37,7 +37,7 @@ android {
     defaultConfig {
         // Keeps the existing Play listing (Damakese → DadaLink).
         applicationId = "me.kibru.damakese"
-        versionCode = 200
+        versionCode = 201
         versionName = "6.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
