@@ -14,10 +14,15 @@ sealed interface SosChannelResult {
 }
 
 data class SosAlert(
+    /** Full SMS text (note + location link + time), as sent from the phone. */
     val message: String,
     val location: GeoPoint?,
     val createdAt: Instant,
     val contact: TrustedContact,
+    /** The plain note without location/time; the server relay adds its own location link. */
+    val note: String = message,
+    val language: AppLanguage = AppLanguage.Default,
+    val country: Country? = null,
 )
 
 data class SosOutcome(val alert: SosAlert, val results: List<SosChannelResult>) {

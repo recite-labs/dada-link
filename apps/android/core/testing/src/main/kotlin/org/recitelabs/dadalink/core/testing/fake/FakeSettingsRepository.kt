@@ -7,6 +7,7 @@ import org.recitelabs.dadalink.core.domain.repository.SettingsRepository
 import org.recitelabs.dadalink.core.model.AppLanguage
 import org.recitelabs.dadalink.core.model.Country
 import org.recitelabs.dadalink.core.model.DisguiseMode
+import org.recitelabs.dadalink.core.model.JourneyPhase
 import org.recitelabs.dadalink.core.model.TrustedContact
 import org.recitelabs.dadalink.core.model.UserSettings
 import java.time.Instant
@@ -17,6 +18,7 @@ class FakeSettingsRepository(initial: UserSettings = UserSettings()) : SettingsR
 
     override suspend fun setLanguage(language: AppLanguage) = state.update { it.copy(language = language) }
     override suspend fun setCountry(country: Country) = state.update { it.copy(country = country) }
+    override suspend fun setPhase(phase: JourneyPhase) = state.update { it.copy(phase = phase) }
     override suspend fun setNickname(nickname: String?) = state.update { it.copy(nickname = nickname) }
     override suspend fun setDisguise(mode: DisguiseMode) = state.update { it.copy(disguise = mode) }
     override suspend fun setHideNotificationContent(hide: Boolean) = state.update { it.copy(hideNotificationContent = hide) }

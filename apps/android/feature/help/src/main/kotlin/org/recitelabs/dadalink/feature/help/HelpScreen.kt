@@ -35,6 +35,7 @@ import org.recitelabs.dadalink.core.designsystem.icon.DadaIcons
 import org.recitelabs.dadalink.core.designsystem.theme.DadaTheme
 import org.recitelabs.dadalink.core.model.Country
 import org.recitelabs.dadalink.core.model.HelpContact
+import org.recitelabs.dadalink.core.model.HelpContactKind
 import org.recitelabs.dadalink.core.model.HelpDirectory
 import org.recitelabs.dadalink.core.ui.DadaScreen
 import org.recitelabs.dadalink.core.ui.PhonePreviews
@@ -57,7 +58,19 @@ internal fun HelpDestination(onBack: (() -> Unit)?, viewModel: HelpViewModel = h
     )
 }
 
-/** 03 Help numbers: per-country directory, bundled, works offline. */
+/** Localised title of a synced directory group. */
+internal fun HelpContactKind.titleRes(): Int = when (this) {
+    HelpContactKind.EMERGENCY -> R.string.help_group_emergency
+    HelpContactKind.EMBASSY -> R.string.help_group_embassy
+    HelpContactKind.LABOUR -> R.string.help_group_labour
+    HelpContactKind.SUPPORT -> R.string.help_group_support
+    HelpContactKind.HEALTH -> R.string.help_group_health
+    HelpContactKind.LEGAL -> R.string.help_group_legal
+    HelpContactKind.RETURNEE -> R.string.help_group_returnee
+    HelpContactKind.OTHER -> R.string.help_group_other
+}
+
+/** 03 Help numbers: per-country directory, synced from the server and stored on the phone; works offline. */
 @Composable
 fun HelpScreen(
     state: HelpUiState,
@@ -102,7 +115,9 @@ private fun DirectoryList(directory: HelpDirectory, onCall: (String) -> Unit, on
     ) {
         item { EmergencyCard(directory.emergency, onCall) }
         directory.sections.forEach { section ->
-            item(key = "h-" + section.title) { SectionHeader(section.title, Modifier.padding(top = 8.dp)) }
+            item(key = "h-" + (section.group?.name ?: section.title)) {
+                SectionHeader(section.group?.let { stringResource(it.titleRes()) } ?: section.title, Modifier.padding(top = 8.dp))
+            }
             items(section.contacts, key = { it.id }) { contact -> ContactRow(contact, onCall, onCopy) }
         }
         item {

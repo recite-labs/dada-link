@@ -13,10 +13,14 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.recitelabs.dadalink.core.domain.usecase.AskDadaUseCase
+import org.recitelabs.dadalink.core.domain.usecase.SendAssistantFeedbackUseCase
+import org.recitelabs.dadalink.core.model.AssistantError
 import org.recitelabs.dadalink.core.model.AssistantEvent
+import org.recitelabs.dadalink.core.model.AssistantException
 import org.recitelabs.dadalink.core.model.ChatMessage
 import org.recitelabs.dadalink.core.model.ChatRole
 import org.recitelabs.dadalink.feature.assistant.navigation.AskRoute
+import java.io.IOException
 import java.util.UUID
 import javax.inject.Inject
 
@@ -28,6 +32,9 @@ data class AskUiState(
     val startVoice: Boolean = false,
 ) {
     val canSend: Boolean get() = input.isNotBlank() && !isAnswering
+
+    /** The generic banner is only needed until an answer carries the server's own emergency notice. */
+    val showEmergencyBanner: Boolean get() = showEmergency && messages.none { it.emergency != null }
 }
 
 sealed interface AskAction {
@@ -36,12 +43,14 @@ sealed interface AskAction {
     data class Ask(val text: String) : AskAction
     data object Retry : AskAction
     data object VoiceConsumed : AskAction
+    data class Feedback(val messageId: String, val helpful: Boolean) : AskAction
 }
 
 /** Conversation lives only in this ViewModel: nothing is written to disk. */
 @HiltViewModel
 class AskViewModel @Inject constructor(
     private val askDada: AskDadaUseCase,
+    private val sendFeedback: SendAssistantFeedbackUseCase,
     savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
@@ -64,6 +73,7 @@ class AskViewModel @Inject constructor(
             is AskAction.Ask -> if (!state.value.isAnswering) ask(action.text)
             AskAction.Retry -> retry()
             AskAction.VoiceConsumed -> state.update { it.copy(startVoice = false) }
+            is AskAction.Feedback -> feedback(action.messageId, action.helpful)
         }
     }
 
@@ -71,6 +81,12 @@ class AskViewModel @Inject constructor(
         val user = ChatMessage(newId(), ChatRole.USER, text.trim())
         state.update { it.copy(messages = it.messages + user) }
         stream()
+    }
+
+    private fun feedback(id: String, helpful: Boolean) {
+        val answer = state.value.messages.firstOrNull { it.id == id && it.feedback == null } ?: return
+        updateAnswer(id) { it.copy(feedback = helpful) }
+        viewModelScope.launch { sendFeedback(answer, helpful) }
     }
 
     private fun retry() {
@@ -92,12 +108,21 @@ class AskViewModel @Inject constructor(
                 updateAnswer(answerId) { it.copy(isStreaming = false) }
             } catch (e: CancellationException) {
                 throw e
+            } catch (e: AssistantException) {
+                fail(answerId, e.error)
+            } catch (_: IOException) {
+                fail(answerId, AssistantError.OFFLINE)
             } catch (_: Exception) {
-                updateAnswer(answerId) { it.copy(isStreaming = false, isError = true, text = "") }
+                fail(answerId, AssistantError.UNAVAILABLE)
             } finally {
                 state.update { it.copy(isAnswering = false) }
             }
         }
+    }
+
+    /** Keeps an emergency notice that already arrived: it matters more than the failed text. */
+    private fun fail(id: String, error: AssistantError) = updateAnswer(id) {
+        it.copy(isStreaming = false, error = error, text = "", sources = emptyList(), followUps = emptyList())
     }
 
     private fun apply(id: String, event: AssistantEvent) = when (event) {
@@ -105,6 +130,9 @@ class AskViewModel @Inject constructor(
         is AssistantEvent.Sources -> updateAnswer(id) { it.copy(sources = event.sources) }
         is AssistantEvent.FollowUps -> updateAnswer(id) { it.copy(followUps = event.suggestions) }
         AssistantEvent.EmergencyDetected -> state.update { it.copy(showEmergency = true) }
+        is AssistantEvent.Emergency -> state.update { s ->
+            s.copy(showEmergency = true, messages = s.messages.map { if (it.id == id) it.copy(emergency = event.notice) else it })
+        }
     }
 
     private fun updateAnswer(id: String, transform: (ChatMessage) -> ChatMessage) = state.update { s ->

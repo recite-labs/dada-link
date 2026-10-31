@@ -20,4 +20,7 @@
     <string name="journey_reviewed_by">Kan ilaale: %1$s</string>
     <string name="journey_ask_about">Waa’ee kanaa Daadaa gaafadhu</string>
     <string name="journey_article">Barreeffama</string>
+    <string name="journey_agency_unknown">Haalli hayyamaa hin beekamu — osoo hin kaffalin dura Ministeera Hojii fi Ogummaa gaafadhu.</string>
+    <string name="journey_agency_offline">Interneetiin hin jiru. Ejansii mirkaneessuuf interneetiin barbaachisa — yeroo walqunnamtu irra deebi\'ii yaali.</string>
+    <string name="journey_agency_invalid">Maaloo yoo xiqqaate qubee ykn lakkoofsa 3 barreessi.</string>
 </resources>

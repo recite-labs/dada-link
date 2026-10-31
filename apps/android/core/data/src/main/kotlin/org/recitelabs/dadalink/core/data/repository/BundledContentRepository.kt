@@ -1,5 +1,7 @@
 package org.recitelabs.dadalink.core.data.repository
 
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import org.recitelabs.dadalink.core.content.ArticleDto
 import org.recitelabs.dadalink.core.content.ContactDto
 import org.recitelabs.dadalink.core.content.ContentBundleDataSource
@@ -12,11 +14,19 @@ import org.recitelabs.dadalink.core.model.Article
 import org.recitelabs.dadalink.core.model.ArticleCategory
 import org.recitelabs.dadalink.core.model.Country
 import org.recitelabs.dadalink.core.model.HelpContact
+import org.recitelabs.dadalink.core.model.HelpContactKind
 import org.recitelabs.dadalink.core.model.HelpDirectory
 import org.recitelabs.dadalink.core.model.HelpSection
 import javax.inject.Inject
 
-class OfflineContentRepository @Inject constructor(private val source: ContentBundleDataSource) : ContentRepository {
+/**
+ * The sample bundled in the APK (assets/content/bundle.json). Used as the first-launch fallback by
+ * [OfflineFirstContentRepository], and on its own in `-Pdadalink.useFakeBackend=true` builds.
+ */
+class BundledContentRepository @Inject constructor(private val source: ContentBundleDataSource) : ContentRepository {
+
+    override fun observeHelpDirectory(country: Country, language: AppLanguage): Flow<HelpDirectory?> =
+        flow { emit(helpDirectory(country, language)) }
 
     override suspend fun helpDirectory(country: Country, language: AppLanguage): HelpDirectory? {
         val dir = source.bundle().directories.firstOrNull { it.country == country.isoCode } ?: return null
@@ -61,6 +71,12 @@ class OfflineContentRepository @Inject constructor(private val source: ContentBu
         phone = phone,
         hours = hours,
         verified = verified,
+        kind = when {
+            id.startsWith("embassy") || id.startsWith("consulate") -> HelpContactKind.EMBASSY
+            id.startsWith("emergency") || id == "police" || id == "ambulance" -> HelpContactKind.EMERGENCY
+            id.startsWith("labour") -> HelpContactKind.LABOUR
+            else -> HelpContactKind.OTHER
+        },
     )
 
     private fun ArticleDto.toModel(lang: String) = Article(

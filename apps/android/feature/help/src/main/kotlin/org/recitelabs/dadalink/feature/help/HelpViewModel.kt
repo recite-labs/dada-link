@@ -7,8 +7,8 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.mapLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import org.recitelabs.dadalink.core.domain.repository.ContentRepository
@@ -32,8 +32,11 @@ class HelpViewModel @Inject constructor(
     val uiState: StateFlow<HelpUiState> = settings.settings
         .map { it.country to it.language }
         .distinctUntilChanged()
-        .mapLatest { (country, language) ->
-            HelpUiState.Ready(country, content.countriesWithDirectory(), content.helpDirectory(country, language))
+        .flatMapLatest { (country, language) ->
+            // Re-emits when a background sync stores newer numbers; never waits for the network.
+            content.observeHelpDirectory(country, language).map { directory ->
+                HelpUiState.Ready(country, content.countriesWithDirectory(), directory)
+            }
         }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), HelpUiState.Loading)
 

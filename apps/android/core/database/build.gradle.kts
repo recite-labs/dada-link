@@ -4,6 +4,11 @@ plugins {
     alias(libs.plugins.dadalink.android.room)
 }
 
+android {
+    // MigrationTest builds a v1 database from the exported schema.
+    sourceSets.getByName("test").resources.directories.add("$projectDir/schemas")
+}
+
 dependencies {
     api(projects.core.model)
     // DadaDatabase is part of this module's API (consumers open it lazily off the main thread).

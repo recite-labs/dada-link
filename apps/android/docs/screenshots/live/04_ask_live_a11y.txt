@@ -1,0 +1,57 @@
+Ask Dada (live, 2026-10-31) - accessibility text dump. The Ask screen sets FLAG_SECURE, so screencap returns an empty image by design.
+Question: My employer hits me and keeps my passport. What can I do?  (locale en, country SA, phase abroad)
+
+Ask Dada
+Hide
+Selam. I’m Dada. Ask me anything about your work, your rights or your health — in your own words. Our conversation is not saved.
+My employer hits me and keeps my passport. What can I do?
+Are you in danger?
+If you are in danger right now, press SOS in DadaLink to alert your trusted contact, and call: Unified emergency number 911 · Police 999 · Ambulance (Saudi Red Crescent) 997 · Civil Defense (fire) 998.
+Open SOS
+911
+Unified emergency number
+[Call 911]
+999
+Police
+[Call 999]
+997
+[Call 997]
+Dada gives information, not legal or medical advice. In danger? Press SOS.
+[Speak your question]
+Home
+Ask
+[SOS — send an alert]
+SOS
+Help
+More
+
+--- answer (scrolled) ---
+If you are in danger right now, press SOS in DadaLink to alert your trusted contact, and call: Unified emergency number 911 · Police 999 · Ambulance (Saudi Red Crescent) 997 · Civil Defense (fire) 998.
+I'm so sorry this is happening to you. It is not your fault.
+
+If you are in danger right now
+•  Press the SOS button, or call the police or emergency number shown in Help numbers. [2]
+
+When you are safe
+•  Keep evidence if you can. Take photos of injuries, and write down dates and what happened in your private log. [2]
+•  Contact your embassy, a shelter or a support organisation from Help numbers. [2]
+•  You can also complain to the labour ministry or the police. [2]
+•  If you can, keep a clear photo of your passport, visa, residence card and contract in the private log. [1]
+
+About your passport
+•  Your passport is yours. A workers' rights guide says that in Saudi Arabia it is against the rules for an employer to keep it, except for a short time for official papers like your residence permit. [1]
+•  Violence together with a kept passport can be warning signs of forced labour. If this is happening, you can tell your embassy or the police. [1][4]
+
+You do not have to face this alone. This is general information, not legal advice. The embassy and the services in Help numbers can guide you on your case.
+
+If someone else may see your phone, you can clear this chat once you are done.
+
+Sources:
+[1] My employer took my passport
+[2] My employer hits me or threatens me. What can I do?
+[4] Abuse: what to do
+
+--- offline (wifi + data disabled), question "My salary is late" ---
+My salary is late
+You are offline. Dada needs the internet to answer — help numbers and SOS still work witho
+Try again

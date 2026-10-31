@@ -32,4 +32,19 @@ class HelpViewModelTest {
             assertNull(lebanon.directory)
         }
     }
+
+    @Test fun `shows newer numbers as soon as a sync stores them`() = runTest {
+        val content = FakeContentRepository()
+        val viewModel = HelpViewModel(FakeSettingsRepository(), content)
+        val synced = TestData.saudiDirectory.copy(emergency = TestData.saudiDirectory.emergency.copy(phone = "999"))
+
+        viewModel.uiState.test {
+            var first = awaitItem()
+            if (first is HelpUiState.Loading) first = awaitItem()
+            assertEquals("911", (first as HelpUiState.Ready).directory?.emergency?.phone)
+
+            content.directories = mapOf(Country.SAUDI_ARABIA to synced)
+            assertEquals("999", (awaitItem() as HelpUiState.Ready).directory?.emergency?.phone)
+        }
+    }
 }

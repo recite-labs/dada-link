@@ -4,26 +4,28 @@ import io.ktor.client.HttpClient
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
-import io.ktor.http.contentType
-import io.ktor.http.isSuccess
-import org.recitelabs.dadalink.core.network.model.SosRelayRequestDto
+import io.ktor.http.content.TextContent
+import kotlinx.serialization.json.Json
+import org.recitelabs.dadalink.core.network.model.SosRequestDto
+import org.recitelabs.dadalink.core.network.model.SosResultDto
 import javax.inject.Inject
 
 interface SosApi {
-    /** @throws java.io.IOException when offline or the server rejects the relay. */
-    suspend fun relay(request: SosRelayRequestDto)
+    /**
+     * `POST /safety/sos` — transient relay by SMS and/or Telegram; the server stores nothing.
+     * Throws [ApiException.Upstream] (503) when no channel succeeded, [ApiException.RateLimited] (429),
+     * or a plain [java.io.IOException] when offline.
+     */
+    suspend fun relay(request: SosRequestDto): SosResultDto
 }
 
-/** `POST {base}/v1/safety/sos` — transient relay, the server stores nothing (provisional path). */
 class KtorSosApi @Inject constructor(
     private val client: HttpClient,
     private val baseUrl: ApiBaseUrl,
+    private val json: Json,
 ) : SosApi {
-    override suspend fun relay(request: SosRelayRequestDto) {
-        val response = client.post(baseUrl.resolve("v1/safety/sos")) {
-            contentType(ContentType.Application.Json)
-            setBody(request)
-        }
-        if (!response.status.isSuccess()) throw ApiException(response.status.value, "SOS relay failed: ${response.status}")
-    }
+    override suspend fun relay(request: SosRequestDto): SosResultDto =
+        client.post(baseUrl.resolve(ApiRoutes.SAFETY_SOS)) {
+            setBody(TextContent(json.encodeToString(SosRequestDto.serializer(), request), ContentType.Application.Json))
+        }.decodeOrThrow(json, SosResultDto.serializer())
 }

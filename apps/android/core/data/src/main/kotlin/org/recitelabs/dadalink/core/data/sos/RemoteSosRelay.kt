@@ -9,43 +9,67 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.serialization.json.Json
+import kotlinx.coroutines.CancellationException
+import org.recitelabs.dadalink.core.data.device.DeviceIdProvider
+import org.recitelabs.dadalink.core.data.wireLocale
 import org.recitelabs.dadalink.core.domain.repository.SosRelay
 import org.recitelabs.dadalink.core.model.SosAlert
 import org.recitelabs.dadalink.core.model.SosChannel
 import org.recitelabs.dadalink.core.model.SosChannelResult
+import org.recitelabs.dadalink.core.network.ApiException
 import org.recitelabs.dadalink.core.network.SosApi
-import org.recitelabs.dadalink.core.network.model.SosRelayRequestDto
-import org.recitelabs.dadalink.core.security.di.QueueCipher
+import org.recitelabs.dadalink.core.network.di.DadaJson
+import org.recitelabs.dadalink.core.network.model.GeoLocationDto
+import org.recitelabs.dadalink.core.network.model.SosRequestDto
+import org.recitelabs.dadalink.core.network.model.TrustedContactDto
 import org.recitelabs.dadalink.core.security.SecretCipher
+import org.recitelabs.dadalink.core.security.di.QueueCipher
 import java.io.IOException
 import java.util.Base64
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 /**
- * Tries the server relay immediately; if offline, queues it in WorkManager. The queued payload is
- * encrypted with a Keystore key because WorkManager's own database is plaintext.
+ * Secondary SOS channel via `POST /safety/sos` (the phone's own SMS goes first). Tries now; if
+ * offline, queues it in WorkManager with the payload encrypted by a Keystore key (WorkManager's
+ * own database is plaintext). If the server answered but could not deliver (503/429/400) we do not
+ * retry: the result is reported as failed and the direct SMS / share sheet remain the real channels.
+ * Never throws: an SOS must not crash because of the relay.
  */
 class RemoteSosRelay @Inject constructor(
     @ApplicationContext private val context: Context,
     private val api: SosApi,
+    private val deviceIds: DeviceIdProvider,
     @QueueCipher private val cipher: SecretCipher,
 ) : SosRelay {
 
     override suspend fun relay(alert: SosAlert): SosChannelResult {
-        val request = alert.toRequest()
         return try {
-            api.relay(request)
-            SosChannelResult.Sent(SosChannel.RELAY)
-        } catch (_: IOException) {
-            enqueue(request)
-            SosChannelResult.Queued(SosChannel.RELAY)
+            val request = alert.toRequest(deviceIds.deviceId())
+                ?: return SosChannelResult.Failed(SosChannel.RELAY, "contact has no international number or Telegram chat id")
+            try {
+                val result = api.relay(request)
+                if (result.deliveredVia.isNotEmpty()) {
+                    SosChannelResult.Sent(SosChannel.RELAY)
+                } else {
+                    SosChannelResult.Failed(SosChannel.RELAY, "relay could not deliver")
+                }
+            } catch (e: ApiException) {
+                SosChannelResult.Failed(SosChannel.RELAY, e.message ?: "relay refused")
+            } catch (_: IOException) {
+                enqueue(request)
+                SosChannelResult.Queued(SosChannel.RELAY)
+            }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            SosChannelResult.Failed(SosChannel.RELAY, e.message ?: "relay error")
         }
     }
 
-    private fun enqueue(request: SosRelayRequestDto) {
-        val payload = Base64.getEncoder().encodeToString(cipher.encrypt(Json.encodeToString(SosRelayRequestDto.serializer(), request).encodeToByteArray()))
+    private fun enqueue(request: SosRequestDto) {
+        val json = DadaJson.encodeToString(SosRequestDto.serializer(), request)
+        val payload = Base64.getEncoder().encodeToString(cipher.encrypt(json.encodeToByteArray()))
         val work = OneTimeWorkRequestBuilder<SosRelayWorker>()
             .setInputData(workDataOf(SosRelayWorker.KEY_PAYLOAD to payload))
             .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build())
@@ -55,10 +79,30 @@ class RemoteSosRelay @Inject constructor(
     }
 }
 
-internal fun SosAlert.toRequest() = SosRelayRequestDto(
-    message = message,
-    contactPhone = contact.phone,
-    contactTelegram = contact.telegram,
-    latitude = location?.latitude,
-    longitude = location?.longitude,
-)
+/** `SosRequest`, or null when the contact has no channel the server can use. */
+internal fun SosAlert.toRequest(deviceId: String): SosRequestDto? {
+    val phone = contact.phone?.let(::toE164)
+    val chatId = contact.telegram?.trim()?.takeIf { TELEGRAM_CHAT_ID.matches(it) }?.toLongOrNull()
+    if (phone == null && chatId == null) return null
+    return SosRequestDto(
+        deviceId = deviceId,
+        locale = language.wireLocale,
+        country = country?.isoCode,
+        trustedContact = TrustedContactDto(phone = phone, telegramChatId = chatId),
+        message = note.trim().take(MAX_MESSAGE).ifEmpty { null },
+        location = location?.let { GeoLocationDto(it.latitude, it.longitude, it.accuracyMeters?.toDouble()?.coerceAtLeast(0.0)) },
+    )
+}
+
+/** Strict E.164 (`+` then 7–15 digits) as `E164PhoneNumber` requires; `00` prefixes become `+`. */
+internal fun toE164(raw: String): String? {
+    val compact = raw.filterNot { it == ' ' || it == '-' || it == '(' || it == ')' || it == '.' }
+    val plus = if (compact.startsWith("00")) "+" + compact.drop(2) else compact
+    return plus.takeIf { E164.matches(it) }
+}
+
+private val E164 = Regex("^\\+[1-9][0-9]{6,14}$")
+private val TELEGRAM_CHAT_ID = Regex("^-?[0-9]{1,16}$")
+
+/** `MAX_SOS_MESSAGE_LENGTH` in packages/domain. */
+private const val MAX_MESSAGE = 500

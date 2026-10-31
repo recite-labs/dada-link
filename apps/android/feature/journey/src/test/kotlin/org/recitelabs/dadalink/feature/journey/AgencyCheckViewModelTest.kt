@@ -9,12 +9,13 @@ import org.recitelabs.dadalink.core.domain.usecase.CheckAgencyUseCase
 import org.recitelabs.dadalink.core.model.AgencyCheckResult
 import org.recitelabs.dadalink.core.testing.MainDispatcherRule
 import org.recitelabs.dadalink.core.testing.TestData
-import org.recitelabs.dadalink.core.testing.fake.FakeContentRepository
+import org.recitelabs.dadalink.core.testing.fake.FakeAgencyRepository
 import org.recitelabs.dadalink.feature.journey.agency.AgencyCheckViewModel
 
 class AgencyCheckViewModelTest {
     @get:Rule val main = MainDispatcherRule()
-    private val vm = AgencyCheckViewModel(CheckAgencyUseCase(FakeContentRepository()))
+    private val agencies = FakeAgencyRepository()
+    private val vm = AgencyCheckViewModel(CheckAgencyUseCase(agencies))
 
     @Test fun `checks and clears the result when the query changes`() = runTest {
         vm.onQueryChange("MoLS/123/2024")
@@ -25,5 +26,12 @@ class AgencyCheckViewModelTest {
         assertNull(vm.uiState.value.result)
         vm.check()
         assertEquals(AgencyCheckResult.NotFound, vm.uiState.value.result)
+    }
+
+    @Test fun `offline is its own result`() = runTest {
+        agencies.results = mapOf("Selam" to AgencyCheckResult.Offline)
+        vm.onQueryChange("Selam")
+        vm.check()
+        assertEquals(AgencyCheckResult.Offline, vm.uiState.value.result)
     }
 }

@@ -35,6 +35,7 @@ import org.recitelabs.dadalink.core.ui.DadaScreen
 import org.recitelabs.dadalink.core.ui.PhonePreviews
 import org.recitelabs.dadalink.core.ui.dial
 import org.recitelabs.dadalink.core.ui.localizedName
+import org.recitelabs.dadalink.core.ui.simpleMarkdown
 import org.recitelabs.dadalink.feature.journey.R
 import org.recitelabs.dadalink.core.ui.R as CoreUiR
 
@@ -134,7 +135,7 @@ fun ArticleScreen(article: Article?, onBack: () -> Unit, onAsk: (String) -> Unit
             if (article.isDraft) DadaBadge(stringResource(CoreUiR.string.core_ui_draft_content), containerColor = DadaTheme.colors.accentTint, contentColor = DadaTheme.colors.ink)
             article.reviewedBy?.let { DadaBadge(stringResource(R.string.journey_reviewed_by, it), icon = DadaIcons.CheckCircle) }
             Text(article.summary, style = DadaTheme.typography.titleSmall, color = DadaTheme.colors.ink)
-            Text(article.body, style = DadaTheme.typography.body, color = DadaTheme.colors.ink)
+            Text(simpleMarkdown(article.body), style = DadaTheme.typography.body, color = DadaTheme.colors.ink)
             DadaOutlinedButton(stringResource(R.string.journey_ask_about), onClick = { onAsk(article.title) }, leadingIcon = DadaIcons.Ask)
             Text(stringResource(CoreUiR.string.core_ui_disclaimer), style = DadaTheme.typography.caption, color = DadaTheme.colors.muted)
         }

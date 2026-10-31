@@ -10,6 +10,7 @@ import org.recitelabs.dadalink.core.model.AssistantEvent
 import org.recitelabs.dadalink.core.model.ChatMessage
 import org.recitelabs.dadalink.core.model.ChatRole
 import org.recitelabs.dadalink.core.model.Country
+import org.recitelabs.dadalink.core.model.JourneyPhase
 import org.recitelabs.dadalink.core.model.SourceRef
 import javax.inject.Inject
 
@@ -21,7 +22,9 @@ class FakeAssistant @Inject constructor(private val detector: EmergencyDetector)
 
     var wordDelayMillis: Long = 35
 
-    override fun ask(conversation: List<ChatMessage>, language: AppLanguage, country: Country): Flow<AssistantEvent> = flow {
+    override suspend fun sendFeedback(helpful: Boolean, language: AppLanguage, contentIds: List<String>) = Unit
+
+    override fun ask(conversation: List<ChatMessage>, language: AppLanguage, country: Country, phase: JourneyPhase): Flow<AssistantEvent> = flow {
         val question = conversation.lastOrNull { it.role == ChatRole.USER }?.text.orEmpty()
         val amharic = question.any { it in 'ሀ'..'፿' } || (question.isBlank() && language == AppLanguage.AMHARIC)
         val answer = pick(question.lowercase(), amharic, detector.isEmergency(question))

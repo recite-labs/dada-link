@@ -10,6 +10,7 @@ import org.recitelabs.dadalink.core.domain.repository.SettingsRepository
 import org.recitelabs.dadalink.core.model.AppLanguage
 import org.recitelabs.dadalink.core.model.Country
 import org.recitelabs.dadalink.core.model.DisguiseMode
+import org.recitelabs.dadalink.core.model.JourneyPhase
 import org.recitelabs.dadalink.core.model.TrustedContact
 import org.recitelabs.dadalink.core.model.UserSettings
 import java.time.Instant
@@ -21,6 +22,7 @@ class DefaultSettingsRepository @Inject constructor(private val source: Settings
 
     override suspend fun setLanguage(language: AppLanguage) = source.update { it.copy(languageTag = language.tag) }
     override suspend fun setCountry(country: Country) = source.update { it.copy(countryIso = country.isoCode) }
+    override suspend fun setPhase(phase: JourneyPhase) = source.update { it.copy(phase = phase.wireValue) }
     override suspend fun setNickname(nickname: String?) = source.update { it.copy(nickname = nickname) }
     override suspend fun setDisguise(mode: DisguiseMode) = source.update { it.copy(disguise = mode.name) }
     override suspend fun setHideNotificationContent(hide: Boolean) = source.update { it.copy(hideNotificationContent = hide) }
@@ -36,6 +38,7 @@ internal fun StoredSettings.toModel() = UserSettings(
     language = AppLanguage.fromTag(languageTag) ?: AppLanguage.Default,
     nickname = nickname,
     country = Country.fromIso(countryIso) ?: Country.SAUDI_ARABIA,
+    phase = JourneyPhase.fromWire(phase) ?: JourneyPhase.Default,
     disguise = disguise?.let { runCatching { DisguiseMode.valueOf(it) }.getOrNull() } ?: DisguiseMode.NONE,
     hideNotificationContent = hideNotificationContent,
     trustedContact = contact?.let { TrustedContact(it.name, it.relation, it.phone, it.telegram) },
