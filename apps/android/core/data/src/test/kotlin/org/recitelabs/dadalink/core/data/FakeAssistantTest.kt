@@ -17,7 +17,7 @@ class FakeAssistantTest {
     private val assistant = FakeAssistant(EmergencyDetector()).apply { wordDelayMillis = 0 }
 
     private suspend fun ask(text: String, lang: AppLanguage = AppLanguage.ENGLISH) =
-        assistant.ask(listOf(ChatMessage("1", ChatRole.USER, text)), lang, Country.SAUDI_ARABIA).toList()
+        assistant.ask(listOf(ChatMessage("1", ChatRole.USER, text)), lang, Country.SAUDI_ARABIA, org.recitelabs.dadalink.core.model.JourneyPhase.ABROAD).toList()
 
     private fun List<AssistantEvent>.text() = filterIsInstance<AssistantEvent.TextDelta>().joinToString("") { it.text }
 

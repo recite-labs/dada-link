@@ -9,7 +9,7 @@ android {
         buildConfig = true
     }
     defaultConfig {
-        val useFakes = providers.gradleProperty("dadalink.useFakeBackend").getOrElse("true").toBoolean()
+        val useFakes = providers.gradleProperty("dadalink.useFakeBackend").getOrElse("false").toBoolean()
         buildConfigField("boolean", "USE_FAKE_BACKEND", useFakes.toString())
     }
 }
@@ -31,4 +31,5 @@ dependencies {
     testImplementation(projects.core.testing)
     testImplementation(libs.robolectric)
     testImplementation(libs.androidx.test.core)
+    testImplementation(libs.androidx.datastore)
 }
