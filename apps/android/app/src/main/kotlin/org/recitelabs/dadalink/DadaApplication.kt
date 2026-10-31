@@ -6,6 +6,7 @@ import androidx.hilt.work.HiltWorkerFactory
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.work.Configuration
 import dagger.hilt.android.HiltAndroidApp
+import org.recitelabs.dadalink.core.data.sync.ContentSyncTrigger
 import org.recitelabs.dadalink.core.domain.repository.SessionLock
 import org.recitelabs.dadalink.lifecycle.AutoLock
 import javax.inject.Inject
@@ -17,6 +18,8 @@ class DadaApplication : Application(), Configuration.Provider {
 
     @Inject lateinit var sessionLock: SessionLock
 
+    @Inject lateinit var contentSync: ContentSyncTrigger
+
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
             .setWorkerFactory(workerFactory)
@@ -26,5 +29,7 @@ class DadaApplication : Application(), Configuration.Provider {
     override fun onCreate() {
         super.onCreate()
         ProcessLifecycleOwner.get().lifecycle.addObserver(AutoLock(sessionLock, SystemClock::elapsedRealtime))
+        // Help numbers and articles: synced in the background, always readable offline.
+        contentSync.start()
     }
 }

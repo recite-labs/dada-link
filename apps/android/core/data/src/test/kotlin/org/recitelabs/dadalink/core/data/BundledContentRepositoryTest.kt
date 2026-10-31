@@ -9,16 +9,16 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.recitelabs.dadalink.core.content.ContentBundleDataSource
-import org.recitelabs.dadalink.core.data.repository.OfflineContentRepository
+import org.recitelabs.dadalink.core.data.repository.BundledContentRepository
 import org.recitelabs.dadalink.core.model.AppLanguage
 import org.recitelabs.dadalink.core.model.ArticleCategory
 import org.recitelabs.dadalink.core.model.Country
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
-class OfflineContentRepositoryTest {
+class BundledContentRepositoryTest {
     @Test fun `reads the bundled directory in amharic with english fallback`() = runTest {
-        val repo = OfflineContentRepository(ContentBundleDataSource(ApplicationProvider.getApplicationContext(), StandardTestDispatcher(testScheduler)))
+        val repo = BundledContentRepository(ContentBundleDataSource(ApplicationProvider.getApplicationContext(), StandardTestDispatcher(testScheduler)))
 
         val directory = repo.helpDirectory(Country.SAUDI_ARABIA, AppLanguage.AMHARIC)
         assertNotNull(directory)

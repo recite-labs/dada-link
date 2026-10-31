@@ -15,6 +15,13 @@ data class StoredSettings(
     val contact: StoredContact? = null,
     val pin: StoredPin? = null,
     val lastCheckInEpochMillis: Long? = null,
+    /** Journey phase wire value (`before`/`abroad`/`return`). */
+    val phase: String? = null,
+    /**
+     * Random UUID generated on first use. Sent to the API only for per-device quotas; it is not
+     * derived from the hardware or any account and is reset if this file is ever reset.
+     */
+    val deviceId: String? = null,
 )
 
 @Serializable

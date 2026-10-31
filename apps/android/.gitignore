@@ -11,3 +11,6 @@ build/
 
 # Machine-specific
 /gradle-local.properties
+
+# The monorepo root ignores data/ (local DB dumps); here :core:data and its package dirs are source.
+!data/
