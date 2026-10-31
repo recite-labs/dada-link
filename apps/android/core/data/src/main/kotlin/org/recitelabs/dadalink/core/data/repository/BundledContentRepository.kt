@@ -20,7 +20,7 @@ import org.recitelabs.dadalink.core.model.HelpSection
 import javax.inject.Inject
 
 /**
- * The sample bundled in the APK (assets/content/bundle.json). Used as the first-launch fallback by
+ * The content bundled in the APK (assets/content/bundle.json, generated from `content/`). Used as the first-launch fallback by
  * [OfflineFirstContentRepository], and on its own in `-Pdadalink.useFakeBackend=true` builds.
  */
 class BundledContentRepository @Inject constructor(private val source: ContentBundleDataSource) : ContentRepository {
@@ -34,7 +34,9 @@ class BundledContentRepository @Inject constructor(private val source: ContentBu
         return HelpDirectory(
             country = country,
             emergency = dir.emergency.toModel(lang),
-            sections = dir.sections.map { s -> HelpSection(s.title.pick(lang), s.contacts.map { it.toModel(lang) }) },
+            sections = dir.sections.map { s ->
+                HelpSection(s.title.pick(lang), s.contacts.map { it.toModel(lang) }, group = s.group?.toGroup())
+            },
             lastReviewed = dir.lastReviewed,
         )
     }
@@ -44,9 +46,9 @@ class BundledContentRepository @Inject constructor(private val source: ContentBu
 
     override suspend fun articles(category: ArticleCategory, country: Country?, language: AppLanguage): List<Article> =
         source.bundle().articles
-            .filter { it.category.toCategory() == category }
-            .filter { country == null || it.country == null || it.country == country.isoCode }
-            .map { it.toModel(language.tag) }
+            .filter { category in it.categories() }
+            .filter { country == null || it.appliesTo(country) }
+            .map { it.toModel(language.tag, category) }
 
     override suspend fun article(id: String, language: AppLanguage): Article? =
         source.bundle().articles.firstOrNull { it.id == id }?.toModel(language.tag)
@@ -71,7 +73,7 @@ class BundledContentRepository @Inject constructor(private val source: ContentBu
         phone = phone,
         hours = hours,
         verified = verified,
-        kind = when {
+        kind = kind?.let(SyncedContentMapper::kindOf) ?: when {
             id.startsWith("embassy") || id.startsWith("consulate") -> HelpContactKind.EMBASSY
             id.startsWith("emergency") || id == "police" || id == "ambulance" -> HelpContactKind.EMERGENCY
             id.startsWith("labour") -> HelpContactKind.LABOUR
@@ -79,16 +81,26 @@ class BundledContentRepository @Inject constructor(private val source: ContentBu
         },
     )
 
-    private fun ArticleDto.toModel(lang: String) = Article(
+    private fun ArticleDto.categories(): Set<ArticleCategory> =
+        categories.ifEmpty { listOf(category) }.mapNotNull { it.toCategory() }.toSet()
+
+    private fun ArticleDto.appliesTo(country: Country): Boolean {
+        val all = countries.ifEmpty { listOfNotNull(this.country) }
+        return all.isEmpty() || country.isoCode in all
+    }
+
+    private fun ArticleDto.toModel(lang: String, shownIn: ArticleCategory? = null) = Article(
         id = id,
-        category = category.toCategory() ?: ArticleCategory.RIGHTS,
+        category = shownIn ?: category.toCategory() ?: ArticleCategory.RIGHTS,
         country = Country.fromIso(country),
         title = title.pick(lang),
         summary = summary.pick(lang),
         body = body.pick(lang),
         reviewedBy = reviewedBy,
-        isDraft = status != "reviewed",
+        isDraft = statuses.pick(lang).ifEmpty { status } != "reviewed",
     )
+
+    private fun String.toGroup(): HelpContactKind? = HelpContactKind.entries.firstOrNull { it.name == this }
 
     private fun String.toCategory(): ArticleCategory? = when (this) {
         "rights" -> ArticleCategory.RIGHTS

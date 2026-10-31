@@ -16,6 +16,7 @@
     "depcruise": "depcruise packages apps --config .dependency-cruiser.cjs",
     "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm depcruise",
     "content": "pnpm --filter @dadalink/server-node content",
+    "content:android-bundle": "node content/scripts/build-android-bundle.mjs",
     "dev:web": "pnpm --filter @dadalink/web dev"
   },
   "devDependencies": {

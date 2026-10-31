@@ -88,7 +88,7 @@ class ContentSyncTest {
     @Test fun `observed help numbers update when a sync lands`() = runTest {
         val (syncer, repo) = parts()
         repo.observeHelpDirectory(Country.SAUDI_ARABIA, AppLanguage.ENGLISH).test {
-            assertEquals("emergency", awaitItem()!!.emergency.id) // bundled sample
+            assertEquals("2026-10-31", awaitItem()!!.lastReviewed) // bundled content
             syncer.sync(Country.SAUDI_ARABIA, AppLanguage.ENGLISH)
             assertEquals("sa-unified-emergency", awaitItem()!!.emergency.id)
             cancelAndIgnoreRemainingEvents()
