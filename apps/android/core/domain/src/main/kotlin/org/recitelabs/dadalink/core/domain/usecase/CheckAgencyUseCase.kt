@@ -1,14 +1,19 @@
 package org.recitelabs.dadalink.core.domain.usecase
 
-import org.recitelabs.dadalink.core.domain.repository.ContentRepository
-import org.recitelabs.dadalink.core.domain.safety.AgencyMatcher
+import org.recitelabs.dadalink.core.domain.repository.AgencyRepository
 import org.recitelabs.dadalink.core.model.AgencyCheckResult
 import javax.inject.Inject
 
-/** Looks an agency up by licence number or (normalised) name in the licensed list. */
-class CheckAgencyUseCase @Inject constructor(private val content: ContentRepository) {
+/** Checks an agency's licence by name or licence number. Blank queries are never sent. */
+class CheckAgencyUseCase @Inject constructor(private val agencies: AgencyRepository) {
     suspend operator fun invoke(query: String): AgencyCheckResult {
-        val match = content.licensedAgencies().firstOrNull { AgencyMatcher.matches(query, it.name, it.licenceNumber) }
-        return match?.let(AgencyCheckResult::Found) ?: AgencyCheckResult.NotFound
+        val trimmed = query.trim()
+        if (trimmed.isEmpty()) return AgencyCheckResult.NotFound
+        return agencies.check(trimmed.take(MAX_QUERY))
+    }
+
+    private companion object {
+        /** `GET /agencies/check?q=` accepts at most 200 characters. */
+        const val MAX_QUERY = 200
     }
 }

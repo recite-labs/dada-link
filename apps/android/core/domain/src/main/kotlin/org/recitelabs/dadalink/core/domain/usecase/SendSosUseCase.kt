@@ -1,6 +1,5 @@
 package org.recitelabs.dadalink.core.domain.usecase
 
-import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withTimeoutOrNull
@@ -23,10 +22,11 @@ sealed interface SendSosResult {
 }
 
 /**
- * Sends an SOS to the trusted contact over every available channel, in parallel:
- *  - SMS straight from the phone (works without data), if permitted;
- *  - server relay (Telegram/SMS provider), queued if offline.
- * If direct SMS is not possible the outcome asks the UI to open the share sheet.
+ * Sends an SOS to the trusted contact:
+ *  1. SMS straight from the phone first (works without data), if permitted;
+ *  2. then the server relay (Telegram/SMS provider) as a secondary channel, queued if offline.
+ * The relay never delays or replaces the direct SMS. If direct SMS is not possible the outcome asks
+ * the UI to open the share sheet.
  */
 class SendSosUseCase @Inject constructor(
     private val settings: SettingsRepository,
@@ -36,7 +36,8 @@ class SendSosUseCase @Inject constructor(
     private val clock: Clock,
 ) {
     suspend operator fun invoke(baseMessage: String, labels: SosMessageLabels): SendSosResult = coroutineScope {
-        val contact = settings.settings.first().trustedContact ?: return@coroutineScope SendSosResult.NoTrustedContact
+        val current = settings.settings.first()
+        val contact = current.trustedContact ?: return@coroutineScope SendSosResult.NoTrustedContact
         val point = withTimeoutOrNull(LOCATION_TIMEOUT_MS) { location.currentLocation() }
         val now = clock.instant()
         val alert = SosAlert(
@@ -44,17 +45,18 @@ class SendSosUseCase @Inject constructor(
             location = point,
             createdAt = now,
             contact = contact,
+            note = baseMessage,
+            language = current.language,
+            country = current.country,
         )
-        val smsResult = async {
-            val phone = contact.phone
-            when {
-                phone == null -> SosChannelResult.Failed(SosChannel.SMS, "no phone number")
-                !sms.canSendDirectly() -> SosChannelResult.Failed(SosChannel.SMS, "permission not granted")
-                else -> sms.send(phone, alert.message)
-            }
+        val phone = contact.phone
+        val smsResult = when {
+            phone == null -> SosChannelResult.Failed(SosChannel.SMS, "no phone number")
+            !sms.canSendDirectly() -> SosChannelResult.Failed(SosChannel.SMS, "permission not granted")
+            else -> sms.send(phone, alert.message)
         }
-        val relayResult = async { relay.relay(alert) }
-        SendSosResult.Done(SosOutcome(alert, listOf(smsResult.await(), relayResult.await())))
+        val relayResult = relay.relay(alert)
+        SendSosResult.Done(SosOutcome(alert, listOf(smsResult, relayResult)))
     }
 
     private companion object {

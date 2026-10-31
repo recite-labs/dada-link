@@ -26,6 +26,6 @@ class AskDadaUseCase @Inject constructor(
         require(last != null) { "Conversation must contain a user message" }
         if (emergencyDetector.isEmergency(last.text)) emit(AssistantEvent.EmergencyDetected)
         val current = settings.settings.first()
-        emitAll(assistant.ask(conversation, current.language, current.country))
+        emitAll(assistant.ask(conversation, current.language, current.country, current.phase))
     }
 }

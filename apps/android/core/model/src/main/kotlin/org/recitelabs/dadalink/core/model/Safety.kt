@@ -19,6 +19,7 @@ data class UserSettings(
     val language: AppLanguage = AppLanguage.Default,
     val nickname: String? = null,
     val country: Country = Country.SAUDI_ARABIA,
+    val phase: JourneyPhase = JourneyPhase.Default,
     val disguise: DisguiseMode = DisguiseMode.NONE,
     val hideNotificationContent: Boolean = true,
     val trustedContact: TrustedContact? = null,
