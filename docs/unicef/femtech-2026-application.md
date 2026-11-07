@@ -45,7 +45,7 @@ Scored: relevance and problem–solution fit, plus global scale (20). Novelty an
 
 3. **Registered as a private for-profit company?** Yes. TODO: confirm Recite Labs' legal form and registration
    number.
-4. **Is your solution open source?** Yes. Code: AGPL-3.0, public at https://github.com/recite-labs/dada-link.
+4. **Is your solution open source?** Yes. Code: AGPL-3.0, at https://github.com/recite-labs/dada-link (make it public before submitting).
    Content: CC-BY-4.0 (see gap 3).
 5. **Country of registration:** Ethiopia (a UNICEF programme country)
 
@@ -162,7 +162,7 @@ TODO: fill in from the 7 Nov returnee testing. Structure:
 
 ### 26. Repository link
 
-https://github.com/recite-labs/dada-link (public, AGPL-3.0)
+https://github.com/recite-labs/dada-link (AGPL-3.0). TODO: the repo is currently private; make it public before submitting
 
 ### 27. Targets and milestones for the next 12 months (≤250)
 
@@ -232,7 +232,7 @@ strongest safety-by-design proof. Decide as a team.
 - [ ] CC-BY-4.0 licence added for `content/`
 - [ ] Returnee testing results recorded (field 25)
 - [ ] Video uploaded to YouTube with English subtitles; link tested in a logged-out browser
-- [ ] Repo public (verified: yes, 7 Nov)
+- [ ] **Make the repo public.** GitHub lists `recite-labs/dada-link` as private; UNICEF needs it accessible (or grant @unicefinnovation access)
 - [ ] Live site reachable (verified: yes, 7 Nov)
 - [ ] Two different contact e-mails
 - [ ] Submitted before 10 Nov to leave a buffer
