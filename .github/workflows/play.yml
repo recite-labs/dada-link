@@ -1,0 +1,144 @@
+name: Google Play
+
+# Manual only. Uses repository secrets; they never leave GitHub Actions.
+#   PLAY_SERVICE_ACCOUNT_JSON_B64   service account key (base64), Play Console access to me.kibru.damakese
+#   DADALINK_UPLOAD_KEYSTORE_B64    upload keystore (.jks, base64)
+#   DADALINK_UPLOAD_STORE_PASSWORD / DADALINK_UPLOAD_KEY_ALIAS / DADALINK_UPLOAD_KEY_PASSWORD
+#
+# Production is deliberately not offered: promote to production by hand in Play Console.
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "What to do"
+        type: choice
+        default: verify
+        options:
+          - verify # check the key works and can see the app; changes nothing
+          - listing # upload title, descriptions, images and screenshots from fastlane/metadata
+          - release # build a signed AAB and upload it to the chosen testing track (with release notes)
+      track:
+        description: "Testing track (release only)"
+        type: choice
+        default: internal
+        options: [internal, alpha, beta]
+      release_status:
+        description: "Release status (release only). 'draft' needs a manual rollout in Play Console."
+        type: choice
+        default: completed
+        options: [completed, draft]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: play
+  cancel-in-progress: false
+
+env:
+  PACKAGE_NAME: me.kibru.damakese
+
+jobs:
+  play:
+    name: ${{ inputs.task }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: apps/android
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Install fastlane
+        run: gem install fastlane --no-document
+
+      - name: Write Play service account key
+        env:
+          KEY_B64: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON_B64 }}
+        run: |
+          test -n "$KEY_B64" || { echo "::error::PLAY_SERVICE_ACCOUNT_JSON_B64 is empty"; exit 1; }
+          echo "$KEY_B64" | base64 -d > "$RUNNER_TEMP/play-key.json"
+          ruby -rjson -e 'k = JSON.parse(File.read(ARGV[0])); puts "Service account: #{k["client_email"]}"' "$RUNNER_TEMP/play-key.json"
+
+      - name: Verify access
+        run: |
+          fastlane run validate_play_store_json_key json_key:"$RUNNER_TEMP/play-key.json"
+          # Read-only call that needs access to this specific app.
+          fastlane run google_play_track_version_codes package_name:"$PACKAGE_NAME" track:internal json_key:"$RUNNER_TEMP/play-key.json"
+
+      - name: Upload store listing
+        if: inputs.task == 'listing'
+        run: |
+          fastlane supply \
+            --package_name "$PACKAGE_NAME" \
+            --json_key "$RUNNER_TEMP/play-key.json" \
+            --metadata_path fastlane/metadata/android \
+            --skip_upload_apk true --skip_upload_aab true --skip_upload_changelogs true
+
+      - uses: actions/setup-java@v4
+        if: inputs.task == 'release'
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@v4
+        if: inputs.task == 'release'
+
+      - name: Write upload signing config
+        if: inputs.task == 'release'
+        env:
+          KEYSTORE_B64: ${{ secrets.DADALINK_UPLOAD_KEYSTORE_B64 }}
+          STORE_PASSWORD: ${{ secrets.DADALINK_UPLOAD_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.DADALINK_UPLOAD_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.DADALINK_UPLOAD_KEY_PASSWORD }}
+        run: |
+          for v in KEYSTORE_B64 STORE_PASSWORD KEY_ALIAS KEY_PASSWORD; do
+            test -n "${!v}" || { echo "::error::signing secret for $v is empty"; exit 1; }
+          done
+          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          {
+            echo "storeFile=$RUNNER_TEMP/upload.jks"
+            echo "storePassword=$STORE_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "keyPassword=$KEY_PASSWORD"
+          } > "$RUNNER_TEMP/upload-signing.properties"
+
+      - name: Build signed release bundle
+        if: inputs.task == 'release'
+        run: ./gradlew :app:bundleRelease -Pdadalink.signing="$RUNNER_TEMP/upload-signing.properties" --no-configuration-cache
+
+      - name: Check bundle is signed with the upload key
+        if: inputs.task == 'release'
+        run: |
+          AAB=$(ls app/build/outputs/bundle/release/*.aab)
+          echo "AAB=$AAB" >> "$GITHUB_ENV"
+          jarsigner -verify "$AAB" | tail -1
+          jarsigner -verify "$AAB" | grep -q "jar verified" || { echo "::error::bundle is not signed"; exit 1; }
+
+      - name: Upload to ${{ inputs.track }}
+        if: inputs.task == 'release'
+        run: |
+          fastlane supply \
+            --package_name "$PACKAGE_NAME" \
+            --json_key "$RUNNER_TEMP/play-key.json" \
+            --aab "$AAB" \
+            --track "${{ inputs.track }}" \
+            --release_status "${{ inputs.release_status }}" \
+            --metadata_path fastlane/metadata/android \
+            --skip_upload_metadata true --skip_upload_images true --skip_upload_screenshots true
+
+      - uses: actions/upload-artifact@v4
+        if: inputs.task == 'release'
+        with:
+          name: dadalink-release-aab
+          path: apps/android/app/build/outputs/bundle/release/*.aab
+          retention-days: 14
+
+      - name: Remove secrets from the runner
+        if: always()
+        run: rm -f "$RUNNER_TEMP/play-key.json" "$RUNNER_TEMP/upload.jks" "$RUNNER_TEMP/upload-signing.properties"
