@@ -12,7 +12,7 @@ export const EmergencyCard = () => {
     <button
       type="button"
       onClick={emergency.open}
-      className="flex w-full items-center gap-4 rounded-[var(--radius-card)] bg-sos-tint p-4 text-left transition-colors hover:bg-[#f8d5da]"
+      className="flex w-full items-center gap-4 rounded-[var(--radius-card)] bg-sos-tint p-4 text-left lg:px-8 lg:py-6 transition-colors hover:bg-[#f8d5da]"
     >
       <span className="flex min-w-0 flex-1 flex-col">
         <span className="text-[13px] font-bold tracking-[0.06em] text-sos uppercase">{t.nav.sos}</span>

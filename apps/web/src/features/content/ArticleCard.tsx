@@ -7,11 +7,11 @@ import { ChevronRightIcon } from "../../ui/icons.tsx"
 export const ArticleCard = ({ item }: { readonly item: ContentSummary }) => {
   const { t, locale } = useI18n()
   return (
-    <li>
+    <li className="flex">
       <Link
         to="/$locale/articles/$id"
         params={{ locale, id: item.id }}
-        className="flex items-center gap-3 rounded-[var(--radius-card)] bg-surface p-4 transition-colors hover:bg-tint"
+        className="flex w-full items-center gap-3 rounded-[var(--radius-card)] bg-surface p-4 transition-colors hover:bg-tint"
       >
         <span className="flex min-w-0 flex-1 flex-col gap-1" lang={item.locale}>
           <span className="text-[17px] leading-[23px] font-bold">{item.title}</span>

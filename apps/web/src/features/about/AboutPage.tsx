@@ -14,7 +14,7 @@ export const AboutPage = () => {
   const { t } = useI18n()
   const about = t.about
   return (
-    <div className="flex flex-col gap-8">
+    <div className="reading-column flex flex-col gap-8 lg:pt-6">
       <PageHeader eyebrow={t.common.tagline} title={about.title} intro={about.intro} />
       <Section title={about.whatTitle}>
         <p>{about.whatBody}</p>

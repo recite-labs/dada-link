@@ -38,7 +38,7 @@ export const AskPage = () => {
   const ask = (question: string) => chat.ask(question, { locale, country, phase: journey })
 
   return (
-    <div className="flex min-h-[calc(100dvh-10rem)] flex-col">
+    <div className="reading-column flex min-h-[calc(100dvh-10rem)] flex-col">
       <header className="flex items-center gap-3 pt-2 pb-4">
         <span className="flex size-12 items-center justify-center rounded-full bg-deep">
           <LogoMark size={28} />

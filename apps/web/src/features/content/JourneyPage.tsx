@@ -23,20 +23,22 @@ export const JourneyPage = () => {
   return (
     <div className="flex flex-col gap-5">
       <PageHeader eyebrow={t.journey.eyebrow} title={t.phaseTitles[phase]} />
-      <ChoiceGroup
-        variant="segmented"
-        label={t.home.journeyLabel}
-        value={phase}
-        onChange={(next) => {
-          store.update(selectJourney(preferences, next))
-          void navigate({ params: (previous) => ({ ...previous, phase: next }) })
-        }}
-        choices={JOURNEY_PHASES.map((value) => ({ value, label: t.phases[value] }))}
-      />
+      <div className="lg:max-w-xl">
+        <ChoiceGroup
+          variant="segmented"
+          label={t.home.journeyLabel}
+          value={phase}
+          onChange={(next) => {
+            store.update(selectJourney(preferences, next))
+            void navigate({ params: (previous) => ({ ...previous, phase: next }) })
+          }}
+          choices={JOURNEY_PHASES.map((value) => ({ value, label: t.phases[value] }))}
+        />
+      </div>
       {data.length === 0 ? (
         <Notice title={t.journey.empty} />
       ) : (
-        <ul className="flex flex-col gap-2.5">
+        <ul className="grid gap-2.5 lg:grid-cols-2 lg:gap-4">
           {data.map((item) => (
             <ArticleCard key={item.id} item={item} />
           ))}

@@ -5,7 +5,7 @@ import { PageHeader } from "../../ui/PageHeader.tsx"
 export const NotFoundPage = () => {
   const { t, locale } = useI18n()
   return (
-    <div className="flex flex-col gap-4 py-6">
+    <div className="reading-column flex flex-col gap-4 py-6">
       <PageHeader eyebrow="404" title={t.errors.notFoundTitle} intro={t.errors.notFoundBody} />
       <Link
         to="/$locale"

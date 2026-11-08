@@ -31,7 +31,9 @@
   --radius-card: 16px;
   --radius-panel: 24px;
 
+  /* Phone-first column; on desktop the shell widens and long-form pages keep the reading width. */
   --container-page: 44rem;
+  --container-wide: 72rem;
 }
 
 @layer base {
@@ -78,6 +80,13 @@
     animation-iteration-count: 1;
     transition-duration: 0.01ms;
   }
+}
+
+/* Long-form pages (articles, chat, policies) keep a readable line length inside the wide desktop shell. */
+@utility reading-column {
+  width: 100%;
+  max-width: var(--container-page);
+  margin-inline: auto;
 }
 
 @utility scrollbar-none {

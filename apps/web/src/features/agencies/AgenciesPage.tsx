@@ -26,7 +26,7 @@ export const AgenciesPage = () => {
   }
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="reading-column flex flex-col gap-5 lg:pt-6">
       <PageHeader title={t.agencies.title} intro={t.agencies.intro} />
       <search>
         <form onSubmit={onSubmit} className="flex flex-col gap-2">

@@ -11,7 +11,7 @@ export const Header = () => {
   const emergency = useEmergency()
   return (
     <header className="sticky top-0 z-30 border-b border-transparent bg-ground/95 backdrop-blur supports-[backdrop-filter]:bg-ground/80">
-      <div className="mx-auto flex max-w-(--container-page) items-center justify-between gap-3 px-5 py-3 lg:max-w-5xl">
+      <div className="mx-auto flex max-w-(--container-page) lg:max-w-(--container-wide) items-center justify-between gap-3 px-5 py-3 lg:px-8">
         <Link to="/$locale" params={{ locale }} aria-label={t.nav.homeLink} className="rounded-lg">
           <Wordmark />
         </Link>
