@@ -24,7 +24,7 @@ export const ArticleView = ({
   const fallback = content.locale !== content.requestedLocale
 
   return (
-    <article className="flex flex-col gap-5 pt-2" lang={content.locale}>
+    <article className="reading-column flex flex-col gap-5 pt-2 lg:pt-6" lang={content.locale}>
       {beforeTitle}
       <header className="flex flex-col gap-2">
         {eyebrow === undefined ? null : (

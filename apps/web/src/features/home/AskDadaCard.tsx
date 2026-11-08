@@ -21,11 +21,16 @@ export const AskDadaCard = () => {
   }
 
   return (
-    <section className="relative isolate overflow-hidden rounded-[var(--radius-panel)] bg-deep p-5 text-ground">
-      <RingsDecoration className="absolute -top-8 -right-8 -z-10" />
-      <h2 className="text-[22px] leading-[28px] font-extrabold tracking-snug">{t.home.askTitle}</h2>
-      <p className="mt-1.5 max-w-[17rem] text-[15px] text-lilac">{t.home.askBody}</p>
-      <form onSubmit={submit} className="mt-4 flex h-13 items-center gap-2 rounded-full bg-ground pr-1.5 pl-4">
+    <section className="relative isolate overflow-hidden rounded-[var(--radius-panel)] bg-deep p-5 text-ground lg:flex lg:flex-col lg:justify-end lg:p-10">
+      <RingsDecoration className="absolute -top-8 -right-8 -z-10 lg:top-12 lg:right-14 lg:scale-150" />
+      <h2 className="text-[22px] leading-[28px] font-extrabold tracking-snug lg:text-[32px] lg:leading-[38px]">
+        {t.home.askTitle}
+      </h2>
+      <p className="mt-1.5 max-w-[17rem] text-[15px] text-lilac lg:max-w-sm lg:text-[17px]">{t.home.askBody}</p>
+      <form
+        onSubmit={submit}
+        className="mt-4 flex h-13 items-center lg:mt-8 lg:h-15 gap-2 rounded-full bg-ground pr-1.5 pl-4"
+      >
         <label htmlFor="home-question" className="sr-only">
           {t.home.askTitle}
         </label>

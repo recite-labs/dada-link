@@ -28,7 +28,7 @@ export const ChoiceGroup = <T extends string>({ label, choices, value, onChange,
         className={
           variant === "segmented"
             ? "grid auto-cols-fr grid-flow-col gap-1 rounded-full bg-surface p-1"
-            : "scrollbar-none -mx-5 flex gap-2 overflow-x-auto px-5 py-1"
+            : "scrollbar-none -mx-5 flex gap-2 overflow-x-auto px-5 py-1 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0"
         }
       >
         {choices.map((choice) => (

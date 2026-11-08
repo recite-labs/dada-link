@@ -28,7 +28,7 @@ const List = ({ items }: { readonly items: ReadonlyArray<string> }) => (
 export const PrivacyPage = () => {
   const { t } = useI18n()
   return (
-    <div lang="en" className="flex flex-col gap-8">
+    <div lang="en" className="reading-column flex flex-col gap-8 lg:pt-6">
       <PageHeader
         eyebrow={t.nav.privacy}
         title="Privacy policy"
@@ -48,9 +48,9 @@ export const PrivacyPage = () => {
 
       <Section title="Data that stays on your phone (Android app)">
         <p>
-          Your private log, check-ins, trusted contacts, PIN and settings are stored only on your
-          device, in an encrypted database whose key is protected by the Android Keystore. We cannot see them. They are
-          deleted when you delete the app or its data. If you choose to share your log, you decide where it goes.
+          Your private log, check-ins, trusted contacts, PIN and settings are stored only on your device, in an
+          encrypted database whose key is protected by the Android Keystore. We cannot see them. They are deleted when
+          you delete the app or its data. If you choose to share your log, you decide where it goes.
         </p>
       </Section>
 
