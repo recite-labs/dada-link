@@ -95,18 +95,16 @@ DadaLink only receives the resulting text.
 
 ## Permissions declaration
 
-### `SEND_SMS` (SMS permission group)
-- **Exception:** *Physical safety / emergency alerts to send SMS* ("Apps that send SMS alerts in emergency
-  situations"). The category appears in Play's July 2026 policy update and is approved case by case.
-- **Core function:** when the server relay cannot be reached, the SOS button sends the alert to the user's
-  chosen trusted contact by SMS from the phone. Domestic workers often have no data plan, or their employer
-  controls the Wi-Fi.
-- **Why no alternative works:** the alert must go out without the user opening another app and pressing
-  "send" while in danger.
-- **Video:** record SOS → hold 3 s → alert delivered to a test contact (Play asks for a demo video link).
-- **If rejected:** remove `SEND_SMS` and switch the offline fallback to `ACTION_SENDTO` (opens the SMS app
-  with the message filled in, user taps send). No permission needed. The server relay stays as the primary
-  channel.
+### SMS / Call Log: none
+The app requests **no** SMS or Call Log permission, so no SMS/Call Log declaration is needed.
+If the Console still shows one, remove it: do **not** tick "Default SMS handler" or "Default Phone handler".
+
+History: 6.0.0 (vc 201) declared `SEND_SMS` and was rejected on 2026-11-03 (declared default SMS / Phone
+handler use cases the app does not have; listing and in-app experience did not match). Since 6.0.1
+(vc 202) the SOS goes through the server relay and then opens the user's SMS app with the alert filled
+in (`ACTION_SENDTO`); the user presses send. The manifest also strips `SEND_SMS` if a library adds it.
+Re-adding direct SMS would need the *Physical safety / emergency alerts* exception, a demo video and a
+listing that promotes the feature.
 
 ### Location (`ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`)
 Foreground only, requested when the user starts an SOS. No background-location declaration needed.
@@ -116,9 +114,9 @@ Standard runtime permission; no declaration.
 
 ## Release
 
-1. Upload `dadalink-6.0.0-vc201.aab` (signed with the Damakese upload key, SHA-256 `95:09:BF:B0:…:EB:82:6E`).
+1. Upload `dadalink-6.0.1-vc202.aab` (signed with the Damakese upload key, SHA-256 `95:09:BF:B0:…:EB:82:6E`).
 2. Internal testing → closed testing → production with a staged rollout (20% → 100%).
-3. Release notes: `changelogs/201.txt`.
+3. Release notes: `changelogs/202.txt`.
 
 ## Before submitting
 

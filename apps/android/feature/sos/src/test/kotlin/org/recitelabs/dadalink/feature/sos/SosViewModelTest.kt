@@ -13,7 +13,6 @@ import org.recitelabs.dadalink.core.testing.TestData
 import org.recitelabs.dadalink.core.testing.fake.FakeContentRepository
 import org.recitelabs.dadalink.core.testing.fake.FakeLocationProvider
 import org.recitelabs.dadalink.core.testing.fake.FakeSettingsRepository
-import org.recitelabs.dadalink.core.testing.fake.FakeSmsGateway
 import org.recitelabs.dadalink.core.testing.fake.FakeSosRelay
 import java.time.Clock
 
@@ -21,12 +20,12 @@ class SosViewModelTest {
     @get:Rule val main = MainDispatcherRule()
 
     private val labels = SosMessageLabels("Location", "Time", "unknown")
-    private val sms = FakeSmsGateway()
+    private val relay = FakeSosRelay()
 
     private fun viewModel(settings: FakeSettingsRepository) = SosViewModel(
         settings,
         FakeContentRepository(),
-        SendSosUseCase(settings, FakeLocationProvider(TestData.riyadh), sms, FakeSosRelay(), Clock.systemUTC()),
+        SendSosUseCase(settings, FakeLocationProvider(TestData.riyadh), relay, Clock.systemUTC()),
     )
 
     @Test fun `loads contact and emergency number from the directory`() = runTest {
@@ -42,7 +41,7 @@ class SosViewModelTest {
 
         val done = vm.uiState.value.phase as SosPhase.Done
         assertTrue(done.outcome.delivered)
-        assertEquals(1, sms.sent.size)
+        assertEquals(1, relay.relayed.size)
         vm.consumeResult()
         assertEquals(SosPhase.Ready, vm.uiState.value.phase)
     }

@@ -7,7 +7,7 @@
     <string name="sos_sending">Ergaa jira…</string>
     <string name="sos_what_sent">Wanti ergamu</string>
     <string name="sos_to">Gara %1$s (%2$s)</string>
-    <string name="sos_by_sms">SMS-dhaan gara %1$s — interneetii malee</string>
+    <string name="sos_by_sms">SMS-dhaan gara %1$s — appiin SMS kee ni banama, ergi tuqi. Interneetii malee hojjeta</string>
     <string name="sos_by_telegram">Yeroo interneetii jiru Telegram-iin gara %1$s</string>
     <string name="sos_your_location">Bakka itti argamtu (yoo jiraate)</string>
     <string name="sos_time">Yeroo</string>
@@ -18,8 +18,8 @@
     <string name="sos_label_unknown">hin beekamu</string>
     <string name="sos_call_emergency">%1$s bilbili</string>
     <string name="sos_call_embassy">Embaasii bilbili</string>
-    <string name="sos_permission_title">SOS interneetii malee akka hojjetu hayyami</string>
-    <string name="sos_permission_body">Akeekkachiisni SIM kee irraa bakka kee waliin akka ergamuuf SMS fi bakka hayyami.</string>
+    <string name="sos_permission_title">Bakka kee SOS waliin ergi</string>
+    <string name="sos_permission_body">Akeekkachiisni bakka jirtu akka agarsiisuuf bakka hayyami.</string>
     <string name="sos_permission_allow">Hayyami</string>
     <string name="sos_no_contact_title">Ammallee namni amanamaan hin jiru</string>
     <string name="sos_no_contact_body">SOS akka isaan ga\'uuf nama amantu dabali. Amma illee balaa tasaa bilbiluu dandeessa.</string>

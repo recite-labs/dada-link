@@ -10,6 +10,8 @@ import androidx.work.WorkManager
 import androidx.work.workDataOf
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.TimeoutCancellationException
+import kotlinx.coroutines.withTimeout
 import org.recitelabs.dadalink.core.data.device.DeviceIdProvider
 import org.recitelabs.dadalink.core.data.wireLocale
 import org.recitelabs.dadalink.core.domain.repository.SosRelay
@@ -30,10 +32,10 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 /**
- * Secondary SOS channel via `POST /safety/sos` (the phone's own SMS goes first). Tries now; if
- * offline, queues it in WorkManager with the payload encrypted by a Keystore key (WorkManager's
+ * SOS relay via `POST /safety/sos`. Tries now; if offline, or the server has not answered within
+ * [ANSWER_TIMEOUT_MS] (the SMS app must not wait on a slow network), queues it in WorkManager with the payload encrypted by a Keystore key (WorkManager's
  * own database is plaintext). If the server answered but could not deliver (503/429/400) we do not
- * retry: the result is reported as failed and the direct SMS / share sheet remain the real channels.
+ * retry: the result is reported as failed and the SMS app / share sheet remain the user's channel.
  * Never throws: an SOS must not crash because of the relay.
  */
 class RemoteSosRelay @Inject constructor(
@@ -48,7 +50,7 @@ class RemoteSosRelay @Inject constructor(
             val request = alert.toRequest(deviceIds.deviceId())
                 ?: return SosChannelResult.Failed(SosChannel.RELAY, "contact has no international number or Telegram chat id")
             try {
-                val result = api.relay(request)
+                val result = withTimeout(ANSWER_TIMEOUT_MS) { api.relay(request) }
                 if (result.deliveredVia.isNotEmpty()) {
                     SosChannelResult.Sent(SosChannel.RELAY)
                 } else {
@@ -59,12 +61,19 @@ class RemoteSosRelay @Inject constructor(
             } catch (_: IOException) {
                 enqueue(request)
                 SosChannelResult.Queued(SosChannel.RELAY)
+            } catch (_: TimeoutCancellationException) {
+                enqueue(request)
+                SosChannelResult.Queued(SosChannel.RELAY)
             }
         } catch (e: CancellationException) {
             throw e
         } catch (e: Exception) {
             SosChannelResult.Failed(SosChannel.RELAY, e.message ?: "relay error")
         }
+    }
+
+    private companion object {
+        const val ANSWER_TIMEOUT_MS = 10_000L
     }
 
     private fun enqueue(request: SosRequestDto) {

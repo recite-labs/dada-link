@@ -14,7 +14,7 @@ sealed interface SosChannelResult {
 }
 
 data class SosAlert(
-    /** Full SMS text (note + location link + time), as sent from the phone. */
+    /** Full SMS text (note + location link + time), as filled into the SMS app and sent by the relay. */
     val message: String,
     val location: GeoPoint?,
     val createdAt: Instant,
@@ -27,7 +27,7 @@ data class SosAlert(
 
 data class SosOutcome(val alert: SosAlert, val results: List<SosChannelResult>) {
     val delivered: Boolean get() = results.any { it is SosChannelResult.Sent || it is SosChannelResult.Queued }
-    /** SMS could not be sent directly; the UI must open the share sheet as a fallback. */
+    /** No SMS was sent by the app; the UI opens the SMS app (or the share sheet) so the user presses send. */
     val needsShareFallback: Boolean
         get() = results.none { it.channel == SosChannel.SMS && it is SosChannelResult.Sent }
 }

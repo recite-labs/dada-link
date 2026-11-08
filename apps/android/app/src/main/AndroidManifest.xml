@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- SOS: SMS straight from the SIM (works without data) and location. Both asked at runtime,
-         only when the user sets up / uses SOS; the app works without them (share-sheet fallback). -->
-    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- SOS: location only, asked at runtime when the user uses SOS. No SEND_SMS: the SMS fallback
+         opens the user's SMS app with the alert filled in (ACTION_SENDTO), and the user presses send. -->
+    <uses-permission android:name="android.permission.SEND_SMS" tools:node="remove" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />

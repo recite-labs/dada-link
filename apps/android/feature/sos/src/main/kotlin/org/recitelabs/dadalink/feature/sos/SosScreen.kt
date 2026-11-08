@@ -55,7 +55,6 @@ import org.recitelabs.dadalink.feature.sos.navigation.toArg
 import org.recitelabs.dadalink.core.ui.R as CoreUiR
 
 private val SOS_PERMISSIONS = arrayOf(
-    Manifest.permission.SEND_SMS,
     Manifest.permission.ACCESS_FINE_LOCATION,
     Manifest.permission.ACCESS_COARSE_LOCATION,
 )
@@ -69,7 +68,7 @@ internal fun SosDestination(
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     val context = LocalContext.current
-    fun granted() = SOS_PERMISSIONS.take(2).all { ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED }
+    fun granted() = SOS_PERMISSIONS.any { ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED }
     var hasPermissions by remember { mutableStateOf(granted()) }
     var asked by rememberSaveable { mutableStateOf(false) }
     var sendAfterPermission by rememberSaveable { mutableStateOf(false) }
@@ -93,7 +92,7 @@ internal fun SosDestination(
     LaunchedEffect(state.phase) {
         val done = state.phase as? SosPhase.Done ?: return@LaunchedEffect
         val outcome = done.outcome
-        // Fallback: hand the alert to the SMS app / share sheet so the user can press send.
+        // Hand the alert to the SMS app (or the share sheet) so the user can press send.
         var openedFallback = false
         if (outcome.needsShareFallback) {
             val phone = outcome.alert.contact.phone

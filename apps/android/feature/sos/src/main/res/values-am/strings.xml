@@ -7,7 +7,7 @@
     <string name="sos_sending">በመላክ ላይ…</string>
     <string name="sos_what_sent">የሚላከው</string>
     <string name="sos_to">ለ%1$s (%2$s)</string>
-    <string name="sos_by_sms">በኤስኤምኤስ ወደ %1$s — ያለ ኢንተርኔት ይሠራል</string>
+    <string name="sos_by_sms">በኤስኤምኤስ ወደ %1$s — የመልዕክት መተግበሪያሽ ይከፈታል፣ ላክን ተጫኚ። ያለ ኢንተርኔት ይሠራል</string>
     <string name="sos_by_telegram">ኢንተርኔት ሲኖር በቴሌግራም ወደ %1$s</string>
     <string name="sos_your_location">ያለሽበት ቦታ (ካለ)</string>
     <string name="sos_time">ሰዓቱ</string>
@@ -18,8 +18,8 @@
     <string name="sos_label_unknown">አልታወቀም</string>
     <string name="sos_call_emergency">%1$s ደውዪ</string>
     <string name="sos_call_embassy">ኤምባሲ ደውዪ</string>
-    <string name="sos_permission_title">SOS ያለ ኢንተርኔት እንዲሠራ ፍቀጂ</string>
-    <string name="sos_permission_body">ማስጠንቀቂያው ከሲምሽ ያለሽበትን ቦታ ይዞ በቀጥታ እንዲላክ ኤስኤምኤስ እና ቦታን ፍቀጂ።</string>
+    <string name="sos_permission_title">ቦታሽን ከSOS ጋር ላኪ</string>
+    <string name="sos_permission_body">ማስጠንቀቂያው ያለሽበትን ቦታ እንዲያሳይ ቦታን ፍቀጂ።</string>
     <string name="sos_permission_allow">ፍቀጂ</string>
     <string name="sos_no_contact_title">እስካሁን የታመነ ሰው የለም</string>
     <string name="sos_no_contact_body">SOS እንዲደርሳቸው የምታምኚውን ሰው ጨምሪ። አሁንም ወደ ድንገተኛ መደወል ትችያለሽ።</string>

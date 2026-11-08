@@ -76,7 +76,8 @@ the network.
 
 ## SOS
 
-SMS is sent from the phone first. The server relay (`POST /safety/sos`) is a secondary channel and
-needs the contact's number in international format (`+251…`) or a numeric Telegram chat id. When the
+The app does not hold `SEND_SMS` (Play only allows it for default SMS apps and a few exceptions).
+The server relay (`POST /safety/sos`) goes first; then the app opens the user's SMS app with the alert
+filled in (`ACTION_SENDTO`, works without data) and the user presses send. The relay needs the contact's number in international format (`+251…`) or a numeric Telegram chat id. When the
 phone is offline the relay is queued, encrypted, in WorkManager. If the server answers that it could
 not deliver, the app does not retry.
